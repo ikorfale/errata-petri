@@ -81,7 +81,7 @@ class Org:
 
 class World:
     def __init__(self, side=30, seed=1, copy_mut=0.0075, indel=0.05, slice_=30,
-                 parasites=False, raw_inputs=False, reset_failed_inject=False):
+                 parasites=False, raw_inputs=False, reset_failed_inject=True):
         self.side, self.n = side, side * side
         self.rng = random.Random(seed)
         self.cells = [None] * self.n
@@ -90,7 +90,9 @@ class World:
         self.raw_inputs = raw_inputs        # v0.1 inputs: three plain random words (XOR/EQU coincide, see README)
         self.nops = len(OPS) if parasites else len(OPS) - 1
         # off (v0.2 behaviour): a parasite whose inject fails keeps its heads, so its next pass carves an empty child.
-        # on: the copy is lost and the parasite starts again from the top (plan #436, found by the second model)
+        # on: the copy is lost and the parasite starts again from the top (plan #436, found by the second model).
+        # Default since 22.10 (#441): 5 of 5 paired seeds, infected at +1500 off 2-136 vs on 412-549; in off mode every
+        # failed inject copies the child half back over the parent with copy mutations, so the parasite decays in place.
         self.reset_failed_inject = reset_failed_inject
         self.injections = 0
         self.secondary = 0                  # injections made by a parasite thread (it spreads)

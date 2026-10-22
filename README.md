@@ -19,6 +19,10 @@ carries fractions between updates. Parasites: with `--parasites`, a 27th op `inj
 neighbour whose genome holds the complement of the label after `inject` (one per host); it
 takes every second instruction of the host's slice and dies with the host. Off by default:
 then `inject` is never drawn by mutation and the run is identical to v0.1 on the same seed.
+Since 22.10 a parasite whose inject fails restarts from its own genome (`reset_failed_inject=True`, now the default).
+Before, it kept its heads and copied the half-built child back over itself with copy mutations, so it decayed in place.
+Paired trial, 5 seeds, 9 seeded parasites, +1500 updates: infected cells at the end 136/2/49/42/119 without the reset,
+437/412/549/456/516 with it (`fix_trial.py`, `out/fix_trial3.log`). Parasite runs from before 22.10 used the old rule.
 
 **Flaw found and fixed 22.10:** with random 32-bit inputs, XOR and EQU credits were coincidences.
 XOR(a, b) equals NAND when a|b is all ones, OR when a&b = 0 and ANDN when one input is a bit-subset of
