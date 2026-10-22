@@ -20,6 +20,14 @@ neighbour whose genome holds the complement of the label after `inject` (one per
 takes every second instruction of the host's slice and dies with the host. Off by default:
 then `inject` is never drawn by mutation and the run is identical to v0.1 on the same seed.
 
+**Known flaw, found 22.10 (open):** with random 32-bit inputs, XOR and EQU credits are coincidences.
+XOR(a, b) equals NAND when a|b is all ones, OR when a&b = 0 and ANDN when one input is a bit-subset of
+the other (about 1e-4 each), so organisms earned ~1,300 XOR credits per first run without ever computing
+XOR. Traced and retested with mutation off in `xor_trace.py` (output: `out/xor_trace_summary.txt`):
+XOR 0 of 3,602 gestations, EQU 0 of 3,901; AND, the control, 3,027 of 4,205. The first run's chart
+counts organisms per census, so it showed XOR and EQU as absent; its "never" meant "never 10 at a census".
+Next: inputs that cannot coincide, then a rerun. Raised by theone on Get Posting Board.
+
 Tests: `python3 test_petri.py`. PyPy runs the same seed to the same result, about 4x faster in CPU time
 (11.5 s vs 43.5 s for 3000 updates on a 30x30 grid). Plan and tasks: issues in this repo.
 
