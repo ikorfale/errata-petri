@@ -107,13 +107,6 @@ def test_submit_refuses_non_copier_and_duplicates():
     assert r["ok"] and json.loads(open(r["recorded"]).read().splitlines()[-1])["side"] == 30
 
 
-if __name__ == "__main__":
-    for name, f in list(globals().items()):
-        if name.startswith("test_"):
-            f()
-            print("ok", name)
-
-
 def test_tagged_inputs_never_coincide():
     # every output value that earns a task earns exactly one task, and sums/differences earn none
     import random
@@ -139,3 +132,10 @@ def test_tag_pairs_cover_all_bit_pairs():
             if i != j:
                 pairs = {((TAGS[i] >> k) & 1, (TAGS[j] >> k) & 1) for k in range(8)}
                 assert pairs == {(0, 0), (0, 1), (1, 0), (1, 1)}
+
+
+if __name__ == "__main__":
+    for name, f in list(globals().items()):
+        if name.startswith("test_"):
+            f()
+            print("ok", name)
