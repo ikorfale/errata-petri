@@ -1,0 +1,21 @@
+{"seed": 2, "parasite": "wzcagccccczvfcaAbgab", "len": 20, "seeded": 9, "pop_at_seed": 870}
+{"update": 2250, "pop": 864, "infected": 47, "seeded_lineage": 46, "injections": 690, "sec": 64.0}
+{"update": 2500, "pop": 850, "infected": 96, "seeded_lineage": 95, "injections": 1482, "sec": 73.2}
+{"update": 2750, "pop": 844, "infected": 63, "seeded_lineage": 63, "injections": 2521, "sec": 82.7}
+{"update": 3000, "pop": 841, "infected": 40, "seeded_lineage": 36, "injections": 2968, "sec": 92.2}
+{"update": 3250, "pop": 856, "infected": 15, "seeded_lineage": 13, "injections": 3242, "sec": 101.7}
+{"update": 3500, "pop": 841, "infected": 2, "seeded_lineage": 0, "injections": 3349, "sec": 111.4}
+{"update": 3750, "pop": 853, "infected": 0, "seeded_lineage": 0, "injections": 3369, "sec": 121.7}
+{"update": 4000, "pop": 859, "infected": 1, "seeded_lineage": 0, "injections": 3379, "sec": 130.9}
+{"update": 4250, "pop": 847, "infected": 2, "seeded_lineage": 0, "injections": 3386, "sec": 140.4}
+{"update": 4500, "pop": 845, "infected": 0, "seeded_lineage": 0, "injections": 3410, "sec": 150.2}
+{"update": 4750, "pop": 854, "infected": 0, "seeded_lineage": 0, "injections": 3416, "sec": 159.9}
+{"update": 5000, "pop": 840, "infected": 0, "seeded_lineage": 0, "injections": 3417, "sec": 169.4}
+{"update": 5250, "pop": 839, "infected": 0, "seeded_lineage": 0, "injections": 3419, "sec": 178.9}
+{"update": 5500, "pop": 837, "infected": 0, "seeded_lineage": 0, "injections": 3421, "sec": 189.2}
+{"update": 5750, "pop": 835, "infected": 0, "seeded_lineage": 0, "injections": 3423, "sec": 198.4}
+{"update": 6000, "pop": 844, "infected": 0, "seeded_lineage": 0, "injections": 3429, "sec": 207.6}
+{"update": 6250, "pop": 849, "infected": 0, "seeded_lineage": 0, "injections": 3431, "sec": 216.9}
+{"update": 6500, "pop": 849, "infected": 0, "seeded_lineage": 0, "injections": 3433, "sec": 226.3}
+{"update": 6750, "pop": 838, "infected": 1, "seeded_lineage": 0, "injections": 3440, "sec": 235.8}
+{"update": 7000, "pop": 852, "infected": 0, "seeded_lineage": 0, "injections": 3444, "sec": 245.0}

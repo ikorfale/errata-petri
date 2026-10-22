@@ -90,6 +90,7 @@ class World:
         self.raw_inputs = raw_inputs        # v0.1 inputs: three plain random words (XOR/EQU coincide, see README)
         self.nops = len(OPS) if parasites else len(OPS) - 1
         self.injections = 0
+        self.secondary = 0                  # injections made by a parasite thread (it spreads)
         self.update = 0
         self.births = 0
         self.task_births = Counter()
@@ -290,6 +291,7 @@ class World:
         p.is_para = True
         host.para = p
         self.injections += 1
+        self.secondary += o.is_para
         self.restart(o, parent, o.merit)
         return True
 
@@ -342,6 +344,7 @@ class World:
                 "genotypes": len(g),
                 "infected": sum(o.para is not None for o in live),
                 "injections": self.injections,
+                "secondary": self.secondary,
                 "mean_len": round(sum(o.glen for o in live) / max(1, len(live)), 1),
                 "top": g.most_common(1)[0][0] if g else "",
                 "tasks_now": dict(t), "lineages": dict(lin),
