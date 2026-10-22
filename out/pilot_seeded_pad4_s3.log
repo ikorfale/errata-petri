@@ -1,0 +1,21 @@
+{"seed": 3, "parasite": "wzcagccccczvfcaAbgab", "len": 20, "seeded": 9, "pop_at_seed": 873}
+{"update": 2250, "pop": 879, "infected": 29, "seeded_lineage": 29, "injections": 454, "sec": 58.2}
+{"update": 2500, "pop": 880, "infected": 85, "seeded_lineage": 85, "injections": 1265, "sec": 66.3}
+{"update": 2750, "pop": 879, "infected": 108, "seeded_lineage": 108, "injections": 2659, "sec": 75.4}
+{"update": 3000, "pop": 869, "infected": 129, "seeded_lineage": 129, "injections": 4481, "sec": 84.3}
+{"update": 3250, "pop": 867, "infected": 132, "seeded_lineage": 130, "injections": 6139, "sec": 93.3}
+{"update": 3500, "pop": 872, "infected": 49, "seeded_lineage": 48, "injections": 7202, "sec": 102.0}
+{"update": 3750, "pop": 864, "infected": 45, "seeded_lineage": 45, "injections": 7879, "sec": 111.3}
+{"update": 4000, "pop": 865, "infected": 2, "seeded_lineage": 2, "injections": 8179, "sec": 120.6}
+{"update": 4250, "pop": 858, "infected": 1, "seeded_lineage": 0, "injections": 8204, "sec": 129.7}
+{"update": 4500, "pop": 870, "infected": 0, "seeded_lineage": 0, "injections": 8215, "sec": 138.9}
+{"update": 4750, "pop": 857, "infected": 0, "seeded_lineage": 0, "injections": 8218, "sec": 149.4}
+{"update": 5000, "pop": 868, "infected": 0, "seeded_lineage": 0, "injections": 8229, "sec": 158.4}
+{"update": 5250, "pop": 871, "infected": 1, "seeded_lineage": 0, "injections": 8245, "sec": 167.6}
+{"update": 5500, "pop": 865, "infected": 0, "seeded_lineage": 0, "injections": 8252, "sec": 176.6}
+{"update": 5750, "pop": 856, "infected": 0, "seeded_lineage": 0, "injections": 8261, "sec": 185.0}
+{"update": 6000, "pop": 870, "infected": 1, "seeded_lineage": 0, "injections": 8266, "sec": 193.4}
+{"update": 6250, "pop": 882, "infected": 0, "seeded_lineage": 0, "injections": 8275, "sec": 200.2}
+{"update": 6500, "pop": 867, "infected": 0, "seeded_lineage": 0, "injections": 8283, "sec": 204.3}
+{"update": 6750, "pop": 863, "infected": 0, "seeded_lineage": 0, "injections": 8288, "sec": 208.4}
+{"update": 7000, "pop": 861, "infected": 0, "seeded_lineage": 0, "injections": 8290, "sec": 213.4}

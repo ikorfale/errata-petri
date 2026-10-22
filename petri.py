@@ -81,7 +81,7 @@ class Org:
 
 class World:
     def __init__(self, side=30, seed=1, copy_mut=0.0075, indel=0.05, slice_=30,
-                 parasites=False, raw_inputs=False):
+                 parasites=False, raw_inputs=False, reset_failed_inject=False):
         self.side, self.n = side, side * side
         self.rng = random.Random(seed)
         self.cells = [None] * self.n
@@ -89,6 +89,9 @@ class World:
         self.parasites = parasites          # off: "inject" is never drawn and acts as a no-op
         self.raw_inputs = raw_inputs        # v0.1 inputs: three plain random words (XOR/EQU coincide, see README)
         self.nops = len(OPS) if parasites else len(OPS) - 1
+        # off (v0.2 behaviour): a parasite whose inject fails keeps its heads, so its next pass carves an empty child.
+        # on: the copy is lost and the parasite starts again from the top (plan #436, found by the second model)
+        self.reset_failed_inject = reset_failed_inject
         self.injections = 0
         self.secondary = 0                  # injections made by a parasite thread (it spreads)
         self.update = 0
@@ -192,6 +195,9 @@ class World:
                 return
         elif op == 26:                      # inject: the copy becomes a parasite in a neighbour
             if self.parasites and self.inject_para(o, c, ip):
+                return
+            if self.parasites and self.reset_failed_inject and o.is_para:
+                self.restart(o, o.mem[:o.glen], o.merit)
                 return
         elif op == 24:                      # IO: output ?BX?, input into ?BX?
             self.output(o, reg[r])
