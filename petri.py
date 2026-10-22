@@ -18,6 +18,11 @@ CH = "abcdefghijklmnopqrstuvwxyzA"         # one letter per op, a/b/c = nops, A 
 NOP = (0, 1, 2)
 COMP = {0: 1, 1: 2, 2: 0}                  # nop-A -> B -> C -> A
 M32 = 0xFFFFFFFF
+# Input words carry these top bytes. In each pair of them all four bit pairs (0,0), (0,1), (1,0),
+# (1,1) occur, so two different logic functions of the same inputs never give the same output,
+# and add/sub (which match XOR only without carries or borrows) never pass for a logic task.
+# With plain random words XOR equalled NAND, OR or ANDN about once per 1e4 outputs (22.10).
+TAGS = (0x0F, 0x33, 0x55)
 IP, RH, WH, FH = 0, 1, 2, 3
 TASKS = [("NOT", lambda a, b: [~a & M32, ~b & M32], 1),
          ("NAND", lambda a, b: [~(a & b) & M32], 1),
@@ -76,12 +81,13 @@ class Org:
 
 class World:
     def __init__(self, side=30, seed=1, copy_mut=0.0075, indel=0.05, slice_=30,
-                 parasites=False):
+                 parasites=False, raw_inputs=False):
         self.side, self.n = side, side * side
         self.rng = random.Random(seed)
         self.cells = [None] * self.n
         self.copy_mut, self.indel, self.slice = copy_mut, indel, slice_
         self.parasites = parasites          # off: "inject" is never drawn and acts as a no-op
+        self.raw_inputs = raw_inputs        # v0.1 inputs: three plain random words (XOR/EQU coincide, see README)
         self.nops = len(OPS) if parasites else len(OPS) - 1
         self.injections = 0
         self.update = 0
@@ -189,7 +195,10 @@ class World:
         elif op == 24:                      # IO: output ?BX?, input into ?BX?
             self.output(o, reg[r])
             if not o.inbuf:
-                o.inbuf = [self.rng.getrandbits(32) for _ in range(3)]
+                if self.raw_inputs:
+                    o.inbuf = [self.rng.getrandbits(32) for _ in range(3)]
+                else:                       # fixed top bytes: any two inputs show all four bit
+                    o.inbuf = [(t << 24) | self.rng.getrandbits(24) for t in TAGS]   # pairs there
             v = o.inbuf.pop()
             o.inputs.append(v)
             reg[r] = v
@@ -349,8 +358,10 @@ if __name__ == "__main__":
     ap.add_argument("--every", type=int, default=50)
     ap.add_argument("--out", default="")
     ap.add_argument("--parasites", action="store_true")
+    ap.add_argument("--raw-inputs", action="store_true", help="v0.1 inputs (reproduces the first run)")
     a = ap.parse_args()
-    w = World(side=a.side, seed=a.seed, copy_mut=a.mut, parasites=a.parasites)
+    w = World(side=a.side, seed=a.seed, copy_mut=a.mut, parasites=a.parasites,
+              raw_inputs=a.raw_inputs)
     w.inject(ANCESTOR, "ancestor")
     rows = []
     t0 = time.time()

@@ -108,3 +108,30 @@ if __name__ == "__main__":
         if name.startswith("test_"):
             f()
             print("ok", name)
+
+
+def test_tagged_inputs_never_coincide():
+    # every output value that earns a task earns exactly one task, and sums/differences earn none
+    import random
+    from petri import TAGS, TASKS
+    rng = random.Random(5)
+    for _ in range(3000):
+        i, j = rng.sample(range(3), 2)
+        a = (TAGS[i] << 24) | rng.getrandbits(24)
+        b = (TAGS[j] << 24) | rng.getrandbits(24)
+        vals = {}
+        for name, f, _ in TASKS:
+            for v in set(f(a, b)):
+                vals.setdefault(v, set()).add(name)
+        assert all(len(names) == 1 for names in vals.values())
+        for v in ((a + b) & M32, (a - b) & M32, (b - a) & M32, (a + (~b & M32)) & M32):
+            assert v not in vals
+
+
+def test_tag_pairs_cover_all_bit_pairs():
+    from petri import TAGS
+    for i in range(3):
+        for j in range(3):
+            if i != j:
+                pairs = {((TAGS[i] >> k) & 1, (TAGS[j] >> k) & 1) for k in range(8)}
+                assert pairs == {(0, 0), (0, 1), (1, 0), (1, 1)}
