@@ -1,0 +1,70 @@
+{
+ "world_seed": 2026,
+ "update": 2000,
+ "pop": 865,
+ "genotypes": 644,
+ "census": {},
+ "top": [
+  {
+   "genome": "wzcagcccvccchoczcscxlcfccscicwcccoacccivccccmcbchujccdccrcccjcccccklcxocgccccbvvcccccccccczvfcaxgab",
+   "count": 6,
+   "len": 99,
+   "sha256": "4e2a009f94c3513e0737be8adffa543d3e32b611148f9891b5bd72ef07601c39"
+  },
+  {
+   "genome": "ccccccmcwjakcccccciclwcccccccccccpsldwcifcscccncgccdpeceiicccccccllccckozvfcaxgab",
+   "count": 6,
+   "len": 81,
+   "sha256": "c1f9e0979d7edd37aafb7f13b99587971306d8328dc9327580ac26fede15ae97"
+  },
+  {
+   "genome": "afagccccncccohcuccjpxwjacccccccpclcccccicccncccpkcocciocccckccgczdbcczciziccjcycccncccnzvfcaxgab",
+   "count": 5,
+   "len": 96,
+   "sha256": "120cc1437bfe3b566ccfed0fe0df02f52e08d5b995a9f482708a92240e4dee76"
+  },
+  {
+   "genome": "wzcagciwccccoccoccccccgcocccccvcccccccpcdcrccjcxccccccycecccucctrccczydjmxvcccxccwzccwscyccccxzvfcaxgab",
+   "count": 5,
+   "len": 103,
+   "sha256": "4e1f8724ccb94c2c188981cc17c466542ac5f2b1f18b265ea3fd87280af9bee7"
+  },
+  {
+   "genome": "wzcagccccccccvxcjhwccqccccffvcvccccjeqcccckcczccctecccczfczccccscdoccccjycvbqcccylamcccczvfcaxgab",
+   "count": 5,
+   "len": 97,
+   "sha256": "6b919b5e327dae5b51908e7dd347c25df4c54283dc3360ece622801d77b79f2f"
+  },
+  {
+   "genome": "wzcagcvrlccccddccccckcxcccceccicvcccccciciwcccecccccldnecmccncccccccvdcccccowcpunzclccpfylzvfcaxgab",
+   "count": 5,
+   "len": 99,
+   "sha256": "31fb79c69d650d8ceb61af8734bb513a874fee9e315b781b504b78aadfc7e870"
+  },
+  {
+   "genome": "wzcagccnvcccwoczcwcxlcfccecicwcccoaccivccjcmcbchuackqccrcccjhicccklccocgccccbrvcccccctlcnzvfcaxgab",
+   "count": 4,
+   "len": 98,
+   "sha256": "bd7549187d5218e6587f33db9208b7360fd4ef6c87a7a8a759dd2faf8c93c2ec"
+  },
+  {
+   "genome": "wzcagccwbcnyncccwcccncccczijsccjcsnyccccccvccccdcccccwccccccccccccicmerxccptfkmccicccccfcmzvfcaxgab",
+   "count": 4,
+   "len": 99,
+   "sha256": "b2cce6e391a9ff95ed72f478a255c58d3b5509462381f2606bf72c9ab1f62297"
+  },
+  {
+   "genome": "wzcagccwczccccchloccpccnvccjrpcpccccfaaaccvccccaicueukwpccqecceclccjicecxecccjccckicccwcfcnzvfcaxgab",
+   "count": 4,
+   "len": 100,
+   "sha256": "966069b8ded8f02f9fcb9f6837081e61d85ee8b16124908564d2b731be295bca"
+  },
+  {
+   "genome": "wzcagcsdawzfcccancrcacrcdcvsyccqcccmrcvccsfcjccuclcccadcebxccqfckmctncclccccccwftcpcccscccozzvfcaxgab",
+   "count": 4,
+   "len": 101,
+   "sha256": "1f1b2a294ba551aad3d65360be991ad27f712894c8ca941971d8412be768042d"
+  }
+ ],
+ "pickle_sha256": "1702fc5f2e8a166b337328ddb2df6d8a69f3e2870e5daa0c421ade5fd0e97e6b"
+}
