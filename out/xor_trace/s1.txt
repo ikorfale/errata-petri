@@ -1,0 +1,38 @@
+{"seed": 1, "updates": 8000, "births": 330596, "task_births": {"ANDN": 203014, "NAND": 88152, "NOR": 79, "NOT": 213848, "ORN": 190008, "XOR": 26, "AND": 14576, "OR": 3911, "EQU": 14}}
+CREDIT AND a&b=0 65
+CREDIT AND also:AND 25723
+CREDIT AND a|b=ones 3
+CREDIT AND ip-in-child 6
+CREDIT AND ip-in-parent 25717
+CREDIT EQU also:AND 3
+CREDIT EQU also:ORN 26
+CREDIT EQU a|b=ones 3
+CREDIT EQU b+~a 27
+CREDIT EQU ip-in-parent 30
+CREDIT EQU subset 26
+CREDIT EQU ~(a-b) 27
+CREDIT XOR a-b 1
+CREDIT XOR also:ANDN 42
+CREDIT XOR also:NAND 9
+CREDIT XOR a|b=ones 9
+CREDIT XOR b-a 41
+CREDIT XOR ip-in-parent 51
+CREDIT XOR subset 42
+GENOTYPES XOR distinct 51
+RETEST XOR credits 1 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 0} all {"NAND": 300} genome wzcagcckccccvccccvccibbcicccctscucwqfccllcccrtqkcaccrclcycprcvvcccxbcyfcficcfcetcycucyccczvfcaxgab
+RETEST XOR credits 1 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 0} all {"NAND": 300} genome wzcagcckccccvcyccccccbbcycccctccucwdfcclacccctqkctccrttlcycpccvvcccmecyfcfcpcfcetcyvcucyccczvfcaxgab
+RETEST XOR credits 1 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 0} all {"NAND": 300} genome wzcagcccccccpcccfccccbcoyccccatcucwdrcclwcccctqkcaccccrcycccdfvcccmbcyfpfcecpcetcycucyccczvfcaxgab
+RETEST XOR credits 1 gestations 1 watched {"XOR": 0, "EQU": 0, "AND": 0} all {"NAND": 1, "ANDN": 1} genome wzcagccycpcpijclfcgccbbcycbctytpivowvrcppljfkeeqqckkcoyyycfccvcccubqyxufceupcftcucucycstzvfcaxfab
+RETEST XOR credits 1 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 0} all {"ORN": 300, "ANDN": 300} genome wbjagcoycciorplufjgccbbhycbctwtxvmnworccplufcebqkzkbccyyycxcwvacbbujuyxuflxupcdtxucucycczzvfcaxgab
+GENOTYPES EQU distinct 30
+RETEST EQU credits 1 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 0} all {"NOT": 300, "NAND": 300, "ORN": 300} genome wzjagctycccdppcufjgccbbhycbctytxvcmnworccpluucetqkzrbrcyyycxcwvacccujdyxqflxfpcftcucudywctzvfcaxgab
+RETEST EQU credits 1 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 101} all {"NOT": 300, "ORN": 300, "AND": 101} genome wzjagccypcpajcufcgcibrcycbctytcitndwrcppljfpeeqqcklcosyycxauvjccubqyxmfceupcftcucucycctzvfcaxgab
+RETEST EQU credits 1 gestations 1 watched {"XOR": 0, "EQU": 0, "AND": 1} all {"NOT": 1, "ORN": 1, "ANDN": 1, "AND": 1} genome jcufcgccbrcypajcufcgccbrcycbctytcicnwvrbwpljfeebqckecoyyycxcuvcccubcyxufceupcftcucucychtzvfcaxgab
+RETEST EQU credits 1 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 185} all {"NOT": 300, "ORN": 300, "AND": 185, "ANDN": 115} genome zwzcagccyppcpajcufcgccbrcycbctyxcicnmvrcwpljfeebqckecoyyycxcuvcccubcyxuffeupcftcucucycctzvfcaxgab
+RETEST EQU credits 1 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 0} all {"NOT": 300, "ORN": 300, "ANDN": 300, "NOR": 1} genome zwzcagccyppcpaijcufcgccbrcycbctytcienwlrcwpljfeebqckecoyyycxcuvcccubcyxufceupcftcucucycctzvfcaxgab
+GENOTYPES AND distinct 7999
+RETEST AND credits 241 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 300} all {"NOT": 300, "AND": 300, "ORN": 300, "ANDN": 300, "NOR": 1} genome wzcagcwyljblbiedealjbbpuycquyduiozwvmasftvpsaqfirjntyyyccuvjacubjyxufceupcfjhucucycsuzvfcaxgab
+RETEST AND credits 180 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 300} all {"NOT": 300, "AND": 300, "ORN": 300, "ANDN": 299} genome wzcagcwyljblbiedyaljbbpuycquywuiozwvmxsftvpsaqfqrjntyqyccuvqacubjyxufceupcfmhucucycquzvfcaxgab
+RETEST AND credits 172 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 300} all {"NOT": 300, "AND": 300, "NOR": 1} genome wzcagccyccccpccufcgccbbcycbctpccvmcyorpnpleccetqkckvcclcyccccvacccmbcyfufceupcfthucucycctzvfcaxgab
+RETEST AND credits 161 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 300} all {"NOT": 300, "AND": 300, "NOR": 1} genome wzcagccyccccpicufcgccbbcycbctpccvmcyorpnpleccetqkckvcclcyccccvacccmbcyfufceupcfthucucycctzvfcaxgab
+RETEST AND credits 155 gestations 300 watched {"XOR": 0, "EQU": 0, "AND": 300} all {"AND": 300} genome wzcagccyccccppcufccccbbcycbccltcvmcworccpydccccfqkckccclcyccccvacckmbcyfefceupcftcucucyccczvfcaxgab

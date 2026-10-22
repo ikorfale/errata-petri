@@ -1,0 +1,23 @@
+p=(3/4)^32 = 1.005e-04
+seed 1 XOR: credits 51, in child 0, unexplained 0, also {'also:ANDN': 42, 'also:NAND': 9}, ones 9 and0 0 subset 42
+seed 1 EQU: credits 30, in child 0, unexplained 0, also {'also:AND': 3, 'also:ORN': 26}, ones 3 and0 0 subset 26
+seed 2 XOR: credits 61, in child 0, unexplained 0, also {'also:ANDN': 16, 'also:NAND': 38, 'also:OR': 7}, ones 38 and0 7 subset 16
+seed 2 EQU: credits 22, in child 0, unexplained 0, also {'also:ORN': 22}, ones 0 and0 0 subset 22
+seed 3 XOR: credits 25, in child 0, unexplained 0, also {'also:OR': 25}, ones 0 and0 25 subset 0
+seed 3 EQU: credits 13, in child 0, unexplained 0, also {'also:ORN': 13}, ones 0 and0 0 subset 13
+TOTAL XOR 137
+TOTAL XOR_unexpl 0
+TOTAL XOR_child 0
+TOTAL EQU 65
+TOTAL EQU_unexpl 0
+TOTAL EQU_child 0
+TOTAL ('XOR', 'geno') 15
+TOTAL ('XOR', 'gest') 3602
+TOTAL ('XOR', 'hit') 0
+TOTAL ('EQU', 'geno') 15
+TOTAL ('EQU', 'gest') 3901
+TOTAL ('EQU', 'hit') 0
+TOTAL ('AND', 'geno') 15
+TOTAL ('AND', 'gest') 4205
+TOTAL ('AND', 'hit') 3027
+TOTAL ('AND', 'full') 9
