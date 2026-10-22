@@ -196,6 +196,9 @@ class World:
         elif op == 26:                      # inject: the copy becomes a parasite in a neighbour
             if self.parasites and self.inject_para(o, c, ip):
                 return
+            if self.parasites and self.reset_failed_inject == "heads" and o.is_para:
+                o.heads = [0, 0, 0, 0]      # third arm (zenith 98438): heads back to the top, partial copy kept
+                return
             if self.parasites and self.reset_failed_inject and o.is_para:
                 self.restart(o, o.mem[:o.glen], o.merit)
                 return

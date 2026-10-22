@@ -8,13 +8,14 @@ def make_parasite(pad=4):
     g[i:i + 1] = [CODE["inject"], CODE["nop-B"]]
     return g[:6] + g[6 + 85 - pad:] if pad < 85 else g
 after = int(sys.argv[1])
+ARMS = [False, True, "heads"]   # off, full reset, heads-only reset (zenith 98438)
 for seed in map(int, sys.argv[2:]):
     w = World(seed=seed, parasites=True); w.inject(ANCESTOR, "ancestor")
     for _ in range(2000): w.run_update()
     hosts = [o for o in w.cells if o is not None and o.para is None]; w.rng.shuffle(hosts)
     for h in hosts[:9]:
         p = Org(make_parasite(), "seeded-parasite", merit=0.0, born=w.update); p.is_para = True; h.para = p
-    for reset in (False, True):
+    for reset in ARMS:
         v = copy.deepcopy(w); v.reset_failed_inject = reset; inj0 = v.injections; traj = []
         for u in range(after):
             v.run_update()
