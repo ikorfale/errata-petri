@@ -1,0 +1,10 @@
+{"seed": 1, "reset": false, "infected_end": 136, "peak": 136, "extinct_at": null, "injections": 6981, "traj": [85, 83, 94, 100, 115, 73, 66, 95, 119, 126, 110, 119, 88, 118, 136]}
+{"seed": 1, "reset": true, "infected_end": 437, "peak": 473, "extinct_at": null, "injections": 23423, "traj": [117, 331, 473, 463, 456, 425, 403, 439, 423, 461, 400, 463, 449, 430, 437]}
+{"seed": 2, "reset": false, "infected_end": 2, "peak": 108, "extinct_at": null, "injections": 3316, "traj": [57, 57, 67, 63, 96, 100, 108, 50, 37, 40, 27, 15, 16, 9, 2]}
+{"seed": 2, "reset": true, "infected_end": 412, "peak": 485, "extinct_at": null, "injections": 24380, "traj": [119, 349, 423, 485, 408, 405, 460, 430, 428, 442, 424, 423, 464, 439, 412]}
+{"seed": 3, "reset": false, "infected_end": 49, "peak": 150, "extinct_at": null, "injections": 7180, "traj": [24, 34, 52, 46, 85, 94, 127, 110, 131, 129, 81, 150, 109, 69, 49]}
+{"seed": 3, "reset": true, "infected_end": 549, "peak": 549, "extinct_at": null, "injections": 31772, "traj": [122, 302, 403, 477, 464, 466, 404, 444, 474, 482, 421, 443, 467, 502, 549]}
+{"seed": 4, "reset": false, "infected_end": 42, "peak": 134, "extinct_at": null, "injections": 4078, "traj": [62, 75, 62, 61, 36, 50, 34, 33, 27, 54, 134, 94, 72, 62, 42]}
+{"seed": 4, "reset": true, "infected_end": 456, "peak": 475, "extinct_at": null, "injections": 22668, "traj": [63, 171, 332, 448, 432, 452, 431, 451, 475, 458, 455, 433, 433, 419, 456]}
+{"seed": 5, "reset": false, "infected_end": 119, "peak": 138, "extinct_at": null, "injections": 4702, "traj": [30, 51, 43, 37, 33, 41, 43, 80, 44, 87, 114, 77, 112, 138, 119]}
+{"seed": 5, "reset": true, "infected_end": 516, "peak": 545, "extinct_at": null, "injections": 22155, "traj": [97, 263, 390, 430, 487, 451, 487, 487, 467, 495, 482, 471, 545, 537, 516]}
