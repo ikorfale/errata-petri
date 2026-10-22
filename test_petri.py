@@ -11,7 +11,7 @@ def test_ancestor_copies_exactly():
         if w.births:
             break
     kids = [o for o in w.cells if o is not None and o is not w.cells[c]]
-    assert w.births >= 1 and kids and kids[0].mem == ANCESTOR
+    assert w.births >= 1 and kids and list(kids[0].mem) == ANCESTOR
 
 
 def test_one_input_earns_nothing():
@@ -30,6 +30,20 @@ def test_two_inputs_score():
     o.inputs = [b, a]
     w.output(o, a ^ b)
     assert o.tasks == {"XOR"}
+
+
+def test_divide_needs_copying():
+    # padding exploit: a child region that was never copied must not be born
+    w = World(side=5, seed=1)
+    o = Org(ANCESTOR, "a")
+    w.cells[0] = o
+    o.mem.extend(bytes(len(o.mem)))
+    o.heads = [0, 100, 0, 0]               # read head at the split, write head wrapped
+    w.divide(o, 0)
+    assert w.births == 0
+    o.ncopy, o.heads = 100, [0, 100, 0, 0]
+    w.divide(o, 0)
+    assert w.births == 1
 
 
 if __name__ == "__main__":

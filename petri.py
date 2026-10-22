@@ -50,21 +50,23 @@ ANCESTOR = [CODE[n] for n in ANCESTOR]
 
 
 class Org:
-    __slots__ = ("mem", "glen", "heads", "reg", "stk", "copied", "inputs",
-                 "inbuf", "tasks", "merit", "age", "lineage", "parent_tasks", "born")
+    __slots__ = ("mem", "glen", "heads", "reg", "stk", "copied", "ncopy", "inputs",
+                 "inbuf", "tasks", "merit", "age", "credit", "lineage", "born")
 
     def __init__(self, genome, lineage, merit=1.0, born=0):
-        self.mem = list(genome)
+        self.mem = bytearray(genome)
         self.glen = len(genome)
         self.heads = [0, 0, 0, 0]
         self.reg = [0, 0, 0]
         self.stk = []
-        self.copied = []
+        self.copied = bytearray()           # recent h-copy values (tail kept short)
+        self.ncopy = 0                      # h-copy executions this gestation
         self.inputs = []
         self.inbuf = []
         self.tasks = set()
         self.merit = merit
-        self.age = 0
+        self.age = 0                        # instructions executed
+        self.credit = 0.0                   # fractional CPU carried between updates
         self.lineage = lineage
         self.born = born
 
@@ -80,6 +82,8 @@ class World:
         self.task_births = Counter()
 
     def inject(self, genome, lineage, cell=None):
+        if not 10 <= len(genome) <= 256:
+            raise ValueError("a seeded genome must have 10 to 256 instructions")
         cell = self.rng.randrange(self.n) if cell is None else cell
         self.cells[cell] = Org(genome, lineage, merit=float(len(genome)), born=self.update)
         return cell
@@ -103,6 +107,29 @@ class World:
         reg = o.reg
         if op <= 2:
             adv = 1
+        elif op == 21:                      # h-copy
+            v = mem[h[RH] % L]
+            if self.rng.random() < self.copy_mut:
+                v = self.rng.randrange(len(OPS))
+            mem[h[WH] % L] = v
+            o.copied.append(v)
+            if len(o.copied) > 40:
+                del o.copied[:-10]
+            o.ncopy += 1
+            h[RH] = (h[RH] + 1) % L
+            h[WH] = (h[WH] + 1) % L
+            adv = 1
+        elif op == 5:                       # if-label: last copied == complement of label
+            lab = self.label(mem, ip + 1)
+            adv = 1 + len(lab)
+            want = [COMP[x] for x in lab]
+            if not (lab and o.copied[-len(lab):] == bytes(want)):
+                adv += 1
+        elif op == 6:                       # mov-head ?IP? -> flow head
+            hd = mod if mod is not None else IP
+            h[hd] = h[FH]
+            if hd == IP:
+                return
         elif op == 3 or op == 4:            # if-n-equ / if-less
             rr = mod if mod is not None else 1
             a, b = reg[rr], reg[COMP[rr]]
@@ -110,17 +137,6 @@ class World:
             adv = (1 if mod is None else 2)
             if not ok:
                 adv += 1
-        elif op == 5:                       # if-label: last copied == complement of label
-            lab = self.label(mem, ip + 1)
-            adv = 1 + len(lab)
-            want = [COMP[x] for x in lab]
-            if not (lab and o.copied[-len(lab):] == want):
-                adv += 1
-        elif op == 6:                       # mov-head ?IP? -> flow head
-            hd = mod if mod is not None else IP
-            h[hd] = h[FH]
-            if hd == IP:
-                return
         elif op == 7:                       # jmp-head ?IP? by CX
             hd = mod if mod is not None else IP
             h[hd] = (h[hd] + reg[2]) % L
@@ -151,15 +167,6 @@ class World:
         elif op in (18, 19, 20):
             a, b = reg[1], reg[2]
             reg[r] = ((a + b) if op == 18 else (a - b) if op == 19 else ~(a & b)) & M32
-        elif op == 21:                      # h-copy
-            v = mem[h[RH] % L]
-            if self.rng.random() < self.copy_mut:
-                v = self.rng.randrange(len(OPS))
-            mem[h[WH] % L] = v
-            o.copied.append(v)
-            h[RH] = (h[RH] + 1) % L
-            h[WH] = (h[WH] + 1) % L
-            adv = 1
         elif op == 22:                      # h-alloc: double memory
             if L == o.glen and L < 400:
                 mem.extend([0] * L)
@@ -184,12 +191,8 @@ class World:
                 h[FH] = (ip + 1) % L
             else:
                 k = len(want)
-                pos = None
-                for d in range(1 + k, L):
-                    s = (ip + d) % L
-                    if all(mem[(s + j) % L] == want[j] for j in range(k)):
-                        pos = s
-                        break
+                p = (mem * 3).find(bytes(want), ip + 1 + k, ip + L - 1 + k)
+                pos = None if p < 0 else p % L
                 if pos is None:
                     reg[1] = reg[2] = 0
                     h[FH] = (ip + 1) % L
@@ -227,15 +230,17 @@ class World:
         child = mem[rh:wh] if wh > rh else []
         parent = mem[:rh]
         h[IP] = (h[IP] + 1) % len(mem)
-        if len(child) < 10 or len(parent) < 10 or not (0.5 <= len(child) / len(parent) <= 2):
-            return                          # failed division: keep running
+        if (len(child) < 10 or len(parent) < 10 or not (0.5 <= len(child) / len(parent) <= 2)
+                or o.ncopy < 0.5 * len(child)):
+            return                          # failed division: keep running (Avida also
+                                            # requires at least half the child to be copied)
         if self.rng.random() < self.indel:
             i = self.rng.randrange(len(child) + 1)
             if self.rng.random() < 0.5:
                 child.insert(i, self.rng.randrange(len(OPS)))
             elif len(child) > 10:
                 child.pop(min(i, len(child) - 1))
-        bonus = float(len(parent))          # longer genomes get more CPU (Avida merit)
+        bonus = float(min(o.ncopy, len(child)))   # merit = copied size, not padded length
         for name, _, b in TASKS:
             if name in o.tasks:
                 bonus *= 2 ** b
@@ -248,7 +253,8 @@ class World:
         o.mem, o.glen = parent, len(parent)
         o.heads = [0, 0, 0, 0]
         o.reg = [0, 0, 0]
-        o.stk, o.copied, o.inputs, o.inbuf = [], [], [], []
+        o.stk, o.copied, o.inputs, o.inbuf = [], bytearray(), [], []
+        o.ncopy = 0
         o.merit = bonus
         o.tasks = set()
 
@@ -261,14 +267,15 @@ class World:
         for c, o in live:
             if self.cells[c] is not o:
                 continue                    # replaced by a neighbour's child
-            o.age += 1
+            o.credit += self.slice * o.merit / mean
+            n = int(o.credit)
+            o.credit -= n
+            step = self.step
+            for _ in range(n):
+                step(o, c)
+            o.age += n
             if o.age > 20 * max(o.glen, 10):
-                self.cells[c] = None        # old age
-                continue
-            for _ in range(max(1, round(self.slice * o.merit / mean))):
-                self.step(o, c)
-                if self.cells[c] is not o:
-                    break
+                self.cells[c] = None        # old age: 20 x genome length in instructions (Avida)
         self.update += 1
 
     def census(self):
