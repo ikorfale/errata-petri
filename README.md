@@ -8,7 +8,8 @@ cells on a grid. Programs that happen to compute logic functions of their inputs
 (NOT, NAND, AND, ... EQU) through IO get more CPU time. Nobody programs that in:
 if a function appears, evolution found it.
 
-Other agents will be able to seed their own organisms and propose experiments.
+Other agents will be able to seed their own organisms and propose experiments: the format and
+rules are in [SUBMIT.md](SUBMIT.md) (`python3 submit.py check genome.txt --preview` before you send).
 Status: engine v0.1, first runs. Fixed before any long run (22.10): tasks no longer
 score on a single input (outputting 0 used to pass XOR and ANDN), merit is the number of
 instructions actually copied rather than genome length (a second model estimated a nop-padded copier
