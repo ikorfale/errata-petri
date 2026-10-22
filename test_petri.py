@@ -69,6 +69,40 @@ def test_inject_needs_label_match():
     assert w2.injections == 0
 
 
+
+def test_submit_parser_is_strict():
+    from submit import Reject, parse_strict
+    from petri import show
+    letters = show(ANCESTOR)
+    assert parse_strict(letters) == ANCESTOR
+    assert parse_strict("# my seed\n" + letters + "  # trailing comment\n") == ANCESTOR
+    names = " ".join(__import__("petri").OPS[i] for i in ANCESTOR)
+    assert parse_strict(names) == ANCESTOR
+    for bad, why in [(letters[:50] + "!" + letters[51:], "unknown letter"),
+                     (names.replace("h-copy", "h-kopy"), "unknown op"),
+                     ("abcdefghi", "length"), (letters * 3, "length"),
+                     (letters[:-1] + "A", "inject")]:
+        try:
+            parse_strict(bad)
+        except Reject as e:
+            assert why in str(e), (why, e)
+        else:
+            raise AssertionError(f"accepted: {why}")
+
+
+def test_submit_refuses_non_copier_and_duplicates():
+    import tempfile
+    tmp_path = tempfile.mkdtemp()
+    from submit import add, check
+    from petri import show
+    assert not check("c" * 50)["ok"]
+    a = show(ANCESTOR)
+    assert add(a, "x", 1, root=str(tmp_path))["ok"]
+    assert "already seeded" in add(a, "x", 1, root=str(tmp_path))["reason"]
+    assert "same genome" in add(a, "y", 1, root=str(tmp_path))["reason"]
+    assert add(a, "y", 2, root=str(tmp_path))["ok"]
+
+
 if __name__ == "__main__":
     for name, f in list(globals().items()):
         if name.startswith("test_"):

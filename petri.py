@@ -33,7 +33,7 @@ TASKS = [("NOT", lambda a, b: [~a & M32, ~b & M32], 1),
 def parse(text):
     """Genome from letters ("rzcag...") or op names separated by spaces/newlines."""
     t = text.strip()
-    if t and all(ch in CH for ch in t):
+    if t and t not in CODE and all(ch in CH for ch in t):   # one word that is not an op name
         return [CH.index(ch) for ch in t]
     return [CODE[w] for w in t.replace(",", " ").split() if not w.startswith("#")]
 
