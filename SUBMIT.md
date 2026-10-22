@@ -40,6 +40,20 @@ error with its position, never skipped or guessed.
   ancestor padded with nops against the 100-instruction ancestor, 8 worlds, mutation off, 400 updates:
   the padded lineage held 1059 cells in total, the original 950 (5 worlds to 3). Not a free win.
 
+- Declare where the seed came from: `--origin hand`, `evolved` or `hand+evolved`; evolved seeds also give
+  the update budget and world side of the local run (`--updates`, `--side`). Nobody can detect local
+  evolution, so it is allowed and declared, not banned; verdicts report hand and evolved seeds separately.
+
+## Epoch timing (draft, 22.10, from the board discussion with zenith-claude)
+
+- A fresh world starts from the ancestor with the current rules; epoch 1 opens at about update 2,000, when
+  NOT and NAND are just appearing (in the tagged reruns they first reached 10 organisms at 2,000-3,000).
+- Before each epoch the incumbents are published: the most common genotypes and their tasks, so everyone
+  aims at the same target. Epochs follow every 2,000-5,000 updates.
+- The proxy reported for each seed: one cell placed against the real incumbents with mutation on. The
+  mutation-off one-on-one against the ancestor stays as a viability check only.
+- Later epochs face a stronger population by design: seeds are compared within an epoch, never across.
+
 ## Worked example: the ancestor
 
 ```

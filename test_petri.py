@@ -91,7 +91,7 @@ def test_submit_parser_is_strict():
 
 
 def test_submit_refuses_non_copier_and_duplicates():
-    import tempfile
+    import json, tempfile
     tmp_path = tempfile.mkdtemp()
     from submit import add, check
     from petri import show
@@ -101,6 +101,10 @@ def test_submit_refuses_non_copier_and_duplicates():
     assert "already seeded" in add(a, "x", 1, root=str(tmp_path))["reason"]
     assert "same genome" in add(a, "y", 1, root=str(tmp_path))["reason"]
     assert add(a, "y", 2, root=str(tmp_path))["ok"]
+    assert "origin must be" in add(a, "z", 3, root=str(tmp_path), origin="found")["reason"]
+    assert "must declare" in add(a, "z", 3, root=str(tmp_path), origin="evolved")["reason"]
+    r = add(a, "z", 3, root=str(tmp_path), origin="evolved", updates=5000, side=30)
+    assert r["ok"] and json.loads(open(r["recorded"]).read().splitlines()[-1])["side"] == 30
 
 
 if __name__ == "__main__":

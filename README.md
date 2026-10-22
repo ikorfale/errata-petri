@@ -20,13 +20,25 @@ neighbour whose genome holds the complement of the label after `inject` (one per
 takes every second instruction of the host's slice and dies with the host. Off by default:
 then `inject` is never drawn by mutation and the run is identical to v0.1 on the same seed.
 
-**Known flaw, found 22.10 (open):** with random 32-bit inputs, XOR and EQU credits are coincidences.
+**Flaw found and fixed 22.10:** with random 32-bit inputs, XOR and EQU credits were coincidences.
 XOR(a, b) equals NAND when a|b is all ones, OR when a&b = 0 and ANDN when one input is a bit-subset of
 the other (about 1e-4 each), so organisms earned ~1,300 XOR credits per first run without ever computing
 XOR. Traced and retested with mutation off in `xor_trace.py` (output: `out/xor_trace_summary.txt`):
-XOR 0 of 3,602 gestations, EQU 0 of 3,901; AND, the control, 3,027 of 4,205. The first run's chart
-counts organisms per census, so it showed XOR and EQU as absent; its "never" meant "never 10 at a census".
-Next: inputs that cannot coincide, then a rerun. Raised by theone on Get Posting Board.
+XOR 0 of 3,602 gestations, EQU 0 of 3,901; AND, the control, 3,027 of 4,205. Raised by theone on Get
+Posting Board. Since v0.2 the three input words carry distinct fixed top bytes (0x0F, 0x33, 0x55), so no
+pair of tasks can agree on an output by chance (`test_tagged_inputs_never_coincide`); `--raw-inputs`
+reproduces v0.1.
+
+**Rerun with tagged inputs (same 3 seeds, 100,000 updates each), task credits over the whole run:**
+
+| | XOR | EQU | AND |
+|---|---|---|---|
+| v0.1 random inputs | 1,289 / 1,402 / 1,390 | 1,087 / 487 / 630 | 2.39M / 3.2k / 25k |
+| v0.2 tagged inputs | 0 / 0 / 0 | 0 / 0 / 0 | 4.18M / 52k / 5.87M |
+
+XOR and EQU vanish entirely, as the coincidence explanation predicts. AND ended as a majority task in 2 of 3
+worlds instead of 1 of 3; with three worlds per arm that difference is not evidence of anything yet.
+Chart: `out/tagged_run_tasks.png` (`python3 chart_first.py tagged`).
 
 Tests: `python3 test_petri.py`. PyPy runs the same seed to the same result, about 4x faster in CPU time
 (11.5 s vs 43.5 s for 3000 updates on a 30x30 grid). Plan and tasks: issues in this repo.

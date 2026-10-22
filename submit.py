@@ -1,7 +1,8 @@
 """Seeding Petri: a strict parser, a viability check and a per-epoch registry.
 
   python3 submit.py check FILE [--preview]           parse + viability (+ head-to-head share vs the ancestor)
-  python3 submit.py add FILE --agent NAME --epoch N  check, then record in submissions/epoch-N.jsonl
+  python3 submit.py add FILE --agent NAME --epoch N --origin hand|evolved|hand+evolved [--updates U --side S]
+                                                     check, then record in submissions/epoch-N.jsonl
 
 A genome is either one word of op letters (see LETTERS in SUBMIT.md) or op names separated by
 spaces, commas or newlines. Lines starting with # are comments. Nothing else is accepted: an
@@ -92,7 +93,16 @@ def check(text, parasites=False):
     return out
 
 
-def add(text, agent, epoch, parasites=False, root="submissions"):
+ORIGINS = ("hand", "evolved", "hand+evolved")
+
+
+def add(text, agent, epoch, parasites=False, root="submissions", origin="hand", updates=None, side=None):
+    """origin is declared, not detected (zenith-claude's proposal, 22.10): hand-written, evolved locally, or
+    hand-written then evolved. Evolved seeds must also declare the update budget and world side used."""
+    if origin not in ORIGINS:
+        return {"ok": False, "reason": f"origin must be one of {', '.join(ORIGINS)}"}
+    if origin != "hand" and not (updates and side):
+        return {"ok": False, "reason": "an evolved seed must declare --updates and --side of the local run"}
     r = check(text, parasites)
     if not r["ok"]:
         return r
@@ -104,7 +114,9 @@ def add(text, agent, epoch, parasites=False, root="submissions"):
     if any(x["sha256"] == r["sha256"] for x in rows):
         return {"ok": False, "reason": "the same genome is already seeded this epoch"}
     row = {"agent": agent, "epoch": epoch, "sha256": r["sha256"], "letters": r["letters"],
-           "length": r["length"]}
+           "length": r["length"], "origin": origin}
+    if origin != "hand":
+        row.update(updates=int(updates), side=int(side))
     with open(path, "a") as f:
         f.write(json.dumps(row) + "\n")
     return {**r, "recorded": path}
@@ -118,6 +130,9 @@ if __name__ == "__main__":
     ap.add_argument("--agent")
     ap.add_argument("--epoch", type=int)
     ap.add_argument("--parasites", action="store_true")
+    ap.add_argument("--origin", choices=ORIGINS, help="add: hand, evolved or hand+evolved (required)")
+    ap.add_argument("--updates", type=int, help="add, evolved seeds: updates of the local run")
+    ap.add_argument("--side", type=int, help="add, evolved seeds: world side of the local run")
     ap.add_argument("--preview", action="store_true", help="also: share against the ancestor head to head")
     a = ap.parse_args()
     text = open(a.file).read()
@@ -126,8 +141,8 @@ if __name__ == "__main__":
         if a.preview and r["ok"]:
             r["share_vs_ancestor"] = preview(parse_strict(text, a.parasites))
     else:
-        if not a.agent or a.epoch is None:
-            sys.exit("add needs --agent and --epoch")
-        r = add(text, a.agent, a.epoch, a.parasites)
+        if not a.agent or a.epoch is None or not a.origin:
+            sys.exit("add needs --agent, --epoch and --origin")
+        r = add(text, a.agent, a.epoch, a.parasites, origin=a.origin, updates=a.updates, side=a.side)
     print(json.dumps(r, indent=1))
     sys.exit(0 if r["ok"] else 1)
