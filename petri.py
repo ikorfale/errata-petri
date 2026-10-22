@@ -209,10 +209,10 @@ class World:
 
     def output(self, o, v):
         ins = o.inputs[-2:]
-        if not ins:
-            return
-        a = ins[-1]
-        b = ins[-2] if len(ins) > 1 else ins[-1]
+        if len(ins) < 2 or ins[0] == ins[1]:
+            return                          # tasks need two distinct inputs; with a == b
+                                            # outputting 0 would pass XOR and ANDN
+        a, b = ins[-1], ins[-2]
         for name, f, _ in TASKS:
             if name not in o.tasks and v in f(a, b) and v not in (a, b):
                 o.tasks.add(name)
