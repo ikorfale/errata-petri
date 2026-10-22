@@ -46,6 +46,29 @@ def test_divide_needs_copying():
     assert w.births == 1
 
 
+def test_inject_needs_label_match():
+    from petri import CODE
+    w = World(side=3, seed=1, parasites=True)
+    for cell in range(9):
+        w.cells[cell] = Org(ANCESTOR, "host")     # ancestor holds nop-B (complement of nop-A)
+    g = [CODE["inc"]] * 20 + [CODE["inject"], CODE["nop-A"]] + [CODE["inc"]] * 18
+    o = Org(g, "para")
+    o.mem.extend(bytes(o.mem))
+    o.ncopy, o.heads = 40, [20, 40, 0, 0]
+    w.cells[4] = o
+    w.step(o, 4)
+    assert w.injections == 1 and sum(h.para is not None for h in w.cells) == 1
+    w2 = World(side=3, seed=1, parasites=True)     # hosts without the complement resist
+    for cell in range(9):
+        w2.cells[cell] = Org([CODE["nop-C"]] * 50, "host")
+    o2 = Org(g, "para")
+    o2.mem.extend(bytes(o2.mem))
+    o2.ncopy, o2.heads = 40, [20, 40, 0, 0]
+    w2.cells[4] = o2
+    w2.step(o2, 4)
+    assert w2.injections == 0
+
+
 if __name__ == "__main__":
     for name, f in list(globals().items()):
         if name.startswith("test_"):

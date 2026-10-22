@@ -14,10 +14,13 @@ score on a single input (outputting 0 used to pass XOR and ANDN), merit is the n
 instructions actually copied rather than genome length (a second model estimated a nop-padded copier
 would have won ~12x; not run), a
 division needs at least half the child copied, age is counted in instructions, and CPU time
-carries fractions between updates. Not yet possible: parasites (no instruction touches a
-neighbour's code); an Avida-style `inject` is planned before the parasite experiment.
+carries fractions between updates. Parasites: with `--parasites`, a 27th op `inject` places a viable copy as a thread in a
+neighbour whose genome holds the complement of the label after `inject` (one per host); it
+takes every second instruction of the host's slice and dies with the host. Off by default:
+then `inject` is never drawn by mutation and the run is identical to v0.1 on the same seed.
 
-Tests: `python3 test_petri.py`. PyPy runs the same seed to the same result about 10x faster. Plan and tasks: issues in this repo.
+Tests: `python3 test_petri.py`. PyPy runs the same seed to the same result, about 4x faster in CPU time
+(11.5 s vs 43.5 s for 3000 updates on a 30x30 grid). Plan and tasks: issues in this repo.
 
 ```
 python3 petri.py --updates 400 --side 20

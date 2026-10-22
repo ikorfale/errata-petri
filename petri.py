@@ -12,9 +12,9 @@ from collections import Counter
 OPS = ["nop-A", "nop-B", "nop-C", "if-n-equ", "if-less", "if-label", "mov-head",
        "jmp-head", "get-head", "set-flow", "shift-r", "shift-l", "inc", "dec",
        "push", "pop", "swap-stk", "swap", "add", "sub", "nand", "h-copy",
-       "h-alloc", "h-divide", "IO", "h-search"]
+       "h-alloc", "h-divide", "IO", "h-search", "inject"]
 CODE = {n: i for i, n in enumerate(OPS)}
-CH = "abcdefghijklmnopqrstuvwxyz"          # one letter per op, a/b/c = nops
+CH = "abcdefghijklmnopqrstuvwxyzA"         # one letter per op, a/b/c = nops, A = inject
 NOP = (0, 1, 2)
 COMP = {0: 1, 1: 2, 2: 0}                  # nop-A -> B -> C -> A
 M32 = 0xFFFFFFFF
@@ -51,7 +51,8 @@ ANCESTOR = [CODE[n] for n in ANCESTOR]
 
 class Org:
     __slots__ = ("mem", "glen", "heads", "reg", "stk", "copied", "ncopy", "inputs",
-                 "inbuf", "tasks", "merit", "age", "credit", "lineage", "born")
+                 "inbuf", "tasks", "merit", "age", "credit", "lineage", "born",
+                 "para", "is_para")
 
     def __init__(self, genome, lineage, merit=1.0, born=0):
         self.mem = bytearray(genome)
@@ -69,14 +70,20 @@ class Org:
         self.credit = 0.0                   # fractional CPU carried between updates
         self.lineage = lineage
         self.born = born
+        self.para = None                    # a parasite thread living in this host
+        self.is_para = False
 
 
 class World:
-    def __init__(self, side=30, seed=1, copy_mut=0.0075, indel=0.05, slice_=30):
+    def __init__(self, side=30, seed=1, copy_mut=0.0075, indel=0.05, slice_=30,
+                 parasites=False):
         self.side, self.n = side, side * side
         self.rng = random.Random(seed)
         self.cells = [None] * self.n
         self.copy_mut, self.indel, self.slice = copy_mut, indel, slice_
+        self.parasites = parasites          # off: "inject" is never drawn and acts as a no-op
+        self.nops = len(OPS) if parasites else len(OPS) - 1
+        self.injections = 0
         self.update = 0
         self.births = 0
         self.task_births = Counter()
@@ -110,7 +117,7 @@ class World:
         elif op == 21:                      # h-copy
             v = mem[h[RH] % L]
             if self.rng.random() < self.copy_mut:
-                v = self.rng.randrange(len(OPS))
+                v = self.rng.randrange(self.nops)
             mem[h[WH] % L] = v
             o.copied.append(v)
             if len(o.copied) > 40:
@@ -172,9 +179,13 @@ class World:
                 mem.extend([0] * L)
                 reg[0] = L
             adv = 1
-        elif op == 23:                      # h-divide
-            self.divide(o, c)
-            return
+        elif op == 23:                      # h-divide (a parasite cannot divide, only inject)
+            if not o.is_para:
+                self.divide(o, c)
+                return
+        elif op == 26:                      # inject: the copy becomes a parasite in a neighbour
+            if self.parasites and self.inject_para(o, c, ip):
+                return
         elif op == 24:                      # IO: output ?BX?, input into ?BX?
             self.output(o, reg[r])
             if not o.inbuf:
@@ -220,26 +231,65 @@ class World:
             if name not in o.tasks and v in f(a, b) and v not in (a, b):
                 o.tasks.add(name)
 
-    def divide(self, o, c):
+    def carve(self, o):
+        """Split memory at the heads as h-divide does; None if the copy is not viable."""
         mem, h = o.mem, o.heads
         rh, wh = h[RH], h[WH]
         if wh == 0:
             wh = len(mem)                   # write head wrapped at the end of memory
         if rh == 0:
             rh = len(mem)
-        child = mem[rh:wh] if wh > rh else []
+        child = mem[rh:wh] if wh > rh else bytearray()
         parent = mem[:rh]
-        h[IP] = (h[IP] + 1) % len(mem)
         if (len(child) < 10 or len(parent) < 10 or not (0.5 <= len(child) / len(parent) <= 2)
                 or o.ncopy < 0.5 * len(child)):
-            return                          # failed division: keep running (Avida also
-                                            # requires at least half the child to be copied)
+            return None                     # failed division (Avida also requires at
+                                            # least half the child to be copied)
         if self.rng.random() < self.indel:
             i = self.rng.randrange(len(child) + 1)
             if self.rng.random() < 0.5:
-                child.insert(i, self.rng.randrange(len(OPS)))
+                child.insert(i, self.rng.randrange(self.nops))
             elif len(child) > 10:
                 child.pop(min(i, len(child) - 1))
+        return child, parent
+
+    @staticmethod
+    def restart(o, parent, merit):
+        """The parent runs again from the top as a fresh copy of itself."""
+        o.mem, o.glen = parent, len(parent)
+        o.heads = [0, 0, 0, 0]
+        o.reg = [0, 0, 0]
+        o.stk, o.copied, o.inputs, o.inbuf = [], bytearray(), [], []
+        o.ncopy = 0
+        o.merit = merit
+        o.tasks = set()
+
+    def inject_para(self, o, c, ip):
+        """Place the copy as a parasite thread in a neighbour whose genome holds the
+        complement of the label after inject (hosts can resist by changing labels).
+        One parasite per host; it takes every second instruction of the host's slice."""
+        lab = self.label(o.mem, ip + 1)
+        cut = self.carve(o)
+        if not lab or cut is None:
+            return False
+        child, parent = cut
+        host = self.cells[self.neighbour(c)]
+        if (host is None or host.para is not None
+                or bytes(COMP[x] for x in lab) not in bytes(host.mem[:host.glen])):
+            return False
+        p = Org(child, o.lineage, merit=0.0, born=self.update)
+        p.is_para = True
+        host.para = p
+        self.injections += 1
+        self.restart(o, parent, o.merit)
+        return True
+
+    def divide(self, o, c):
+        cut = self.carve(o)
+        if cut is None:
+            o.heads[IP] = (o.heads[IP] + 1) % len(o.mem)
+            return                          # failed division: keep running
+        child, parent = cut
         bonus = float(min(o.ncopy, len(child)))   # merit = copied size, not padded length
         for name, _, b in TASKS:
             if name in o.tasks:
@@ -249,14 +299,7 @@ class World:
         kid = Org(child, o.lineage, merit=bonus, born=self.update)
         self.cells[self.neighbour(c)] = kid
         self.births += 1
-        # parent restarts as a fresh copy of itself, keeping its merit
-        o.mem, o.glen = parent, len(parent)
-        o.heads = [0, 0, 0, 0]
-        o.reg = [0, 0, 0]
-        o.stk, o.copied, o.inputs, o.inbuf = [], bytearray(), [], []
-        o.ncopy = 0
-        o.merit = bonus
-        o.tasks = set()
+        self.restart(o, parent, bonus)
 
     def run_update(self):
         live = [(c, o) for c, o in enumerate(self.cells) if o is not None]
@@ -271,8 +314,11 @@ class World:
             n = int(o.credit)
             o.credit -= n
             step = self.step
-            for _ in range(n):
-                step(o, c)
+            for i in range(n):
+                if o.para is not None and i & 1:
+                    step(o.para, c)         # the parasite takes every second instruction
+                else:
+                    step(o, c)
             o.age += n
             if o.age > 20 * max(o.glen, 10):
                 self.cells[c] = None        # old age: 20 x genome length in instructions (Avida)
@@ -285,6 +331,8 @@ class World:
         lin = Counter(o.lineage for o in live)
         return {"update": self.update, "pop": len(live), "births": self.births,
                 "genotypes": len(g),
+                "infected": sum(o.para is not None for o in live),
+                "injections": self.injections,
                 "mean_len": round(sum(o.glen for o in live) / max(1, len(live)), 1),
                 "top": g.most_common(1)[0][0] if g else "",
                 "tasks_now": dict(t), "lineages": dict(lin),
@@ -300,8 +348,9 @@ if __name__ == "__main__":
     ap.add_argument("--mut", type=float, default=0.0075)
     ap.add_argument("--every", type=int, default=50)
     ap.add_argument("--out", default="")
+    ap.add_argument("--parasites", action="store_true")
     a = ap.parse_args()
-    w = World(side=a.side, seed=a.seed, copy_mut=a.mut)
+    w = World(side=a.side, seed=a.seed, copy_mut=a.mut, parasites=a.parasites)
     w.inject(ANCESTOR, "ancestor")
     rows = []
     t0 = time.time()
@@ -312,6 +361,6 @@ if __name__ == "__main__":
             row["sec"] = round(time.time() - t0, 1)
             rows.append(row)
             print(json.dumps({k: row[k] for k in ("update", "pop", "births", "genotypes",
-                                                  "mean_len", "tasks_now", "sec")}), flush=True)
+                                                  "mean_len", "infected", "tasks_now", "sec")}), flush=True)
     if a.out:
         json.dump(rows, open(a.out, "w"))
