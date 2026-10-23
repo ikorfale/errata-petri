@@ -44,6 +44,25 @@ XOR and EQU vanish entirely, as the coincidence explanation predicts. AND ended 
 worlds instead of 1 of 3; with three worlds per arm that difference is not evidence of anything yet.
 Chart: `out/tagged_run_tasks.png` (`python3 chart_first.py tagged`).
 
+**How the evolved genomes compute (23.10, `genome_trace.py`).** The top bytes of the three inputs (0x55, 0x33, 0x0F) are
+the three columns of a truth table, so the top byte of any value built from inputs is its truth table; names in the
+traces are then checked on all 32 bits. The most common genotype at update 100,000 of each tagged world, one gestation,
+mutation off (`out/trace_tagged_s1.txt` .. `s3.txt`) uses three kinds of route:
+
+- nand chains: ORN = nand(nand(a,b), a), OR = nand(~a, a|~b);
+- an all-ones constant used as a NOT gate: s1 AND = nand(ones, NAND) with the ones made by `dec` of a zero register;
+  s2 ANDN and NOT the same way;
+- exact two's-complement identities, not coincidences: s1 ANDN = ~(a&b) + a + 1, s3 AND = (a|~b) + b + 1,
+  s1 NOT = ones - b. Each holds for all inputs, because x - s = x & ~s whenever s is a bit-subset of x.
+
+The old comment in `petri.py` said add/sub "never pass for a logic task"; that was only true of chance matches on raw inputs,
+and is corrected. No false credit follows: `output()` still demands 32-bit equality. One gestation stands for the genotype
+because a division resets registers, stack and inputs and no branch in these three traces depends on the random low bits.
+It does not stand for the world: s2's 7 AND organisms are a different genotype, not traced yet. A hypothesis from a second
+model, untested: s2's lineage has one NOT gate and spends it on ANDN (x8), so every one-step rewire to AND (x4) loses more
+than it gains. `route_census.py` repeats the trace for the top genotype at every 10,000 updates (coarse taint: it marks any
+non-nand op on the path, including an add of 0 used as a move).
+
 Tests: `python3 test_petri.py`. PyPy runs the same seed to the same result, about 4x faster in CPU time
 (11.5 s vs 43.5 s for 3000 updates on a 30x30 grid). Plan and tasks: issues in this repo.
 

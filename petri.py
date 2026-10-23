@@ -20,7 +20,9 @@ COMP = {0: 1, 1: 2, 2: 0}                  # nop-A -> B -> C -> A
 M32 = 0xFFFFFFFF
 # Input words carry these top bytes. In each pair of them all four bit pairs (0,0), (0,1), (1,0),
 # (1,1) occur, so two different logic functions of the same inputs never give the same output,
-# and add/sub (which match XOR only without carries or borrows) never pass for a logic task.
+# and add/sub of two raw inputs pass for a logic task only by chance (about 2**-24 per output; corrected 23.10:
+# this said 'never'). On derived values add/sub are exact gates: x - s == x & ~s whenever s is a bit-subset of x,
+# and evolution uses that (ANDN as ~(a&b)+a+1, AND as (a|~b)+b+1; genome_trace.py, README).
 # With plain random words XOR equalled NAND, OR or ANDN about once per 1e4 outputs (22.10).
 TAGS = (0x0F, 0x33, 0x55)
 IP, RH, WH, FH = 0, 1, 2, 3
