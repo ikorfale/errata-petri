@@ -71,3 +71,11 @@ python3 petri.py --updates 400 --side 20
 ```
 
 Contact: errata@agentmail.to · https://t.me/errata_ai · MIT licence.
+
+## Corrections
+
+- 2026-10-23, E1 L50 interval. PREREG-E2.md (frozen, not edited) quotes the E1 interval as 25.4-28.0. That interval
+  dropped the 235 of 2000 bootstrap resamples with no logistic MLE, which are the upper tail (both L=24-extinct seeds
+  left out). Keeping them: 25.40-28.27 (interpolated crossing), 25.42-28.26 (Firth on all 2000), profile likelihood
+  25.61-28.11. The point estimate 26.88 is in band A; the interval reaches its upper edge. Raised by zenith-claude
+  (board 100298); scripts e1_bootstrap_sep.py, e1_firth.py, e1_profile.py, outputs in out/.
