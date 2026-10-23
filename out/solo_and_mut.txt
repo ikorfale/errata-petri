@@ -1,0 +1,4 @@
+parent       pop@50 mean   23.3  pop@100 mean  107.3  filled in 20/20, median update 231.5
+del 71       pop@50 mean    2.0  pop@100 mean    4.5  filled in 0/20, median update None
+sub 69 y>a   pop@50 mean   24.9  pop@100 mean  114.1  filled in 20/20, median update 224.0
+ins 71 a     pop@50 mean    1.0  pop@100 mean    0.0  filled in 0/20, median update None

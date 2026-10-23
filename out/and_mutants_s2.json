@@ -1,0 +1,375 @@
+[
+{
+"edit": "sub 68 u>e",
+"tasks": [
+"AND",
+"NAND",
+"NOT"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycueyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 68 u>f",
+"tasks": [
+"AND",
+"NAND",
+"NOT"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycufyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 69 y>a",
+"tasks": [
+"AND",
+"NAND",
+"NOT"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuauupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 69 y>c",
+"tasks": [
+"AND",
+"NAND",
+"NOT"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuucuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 69 y>e",
+"tasks": [
+"AND",
+"NAND",
+"NOT"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuueuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 69 y>f",
+"tasks": [
+"AND",
+"NAND",
+"NOT"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuufuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 69 y>u",
+"tasks": [
+"AND",
+"NAND",
+"NOT"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuuuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "del 70",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>b",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>d",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuydupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>e",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>h",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyhupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>j",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyjupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>m",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuymupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>n",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuynupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>q",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyqupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>r",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyrupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>v",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyvupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>w",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuywupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 70 u>x",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyxupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "del 71",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 71 u>b",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyubpcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 71 u>d",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyudpcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 71 u>i",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuipcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 71 u>j",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyujpcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 71 u>q",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuqpcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 71 u>v",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuvpcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 71 u>w",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuwpcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "sub 71 u>x",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuxpcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 70 f",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyfuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 70 u",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 71 a",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuaupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 71 e",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyueupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 71 f",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyufupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 71 u",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 72 a",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuuapcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 72 c",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuucpcfgerncuyuyzvvvfcaxgab"
+},
+{
+"edit": "ins 72 u",
+"tasks": [
+"AND",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuuupcfgerncuyuyzvvvfcaxgab"
+}
+]

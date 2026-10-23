@@ -1,0 +1,32 @@
+update 100000, pop 894; AND carriers 7 (organisms 7); ANDN carriers in pop 572/894; AND carriers with ANDN 0
+if AND and ANDN were independent: P(all 7 lack ANDN) = 0.0008
+
+dominant (n=8) outputs: [(63, 'NAND', ('NAND',)), (64, 'z', ('NAND',)), (65, 'x', ('NAND',)), (69, 'x|~y', ('NAND', 'ORN')), (81, 'y&~z', ('ANDN', 'NAND', 'ORN')), (83, 'NOT x', ('ANDN', 'NAND', 'NOT', 'ORN'))]
+
+AND carrier n=1 len 94 tasks {'AND,NAND,NOT,ORN': 1}
+  edits vs dominant: [('replace', 1, 'al', 'bq'), ('insert', 8, '', 'hiehf'), ('replace', 10, 'jh', 'yqcvagdves'), ('delete', 13, 'pmmch', ''), ('delete', 20, 'lovuuxvs', ''), ('replace', 31, 'a', 'kbyz'), ('replace', 33, 'irwuyjhyatxpgvfll', 's'), ('insert', 52, '', 'glcpsy'), ('replace', 53, 'lg', 'jzmcduqepvjs'), ('delete', 56, 'dqg', ''), ('replace', 63, 'y', 'b'), ('delete', 71, 'u', ''), ('insert', 75, '', 'me'), ('delete', 76, 'er', '')]
+  outputs: [(64, 'NAND', ('NAND',)), (65, 'z', ('NAND',)), (69, 'z|~x', ('NAND', 'ORN')), (80, 'AND', ('AND', 'NAND', 'ORN')), (82, 'NOT z', ('AND', 'NAND', 'NOT', 'ORN'))]
+
+AND carrier n=1 len 94 tasks {'AND,NAND,NOT': 1}
+  edits vs dominant: [('delete', 0, 'ral', ''), ('insert', 4, '', 'bxj'), ('replace', 8, 'x', 'q'), ('insert', 10, '', 'thwndefweamzvmczzin'), ('insert', 12, '', 'z'), ('replace', 13, 'pmmchvnlov', 'x'), ('insert', 25, '', 'cxjjopshrgqyxveeic'), ('replace', 28, 'ikhacirwuyjhyatxpgvfllurulgkdqg', 'n'), ('insert', 64, '', 'm'), ('replace', 65, 'yc', 'r'), ('replace', 71, 'u', 'b'), ('replace', 75, 'ger', 'whs')]
+  outputs: [(62, 'NAND', ('NAND',)), (64, 'z+1', ('NAND',)), (68, 'ttff', ('NAND',)), (80, 'AND', ('AND', 'NAND')), (82, 'NOT z', ('AND', 'NAND', 'NOT'))]
+
+AND carrier n=1 len 94 tasks {'AND,NAND,NOT,ORN': 1}
+  edits vs dominant: [('delete', 0, 'ral', ''), ('insert', 4, '', 'bxj'), ('replace', 8, 'x', 'q'), ('insert', 10, '', 'thwndefweamzvmczzin'), ('insert', 12, '', 'e'), ('replace', 13, 'pmmchvnlov', 'x'), ('insert', 25, '', 'cxjjopshrgqyxveeic'), ('replace', 28, 'ikhacirwuyjhyatxpgvfllurulgkdqg', 'n'), ('replace', 64, 'y', 'm'), ('replace', 71, 'u', 'b'), ('replace', 75, 'ger', 'whs')]
+  outputs: [(62, 'NAND', ('NAND',)), (64, 'z+1', ('NAND',)), (68, 'z|~x', ('NAND', 'ORN')), (80, 'AND', ('AND', 'NAND', 'ORN')), (82, 'NOT z', ('AND', 'NAND', 'NOT', 'ORN'))]
+
+AND carrier n=1 len 95 tasks {'AND,NAND,ORN': 1}
+  edits vs dominant: [('replace', 0, 'ral', 'dbx'), ('replace', 8, 'x', 'h'), ('replace', 10, 'j', 'e'), ('insert', 12, '', 'aoi'), ('replace', 14, 'mm', 'jvagdv'), ('replace', 17, 'hvnlovuu', 'k'), ('insert', 29, '', 'lh'), ('replace', 30, 'h', 'vgfjnregzlogf'), ('replace', 32, 'ci', 'jzp'), ('replace', 35, 'wuyjhy', 'plneg'), ('replace', 42, 'txpg', 'fz'), ('delete', 47, 'fllurulgkdqg', ''), ('replace', 63, 'y', 'b'), ('replace', 71, 'u', 'w'), ('replace', 75, 'g', 'm')]
+  outputs: [(64, 'NAND', ('NAND',)), (65, 'z', ('NAND',)), (69, 'z|~x', ('NAND', 'ORN')), (81, 'AND', ('AND', 'NAND', 'ORN')), (83, 'NOT z', ('AND', 'NAND', 'NOT', 'ORN'))]
+
+AND carrier n=1 len 94 tasks {'AND,NAND,NOT,ORN': 1}
+  edits vs dominant: [('delete', 0, 'ral', ''), ('insert', 4, '', 'skz'), ('insert', 10, '', 'qhhpfmyb'), ('insert', 11, '', 'dgtvxuqlijc'), ('insert', 12, '', 'kylubzivnjbzigy'), ('delete', 14, 'mmchvn', ''), ('insert', 22, '', 'wlyw'), ('replace', 23, 'uuxvsi', 'w'), ('delete', 30, 'hacirwuyjhyatxpgvfllurulgkd', ''), ('delete', 58, 'g', ''), ('replace', 64, 'y', 'q'), ('replace', 70, 'u', 'b'), ('replace', 75, 'g', 's'), ('replace', 77, 'r', 'j')]
+  outputs: [(62, 'NAND', ('NAND',)), (64, 'z', ('NAND',)), (68, 'z|~x', ('NAND', 'ORN')), (80, 'AND', ('AND', 'NAND', 'ORN')), (82, 'NOT z', ('AND', 'NAND', 'NOT', 'ORN'))]
+
+AND carrier n=1 len 95 tasks {'AND,NAND,NOT': 1}
+  edits vs dominant: [('replace', 1, 'al', 'rx'), ('insert', 8, '', 'mimht'), ('replace', 10, 'jhm', 'yrc'), ('replace', 14, 'mm', 'ebdv'), ('replace', 17, 'h', 'fg'), ('replace', 19, 'nlovuuxvs', 'p'), ('replace', 31, 'acir', 'kvyjxo'), ('replace', 37, 'y', 'glfqstartrbd'), ('insert', 39, '', 'qe'), ('delete', 40, 'yatxpg', ''), ('replace', 47, 'fllurulgkdqg', 'boh'), ('replace', 63, 'y', 'b'), ('replace', 68, 'u', 'f'), ('replace', 75, 'g', 'x'), ('replace', 77, 'r', 'a')]
+  outputs: [(64, 'NAND', ('NAND',)), (65, 'z', ('NAND',)), (81, 'AND', ('AND', 'NAND')), (83, 'NOT y', ('AND', 'NAND', 'NOT'))]
+
+AND carrier n=1 len 94 tasks {'AND,NAND,NOT,ORN': 1}
+  edits vs dominant: [('delete', 0, 'ral', ''), ('insert', 4, '', 'pij'), ('insert', 8, '', 'rishiflxkatenbvaifgitjhlyqymbsogoppe'), ('insert', 10, '', 'b'), ('replace', 11, 'hmpmmchvnlov', 'ibj'), ('replace', 24, 'uxv', 'fa'), ('replace', 28, 'ikhacirwu', 'j'), ('delete', 38, 'jhyatxpgvfllurulgkdq', ''), ('replace', 64, 'y', 'e'), ('replace', 70, 'u', 'x'), ('replace', 75, 'ger', 'zqj')]
+  outputs: [(62, 'NAND', ('NAND',)), (64, 'z', ('NAND',)), (68, 'z|~x', ('NAND', 'ORN')), (80, 'AND', ('AND', 'NAND', 'ORN')), (82, 'NOT z', ('AND', 'NAND', 'NOT', 'ORN'))]

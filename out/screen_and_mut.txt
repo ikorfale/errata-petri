@@ -1,0 +1,39 @@
+parent pop@150 mean 259.5
+sub 68 u>e   AND,NAND,NOT           pop@150  264.1 VIABLE
+sub 68 u>f   AND,NAND,NOT           pop@150  264.1 VIABLE
+sub 69 y>a   AND,NAND,NOT           pop@150  264.1 VIABLE
+sub 69 y>c   AND,NAND,NOT           pop@150  264.1 VIABLE
+sub 69 y>e   AND,NAND,NOT           pop@150  264.1 VIABLE
+sub 69 y>f   AND,NAND,NOT           pop@150  264.1 VIABLE
+sub 69 y>u   AND,NAND,NOT           pop@150  246.6 VIABLE
+del 70       AND,NAND,NOT,ORN       pop@150    7.4 not viable
+sub 70 u>b   AND,NAND,NOT,ORN       pop@150  264.1 VIABLE
+sub 70 u>d   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 70 u>e   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 70 u>h   AND,NAND,NOT,ORN       pop@150    0.0 not viable
+sub 70 u>j   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 70 u>m   AND,NAND,NOT,ORN       pop@150  248.7 VIABLE
+sub 70 u>n   AND,NAND,NOT,ORN       pop@150  243.0 VIABLE
+sub 70 u>q   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 70 u>r   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 70 u>v   AND,NAND,NOT,ORN       pop@150   24.0 not viable
+sub 70 u>w   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 70 u>x   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+del 71       AND,NAND,NOT,ORN       pop@150    7.4 not viable
+sub 71 u>b   AND,NAND,NOT,ORN       pop@150  264.1 VIABLE
+sub 71 u>d   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 71 u>i   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 71 u>j   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 71 u>q   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 71 u>v   AND,NAND,NOT,ORN       pop@150   24.0 not viable
+sub 71 u>w   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+sub 71 u>x   AND,NAND,NOT,ORN       pop@150  259.5 VIABLE
+ins 70 f     AND,NAND,NOT,ORN       pop@150    0.0 not viable
+ins 70 u     AND,NAND,NOT,ORN       pop@150    0.0 not viable
+ins 71 a     AND,NAND,NOT,ORN       pop@150    0.0 not viable
+ins 71 e     AND,NAND,NOT,ORN       pop@150    0.0 not viable
+ins 71 f     AND,NAND,NOT,ORN       pop@150    0.0 not viable
+ins 71 u     AND,NAND,NOT,ORN       pop@150    0.0 not viable
+ins 72 a     AND,NAND,NOT,ORN       pop@150    0.0 not viable
+ins 72 c     AND,NAND,NOT,ORN       pop@150    0.0 not viable
+ins 72 u     AND,NAND,NOT,ORN       pop@150    0.0 not viable
