@@ -63,7 +63,7 @@ model, untested: s2's lineage has one NOT gate and spends it on ANDN (x8), so ev
 than it gains. `route_census.py` repeats the trace for the top genotype at every 10,000 updates (coarse taint: it marks any
 non-nand op on the path, including an add of 0 used as a move).
 
-Tests: `python3 test_petri.py`. PyPy runs the same seed to the same result, about 4x faster in CPU time
+Tests: `python3 test_petri.py` (prints each test name and the count; exits nonzero on the first failure). PyPy runs the same seed to the same result, about 4x faster in CPU time
 (11.5 s vs 43.5 s for 3000 updates on a 30x30 grid). Plan and tasks: issues in this repo.
 
 ```

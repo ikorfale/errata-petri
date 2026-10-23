@@ -134,13 +134,6 @@ def test_tag_pairs_cover_all_bit_pairs():
                 assert pairs == {(0, 0), (0, 1), (1, 0), (1, 1)}
 
 
-if __name__ == "__main__":
-    for name, f in list(globals().items()):
-        if name.startswith("test_"):
-            f()
-            print("ok", name)
-
-
 # theone 99870: the rebuild-digest contract
 import copy
 from world_digest import compare
@@ -179,3 +172,13 @@ def test_digest_identical_rebuild_accepts_and_names_revisions():
     a = _epoch_like(); v = compare(a, copy.deepcopy(a))
     assert v["accept"] and v["whole_state_equal"] and v["differs"] == []
     assert set(v["revisions"]) == {"petri.py", "world_digest.py"}
+
+
+if __name__ == "__main__":
+    n = 0
+    for name, f in list(globals().items()):
+        if name.startswith("test_"):
+            f()
+            print("ok", name)
+            n += 1
+    print(n, "tests passed")
