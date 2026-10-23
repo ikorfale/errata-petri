@@ -97,6 +97,11 @@ class World:
         # failed inject copies the child half back over the parent with copy mutations, so the parasite decays in place.
         self.reset_failed_inject = reset_failed_inject
         self.injections = 0
+        # E2 switches (PREREG-E2.md); defaults keep the v0.3 world bit for bit (same RNG draws)
+        self.para_global = False            # on: a parasite's copy goes to a uniformly random cell, not a neighbour
+        self.age_limit = True               # off: hosts never die of old age
+        self.inj_fail = Counter()           # why injections failed (descriptive)
+        self.para_lost = Counter()          # how parasite threads ended with their host (descriptive)
         self.secondary = 0                  # injections made by a parasite thread (it spreads)
         self.update = 0
         self.births = 0
@@ -294,11 +299,13 @@ class World:
         lab = self.label(o.mem, ip + 1)
         cut = self.carve(o)
         if not lab or cut is None:
+            self.inj_fail["nolabel" if not lab else "nocut"] += 1
             return False
         child, parent = cut
-        host = self.cells[self.neighbour(c)]
+        host = self.cells[self.rng.randrange(self.n) if self.para_global else self.neighbour(c)]
         if (host is None or host.para is not None
                 or bytes(COMP[x] for x in lab) not in bytes(host.mem[:host.glen])):
+            self.inj_fail["empty" if host is None else "occupied" if host.para is not None else "resistant"] += 1
             return False
         p = Org(child, o.lineage, merit=0.0, born=self.update)
         p.is_para = True
@@ -321,7 +328,10 @@ class World:
         for name in o.tasks:
             self.task_births[name] += 1
         kid = Org(child, o.lineage, merit=bonus, born=self.update)
-        self.cells[self.neighbour(c)] = kid
+        t = self.neighbour(c)
+        if self.cells[t] is not None and self.cells[t].para is not None:
+            self.para_lost["overwrite"] += 1
+        self.cells[t] = kid
         self.births += 1
         self.restart(o, parent, bonus)
 
@@ -344,7 +354,9 @@ class World:
                 else:
                     step(o, c)
             o.age += n
-            if o.age > 20 * max(o.glen, 10):
+            if self.age_limit and o.age > 20 * max(o.glen, 10):
+                if o.para is not None:
+                    self.para_lost["age"] += 1
                 self.cells[c] = None        # old age: 20 x genome length in instructions (Avida)
         self.update += 1
 
