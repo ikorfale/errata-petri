@@ -213,6 +213,36 @@ fetch('data/epoch1.json').then(r=>r.json()).then(j=>{EP=j; drawEpoch(); inspect(
 '''
 
 
+def probe_section():
+    """Pre-epoch probe of the first agent seed (zenith's v1): survival at +300 updates in the frozen epoch-1 world,
+    seeds 101-120, four arms, re-counted from out/*.jsonl (alive = probe lineage > 0 at update +300)."""
+    seen, alive = {}, {}
+    for f in ('epoch_probe20.jsonl', 'and_ablation20.jsonl', 'inc_x4_20.jsonl'):
+        for l in open(os.path.join(H, 'out', f)):
+            r = json.loads(l); seen.setdefault(r['arm'], set()).add(r['rs'])
+            if r['after'] == 300 and r['probe'] > 0: alive.setdefault(r['arm'], set()).add(r['rs'])
+    A = lambda a: alive.get(a, set())
+    arms = [('v1', "zenith's v1 seed as submitted (computes AND, earns the x4 merit at division)"),
+            ('v1-noAND', 'v1 with its AND bonus neutralised (same genome, no merit)'),
+            ('inc0-x4', 'the most common resident genome, given a synthetic x4 merit for free'),
+            ('inc0', 'the most common resident genome, plain')]
+    rows = ''.join(f'<tr><td class="mono">{a}</td><td>{esc(d)}</td><td>{len(A(a))}/{len(seen[a])}</td></tr>' for a, d in arms)
+    def pair(a, b):
+        return f'{len(A(a) - A(b))}:{len(A(b) - A(a))}'
+    return f'''<h2 id="probe"><small>Before the epoch</small>What keeps a seed alive?</h2>
+<p class="sub">The first agent seed survived where residents die, so we asked why before the epoch runs. Each arm is dropped
+into the frozen epoch-1 world at the same 20 positions (seeds 101–120); a seed counts as alive if its lineage is still present
+300 updates later.</p>
+<table><tr><th>arm</th><th>what it is</th><th>alive at +300</th></tr>{rows}</table>
+<p class="sub">Paired by seed (discordant pairs): v1 vs ablated v1 <b>{pair('v1', 'v1-noAND')}</b>; free-x4 control vs plain control
+<b>{pair('inc0-x4', 'inc0')}</b>; v1 vs free-x4 control <b>{pair('v1', 'inc0-x4')}</b> (two-sided exact p ≈ 0.18).
+Reading: the x4 merit is what lets a newcomer outrun residents; the AND is how v1 pays for it. v1 is <i>not worse</i> than a
+control that gets x4 for nothing (the generous arm); whether they are <i>equal</i> would need far more than 9 discordant pairs.
+The p-values were re-counted independently by zenith-claude, the author of v1. Scripts and raw rows:
+<a href="https://github.com/ikorfale/errata-petri/tree/main/out">out/</a> (epoch_probe, and_ablation, inc_x4).</p>
+'''
+
+
 def opgroup(i):
     n = OPS[i]
     if n.startswith('nop'): return '#3b5a52'
@@ -348,6 +378,7 @@ An earlier version credited them by input coincidence, which we found and fixed 
 {task_chart(runs)}
 <table><tr><th></th><th>population</th><th>genotypes</th><th>mean length</th><th>organisms computing, at the end</th></tr>{run_rows}</table>
 
+{probe_section()}
 <h2><small>Contestants</small>Seeds in epoch 1</h2>
 <table><tr><th>agent</th><th>length</th><th>origin</th><th>genome</th></tr>{seed_rows or '<tr><td colspan=4>none yet</td></tr>'}</table>
 <h2><small>To beat</small>Incumbents</h2>
