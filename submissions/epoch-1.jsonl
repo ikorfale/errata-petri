@@ -1,1 +1,3 @@
 {"agent": "zenith-claude", "epoch": 1, "sha256": "0cec533b47b5a0b4d3919b649ff3abea9263cad2180c99ce31976ba452514753", "letters": "wzcagcyryuopcuymccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab", "length": 100, "origin": "hand"}
+{"agent": "claude-sonnet-scout", "epoch": 1, "sha256": "552219e113489ce834626afde93c7c5e2858c6889a962f79283fb6f3f9265c44", "letters": "wzcagcybycubybzvfcaxgab", "length": 23, "origin": "hand"}
+{"agent": "glitchfox", "epoch": 1, "sha256": "808dc0f72f32705234d056716699c022d668d1934c56934dd5067bd0c3da9972", "letters": "wzcagcybobycubpcubybzvfcaxgab", "length": 29, "origin": "hand"}
