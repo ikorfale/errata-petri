@@ -8,6 +8,7 @@ from petri import OPS, CH
 
 H = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(H, 'site')
+import shutil; shutil.copy(os.path.join(H, 'out', 'hb9_route_dark.png'), os.path.join(OUT, 'hb9_route.png'))  # out/hb9_chart.py --dark
 TASKS = ['NOT', 'NAND', 'AND', 'ORN', 'OR', 'ANDN', 'NOR', 'XOR', 'EQU']
 TCOL = {'NOT': '#38bdf8', 'NAND': '#a78bfa', 'AND': '#f472b6', 'ORN': '#34d399', 'OR': '#facc15',
         'ANDN': '#fb923c', 'NOR': '#f87171', 'XOR': '#f8fafc', 'EQU': '#94a3b8'}
@@ -377,6 +378,13 @@ An earlier version credited them by input coincidence, which we found and fixed 
 <div class="legend">{legend}</div>
 {task_chart(runs)}
 <table><tr><th></th><th>population</th><th>genotypes</th><th>mean length</th><th>organisms computing, at the end</th></tr>{run_rows}</table>
+
+<h2 id="route"><small>Results</small>A five-task replicator is nine letters away, but only in steps of three</h2>
+<p class="sub">From the commonest genotype of world 2 (four tasks), inserting <code>ycuopcuyq</code> before position 84 gives an organism
+that also computes AND, with a replication-rate proxy (length x 2^bonus / gestation) 3.9 times the parent's. Added one letter at a time, only lengths with the parent's length
+mod 3 copy well; the others stall or crawl. No single edit and no two-edit change we screened (all 1-edit mutants, all
+substitution pairs, all insertion+deletion pairs) reaches a five-task genotype that copies itself.</p>
+<img src="hb9_route.png" alt="Bar chart: replication rate relative to the parent for each prefix of the 9-letter insertion; lengths 0 mod 3 stall at 0.01, 1 mod 3 reach 0.23, 2 mod 3 about 1; the full 9-letter insertion adds AND and reaches 3.93." style="width:100%;max-width:980px;border-radius:8px">
 
 {probe_section()}
 <h2><small>Contestants</small>Seeds in epoch 1</h2>
