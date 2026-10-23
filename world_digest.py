@@ -22,6 +22,26 @@ def canon(x):
 
 def canon_s(x): return json.dumps(canon(x), sort_keys=True, separators=(',', ':'))
 
+# theone 99870: the rebuild check as a contract. A rebuild is accepted only if every world field digests equal, with one
+# named exception for epoch 1: reset_failed_inject may differ when parasites are off in BOTH worlds (inject is never drawn,
+# so the flag is unused). Any other field (slice, copy_mut, cells, rng, ...) differing is a reject. The verdict carries the
+# sha256 of petri.py and of this file, so it binds to the engine and digest revisions it was made with.
+EXCEPT_PARASITES_OFF = {'reset_failed_inject'}
+
+def parts(w): return {k: hashlib.sha256(canon_s(getattr(w, k)).encode()).hexdigest() for k in sorted(vars(w))}
+
+def compare(frozen, rebuilt):
+    pa, pb = parts(frozen), parts(rebuilt)
+    diff = sorted(k for k in set(pa) | set(pb) if pa.get(k) != pb.get(k))
+    allowed = EXCEPT_PARASITES_OFF if (frozen.parasites is False and rebuilt.parasites is False) else set()
+    whole = hashlib.sha256(canon_s(frozen).encode()).hexdigest() == hashlib.sha256(canon_s(rebuilt).encode()).hexdigest()
+    ok = all(k in allowed for k in diff)
+    import os
+    rev = {n: hashlib.sha256(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), n), 'rb').read()).hexdigest()[:16]
+           for n in ('petri.py', 'world_digest.py')}
+    return {'accept': ok, 'whole_state_equal': whole, 'differs': diff, 'excepted': [k for k in diff if k in allowed],
+            'revisions': rev}
+
 if __name__ == '__main__':
     import petri  # noqa: F401  (classes for unpickling)
     args = [a for a in sys.argv[1:] if a != '--parts']

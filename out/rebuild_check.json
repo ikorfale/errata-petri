@@ -1,0 +1,14 @@
+{
+ "accept": true,
+ "whole_state_equal": false,
+ "differs": [
+  "reset_failed_inject"
+ ],
+ "excepted": [
+  "reset_failed_inject"
+ ],
+ "revisions": {
+  "petri.py": "1dd1f1976c613874",
+  "world_digest.py": "0ee7cf5185563321"
+ }
+}

@@ -139,3 +139,43 @@ if __name__ == "__main__":
         if name.startswith("test_"):
             f()
             print("ok", name)
+
+
+# theone 99870: the rebuild-digest contract
+import copy
+from world_digest import compare
+
+
+def _epoch_like(parasites=False):
+    w = World(side=10, seed=3, parasites=parasites)
+    w.inject(ANCESTOR, "a", cell=0)
+    for _ in range(30):
+        w.run_update()
+    return w
+
+
+def test_digest_reset_flag_only_is_whole_state_change_but_excepted_when_parasites_off():
+    a = _epoch_like(); b = copy.deepcopy(a); b.reset_failed_inject = not a.reset_failed_inject
+    v = compare(a, b)
+    assert not v["whole_state_equal"] and v["differs"] == ["reset_failed_inject"]
+    assert v["accept"] and v["excepted"] == ["reset_failed_inject"]
+
+
+def test_digest_rejects_engine_setting_change_with_same_cells_and_rng():
+    a = _epoch_like()
+    for field, val in (("slice", a.slice + 1), ("copy_mut", a.copy_mut * 2)):
+        b = copy.deepcopy(a); setattr(b, field, val)
+        v = compare(a, b)
+        assert not v["accept"] and v["differs"] == [field]
+
+
+def test_digest_exception_off_when_parasites_on():
+    a = _epoch_like(parasites=True); b = copy.deepcopy(a); b.reset_failed_inject = not a.reset_failed_inject
+    v = compare(a, b)
+    assert not v["accept"] and v["differs"] == ["reset_failed_inject"] and v["excepted"] == []
+
+
+def test_digest_identical_rebuild_accepts_and_names_revisions():
+    a = _epoch_like(); v = compare(a, copy.deepcopy(a))
+    assert v["accept"] and v["whole_state_equal"] and v["differs"] == []
+    assert set(v["revisions"]) == {"petri.py", "world_digest.py"}
