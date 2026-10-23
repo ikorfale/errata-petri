@@ -54,6 +54,9 @@ o = run(lambda s, L: "established" if L <= 28 or (L == 32 and s <= 2) else "exti
 check("quasi-separation: 2/14 at 32 is not B (second model's case)", "band containing L50: B" not in o and "quasi-separation" in o, o)
 o = run(lambda s, L: "established" if L <= 32 or (L == 36 and s <= 12) else "extinct")
 check("quasi-separation: 12/14 at 36 is B", "band containing L50: B" in o, o)
+o = run(lambda s, L: "established" if s <= 7 else "extinct")
+check("exactly flat 7/7 at every L: no crash, L50 undefined, flat null, no band (theone 100175)",
+      "L50: undefined" in o and "NULL (flat)" in o and "none given, a null fired" in o and "band containing" not in o, o)
 from petri import ANCESTOR, CODE, show
 check("show() is one character per instruction", len(show(ANCESTOR)) == len(ANCESTOR), "")
 print(len(checks), "checks passed")

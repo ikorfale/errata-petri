@@ -125,12 +125,17 @@ def verdict(warm, worlds, expect_seeds=14):
                 interval = None
                 lines.append("L50: logistic fit did not converge; no L50")
             else:
-                a, b = ab; l50 = -a / b; interval = (l50, l50)
+                a, b = ab
                 p1 = sum(ys) / len(ys)
                 ll0 = sum(math.log(p1) if y else math.log(1 - p1) for y in ys)
                 lr = 2 * (loglik(a, b, xs, ys) - ll0)
                 p = math.erfc(math.sqrt(max(lr, 0) / 2))          # chi-square, 1 df
-                lines.append(f"L50 = {l50:.2f} (logistic a={a:.3f} b={b:.4f}; LR slope test chi2={lr:.2f}, p={p:.2g})")
+                if b == 0:                                        # exactly flat (theone 100175): no L50, the null decides
+                    interval = None
+                    lines.append(f"L50: undefined, slope exactly 0 (logistic a={a:.3f}; LR slope test chi2={lr:.2f}, p={p:.2g})")
+                else:
+                    l50 = -a / b; interval = (l50, l50)
+                    lines.append(f"L50 = {l50:.2f} (logistic a={a:.3f} b={b:.4f}; LR slope test chi2={lr:.2f}, p={p:.2g})")
                 if p > 0.05:
                     lines.append("NULL (flat): slope not distinguishable from 0 at p>0.05"); null = True
 
