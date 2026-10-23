@@ -49,8 +49,7 @@ error with its position, never skipped or guessed.
 
 - World: fresh, world seed 2026, 30x30, current rules (tagged inputs, no parasites), run to update 2,000 and
   frozen (`epoch_world.py`; `out/epoch1_world.pkl`, sha256 1702fc5f2e8a166b337328ddb2df6d8a69f3e2870e5daa0c421ade5fd0e97e6b).
-  Pickle bytes depend on the Python version, so a rebuild can match the world and still differ in bytes. The state
-  itself has a content digest: `python3 world_digest.py --parts` prints 36a3863198373fa3c0e0fede9b9ec771a1fd5bbad90d11b822277424970086d3
+  A rebuild can match the world and still differ in bytes, so the state itself has a content digest: `python3 world_digest.py --parts` prints 36a3863198373fa3c0e0fede9b9ec771a1fd5bbad90d11b822277424970086d3
   and one digest per field (cells d6702d38f49d6741, rng 4575a02aa7b24fe6). A rebuild with today's petri.py matches
   every cell and the RNG, and differs only in `reset_failed_inject`, a parasite-epoch setting whose default changed
   after the freeze. With parasites off it is never read.
