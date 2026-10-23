@@ -1,0 +1,16 @@
+== low 5 y 82 h seed 5: births 1
+  update 13: genome ralwjygcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyhyzvvvfcaxgab
+  child  pmmchvnlovuuxvsikhacirwu (len 24, == genome: False)
+  parent ralwjygcxijhm (len 13, == genome: False)
+== low 12 b 84 v seed 5: births 1
+  update 43: genome ralwjagcxijhbpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyvvvvfcaxgab
+  child  iyjllrvfcwyyfaaaachsikhyatxlgkdcuuycuyugab (len 42, == genome: False)
+  parent cwyyfaaaachsikhyatxlgkdcuuycuyugab (len 34, == genome: False)
+== del-first parent[93] seed 1: births 1
+  update 34: genome ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgb
+  child  cvvvfcvvvcvvvfcvvvfcvvvcvvvf (len 28, == genome: False)
+  parent cvvvfcvvvfcvvvcvvvfcvvvfcvvvcvvvf (len 33, == genome: False)
+== parent seed 1: births 1396
+  update 6: genome ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab
+  child  ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab (len 95, == genome: True)
+  parent ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab (len 95, == genome: True)

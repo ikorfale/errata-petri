@@ -1,0 +1,103 @@
+# done i=0: 58750 pairs, 0 AND+ANDN, 0 of them dividing
+# done i=1: 116875 pairs, 0 AND+ANDN, 0 of them dividing
+# done i=2: 174375 pairs, 0 AND+ANDN, 0 of them dividing
+# done i=3: 231250 pairs, 0 AND+ANDN, 0 of them dividing
+# done i=4: 287500 pairs, 0 AND+ANDN, 0 of them dividing
+BOTH 5 y 82 h ('AND', 'ANDN', 'NAND', 'ORN') solo 0.0 ralwjygcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyhyzvvvfcaxgab
+# done i=5: 343125 pairs, 1 AND+ANDN, 0 of them dividing
+# done i=6: 398125 pairs, 1 AND+ANDN, 0 of them dividing
+# done i=7: 452500 pairs, 1 AND+ANDN, 0 of them dividing
+# done i=8: 506250 pairs, 1 AND+ANDN, 0 of them dividing
+# done i=9: 559375 pairs, 1 AND+ANDN, 0 of them dividing
+BOTH 10 b 83 f ('AND', 'ANDN', 'NAND', 'ORN') solo 0.0 ralwjagcxibhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyufzvvvfcaxgab
+# done i=10: 611875 pairs, 2 AND+ANDN, 0 of them dividing
+BOTH 11 b 84 f ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') solo 0.0 ralwjagcxijbmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyfvvvfcaxgab
+# done i=11: 663750 pairs, 3 AND+ANDN, 0 of them dividing
+BOTH 12 b 84 v ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') solo 0.0 ralwjagcxijhbpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyvvvvfcaxgab
+# done i=12: 715000 pairs, 4 AND+ANDN, 0 of them dividing
+# done i=13: 765625 pairs, 4 AND+ANDN, 0 of them dividing
+# done i=14: 815625 pairs, 4 AND+ANDN, 0 of them dividing
+# done i=15: 865000 pairs, 4 AND+ANDN, 0 of them dividing
+BOTH 16 y 85 a ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmyhvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzavvfcaxgab
+# done i=16: 913750 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=17: 961875 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=18: 1009375 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=19: 1056250 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=20: 1102500 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=21: 1148125 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=22: 1193125 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=23: 1237500 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=24: 1281250 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=25: 1324375 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=26: 1366875 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=27: 1408750 pairs, 5 AND+ANDN, 0 of them dividing
+# done i=28: 1450000 pairs, 5 AND+ANDN, 0 of them dividing
+BOTH 29 i 91 a ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaagab
+BOTH 29 i 91 b ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcabgab
+BOTH 29 i 91 c ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcacgab
+BOTH 29 i 92 a ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxaab
+BOTH 29 i 92 b ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxbab
+BOTH 29 i 92 c ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxcab
+BOTH 29 i 92 d ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxdab
+BOTH 29 i 92 e ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxeab
+BOTH 29 i 92 h ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxhab
+BOTH 29 i 92 j ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxjab
+BOTH 29 i 92 q ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxqab
+BOTH 29 i 92 w ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxwab
+BOTH 29 i 92 x ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxxab
+BOTH 29 i 92 z ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsiihacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxzab
+# done i=29: 1490625 pairs, 19 AND+ANDN, 0 of them dividing
+# done i=30: 1530625 pairs, 19 AND+ANDN, 0 of them dividing
+# done i=31: 1570000 pairs, 19 AND+ANDN, 0 of them dividing
+BOTH 32 y 85 a ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhayirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzavvfcaxgab
+# done i=32: 1608750 pairs, 20 AND+ANDN, 0 of them dividing
+BOTH 33 y 85 a ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacyrwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzavvfcaxgab
+BOTH 33 y 85 j ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacyrwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzjvvfcaxgab
+BOTH 33 y 86 j ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacyrwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvjvfcaxgab
+BOTH 33 y 87 j ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacyrwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvjfcaxgab
+# done i=33: 1646875 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=34: 1684375 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=35: 1721250 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=36: 1757500 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=37: 1793125 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=38: 1828125 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=39: 1862500 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=40: 1896250 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=41: 1929375 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=42: 1961875 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=43: 1993750 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=44: 2025000 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=45: 2055625 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=46: 2085625 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=47: 2115000 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=48: 2143750 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=49: 2171875 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=50: 2199375 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=51: 2226250 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=52: 2252500 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=53: 2278125 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=54: 2303125 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=55: 2327500 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=56: 2351250 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=57: 2374375 pairs, 24 AND+ANDN, 0 of them dividing
+# done i=58: 2396875 pairs, 24 AND+ANDN, 0 of them dividing
+BOTH 59 a 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgacyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 b 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgbcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 c 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgccyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 d 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgdcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 i 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgicyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 j 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgjcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 k 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgkcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 l 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqglcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 m 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgmcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 n 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgncyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 p 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgpcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 q 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgqcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 s 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgscyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 t 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgtcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 u 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgucyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 w 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgwcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 x 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgxcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+BOTH 59 z 92 l ('AND', 'ANDN', 'NOT', 'ORN') solo 0.0 ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgzcyuyyycuuyuupcfgerncuyuyzvvvfcaxlab
+# done i=59: 2418750 pairs, 42 AND+ANDN, 0 of them dividing
+2418750 double substitutions; with AND and ANDN: 42; dividing (solo pop@150 >= 130): 0
