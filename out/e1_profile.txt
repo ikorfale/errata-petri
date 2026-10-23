@@ -1,0 +1,3 @@
+profile max at L50 = 26.88; 95% profile CI 25.61 - 28.11
+seeds extinct at L24: [11, 13] -> their L28: ['extinct', 'extinct']
+seeds established at L28: [1, 2, 9, 12, 14]

@@ -1,0 +1,5 @@
+resample kinds: {'logistic': 1765, 'quasi-separation, interpolated': 235}
+fit-only  n=1765  2.5% 25.40  median 26.86  97.5% 28.00
+midpoint  n=2000  2.5% 25.40  median 26.88  97.5% 28.27
+E2 rule   n=2000  lows 2.5% 25.40  highs 97.5% 28.27
+separated-resample midpoints: {}
