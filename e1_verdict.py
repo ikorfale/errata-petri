@@ -7,8 +7,14 @@ L50: maximum-likelihood logistic fit of established (1) vs extinct (0) on L.
 Not in the preregistration, decided here before seeing data: under complete or quasi-complete separation
 the MLE does not exist; then L50 is reported as the interval between the largest L with any established world
 and the smallest L above it with no established world, and a band "contains" L50 only if it contains that whole interval.
-Null "flat": likelihood-ratio test of the slope, p > 0.05. Null "non-monotone": more than one inversion
-(established share rising from one arm to the next larger L) among arms with at least one resolved world.
+Quasi-separation (exactly one mixed arm, every arm below it all established, every arm above it none): L50 is the first
+L where the per-arm established share, linearly interpolated, falls to 0.5.
+Bands are closed as written in the preregistration (A [21,28], B [32,40], C <= 22). A point L50 is checked against them;
+an interval L50 counts for every band it intersects, and more than one band is reported as "ambiguous".
+Null "flat": likelihood-ratio test of the slope, p > 0.05. Null "non-monotone": more than one inversion, an inversion
+being a rise of at least 3/14 in established share from one arm to the next larger L (arms with a resolved world).
+A null that fires takes precedence: no band verdict is given.
+(These four details were fixed after a second-model review of this script, before any E1 data existed.)
 """
 import json, math, sys
 from collections import defaultdict
@@ -28,7 +34,7 @@ def load(paths):
             inf = last["inf"] if last else None
             if inf == 0:
                 out = "extinct"
-            elif last and last["u"] - r["census"][0]["u"] + 250 == UPD and inf >= EST:
+            elif last and last["u"] - r["census"][0]["u"] + 250 == r.get("upd", UPD) and inf >= EST:
                 out = "established"
             else:
                 out = "unresolved"
@@ -96,39 +102,55 @@ def verdict(warm, worlds, expect_seeds=14):
     xs = [w["L"] for w in worlds if w["outcome"] != "unresolved"]
     ys = [1 if w["outcome"] == "established" else 0 for w in worlds if w["outcome"] != "unresolved"]
     est_L = [x for x, y in zip(xs, ys) if y]
+    null = False
     if not est_L or all(ys):
         lines.append("L50: no established worlds" if not est_L else "L50: no extinct worlds")
         interval = None
-    elif separated(xs, ys) and min(est_L) >= max(x for x, y in zip(xs, ys) if not y) and max(est_L) > min(est_L + xs):
-        interval = None
-        lines.append("L50: reversed separation (established only at the longer L): no L50, contradicts every model")
-    elif separated(xs, ys):
-        lo = max(est_L); above = [L for L in Ls if L > lo]
-        interval = (lo, above[0] if above else math.inf)
-        lines.append(f"L50: complete separation, no MLE; L50 in ({interval[0]}, {interval[1]}]")
     else:
-        ab = fit(xs, ys)
-        if ab is None:
-            lo = max(est_L); interval = (lo, min([L for L in Ls if L > lo] or [math.inf]))
-            lines.append(f"L50: fit did not converge (quasi-separation); L50 in ({interval[0]}, {interval[1]}]")
+        ext_L = [x for x, y in zip(xs, ys) if not y]
+        if min(est_L) >= max(ext_L):
+            interval = None
+            lines.append("L50: reversed separation (established only at the longer L): no L50, contradicts every model")
+        elif max(est_L) < min(ext_L):
+            lo = max(est_L); interval = (lo, min(L for L in Ls if L > lo))
+            lines.append(f"L50: complete separation, no MLE; L50 in ({interval[0]}, {interval[1]}]")
+        elif max(est_L) == min(ext_L):               # quasi-separation: one mixed arm, no MLE
+            sh = [(L, s_) for L, s_ in shares if s_ is not None]
+            cross = next(((L1 + (L2 - L1) * (s1 - 0.5) / (s1 - s2)) for (L1, s1), (L2, s2) in zip(sh, sh[1:]) if s1 >= 0.5 > s2), None)
+            interval = (cross, cross) if cross is not None else None
+            lines.append(f"L50: quasi-separation, no MLE; interpolated share-0.5 crossing L50 = {cross if cross is None else round(cross, 2)}")
         else:
-            a, b = ab; l50 = -a / b; interval = (l50, l50)
-            p1 = sum(ys) / len(ys)
-            ll0 = sum(math.log(p1) if y else math.log(1 - p1) for y in ys)
-            lr = 2 * (loglik(a, b, xs, ys) - ll0)
-            p = math.erfc(math.sqrt(max(lr, 0) / 2))          # chi-square, 1 df
-            lines.append(f"L50 = {l50:.2f} (logistic a={a:.3f} b={b:.4f}; LR slope test chi2={lr:.2f}, p={p:.2g})")
-            if p > 0.05:
-                lines.append("NULL (flat): slope not distinguishable from 0 at p>0.05")
+            ab = fit(xs, ys)
+            if ab is None:
+                interval = None
+                lines.append("L50: logistic fit did not converge; no L50")
+            else:
+                a, b = ab; l50 = -a / b; interval = (l50, l50)
+                p1 = sum(ys) / len(ys)
+                ll0 = sum(math.log(p1) if y else math.log(1 - p1) for y in ys)
+                lr = 2 * (loglik(a, b, xs, ys) - ll0)
+                p = math.erfc(math.sqrt(max(lr, 0) / 2))          # chi-square, 1 df
+                lines.append(f"L50 = {l50:.2f} (logistic a={a:.3f} b={b:.4f}; LR slope test chi2={lr:.2f}, p={p:.2g})")
+                if p > 0.05:
+                    lines.append("NULL (flat): slope not distinguishable from 0 at p>0.05"); null = True
 
-    inv = sum(1 for (_, s1), (_, s2) in zip([s for s in shares if s[1] is not None], [s for s in shares if s[1] is not None][1:]) if s2 > s1)
-    lines.append(f"inversions (share rising with L): {inv}" + ("  -> NULL (non-monotone)" if inv > 1 else ""))
+    inv = sum(1 for (_, s1), (_, s2) in zip([s for s in shares if s[1] is not None], [s for s in shares if s[1] is not None][1:]) if s2 - s1 >= 3 / 14 - 1e-9)
+    lines.append(f"inversions (share rising >= 3/14 with L): {inv}" + ("  -> NULL (non-monotone)" if inv > 1 else ""))
+    null = null or inv > 1
 
-    if interval:
+    if null:
+        lines.append("band verdict: none given, a null fired")
+    elif interval:
         lo, hi = interval
-        hits = [k for k, (a, b) in BANDS.items() if a <= lo and hi <= b]
-        lines.append("band containing L50: " + (", ".join(hits) if hits else
-                     "none (28-32, above 40, or an interval spanning bands): supports none of A, B, C"))
+        if lo == hi:
+            hits = [k for k, (a, b) in BANDS.items() if a <= lo <= b]
+        else:                                   # (lo, hi]
+            hits = [k for k, (a, b) in BANDS.items() if a < hi and b > lo]
+        if len(hits) > 1:
+            lines.append(f"band containing L50: ambiguous ({', '.join(hits)})")
+        else:
+            lines.append("band containing L50: " + (", ".join(hits) if hits else
+                         "none (between bands or above 40): supports none of A, B, C"))
 
     def n(L, k):
         return sum(w["outcome"] == k for w in by.get(L, []))
