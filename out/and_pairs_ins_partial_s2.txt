@@ -1,0 +1,10 @@
+BOTH 69 m 70 s ('AND', 'ANDN', 'NAND', 'NOT') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuumsyuupcfgerncuyuyzvvvfcaxgab
+BOTH 69 s 70 m ('AND', 'ANDN', 'NAND', 'NOT') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuusmyuupcfgerncuyuyzvvvfcaxgab
+BOTH 70 e 84 h ('AND', 'ANDN', 'NAND', 'ORN') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeuupcfgerncuyuhyzvvvfcaxgab
+BOTH 70 e 85 h ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeuupcfgerncuyuyhzvvvfcaxgab
+BOTH 70 e 86 a ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeuupcfgerncuyuyzavvvfcaxgab
+BOTH 70 e 86 j ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeuupcfgerncuyuyzjvvvfcaxgab
+BOTH 70 e 87 j ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeuupcfgerncuyuyzvjvvfcaxgab
+BOTH 70 e 88 j ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeuupcfgerncuyuyzvvjvfcaxgab
+BOTH 70 e 89 j ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeuupcfgerncuyuyzvvvjfcaxgab
+BOTH 70 e 93 j ('AND', 'ANDN', 'NAND', 'NOT', 'ORN') ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyeuupcfgerncuyuyzvvvfcaxjgab

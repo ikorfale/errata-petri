@@ -1,0 +1,10 @@
+69 m 70 s    ('AND', 'ANDN', 'NAND', 'NOT')                solo pop@150   10.7
+69 s 70 m    ('AND', 'ANDN', 'NAND', 'NOT')                solo pop@150   10.7
+70 e 84 h    ('AND', 'ANDN', 'NAND', 'ORN')                solo pop@150    0.0
+70 e 85 h    ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')         solo pop@150    0.0
+70 e 86 a    ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')         solo pop@150    0.0
+70 e 86 j    ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')         solo pop@150    0.0
+70 e 87 j    ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')         solo pop@150    0.0
+70 e 88 j    ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')         solo pop@150    0.0
+70 e 89 j    ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')         solo pop@150    0.0
+70 e 93 j    ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')         solo pop@150    0.0
