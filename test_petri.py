@@ -204,7 +204,11 @@ def test_scoring_table_total_and_strict():
     assert score_arith(("never", 4, 2), ("exact", 3)) == "miss"
     assert score_arith(("exact", 1, 3, 0), ("rotated", 7)) == "not-scored"
     assert score_arith(("exact", 1, 3, 0), ("other-birth", 40), ("other-birth", 23)) == "not-scored"
-    assert score_arith(("exact", 1, 3, 0), ("exact", 1), ("other-birth", 23)) == "miss"
+    assert score_arith(("exact", 1, 3, 0), ("exact", 1), ("other-birth", 23)) == "hit"   # other seed -> premise
+    assert score_arith(("exact", 1, 3, 0), ("exact", 1), ("exact", 3)) == "miss"
+    assert score_arith(("never", 4, 2), ("other-birth", 40), ("exact", 5)) == "miss"
+    assert arith_premise(("exact", 1, 3, 0), ("other-birth", 40), ("other-birth", 41)) is False
+    assert arith_premise(("exact", 1, 3, 0), ("exact", 1), ("other-birth", 41)) is False
     assert arith_premise(("exact", 1, 3, 0), ("rotated", 7)) is False
     assert arith_premise(("never", 4, 2), ("never", "x")) is True
 

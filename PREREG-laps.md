@@ -25,16 +25,18 @@ world? Two predictors, one truth runner, one scoring rule, all fixed before any 
   seeds: miss.
 - static: hit iff class and parameter equal (j for exact, ncopy for exact-offlap and rotated; never = never).
   Abstain and other-birth are not scored; other-birth is reported with its truth, length match and seed stability
-  (in-sample 5 of 7 other-birth predictions met seed-dependent truth; decided on development data before any test
-  truth exists).
+  (in-sample 7 other-birth predictions: 2 seed-stable with matching child length, 5 whose truth differed between
+  the seeds; decided on development data before any test truth exists).
 - arith is two things, scored apart:
-  - lap claim: scored only when truth is an exact copy under at least one seed. exact j hits iff truth is
-    ("exact", j) under both seeds; never against an exact copy is a miss.
-  - premise ("a non-abstained arith meets either an exact copy at a lap or no birth"): a measurement, reported as
-    holds / fails with the breakdown by (arith class, truth class). It is already false in-sample (holds 166 of 258),
-    so it carries no refute rule.
-- The scoring driver is static_insample.py: summary to stdout, every miss and premise failure with its genome to
-  `<prefix>.misses.json`.
+  - lap claim: scored on the seeds whose truth is an exact copy at a lap (not scored if neither seed gives one).
+    Hit iff arith is exact j and every such seed has that j; arith never against any exact copy is a miss. What the
+    other seed did goes to the premise.
+  - premise ("a non-abstained arith meets, under both seeds, an exact copy at a lap or no birth"): a measurement,
+    reported as holds / fails with the breakdown by (arith class, truth classes). It is already false in-sample
+    (holds 166 of 263), so it carries no refute rule.
+- The scoring driver is static_insample.py: it asserts that committed predictions equal what the frozen predictors
+  give, prints every count in this file (including the arith lap claim by j class and gcd, and the targeted cells),
+  and writes every miss and premise failure with its genome to `<prefix>.misses.json`.
 
 ## Reported, per stratum and per predictor
 hits, misses, abstentions, out-of-scope, not-scored; for arith the lap claim separately for j = 1 and j >= 3 and for
@@ -44,9 +46,9 @@ in how many of the drawn variants.
 ## Decision rules
 - static soundness is judged on the random stratum only (the targeted stratum is adversarially selected and is
   reported alongside, never pooled): sound if it has at least 200 scored cases and at most 1% misses. In-sample:
-  256 hits, 0 misses, 2 out-of-scope.
+  256 hits, 0 misses, 1320 abstentions (7 of them other-birth).
 - arith lap claim: any miss refutes the arithmetic as stated; the headline gives hits/scored for j = 1 and j >= 3
-  separately, never pooled. In-sample: 166 hits, 0 misses (j = 1: 69, of them 62 with gcd > 1; j = 3: 73; j = 5: 24).
+  separately, never pooled. In-sample: 166 hits, 0 misses (j = 1: 69, of them 62 with gcd > 1; j >= 3: 97, all gcd = 1).
   The test-set arith predictions are almost all j = 1 (574 j = 1, 3 j = 5, out/laps_gen.txt), so the j >= 3 cells
   get their power from the targeted stratum.
 - Every headline carries the abstain count and the premise rate next to the hit counts.
@@ -60,7 +62,7 @@ in how many of the drawn variants.
   is periodic from its first points and that the label passes only at lap boundaries.
 
 ## In-sample (development data, 1576 census genomes): `out/static_insample.txt` and `out/static_insample.misses.json`,
-produced by static_insample.py with scoring.py. Seed 8 hits the step cap on 98 genomes where arith does not abstain.
+produced by static_insample.py with scoring.py. Seed 7 or 8 hits the step cap on 98 genomes where arith does not abstain (out-of-scope).
 
 ## Freeze: sha256 of petri.py, static_lap.py, laps_truth.py, scoring.py, static_insample.py, laps_gen.py,
 laps_targeted.py and both prediction files, recorded in this file's freeze commit.

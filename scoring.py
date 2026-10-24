@@ -1,27 +1,25 @@
 """#491 frozen scoring rule: every (prediction, truth) pair maps to hit | miss | abstain | out-of-scope | not-scored.
-Revised after a blocking-only review (Fable, 24.10): arith split into a lap claim and a premise measurement; static
-other-birth scored on class only, length reported separately; unresolved in either seed is out-of-scope.
+Revised after two blocking-only reviews (Fable, 24.10): arith split into a lap claim and a premise measurement; static
+other-birth predictions are abstentions, reported with their truth; unresolved in either seed is out-of-scope.
 
 Truth classes (laps_truth.truth): exact j | exact-offlap n | rotated n | other-birth len | never | unresolved.
 Static classes (static_lap.predict): exact j | exact-offlap n | rotated n | other-birth len | never | abstain.
 Arith classes (static_lap.arith): ('exact', j, p, e) | ('never', p, e) | None.
 
-Common: truth unresolved under seed 7 or seed 8 -> out-of-scope. A non-abstained prediction whose resolved truth
-differs between the two seeds -> miss.
-Static:
-  abstain -> abstain (counted, not scored)
+Common: truth unresolved under seed 7 or seed 8 -> out-of-scope.
+Static (a non-abstained prediction must be seed-independent: truth differing between the seeds -> miss):
+  abstain, other-birth -> abstain (counted, not scored). other-birth is reported with its truth, child-length match and
+                 seed stability: in-sample 7 other-birth predictions, 2 seed-stable with matching length, 5 with
+                 truth differing between seeds (decided on development data, before any test truth)
   same class and same parameter -> hit (j for exact, ncopy for exact-offlap and rotated; never = never)
-  other-birth -> abstain, reported with its truth: in-sample 3 of the 5 seed-resolved other-birth predictions were
-                 seed-dependent (a non-abstaining predictor must be seed-independent), and the child length matched in
-                 2 of 5; the class is treated as an abstention rather than scored (decided on development data)
   anything else -> miss
-Arith lap claim (the arithmetic): scored only when truth is an exact copy at a lap, ('exact', j).
-  None -> abstain; no exact copy under either seed -> not-scored (goes to the premise); exact under one seed only
-  -> miss; exact j -> hit iff j matches; never -> miss
-Arith premise ("when arith does not abstain, the first birth is an exact copy at a lap, or there is none"):
-  a measurement, not a hypothesis: for each non-abstained arith, holds iff truth is ('exact', j') or never; the
-  failures are broken down by (arith class, truth class). Arith never vs truth never is a within-horizon (10 laps)
-  confirmation only.
+Arith lap claim (the arithmetic): scored on the seeds whose truth is an exact copy at a lap.
+  None -> abstain; no exact copy under either seed -> not-scored; otherwise hit iff arith is exact j and every seed
+  with an exact copy has that j; arith never against any exact copy -> miss. What the other seed did goes to the
+  premise, not to the lap claim.
+Arith premise ("a non-abstained arith meets, under both seeds, an exact copy at a lap or no birth"): a measurement,
+  not a hypothesis; holds iff both seeds give exact or never; failures broken down by (arith class, truth classes).
+  Arith never vs truth never is a within-horizon (10 laps) confirmation only.
 """
 
 def _common(pred_abstains, tr, tr2):
@@ -43,15 +41,17 @@ def static_len(pr, tr):
 def score_arith(a, tr, tr2=None):
     """Lap claim."""
     if a is None: return "abstain"
-    if tr[0] == "unresolved" or (tr2 is not None and tr2[0] == "unresolved"): return "out-of-scope"
-    if tr[0] != "exact" and (tr2 is None or tr2[0] != "exact"): return "not-scored"   # no exact copy under either seed
-    if tr2 is not None and tr2 != tr: return "miss"
-    return "hit" if a[0] == "exact" and a[1] == tr[1] else "miss"
+    trs = [t for t in (tr, tr2) if t is not None]
+    if any(t[0] == "unresolved" for t in trs): return "out-of-scope"
+    ex = [t for t in trs if t[0] == "exact"]
+    if not ex: return "not-scored"
+    return "hit" if a[0] == "exact" and all(t[1] == a[1] for t in ex) else "miss"
 
 def arith_premise(a, tr, tr2=None):
-    """True / False for non-abstained arith with in-scope seed-stable truth, else None."""
-    if a is None or tr[0] == "unresolved" or (tr2 is not None and (tr2[0] == "unresolved" or tr2 != tr)): return None
-    return tr[0] in ("exact", "never")
+    """True / False for non-abstained arith with resolved truth under both seeds, else None."""
+    trs = [t for t in (tr, tr2) if t is not None]
+    if a is None or any(t[0] == "unresolved" for t in trs): return None
+    return all(t[0] in ("exact", "never") for t in trs)
 
 PRED_STATIC = [("exact", 1), ("exact", 3), ("exact-offlap", 7), ("rotated", 7), ("other-birth", 40), ("never", "x"),
                ("abstain", "x")]

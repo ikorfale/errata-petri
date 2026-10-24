@@ -17,13 +17,19 @@ arith lap claim (pred, truth, score):
   ('none', 'exact', 'abstain') 83
   ('none', 'other-birth', 'abstain') 1105
   ('none', 'rotated', 'abstain') 27
+arith lap claim by j and gcd(L, p) (j class, gcd, score):
+  ('j=1', 'gcd=1', 'hit') 7
+  ('j=1', 'gcd>1', 'hit') 62
+  ('j>=3', 'gcd=1', 'hit') 97
 arith premise (pred, truth, holds):
   ('exact', 'exact', True) 166
   ('exact', 'other-birth', False) 28
+  ('exact', 'other-birth/other-birth', False) 3
   ('exact', 'rotated', False) 3
   ('never', 'other-birth', False) 10
+  ('never', 'other-birth/other-birth', False) 2
   ('never', 'rotated', False) 51
 static totals {'abstain': 1320, 'hit': 256}
 arith-lap totals {'abstain': 1215, 'hit': 166, 'not-scored': 97, 'out-of-scope': 98}
-premise holds 166 of 258
-misses and premise failures written: 92 -> out/static_insample.misses.json
+premise holds 166 of 263
+misses and premise failures written: 97 -> out/static_insample.misses.json
