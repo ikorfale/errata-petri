@@ -191,6 +191,19 @@ def test_least_odd_j_matches_theone_fixtures_and_enumeration():
     assert none == 20694, none  # zenith's independent total (#101425): 20,694 none, 32,106 with a solution
 
 
+def test_scoring_table_total_and_strict():
+    from scoring import table, score_static, score_arith, TRUTH
+    allowed = {"hit", "miss", "abstain", "out-of-scope"}
+    rows = table()
+    assert all(c in allowed for _, _, cells in rows for c in cells)
+    assert sum(len(cells) for _, _, cells in rows) == 12 * len(TRUTH)
+    assert score_static(("rotated", 7), ("rotated", 8)) == "miss"          # parameter must match
+    assert score_static(("exact", 1), ("exact", 1), ("exact", 3)) == "miss"  # seed-dependent truth
+    assert score_arith(("exact", 11, 13, 5), ("exact", 1)) == "miss"       # birth inside horizon contradicts j=11
+    assert score_arith(("exact", 11, 13, 5), ("never", "x")) == "out-of-scope"
+    assert score_arith(("never", 4, 2), ("other-birth", 40)) == "miss"
+
+
 if __name__ == "__main__":
     n = 0
     for name, f in list(globals().items()):

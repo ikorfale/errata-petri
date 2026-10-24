@@ -1,25 +1,26 @@
-"""In-sample check of static_lap.predict on the 1576 census genomes (development data, NOT the test)."""
+"""In-sample check of static_lap.predict and arith on the 1576 census genomes (development data, NOT the test).
+Scored only through scoring.py (the frozen rule); truth under seeds 7 and 8."""
 import sys, json, collections
 sys.path.insert(0, ".")
-from petri import World, parse
+from petri import parse
 from static_lap import predict, arith
 from laps_truth import truth
+from scoring import score_static, score_arith
 if __name__ == "__main__":
     R = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "out/two_step_filter.json"))
-    tab = collections.Counter(); ex = []; ar = collections.Counter()
+    st = collections.Counter(); ar = collections.Counter(); ex = []
     for r in R:
         g = parse(r["genome"]) if isinstance(r["genome"], str) else r["genome"]
-        pr = predict(g); tr = truth(g)
-        if pr[0] not in ("abstain",) and truth(g, seed=8) != tr: tab[("SEED-DEPENDENT", pr[0])] += 1
-        pk = pr[0] if pr[0] in ("abstain", "filtered", "never") else pr
-        tk = tr if tr[0] in ("exact", "rotated") else (tr[0],)
-        if pr[0] == "other-birth": pk = ("other-birth",)
-        ok = (pk == tk) or (pr[0] == "never" and tr[0] == "never")
-        tab[(pr[0], tr[0], "ok" if ok else "MISS")] += 1
-        a = arith(g)
-        if tr[0] == "exact": ar[("arith", "none" if a is None else a[0], "ok" if a and a[0] == "exact" and a[1] == tr[1] else "MISS" if a else "-")] += 1
-        elif tr[0] == "never" and a: ar[("arith on never", a[0])] += 1
-        if not ok and pr[0] not in ("abstain", "filtered") and len(ex) < 12: ex.append((len(g), pr, tr))
-    for k, v in sorted(tab.items()): print(k, v)
-    for k, v in sorted(ar.items()): print(k, v)
+        pr = predict(g); a = arith(g); tr = truth(g); tr2 = truth(g, seed=8)
+        s = score_static(pr, tr, tr2); sa = score_arith(a, tr, tr2)
+        st[(pr[0], tr[0], s)] += 1
+        ar[("none" if a is None else a[0], tr[0], sa)] += 1
+        if "miss" in (s, sa) and len(ex) < 12: ex.append((len(g), pr, a, tr, tr2))
+    print("genomes", len(R))
+    print("static (pred, truth, score):"); [print(" ", k, v) for k, v in sorted(st.items())]
+    print("arith (pred, truth, score):"); [print(" ", k, v) for k, v in sorted(ar.items())]
+    for name, c in (("static", st), ("arith", ar)):
+        tot = collections.Counter()
+        for k, v in c.items(): tot[k[2]] += v
+        print(name, "totals", dict(sorted(tot.items())))
     print("misses:", *ex, sep="\n  ")

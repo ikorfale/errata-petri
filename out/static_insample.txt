@@ -1,9 +1,32 @@
-('SEED-DEPENDENT', 'other-birth') 5
-('abstain', 'exact', 'MISS') 74
-('abstain', 'other-birth', 'MISS') 1239
-('exact', 'exact', 'ok') 175
-('other-birth', 'other-birth', 'ok') 7
-('rotated', 'rotated', 'ok') 81
-('arith', 'exact', 'ok') 166
-('arith', 'none', '-') 83
+genomes 1576
+static (pred, truth, score):
+  ('abstain', 'exact', 'abstain') 74
+  ('abstain', 'other-birth', 'abstain') 1239
+  ('exact', 'exact', 'hit') 175
+  ('other-birth', 'other-birth', 'hit') 2
+  ('other-birth', 'other-birth', 'miss') 5
+  ('rotated', 'rotated', 'hit') 81
+arith (pred, truth, score):
+  ('exact', 'exact', 'hit') 166
+  ('exact', 'other-birth', 'miss') 122
+  ('exact', 'rotated', 'miss') 3
+  ('never', 'other-birth', 'miss') 19
+  ('never', 'rotated', 'miss') 51
+  ('none', 'exact', 'abstain') 83
+  ('none', 'other-birth', 'abstain') 1105
+  ('none', 'rotated', 'abstain') 27
+static totals {'abstain': 1313, 'hit': 258, 'miss': 5}
+arith totals {'abstain': 1215, 'hit': 166, 'miss': 195}
 misses:
+  (96, ('rotated', 49), ('never', 2, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 48), ('never', 2, 1), ('rotated', 48), ('rotated', 48))
+  (96, ('rotated', 49), ('never', 2, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 2, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
+  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
