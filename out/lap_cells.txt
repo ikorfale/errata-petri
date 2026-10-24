@@ -1,0 +1,22 @@
+cell (L%3, e%3): counts by laps j      rule predicts
+  (0, 0): {1: 65}   rule j=1
+  (0, 1): {1: 7}   rule j=never
+  (0, 2): {1: 1}   rule j=never
+  (1, 0): {3: 44}   rule j=3
+  (1, 1): {1: 4}   rule j=1
+  (1, 2): {5: 23}   rule j=5
+  (2, 0): {3: 61}   rule j=3
+  (2, 1): {5: 30}   rule j=5
+  (2, 2): {1: 15}   rule j=1
+total by j: {1: 92, 3: 105, 5: 53}  sum 250
+dividers by L%3: {0: 73, 1: 71, 2: 106}
+glitchfox check: j1 - j5 = 92 - 53 = 39;  #(0,0) = 65
+misses: L, ncopy at first check, e%3, j, rule j, top gaps between checks, number of checks
+   (96, 1, 1, 1, None, {1: 95}, 96)
+   (96, 1, 1, 1, None, {1: 95}, 96)
+   (96, 1, 1, 1, None, {0: 95, 1: 95}, 191)
+   (96, 1, 1, 1, None, {1: 95}, 96)
+   (96, 1, 1, 1, None, {1: 95}, 96)
+   (96, 1, 1, 1, None, {1: 95, 0: 95}, 191)
+   (96, 1, 1, 1, None, {1: 93, 2: 1}, 95)
+   (96, 2, 2, 1, None, {3: 31, 1: 1}, 33)
