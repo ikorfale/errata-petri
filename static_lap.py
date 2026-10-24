@@ -27,11 +27,11 @@ def predict(g, jmax=9):
     M32 = 0xFFFFFFFF
     copied = []
     checks = []              # checks: (step, ncopy, label tuple or None for h-divide, neutral)
-    H = (jmax + 1) * L
+    H = (jmax + 1) * L; reached = False
     for step in range(100 * L):        # abstract run with every check failing, until the horizon in copies
         n2 = len(mem); ip %= n2
         if ip >= L: return ("abstain", "IP in child half")
-        if nc > H: break
+        if nc > H: reached = True; break
         op = g[ip]
         nxt = mem[(ip + 1) % n2]
         if nxt is None: return ("abstain", "modifier read from child half")
@@ -57,9 +57,14 @@ def predict(g, jmax=9):
             if a is not None and b is not None:
                 if not ((a != b) if op == CODE["if-n-equ"] else (a < b)): adv += 1
                 regsteps.append(step)
-            else:                      # unknown: neutral only if the skippable op touches no head, copy, label, branch
-                sk = mem[(ip + adv) % n2]
+            else:                      # unknown: the skippable op may or may not run. Neutral only if it touches no
+                sk = mem[(ip + adv) % n2]   # head, copy, label or branch; whatever it could write becomes unknown
                 if sk is None or sk in CONTROL: return ("abstain", "unknown-register skip over a control instruction")
+                if sk in (14, 15): return ("abstain", "unknown-register skip over a stack op")
+                skm = mem[(ip + adv + 1) % n2]; sr = skm if skm in NOP else 1
+                if sk in (10, 11, 12, 13, 18, 19, 20, 24): reg[sr] = None
+                elif sk == 17: reg[sr] = reg[COMP[sr]] = None
+                elif sk == CODE["get-head"]: reg[2] = None
         elif op == CODE["get-head"]:
             reg[2] = {0: ip, 1: rh, 2: wh, 3: fh}[mod if mod is not None else 0]
         elif op == CODE["IO"]:
@@ -108,6 +113,7 @@ def predict(g, jmax=9):
                 else: fh = (pos + k) % n2; reg[1] = (pos - ip) % n2; reg[2] = k
         ip = (ip + adv) % len(mem)
     predict.checks = [(n, lab) for s, n, lab, *_ in checks]   # for the arithmetic rule (ncopy at each check)
+    if not reached and nc > 0: return ("abstain", "step budget ran out before the copy horizon")
     if nc == 0: return ("never", "no copies within the step budget")
     for s, n, lab, neu, r, w, tail, m in checks:
         if lab is not None:            # if-label passes iff the last k copied letters are the label's complement

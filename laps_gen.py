@@ -44,3 +44,17 @@ print("parents", len(parents), dict(byp)); print("mutants", len(M))
 print("mutants sha256", hashlib.sha256(blob).hexdigest()); print("predictions sha256", hashlib.sha256(pb).hexdigest())
 print("static", collections.Counter(p["static"][0] if p["static"][0] != "exact" else f"exact j={p['static'][1]}" for p in preds).most_common())
 print("arith", collections.Counter("none" if p["arith"] is None else f"{p['arith'][0]} j={p['arith'][1]}" if p["arith"][0] == "exact" else "never" for p in preds).most_common())
+
+from math import gcd
+def unreduced(L, p, e):
+    for j in range(1, 2 * p + 1, 2):
+        if (j * L - e) % p == 0: return j
+    return "never"
+diff = collections.Counter()
+for d in preds:
+    a = d["arith"]
+    if not a: continue
+    L = len(d["genome"]); p, e = (a[2], a[3]) if a[0] == "exact" else (a[1], a[2])
+    red = a[1] if a[0] == "exact" else "never"
+    diff[(L % p, e % p, gcd(L, p), "same" if unreduced(L, p, e) == red else "DIFFER")] += 1
+print("arith cells (L mod p, e mod p, gcd, reduced vs unreduced):", sorted(diff.items(), key=str))
