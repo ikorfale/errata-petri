@@ -1,0 +1,7 @@
+k=0 len 95 len mod 3 2 gestation steps 194 solo pop@150 246.4
+k=1 len 96 len mod 3 0 gestation steps 20000 solo pop@150 0.0
+k=2 len 97 len mod 3 1 gestation steps 847 solo pop@150 10.0
+k=3 len 98 len mod 3 2 gestation steps 202 solo pop@150 260.4
+k=4 len 99 len mod 3 0 gestation steps 20000 solo pop@150 0.0
+k=5 len 100 len mod 3 1 gestation steps 875 solo pop@150 8.2
+k=6 len 101 len mod 3 2 gestation steps 210 solo pop@150 234.8
