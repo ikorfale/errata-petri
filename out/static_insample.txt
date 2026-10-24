@@ -1,32 +1,29 @@
-genomes 1576
+source out/two_step_filter.json genomes 1576
 static (pred, truth, score):
   ('abstain', 'exact', 'abstain') 74
   ('abstain', 'other-birth', 'abstain') 1239
   ('exact', 'exact', 'hit') 175
-  ('other-birth', 'other-birth', 'hit') 2
-  ('other-birth', 'other-birth', 'miss') 5
+  ('other-birth', 'other-birth', 'abstain') 7
   ('rotated', 'rotated', 'hit') 81
-arith (pred, truth, score):
+static other-birth (reported, not scored): (truth7 class, length match, seed-stable): {('other-birth', True, True): 2, ('other-birth', False, False): 5}
+arith lap claim (pred, truth, score):
   ('exact', 'exact', 'hit') 166
-  ('exact', 'other-birth', 'miss') 122
-  ('exact', 'rotated', 'miss') 3
-  ('never', 'other-birth', 'miss') 19
-  ('never', 'rotated', 'miss') 51
+  ('exact', 'other-birth', 'not-scored') 31
+  ('exact', 'other-birth', 'out-of-scope') 91
+  ('exact', 'rotated', 'not-scored') 3
+  ('never', 'other-birth', 'not-scored') 12
+  ('never', 'other-birth', 'out-of-scope') 7
+  ('never', 'rotated', 'not-scored') 51
   ('none', 'exact', 'abstain') 83
   ('none', 'other-birth', 'abstain') 1105
   ('none', 'rotated', 'abstain') 27
-static totals {'abstain': 1313, 'hit': 258, 'miss': 5}
-arith totals {'abstain': 1215, 'hit': 166, 'miss': 195}
-misses:
-  (96, ('rotated', 49), ('never', 2, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 48), ('never', 2, 1), ('rotated', 48), ('rotated', 48))
-  (96, ('rotated', 49), ('never', 2, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 2, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
-  (96, ('rotated', 49), ('never', 3, 1), ('rotated', 49), ('rotated', 49))
+arith premise (pred, truth, holds):
+  ('exact', 'exact', True) 166
+  ('exact', 'other-birth', False) 28
+  ('exact', 'rotated', False) 3
+  ('never', 'other-birth', False) 10
+  ('never', 'rotated', False) 51
+static totals {'abstain': 1320, 'hit': 256}
+arith-lap totals {'abstain': 1215, 'hit': 166, 'not-scored': 97, 'out-of-scope': 98}
+premise holds 166 of 258
+misses and premise failures written: 92 -> out/static_insample.misses.json

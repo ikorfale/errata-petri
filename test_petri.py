@@ -192,16 +192,21 @@ def test_least_odd_j_matches_theone_fixtures_and_enumeration():
 
 
 def test_scoring_table_total_and_strict():
-    from scoring import table, score_static, score_arith, TRUTH
-    allowed = {"hit", "miss", "abstain", "out-of-scope"}
+    from scoring import table, score_static, score_arith, arith_premise, TRUTH
+    allowed = {"hit", "miss", "abstain", "out-of-scope", "not-scored"}
     rows = table()
     assert all(c in allowed for _, _, cells in rows for c in cells)
     assert sum(len(cells) for _, _, cells in rows) == 12 * len(TRUTH)
-    assert score_static(("rotated", 7), ("rotated", 8)) == "miss"          # parameter must match
-    assert score_static(("exact", 1), ("exact", 1), ("exact", 3)) == "miss"  # seed-dependent truth
-    assert score_arith(("exact", 11, 13, 5), ("exact", 1)) == "miss"       # birth inside horizon contradicts j=11
-    assert score_arith(("exact", 11, 13, 5), ("never", "x")) == "out-of-scope"
-    assert score_arith(("never", 4, 2), ("other-birth", 40)) == "miss"
+    assert score_static(("rotated", 7), ("rotated", 8)) == "miss"            # parameter must match
+    assert score_static(("other-birth", 40), ("other-birth", 40)) == "abstain"  # reported, not scored
+    assert score_static(("exact", 1), ("exact", 1), ("exact", 3)) == "miss"    # seed-dependent truth
+    assert score_static(("exact", 1), ("exact", 1), ("unresolved", "c")) == "out-of-scope"  # either seed unresolved
+    assert score_arith(("never", 4, 2), ("exact", 3)) == "miss"
+    assert score_arith(("exact", 1, 3, 0), ("rotated", 7)) == "not-scored"
+    assert score_arith(("exact", 1, 3, 0), ("other-birth", 40), ("other-birth", 23)) == "not-scored"
+    assert score_arith(("exact", 1, 3, 0), ("exact", 1), ("other-birth", 23)) == "miss"
+    assert arith_premise(("exact", 1, 3, 0), ("rotated", 7)) is False
+    assert arith_premise(("never", 4, 2), ("never", "x")) is True
 
 
 if __name__ == "__main__":
