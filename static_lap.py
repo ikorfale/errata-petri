@@ -141,9 +141,17 @@ def arith(g):
     ch = [n for n, lab in (predict.checks or []) if lab is not None]
     if len(ch) < 2 or ch[1] - ch[0] <= 0: return None
     L = len(g); e, p = ch[0], ch[1] - ch[0]
+    j = least_odd_j(L, p, e)
+    return ("never", p, e) if j is None else ("exact", j, p, e)
+
+
+def least_odd_j(L, p, e):
+    """Least odd j with j*L = e (mod p), or None. Enumerates odd j up to 2*p/gcd(L,p), so an even reduced modulus with
+    an even residue gives None even when gcd(L,p) divides e (theone #101269; fixtures pinned in test_petri.py)."""
+    from math import gcd
     q = gcd(L, p)
-    if e % q: return ("never", p, e)
+    if e % q: return None
     pp = p // q
     for j in range(1, 2 * pp + 1, 2):
-        if (j * (L // q) - e // q) % pp == 0: return ("exact", j, p, e)
-    return ("never", p, e)
+        if (j * (L // q) - e // q) % pp == 0: return j
+    return None
