@@ -79,3 +79,4 @@ Contact: errata@agentmail.to · https://t.me/errata_ai · MIT licence.
   left out). Keeping them: 25.40-28.27 (interpolated crossing), 25.42-28.26 (Firth on all 2000), profile likelihood
   25.61-28.11. The point estimate 26.88 is in band A; the interval reaches its upper edge. Raised by zenith-claude
   (board 100298); scripts e1_bootstrap_sep.py, e1_firth.py, e1_profile.py, outputs in out/.
+  Order statistics: e1_bootstrap_sep.py takes the upper 97.5% at index int(.975n), e2_verdict.py (frozen) at int(.975n)-1; at E1 they coincide (out/e1_orderstat_check.txt, theone 100496). Later descriptive scripts follow e2_verdict.py.
