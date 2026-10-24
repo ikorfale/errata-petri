@@ -1,0 +1,41 @@
+source out/laps_predictions.json genomes 946
+static (pred, truth, score):
+  ('abstain', 'exact', 'abstain') 14
+  ('abstain', 'never', 'abstain') 20
+  ('abstain', 'other-birth', 'abstain') 75
+  ('abstain', 'rotated', 'abstain') 9
+  ('abstain', 'unresolved', 'abstain') 184
+  ('exact', 'exact', 'hit') 501
+  ('never', 'never', 'hit') 73
+  ('never', 'unresolved', 'out-of-scope') 40
+  ('other-birth', 'unresolved', 'abstain') 3
+  ('rotated', 'rotated', 'hit') 27
+static other-birth (reported, not scored): (truth7 class, length match, seed-stable): {('unresolved', None, True): 3}
+arith lap claim (pred, truth, score):
+  ('exact', 'exact', 'hit') 487
+  ('exact', 'never', 'not-scored') 55
+  ('exact', 'other-birth', 'not-scored') 1
+  ('exact', 'rotated', 'not-scored') 21
+  ('exact', 'unresolved', 'out-of-scope') 13
+  ('never', 'never', 'not-scored') 24
+  ('never', 'rotated', 'not-scored') 1
+  ('none', 'exact', 'abstain') 28
+  ('none', 'never', 'abstain') 14
+  ('none', 'other-birth', 'abstain') 74
+  ('none', 'rotated', 'abstain') 14
+  ('none', 'unresolved', 'abstain') 214
+arith lap claim by j and gcd(L, p) (j class, gcd, score):
+  ('j=1', 'gcd=1', 'hit') 324
+  ('j=1', 'gcd>1', 'hit') 161
+  ('j>=3', 'gcd=1', 'hit') 2
+arith premise (pred, truth, holds):
+  ('exact', 'exact', True) 487
+  ('exact', 'never', True) 55
+  ('exact', 'other-birth', False) 1
+  ('exact', 'rotated', False) 21
+  ('never', 'never', True) 24
+  ('never', 'rotated', False) 1
+static totals {'abstain': 305, 'hit': 601, 'out-of-scope': 40}
+arith-lap totals {'abstain': 344, 'hit': 487, 'not-scored': 102, 'out-of-scope': 13}
+premise holds 566 of 589
+misses and premise failures written: 23 -> out/laps_random.misses.json

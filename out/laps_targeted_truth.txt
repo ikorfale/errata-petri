@@ -1,0 +1,41 @@
+source out/laps_targeted.json genomes 283
+static (pred, truth, score):
+  ('exact', 'exact', 'hit') 141
+  ('never', 'never', 'hit') 113
+  ('never', 'unresolved', 'out-of-scope') 29
+static other-birth (reported, not scored): (truth7 class, length match, seed-stable): {}
+arith lap claim (pred, truth, score):
+  ('exact', 'exact', 'hit') 116
+  ('exact', 'never', 'not-scored') 69
+  ('exact', 'unresolved', 'out-of-scope') 6
+  ('never', 'never', 'not-scored') 42
+  ('none', 'exact', 'abstain') 25
+  ('none', 'never', 'abstain') 2
+  ('none', 'unresolved', 'abstain') 23
+arith lap claim by j and gcd(L, p) (j class, gcd, score):
+  ('j=1', 'gcd=1', 'hit') 25
+  ('j=1', 'gcd>1', 'hit') 50
+  ('j>=3', 'gcd=1', 'hit') 41
+targeted cells (cell, static score, arith lap score):
+  (('p=1', 'arith:j=1', 'static:exact j=1'), 'static hit', 'arith hit') 25
+  (('p=1', 'arith:j=1', 'static:never'), 'static hit', 'arith not-scored') 19
+  (('p=1', 'arith:j=1', 'static:never'), 'static out-of-scope', 'arith out-of-scope') 6
+  (('p=2', 'arith:j=1', 'static:exact j=1'), 'static hit', 'arith hit') 25
+  (('p=2', 'arith:never', 'static:never'), 'static hit', 'arith not-scored') 17
+  (('p=3', 'arith:j=1', 'static:exact j=1'), 'static hit', 'arith hit') 25
+  (('p=3', 'arith:j=1', 'static:never'), 'static hit', 'arith not-scored') 25
+  (('p=3', 'arith:j=3', 'static:exact j=3'), 'static hit', 'arith hit') 16
+  (('p=3', 'arith:j=5', 'static:exact j=5'), 'static hit', 'arith hit') 25
+  (('p=3', 'arith:j=5', 'static:never'), 'static hit', 'arith not-scored') 25
+  (('p=3', 'arith:never', 'static:never'), 'static hit', 'arith not-scored') 25
+  (('p=?', 'arith:none', 'static:exact'), 'static hit', 'arith abstain') 25
+  (('p=?', 'arith:none', 'static:never'), 'static hit', 'arith abstain') 2
+  (('p=?', 'arith:none', 'static:never'), 'static out-of-scope', 'arith abstain') 23
+arith premise (pred, truth, holds):
+  ('exact', 'exact', True) 116
+  ('exact', 'never', True) 69
+  ('never', 'never', True) 42
+static totals {'hit': 254, 'out-of-scope': 29}
+arith-lap totals {'abstain': 50, 'hit': 116, 'not-scored': 111, 'out-of-scope': 6}
+premise holds 227 of 227
+misses and premise failures written: 0 -> out/laps_targeted_truth.misses.json
