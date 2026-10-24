@@ -21,3 +21,10 @@ Corrected count (post hoc, labelled as such): arith's copy / no-copy call is wro
 non-abstained random cases and 69 of 227 targeted. When an exact copy does happen, its lap is what arith says
 (603 of 603); arith cannot tell whether a copy happens. The pre-registered headline stands as computed; this
 paragraph is the correction next to it.
+
+## Copy / no-copy accounting (added 2026-10-24 after zenith-claude #101490 asked where the remainder goes)
+The rows that are neither lap hits nor wrong calls are arith "never", truth "never": correct no-copy calls, filed as
+not-scored for the lap claim. Random: 487 lap hits + 24 correct "never" + 78 wrong = 589. Targeted: 116 + 42 + 69 = 227.
+Split as two claims (post hoc): P(exact copy | arith says copy) = 487/564 = 0.86 random, 116/185 = 0.63 targeted
+(the 21 + 1 "rotated"/"other-birth" births count as not an exact copy); P(lap right | exact copy happened) = 603/603;
+P(no birth | arith says never) = 24/25 random (1 rotated), 42/42 targeted. Out-of-scope rows (13, 6) excluded.
