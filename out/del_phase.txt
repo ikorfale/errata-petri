@@ -1,0 +1,4 @@
+net -1: 25 edits; (control class, edit class) counts {('fast', 'slow'): 24, ('slow', 'slow'): 1}
+   control fast: 24; of these edit in predicted class 'slow': 24; counterexamples: 0 []
+net -2: 300 edits; (control class, edit class) counts {('fast', 'never'): 277, ('slow', 'slow'): 23}
+   control fast: 277; of these edit in predicted class 'never': 277; counterexamples: 0 []

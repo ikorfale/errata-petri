@@ -1,0 +1,7 @@
+dominant 95 ('ANDN', 'NAND', 'NOT', 'ORN') 194
+block oypcupcncuyq (12): 84 positions, classes {'never': 19, 'fast': 44, 'slow': 21}; AND+ANDN at 1
+   p 82 steps 970 slow ('AND', 'ANDN', 'NAND', 'ORN')
+block oypcupcncuy (11): 85 positions, classes {'never': 20, 'fast': 46, 'slow': 19}; AND+ANDN at 1
+   p 84 steps 20000 never ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')
+silent subs per index (of 25): [13, 5, 16, 0, 0, 0, 0, 0, 16, 0, 10, 0, 23, 25, 25, 25, 25, 25, 25, 25, 25, 21, 0, 21, 16, 16, 0, 19, 0, 13, 0, 23, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 0, 0, 0, 0, 6, 9, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 23, 1, 24, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+indices with >=1 silent sub: 56 with >=20: 41

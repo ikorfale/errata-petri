@@ -1,0 +1,39 @@
+executed indices 45 of 95 : [0, 2, 3, 4, 6, 8, 9, 10, 11, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71, 72, 74, 76, 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 91, 92]
+never executed: [1, 5, 7, 12, 13, 14, 15, 16, 17, 18, 19, 20, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 60, 66, 73, 75, 77, 79, 89, 90, 93, 94]
+12-runs fully inside dead code start at [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+
+block at 31: tasks ('ANDN', 'NAND', 'NOT', 'ORN') steps 194
+  one-step activators giving AND+ANDN: 0; fast (<300): 0
+
+block at 35: tasks ('ANDN', 'NAND', 'NOT', 'ORN') steps 194
+  one-step activators giving AND+ANDN: 0; fast (<300): 0
+
+block at 39: tasks ('ANDN', 'NAND', 'NOT', 'ORN') steps 194
+  one-step activators giving AND+ANDN: 47; fast (<300): 0
+    ('sub', 21, 'h', 20000, 95)
+    ('ins', 22, 'h', 20000, 96)
+    ('ins', 23, 'h', 20000, 96)
+    ('ins', 24, 'h', 20000, 96)
+    ('sub', 30, 'v', 20000, 95)
+    ('del', 31, 'a', 20000, 94)
+    ('sub', 84, 'j', 20000, 95)
+    ('ins', 85, 'a', 20000, 96)
+    ('sub', 85, 'a', 20000, 95)
+    ('ins', 85, 'j', 20000, 96)
+    ('sub', 85, 'j', 20000, 95)
+    ('ins', 86, 'j', 20000, 96)
+
+block at 43: tasks ('ANDN', 'NAND', 'NOT', 'ORN') steps 194
+  one-step activators giving AND+ANDN: 4; fast (<300): 0
+    ('sub', 84, 'j', 20000, 95)
+    ('ins', 92, 'd', 20000, 96)
+    ('ins', 92, 'e', 20000, 96)
+    ('ins', 92, 'f', 20000, 96)
+
+block at 47: tasks ('ANDN', 'NAND', 'NOT', 'ORN') steps 194
+  one-step activators giving AND+ANDN: 5; fast (<300): 0
+    ('sub', 28, 'c', 20000, 95)
+    ('sub', 28, 'r', 20000, 95)
+    ('sub', 29, 'r', 20000, 95)
+    ('sub', 92, 'm', 20000, 95)
+    ('sub', 92, 'u', 20000, 95)
