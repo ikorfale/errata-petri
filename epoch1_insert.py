@@ -1,0 +1,52 @@
+"""Epoch 1 verdict run (plan #440/#443; protocol in SUBMIT.md and board post 'epoch 1 entries', 23.10).
+Written 24.10 before the close and before any entry was run under it.
+Each entry (submissions/epoch-1.jsonl) and one control (the top incumbent, a plain copier with no bonus, dropped the
+same way) goes into the frozen world out/epoch1_world.pkl (update 2000, sha256 checked) in one random EMPTY cell,
+mutation on, +3000 updates. Insertion seeds 1..5, the same for every arm: seed s fixes the RNG and so the cell.
+Reported per arm and seed: lineage cells at +100/+500/+1000/+2000/+3000; births of the lineage and its births that
+earned each task bonus (cumulative from insertion: the primary task measure, AND among them); a snapshot of o.tasks
+as a secondary column (a lineage that holds the board without its task = a copier win).
+Usage: python3 epoch1_insert.py ARM SEED [UPDATES]   ARM = agent name in the submissions file, or 'control'"""
+import hashlib, json, pickle, random, sys
+from collections import Counter
+from petri import parse, World
+PKL, SHA = "out/epoch1_world.pkl", json.load(open("out/epoch1_incumbents.json"))["pickle_sha256"]
+CHECK = (100, 500, 1000, 2000, 3000)
+arm, s = sys.argv[1], int(sys.argv[2]); ups = int(sys.argv[3]) if len(sys.argv) > 3 else 3000
+raw = open(PKL, "rb").read(); assert hashlib.sha256(raw).hexdigest() == SHA, "frozen world changed"
+if arm == "control":
+    letters = json.load(open("out/epoch1_incumbents.json"))["top"][0]["genome"]
+else:
+    rows = [json.loads(l) for l in open("submissions/epoch-1.jsonl") if l.strip()]
+    (row,) = [r for r in rows if r["agent"] == arm]
+    letters = row["letters"]; assert hashlib.sha256(letters.encode()).hexdigest() == row["sha256"]
+w = pickle.loads(raw); assert w.update == 2000
+# the pickle predates switches added later (E2: age_limit, para_global, ...); their defaults keep the frozen rules
+fresh = World(); added = sorted(k for k in vars(fresh) if not hasattr(w, k))
+for k in added: setattr(w, k, getattr(fresh, k))
+w.rng = random.Random(s)
+empty = [c for c in range(w.n) if w.cells[c] is None]
+# task births per lineage, counted at division (what the bonus is paid on); o.tasks is cleared at every division, so
+# a checkpoint snapshot only shows organisms mid-gestation after their task IO (Fable review 24.10) -> secondary column
+births, tbirths = Counter(), Counter()
+_divide = w.divide
+def divide(o, c):
+    n0, lin, tasks = w.births, o.lineage, set(o.tasks)
+    _divide(o, c)
+    if w.births > n0 and lin == "seed":
+        births["seed"] += 1
+        for name in tasks: tbirths[name] += 1
+w.divide = divide
+cell = w.inject(parse(letters), "seed", cell=w.rng.choice(empty))
+out = {"arm": arm, "seed": s, "cell": cell, "empty_cells": len(empty), "len": len(letters), "attrs_added": added, "checks": []}
+for u in range(1, ups + 1):
+    w.run_update()
+    if u in CHECK or u == ups:
+        live = [o for o in w.cells if o is not None]; mine = [o for o in live if o.lineage == "seed"]
+        t = Counter(name for o in mine for name in o.tasks)
+        out["checks"].append({"after": u, "cells": len(mine), "pop": len(live), "births": births["seed"], "task_births": dict(tbirths), "tasks_snapshot": dict(t),
+                              "and_carriers_snapshot": t.get("AND", 0),
+                              "pop_tasks": dict(Counter(name for o in live for name in o.tasks))})
+        if not mine:
+            out["extinct_by"] = u; break
+print(json.dumps(out), flush=True)
