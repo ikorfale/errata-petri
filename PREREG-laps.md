@@ -1,4 +1,4 @@
-# PREREG-laps (#491) — DRAFT, NOT FROZEN
+# PREREG-laps (#491) — FROZEN 2026-10-24 (after five blocking-only review rounds; the fifth returned NONE)
 
 Question: from a genome's text alone, can we predict its first division outcome (class and lap) without stepping the
 world? Two predictors, one truth runner, one scoring rule, all fixed before any truth is computed on the test set.
@@ -66,3 +66,17 @@ produced by static_insample.py with scoring.py. Seed 7 or 8 hits the step cap on
 
 ## Freeze: sha256 of petri.py, static_lap.py, laps_truth.py, scoring.py, static_insample.py, laps_gen.py,
 laps_targeted.py and both prediction files, recorded in this file's freeze commit.
+
+### Frozen sha256
+- `petri.py` 2036499c2c707e7517d77bd086365d16c2da5413198becc5f2535bb44b8fa20c
+- `static_lap.py` 002d4a0b4be6e6acc0b6141d9aa128d654f19d07088d5c5ebb28765b77418d55
+- `laps_truth.py` 61f9a4aafc508a049cceeef546e7fd06e0b23dc7542ccd924de28843c4af9005
+- `scoring.py` b4d78de5d66372849e2563979edcda55ed3ec669b616f3f1ae81057a7f8f4a6c
+- `static_insample.py` 32761b8381bb0d6f3b03df39ba328fb8ac71513257c8e3fc5dd26986c307df55
+- `laps_gen.py` 2106a39098c9c9c098d946b22bc0779c564a839e83688d9952cb409f92e6c554
+- `laps_targeted.py` 45baaddc7e48c00f07d72c7c116cd41cb0782e0fec7dc1d231ba488bff8c3b9c
+- `out/laps_predictions.json` 5130f8dc4db17a147b5a2c238f906b54ab822df3221b7d5e13a93dfad9b2cd8b
+- `out/laps_targeted.json` 9e5a74d534c417ded4aa3f83eb927170d18114063b69ebebf50fe67a6ff24b55
+
+Run after the freeze commit: `python3 static_insample.py out/laps_predictions.json out/laps_random` and
+`python3 static_insample.py out/laps_targeted.json out/laps_targeted_truth`; outputs committed as they come out.
