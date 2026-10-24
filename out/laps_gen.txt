@@ -1,0 +1,7 @@
+parents 5 {3: 2, 1: 2}
+mutants 946
+mutants sha256 e1f6c691202516be73db094feb0fa39433b0d5548008205bd248494511ee70c1
+predictions sha256 5130f8dc4db17a147b5a2c238f906b54ab822df3221b7d5e13a93dfad9b2cd8b
+static [('exact j=1', 499), ('abstain', 302), ('never', 113), ('rotated', 27), ('other-birth', 3), ('exact j=5', 2)]
+arith [('exact j=1', 574), ('none', 344), ('never', 25), ('exact j=5', 3)]
+arith cells (L mod p, e mod p, gcd, reduced vs unreduced): [((0, 0, 1, 'same'), 378), ((0, 0, 2, 'same'), 14), ((0, 0, 3, 'same'), 180), ((0, 1, 2, 'same'), 2), ((0, 1, 3, 'same'), 19), ((0, 2, 3, 'same'), 4), ((1, 2, 1, 'same'), 3), ((2, 2, 1, 'same'), 2)]

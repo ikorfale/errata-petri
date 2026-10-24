@@ -140,6 +140,9 @@ def arith(g):
     predict(g)
     ch = [n for n, lab in (predict.checks or []) if lab is not None]
     if len(ch) < 2 or ch[1] - ch[0] <= 0: return None
+    if len(ch) < 3 or len({b - a for a, b in zip(ch[:6], ch[1:6])}) != 1: return None   # aperiodic or too short:
+    # the rule assumes a periodic schedule; the targeted stratum (laps_targeted.py) showed every arith "never" that
+    # static contradicts comes from a schedule that is not periodic over its first checks, so arith abstains there
     L = len(g); e, p = ch[0], ch[1] - ch[0]
     j = least_odd_j(L, p, e)
     return ("never", p, e) if j is None else ("exact", j, p, e)

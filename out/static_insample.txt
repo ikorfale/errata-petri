@@ -4,7 +4,6 @@
 ('exact', 'exact', 'ok') 175
 ('other-birth', 'other-birth', 'ok') 7
 ('rotated', 'rotated', 'ok') 81
-('arith', 'exact', 'ok') 169
-('arith', 'never', 'MISS') 1
-('arith', 'none', '-') 79
+('arith', 'exact', 'ok') 166
+('arith', 'none', '-') 83
 misses:
