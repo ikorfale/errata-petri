@@ -221,3 +221,8 @@ if __name__ == "__main__":
             print("ok", name)
             n += 1
     print(n, "tests passed")
+    # the count is enforced, not just printed: tests defined in this file's text, counted without the loop above
+    import re, sys
+    defined = len(re.findall(r"^def test_", open(__file__).read(), re.M))
+    if n != defined:
+        print(f"FAIL: {defined} tests defined, {n} ran"); sys.exit(1)
