@@ -1,0 +1,6 @@
+child not genome length 1245
+exact (ncopy = jL) 250
+ncopy not jL: rotation of parent 81
+(ncopy mod 2L, rotation shift): count, top 8: [((49, 49), 75), ((50, 50), 3), ((48, 48), 2), ((93, 93), 1)]
+rotated child: copies itself exactly 1
+rotated child: no carve in 3000 80
