@@ -1,0 +1,8 @@
+parent solo 246.4
+39 sub 21 h + sub 10 e len 95 steps 130 ['AND', 'ANDN', 'NAND', 'NOT', 'ORN'] | child==parent: False child len 60 | solo 0
+39 sub 21 h + sub 2 s len 95 steps 139 ['AND', 'ANDN', 'NOT'] | child==parent: False child len 60 | solo 0
+39 sub 21 h + ins 31 z len 96 steps 207 ['AND', 'ANDN', 'NOT', 'ORN'] | child==parent: True child len 96 | solo 247.2
+39 ins 22 h + del 55 len 95 steps 188 ['AND', 'ANDN', 'NAND', 'NOT', 'ORN'] | child==parent: False child len 60 | solo 0
+block@39 only len 95 steps 194 ['ANDN', 'NAND', 'NOT', 'ORN'] | child==parent: True | solo 246.4
+block@39 + ins 31 z len 96 steps 350 [] | child==parent: False | solo 0
+block@39 + sub 21 h len 95 steps 20000 ['AND', 'ANDN', 'NOT'] | child==parent: False | solo 0
