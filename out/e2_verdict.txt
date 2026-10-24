@@ -1,0 +1,42 @@
+worlds: 238 (expected 238)
+local arms matching E1 world for world: 42/42
+
+mode local: mean h_arm 0.0489
+  L   est ext unres
+  24   12   2     0
+  28    5   9     0
+  32    0  14     0
+  L50 (26.85, 26.85) (logistic a=19.014 b=-0.7082); bootstrap interval (25.33, 28.27)
+  failed injections 974770: empty 12.7%, nocut 33.1%, nolabel 1.1%, occupied 53.1%, resistant 0.0%
+  parasites lost with host 518281: age 17.5%, overwrite 82.5%
+
+mode global: mean h_arm 0.0495
+  L   est ext unres
+  24   12   2     0
+  28    9   5     0
+  30    5   9     0
+  32    3  10     1
+  36    0  14     0
+  40    0  14     0
+  44    0  14     0
+  48    0  14     0
+  L50 (28.8, 28.8) (logistic a=13.448 b=-0.4668); bootstrap interval (27.45, 29.99)
+  failed injections 1694511: empty 12.1%, nocut 36.1%, nolabel 1.3%, occupied 50.4%, resistant 0.0%
+  parasites lost with host 1098475: age 15.8%, overwrite 84.2%
+
+mode noage: mean h_arm 0.0467
+  L   est ext unres
+  24   14   0     0
+  28   11   3     0
+  30   11   3     0
+  32    7   6     1
+  36    0  14     0
+  40    0  14     0
+  L50 (31.52, 31.52) (logistic a=19.799 b=-0.6281); bootstrap interval (30.36, 32.42)
+  failed injections 3628064: empty 0.0%, nocut 33.0%, nolabel 1.3%, occupied 65.7%, resistant 0.0%
+  parasites lost with host 1670102: overwrite 100.0%
+occupied-host share of failed injections: local 53.1%, global 50.4%
+
+shift vs E1 L50 26.88: global straddles 3, noage >=3
+crowding (second model): undecided
+old age (mine, post hoc): supported
