@@ -21,8 +21,8 @@ world? Two predictors, one truth runner, one scoring rule, all fixed before any 
 "unresolved". Run under world seeds 7 and 8.
 
 ## Scoring (scoring.py is the whole rule; `python3 scoring.py` prints the table)
-- Truth unresolved under seed 7 or seed 8: out-of-scope. A non-abstained prediction whose truth differs between the
-  seeds: miss.
+- Truth unresolved under seed 7 or seed 8: out-of-scope. A non-abstained static prediction whose truth differs
+  between the seeds: miss (arith handles seed divergence through the premise, below).
 - static: hit iff class and parameter equal (j for exact, ncopy for exact-offlap and rotated; never = never).
   Abstain and other-birth are not scored; other-birth is reported with its truth, length match and seed stability
   (in-sample 7 other-birth predictions: 2 seed-stable with matching child length, 5 whose truth differed between
