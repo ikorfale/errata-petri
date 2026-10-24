@@ -1,0 +1,102 @@
+parent L 95
+R1 k0 L96 mod3 0 steps 207 checks 33 ips [75, 89] ncopy@1st 0 gaps {3: 32} ncopy@last 96
+    divide@5 ncopy 0 rh 0 wh 96 mem 192 span -96
+    divide@206 ncopy 96 rh 96 wh 0 mem 192 span 96
+R1 k1 L97 mod3 1 steps 532 checks 98 ips [75, 90] ncopy@1st 0 gaps {3: 97} ncopy@last 291
+    divide@5 ncopy 0 rh 0 wh 97 mem 194 span -97
+    divide@531 ncopy 291 rh 97 wh 0 mem 194 span 97
+R1 k2 L98 mod3 2 steps 537 checks 99 ips [75, 91] ncopy@1st 0 gaps {3: 98} ncopy@last 294
+    divide@5 ncopy 0 rh 0 wh 98 mem 196 span -98
+    divide@536 ncopy 294 rh 98 wh 0 mem 196 span 98
+R1 k3 L99 mod3 0 steps 213 checks 34 ips [75, 92] ncopy@1st 0 gaps {3: 33} ncopy@last 99
+    divide@5 ncopy 0 rh 0 wh 99 mem 198 span -99
+    divide@212 ncopy 99 rh 99 wh 0 mem 198 span 99
+R1 k4 L100 mod3 1 steps 548 checks 101 ips [75, 93] ncopy@1st 0 gaps {3: 100} ncopy@last 300
+    divide@5 ncopy 0 rh 0 wh 100 mem 200 span -100
+    divide@547 ncopy 300 rh 100 wh 0 mem 200 span 100
+R1 k5 L101 mod3 2 steps 553 checks 102 ips [75, 94] ncopy@1st 0 gaps {3: 101} ncopy@last 303
+    divide@5 ncopy 0 rh 0 wh 101 mem 202 span -101
+    divide@552 ncopy 303 rh 101 wh 0 mem 202 span 101
+R3 k0 L96 mod3 0 steps 210 checks 33 ips [75, 89] ncopy@1st 0 gaps {3: 32} ncopy@last 96
+    divide@5 ncopy 0 rh 0 wh 96 mem 192 span -96
+    divide@209 ncopy 96 rh 96 wh 0 mem 192 span 96
+R3 k1 L97 mod3 1 steps never(<3000) checks 601 ips [90] ncopy@1st 4 gaps {3: 19, 0: 581} ncopy@last 61
+    divide@5 ncopy 0 rh 0 wh 97 mem 194 span -97
+    divide@100 ncopy 0 rh 0 wh 76 mem 194 span -118
+    divide@133 ncopy 0 rh 0 wh 148 mem 194 span -46
+    divide@195 ncopy 1 rh 1 wh 128 mem 194 span 127
+    ... 9 divide attempts in total
+R3 k2 L98 mod3 2 steps 523 checks 98 ips [91] ncopy@1st 3 gaps {3: 97} ncopy@last 294
+    divide@5 ncopy 0 rh 0 wh 98 mem 196 span -98
+    divide@522 ncopy 294 rh 98 wh 0 mem 196 span 98
+R3 k3 L99 mod3 0 steps 978 checks 100 ips [15, 32, 75, 92] ncopy@1st 0 gaps {3: 96, 2: 1, 0: 2} ncopy@last 290
+    divide@5 ncopy 0 rh 0 wh 99 mem 198 span -99
+    divide@35 ncopy 0 rh 0 wh 99 mem 198 span -99
+    divide@132 ncopy 0 rh 0 wh 20 mem 198 span -178
+    divide@165 ncopy 0 rh 0 wh 8 mem 198 span -190
+    ... 10 divide attempts in total
+R3 k4 L100 mod3 1 steps never(<3000) checks 0 ips [] ncopy@1st None gaps {} ncopy@last None
+    divide@5 ncopy 0 rh 0 wh 100 mem 200 span -100
+    divide@33 ncopy 0 rh 0 wh 100 mem 200 span -100
+    divide@36 ncopy 0 rh 0 wh 100 mem 200 span -100
+    divide@39 ncopy 0 rh 0 wh 100 mem 200 span -100
+    ... 990 divide attempts in total
+R3 k5 L101 mod3 2 steps 557 checks 102 ips [75, 94] ncopy@1st 0 gaps {3: 101} ncopy@last 303
+    divide@5 ncopy 0 rh 0 wh 101 mem 202 span -101
+    divide@556 ncopy 303 rh 101 wh 0 mem 202 span 101
+R2 k0 L95 mod3 2 steps 207 checks 33 ips [45, 74, 88] ncopy@1st 2 gaps {0: 1, 3: 31} ncopy@last 95
+    divide@5 ncopy 0 rh 0 wh 95 mem 190 span -95
+    divide@13 ncopy 1 rh 1 wh 96 mem 190 span 95
+    divide@206 ncopy 95 rh 95 wh 0 mem 190 span 95
+R2 k1 L96 mod3 0 steps never(<3000) checks 617 ips [74, 86, 87, 88, 89] ncopy@1st 8 gaps {3: 27, 2: 96, 1: 191, 0: 302} ncopy@last 472
+    divide@5 ncopy 0 rh 0 wh 96 mem 192 span -96
+    divide@13 ncopy 1 rh 1 wh 97 mem 192 span 96
+    divide@120 ncopy 2 rh 2 wh 96 mem 192 span 94
+    divide@128 ncopy 3 rh 3 wh 97 mem 192 span 94
+    ... 312 divide attempts in total
+R2 k2 L97 mod3 1 steps 514 checks 0 ips [] ncopy@1st None gaps {} ncopy@last None
+    divide@5 ncopy 0 rh 0 wh 97 mem 194 span -97
+    divide@13 ncopy 1 rh 1 wh 98 mem 194 span 97
+    divide@55 ncopy 2 rh 2 wh 61 mem 194 span 59
+    divide@63 ncopy 3 rh 3 wh 62 mem 194 span 59
+    ... 22 divide attempts in total
+R2 k3 L98 mod3 2 steps 678 checks 0 ips [] ncopy@1st None gaps {} ncopy@last None
+    divide@5 ncopy 0 rh 0 wh 98 mem 196 span -98
+    divide@13 ncopy 1 rh 1 wh 99 mem 196 span 98
+    divide@101 ncopy 2 rh 2 wh 39 mem 196 span 37
+    divide@109 ncopy 3 rh 3 wh 40 mem 196 span 37
+    ... 15 divide attempts in total
+R2 k4 L99 mod3 0 steps never(<3000) checks 0 ips [] ncopy@1st None gaps {} ncopy@last None
+    divide@5 ncopy 0 rh 0 wh 99 mem 198 span -99
+    divide@13 ncopy 1 rh 1 wh 100 mem 198 span 99
+R2 k5 L100 mod3 1 steps 227 checks 17 ips [74, 93] ncopy@1st 4 gaps {3: 16} ncopy@last 52
+    divide@5 ncopy 0 rh 0 wh 100 mem 200 span -100
+    divide@13 ncopy 1 rh 1 wh 101 mem 200 span 100
+    divide@97 ncopy 2 rh 2 wh 43 mem 200 span 41
+    divide@105 ncopy 3 rh 3 wh 44 mem 200 span 41
+    ... 5 divide attempts in total
+
+successful divide: child length vs genome length (the cell after birth holds the parent; the child is the newest org)
+R1 k0 L96 last divide ncopy 96 child 96 EXACT LENGTH
+R1 k1 L97 last divide ncopy 291 child 97 EXACT LENGTH
+R1 k2 L98 last divide ncopy 294 child 98 EXACT LENGTH
+R1 k3 L99 last divide ncopy 99 child 99 EXACT LENGTH
+R1 k4 L100 last divide ncopy 300 child 100 EXACT LENGTH
+R1 k5 L101 last divide ncopy 303 child 101 EXACT LENGTH
+R3 k0 L96 last divide ncopy 96 child 96 EXACT LENGTH
+R3 k2 L98 last divide ncopy 294 child 98 EXACT LENGTH
+R3 k3 L99 last divide ncopy 290 child 49 TRUNCATED/OTHER
+R3 k5 L101 last divide ncopy 303 child 101 EXACT LENGTH
+R2 k0 L95 last divide ncopy 95 child 95 EXACT LENGTH
+R2 k2 L97 last divide ncopy 21 child 41 TRUNCATED/OTHER
+R2 k3 L98 last divide ncopy 14 child 25 TRUNCATED/OTHER
+R2 k5 L100 last divide ncopy 52 child 41 TRUNCATED/OTHER
+
+parent mirror: k no-op 'q' at site 84 of the parent (the series behind 'slow' 847/875 in 100923)
+parent k0 L95 mod3 2 steps 194 ncopy@1st 2 checks 32 last-divide ncopy 95 child 95 EXACT
+parent k1 L96 mod3 0 steps never ncopy@1st 2 checks 593 last-divide ncopy 1 child - 
+parent k2 L97 mod3 1 steps 847 ncopy@1st 2 checks 162 last-divide ncopy 485 child 97 EXACT
+parent k3 L98 mod3 2 steps 202 ncopy@1st 2 checks 33 last-divide ncopy 98 child 98 EXACT
+parent k4 L99 mod3 0 steps never ncopy@1st 2 checks 592 last-divide ncopy 1 child - 
+parent k5 L100 mod3 1 steps 875 ncopy@1st 2 checks 167 last-divide ncopy 500 child 100 EXACT
+parent k6 L101 mod3 2 steps 210 ncopy@1st 2 checks 34 last-divide ncopy 101 child 101 EXACT
