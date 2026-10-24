@@ -179,14 +179,16 @@ def test_least_odd_j_matches_theone_fixtures_and_enumeration():
     fx = {(95, 4, 0): None, (95, 4, 1): 3, (95, 4, 2): None, (95, 4, 3): 1, (98, 4, 0): None, (98, 4, 2): 1, (96, 4, 0): 1}
     for k, v in fx.items():
         assert least_odd_j(*k) == v, (k, least_odd_j(*k), v)
-    n = 0
+    n = none = 0
     for L in range(1, 101):
         for p in range(1, 33):
             for e in range(p):
                 brute = next((j for j in range(1, 2 * p + 1, 2) if (j * L - e) % p == 0), None)
                 assert least_odd_j(L, p, e) == brute, (L, p, e)
                 n += 1
+                none += brute is None
     assert n == 52800
+    assert none == 20694, none  # zenith's independent total (#101425): 20,694 none, 32,106 with a solution
 
 
 if __name__ == "__main__":
