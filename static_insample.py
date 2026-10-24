@@ -29,7 +29,7 @@ if __name__ == "__main__":
         if a is not None and sa in ("hit", "miss"):
             jk = "never" if a[0] == "never" else ("j=1" if a[1] == 1 else "j>=3")
             arj[(jk, "gcd>1" if gcd(len(g), a[1 + (a[0] == "exact")]) > 1 else "gcd=1", sa)] += 1
-        if isinstance(r, dict) and "cell" in r and sa != "abstain":
+        if isinstance(r, dict) and "cell" in r:
             cells[(tuple(r["cell"]), "static " + s, "arith " + sa)] += 1
         if pr[0] == "other-birth": ln[(tr[0], static_len(pr, tr), tr == tr2)] += 1
         if prem is not None: pm[(a[0], tr[0] if tr2 == tr else tr[0] + "/" + tr2[0], prem)] += 1
