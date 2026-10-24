@@ -1,0 +1,5909 @@
+[
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsiehacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccecczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuruupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccczccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwutjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyqyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncupqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcnceyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccwccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccpccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccpccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccccccccccccccccccckccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccqccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccoccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccccccccrcccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccycccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdagycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulrkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccpcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncugqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycueyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmahvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagctccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgcrncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyqupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgaf",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgag",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjaacxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wucagcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjaacxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjogcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralpjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgay",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "rafwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+0
+]
+},
+{
+"genome": "raldjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgnb",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgwb",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjrgcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjlgcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgaq",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwxagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgalb",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcazcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwyagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcabcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjarcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjxgcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "wzcatcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgnb",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjjgcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=1",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+1,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuvqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxijxmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvrfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovupuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvpvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvhvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhackirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxfjhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncvyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcvpcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovunuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlowuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijwmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzrvvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlvvuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagceijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvkvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycvuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirvuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzwvvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyvyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxijlmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulvkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxpjhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnfhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+2,
+0
+]
+},
+{
+"genome": "ralwjavcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxijhmpmmcfvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoyucupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulwkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulpkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "calwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycykyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncubqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuuvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqgulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhxxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuojoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyqycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpvmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhppmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuizvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvyikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuvuyzdvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdtgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgyfyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqvycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmgmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuwqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhaclrwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuvuyzevvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgyhyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "fralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"never",
+2,
+0
+]
+},
+{
+"genome": "raflwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"never",
+2,
+0
+]
+},
+{
+"genome": "ralwjagcfxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"never",
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlfhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"never",
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlfhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"never",
+2,
+0
+]
+},
+{
+"genome": "rfalwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"never",
+2,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgyb",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwaagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzlvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvkvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvnvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfbaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvlvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjaicxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwnagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjaqcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjawcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjigcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "wzcagcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+2
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvrvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjajcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgvb",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralqjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvmvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralbjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralcjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgal",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzhvvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjaacxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwuagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "raldjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=2",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+2,
+1
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypyupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjdmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgorncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulakdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjeypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjampmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyqycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjowpcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwayjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycpuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqdulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuulcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgernruyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqruxgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwcyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrmlgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyynuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "palwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyxupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcipcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirquyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgpcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuycycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuytyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjmmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralcjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgub",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgkb",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjakcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjaycxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "raljjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwxagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "radwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxghb",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgeb",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjapcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjtgcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjabcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralcjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfaaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjxgcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgav",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwpagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjalcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwbagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjaxcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwkagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgah",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgob",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjawcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcvxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+3
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvhnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacihrwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacikrwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhackirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhzacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlkhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjehmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacihrwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacikrwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhackirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhzacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlkhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinjkhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxinkjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+0
+]
+},
+{
+"genome": "ralwjagcxvinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=3",
+"static:exact j=3"
+],
+"static": [
+"exact",
+3
+],
+"arith": [
+"exact",
+3,
+3,
+3
+]
+},
+{
+"genome": "raltwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralnwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "rcalwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlzhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralbwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcwxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxwinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralrwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwajagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwpjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxqinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjaqgcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxiinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "bralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "rjalwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxlinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "realwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwyjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjasgcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjargcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "raliwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "rualwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxcinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "railwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:exact j=5"
+],
+"static": [
+"exact",
+5
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjtagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjbagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjpagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjmagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwdjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjajgcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjnagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjeagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjyagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjadgcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjsagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjcagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjuagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "raldwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralewjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjxagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjoagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjdagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjiagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjwagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjhagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjaegcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "wralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjqagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjragcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:j=5",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+5,
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuvuyzvzvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuvzvzvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyvvzvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyvyzvzvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncvyuyzvzvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgernvuyuyzvzvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgervcuyuyzvzvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgvrncuyuyzvzvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlmvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuvjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnltvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxcnjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoyvcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvrlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlnvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcnvuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcvpcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagceihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxinzhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnluvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwvyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyvycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnldvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhavirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcvcuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxmnjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjavcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlwvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacvrwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnzhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuvpcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+1
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlkvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=3",
+"arith:never",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"never",
+3,
+2
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyvvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:exact j=1"
+],
+"static": [
+"exact",
+1
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuvuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuvzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyvyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncvyuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgernvuyuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgervcuyuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgvrncuyuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuvuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuvzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyvyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncvyuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgernvuyuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgervcuyuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgvrncuyuyzvvvfcaxgab",
+"cell": [
+"p=4",
+"arith:j=1",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": [
+"exact",
+1,
+4,
+0
+]
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcnfuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyyfuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwfyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhafirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjofpcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhfcirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcufcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirfuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvmfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcnfuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupfncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcufcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwfyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyfyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxifhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncufqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoyfcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncfyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxifhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncfyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycufyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcnfuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulfkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyfrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyufzvzvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:exact"
+],
+"static": [
+"exact",
+1
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwugyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhwvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovughuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhgacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulzgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcxgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvtuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypzupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralgjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcsgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuytoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvvuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvsikhacirwuygjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxevsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacitwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvyuuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxinjhmpmmchvnlhvuuxvisikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwuyjoypcupzcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxihjhmpmmchvnlhvuuxvsikhacirwiyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ragwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzevvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacigrwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzdvvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": null
+},
+{
+"genome": "ralwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvgvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no passing check with a viable carve within 10 laps"
+],
+"arith": null
+},
+{
+"genome": "rglwjagcxijhmpmmchvnlovuhuxvsikhacirwuyjoypcupcncuyqrulgkdqgycyuyyycuuyuupcfgerncuyuyzvzvfcaxgab",
+"cell": [
+"p=?",
+"arith:none",
+"static:never"
+],
+"static": [
+"never",
+"no copies within the step budget"
+],
+"arith": null
+}
+]

@@ -1,0 +1,21 @@
+cell (p, arith, static): variants -> drawn
+  ('p=1', 'arith:j=1', 'static:exact j=1'): 7401 -> 25  [agree]
+  ('p=1', 'arith:j=1', 'static:never'): 491 -> 25  [DISAGREE]
+  ('p=2', 'arith:j=1', 'static:exact j=1'): 233 -> 25  [agree]
+  ('p=2', 'arith:j=1', 'static:never'): 2 -> 2  [DISAGREE]
+  ('p=2', 'arith:never', 'static:exact j=1'): 1496 -> 25  [DISAGREE]
+  ('p=2', 'arith:never', 'static:exact j=5'): 6 -> 6  [DISAGREE]
+  ('p=2', 'arith:never', 'static:never'): 170 -> 25  [agree]
+  ('p=3', 'arith:j=1', 'static:exact j=1'): 3014 -> 25  [agree]
+  ('p=3', 'arith:j=1', 'static:never'): 263 -> 25  [DISAGREE]
+  ('p=3', 'arith:j=3', 'static:exact j=3'): 16 -> 16  [agree]
+  ('p=3', 'arith:j=5', 'static:exact j=5'): 174 -> 25  [agree]
+  ('p=3', 'arith:j=5', 'static:never'): 28 -> 25  [DISAGREE]
+  ('p=3', 'arith:never', 'static:exact j=1'): 8 -> 8  [DISAGREE]
+  ('p=3', 'arith:never', 'static:never'): 167 -> 25  [agree]
+  ('p=4', 'arith:j=1', 'static:exact j=1'): 1 -> 1  [agree]
+  ('p=4', 'arith:j=1', 'static:never'): 14 -> 14  [DISAGREE]
+  ('p=?', 'arith:none', 'static:exact'): 200 -> 25  [DISAGREE]
+  ('p=?', 'arith:none', 'static:never'): 668 -> 25  [DISAGREE]
+variants 28344 drawn 347
+targeted sha256 35b7525dc6b829916c34d38b8258575d297c0d362dc7421d15ad05e317cccd6f
