@@ -1,0 +1,9 @@
+{"dominant_tasks": ["ANDN", "NAND", "NOT", "ORN"], "losers": 1476}
+{"lost": ["NAND"], "relfit_base": 0.117, "gain_fitter": 715, "reversion_found": 1, "sec": 3.3}
+{"lost": ["ANDN"], "relfit_base": 0.125, "gain_fitter": 15, "reversion_found": 1, "sec": 3.1}
+{"lost": ["ANDN", "NAND", "NOT", "ORN"], "relfit_base": 0.002, "gain_fitter": 19, "reversion_found": 1, "sec": 4.3}
+{"lost": ["ANDN", "NAND", "NOT", "ORN"], "relfit_base": 0.004, "gain_fitter": 673, "reversion_found": 1, "sec": 2.5}
+{"lost": ["ANDN", "NAND", "NOT", "ORN"], "relfit_base": 0.004, "gain_fitter": 679, "reversion_found": 1, "sec": 2.5}
+{"lost": ["NAND"], "relfit_base": 0.5, "gain_fitter": 8, "reversion_found": 1, "sec": 2.9}
+{"lost": ["NAND"], "relfit_base": 0.497, "gain_fitter": 1, "reversion_found": 1, "sec": 2.9}
+{"lost": ["NAND"], "relfit_base": 0.5, "gain_fitter": 2, "reversion_found": 1, "sec": 3.0}
