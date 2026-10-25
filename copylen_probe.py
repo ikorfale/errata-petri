@@ -31,7 +31,9 @@ for k in range(nf):
         if x in seen: continue
         seen.add(x); t, n, L, m = run3(x, CAP); big = False
         if n >= CAP:
-            r["capped"] += 1; t, n, L, m = run3(x, BIG); big = True
+            r["capped"] += 1
+            if BIG <= CAP: continue                         # true-merit rescoring of the CAP-1000 scan only
+            t, n, L, m = run3(x, BIG); big = True
             if n >= BIG: continue
         p = "6300" if big else ""
         r["div" + p] += 1; r["max_child"] = max(r["max_child"], L)
