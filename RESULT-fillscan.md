@@ -31,3 +31,18 @@ divide, 0 gain a task. Lab job petri-capprobe-481 re-runs fills 0-399 the same w
 Public sentence until it finishes (Fable): "In 1254 neutral fills of the s2 dominant's dead code, none of 6.1 million
 one-step mutants that divided within 1000 steps gained a task and beat the dominant (95% upper bound 0.24% of fills;
 one dominant, one fill seed, input seed 7)."
+
+## Censoring probe: result (lab job petri-capprobe-481, 25.10)
+Killed at its 3 h limit after fills 0-317 of the 400 planned (seeded prefix, so the cut is independent of outcome).
+out/cap_probe_s1.jsonl: 318 fills, 774,970 mutants hit CAP 1000 (2338-2659 per fill), re-run to 6,300 steps:
+1,417 divide (1-7 per fill), 0 gain a task, 0 fitter. Break-even of a +5-bit gain with an insertion: 32*194*96/95 = 6,273.
+Rule of three for gains up to 5 bits at copied length <= 96: below 3/318 = 0.94% of fills.
+
+## Copied length (Fable review 25.10, blocking)
+petri.py pays merit = min(ncopy, len(child)) * 2^bonus, and carve() allows a child up to 2x the parent. fill_scan.py and
+cap_probe.py scored fitness with genome length, so a mutant that copies a longer child was under-scored.
+copylen_probe.py scores by the merit actually paid at the first division (kid.merit / steps, dominant 12160/194).
+Fills 0-11 (out/copylen_s1.jsonl, matches cap_probe counts per fill): 29,075 divide within 1000, 62 with a child longer
+than the parent (max 126), 336 gain a task, 0 fitter; 29,277 capped, 44 divide by 6,300, 0 gain.
+At the 2x limit (child 190) the +5-bit break-even is 32*194*190/95 = 12,416 steps: fills 0-317 re-run to 12,500 with true
+merit (out/copylen12500_s1.jsonl; its "div6300"/"gain6300" columns mean 12,500 in that file).

@@ -1,0 +1,13 @@
+{"dominant_tasks": ["ANDN", "NAND", "NOT", "ORN"], "steps": 194, "child_len": 95, "merit": 12160.0, "len": 95}
+{"fill": 0, "div": 2292, "long_child": 5, "max_child": 117, "gain": 28, "fitter": 0, "capped": 2570, "div6300": 5, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 10.6}
+{"fill": 1, "div": 2275, "long_child": 7, "max_child": 126, "gain": 28, "fitter": 0, "capped": 2589, "div6300": 5, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 12.1}
+{"fill": 2, "div": 2325, "long_child": 4, "max_child": 124, "gain": 28, "fitter": 0, "capped": 2538, "div6300": 5, "long6300": 1, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 10.4}
+{"fill": 3, "div": 2330, "long_child": 6, "max_child": 110, "gain": 28, "fitter": 0, "capped": 2530, "div6300": 2, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 10.8}
+{"fill": 4, "div": 2309, "long_child": 4, "max_child": 110, "gain": 28, "fitter": 0, "capped": 2554, "div6300": 3, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 11.1}
+{"fill": 5, "div": 2341, "long_child": 6, "max_child": 125, "gain": 28, "fitter": 0, "capped": 2521, "div6300": 7, "long6300": 2, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 10.9}
+{"fill": 6, "div": 2264, "long_child": 5, "max_child": 110, "gain": 28, "fitter": 0, "capped": 2599, "div6300": 2, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 10.8}
+{"fill": 7, "div": 2326, "long_child": 5, "max_child": 125, "gain": 28, "fitter": 0, "capped": 2538, "div6300": 3, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 11.8}
+{"fill": 8, "div": 3029, "long_child": 4, "max_child": 110, "gain": 28, "fitter": 0, "capped": 1834, "div6300": 2, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 8.0}
+{"fill": 9, "div": 2290, "long_child": 5, "max_child": 110, "gain": 28, "fitter": 0, "capped": 2573, "div6300": 1, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 11.0}
+{"fill": 10, "div": 2274, "long_child": 6, "max_child": 126, "gain": 28, "fitter": 0, "capped": 2587, "div6300": 2, "long6300": 0, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 11.1}
+{"fill": 11, "div": 3020, "long_child": 5, "max_child": 126, "gain": 28, "fitter": 0, "capped": 1844, "div6300": 7, "long6300": 1, "gain6300": 0, "fitter6300": 0, "hits": [], "sec": 9.7}
