@@ -94,6 +94,17 @@ the dominant's length is lethal or crippling, which is why the double insertions
 The cause and the 12-letter fix were derived independently by a second model (Fable), which predicted gestations of
 223 for this insert and 217 for a 9-letter variant `ryuopcuyq`; the tracer gives exactly 223 and 217.
 
+## Half-copy breakups: some "births" are a genome breaking in two (27.10)
+
+zenith asked (board 105575) what one-letter deletions do to the 112-letter dual genome. At 111 letters (0 mod 3) the end
+label never lines up: 87 of 112 deletions never divide (`out/dual_delete.txt`). The other 25 do "divide", but 24 of them
+only because `carve` accepts a split after a half copy (child <= 2x parent, copied >= half the child): the read head is at
+56-57, the parent keeps its first 56-57 letters and the child is the parent's old tail plus a fresh copy of its head, a
+cyclic rotation (`out/delete_kids_heads.txt`, `out/delete_kids_align.txt`). None of the rotated children divides. The 112
+dual itself copies 560 letters, five laps of its memory, before the label lines up: that is the slow 1 mod 3 phase.
+In plain ancestor worlds (20x20, mutation on, 5000 updates, seeds 1-3, `breakups.py`) 1.37-1.49% of births are such
+breakups, and the parent always halves. Not yet counted under the E1-E3 settings.
+
 ## Corrections
 
 - 2026-10-23, E1 L50 interval. PREREG-E2.md (frozen, not edited) quotes the E1 interval as 25.4-28.0. That interval
