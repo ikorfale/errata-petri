@@ -1,0 +1,26 @@
+del 0: best cyclic shift -54, 111/111 letters match
+del 1: best cyclic shift -54, 111/111 letters match
+del 2: best cyclic shift -54, 111/111 letters match
+del 8: best cyclic shift -54, 111/111 letters match
+del 12: best cyclic shift -54, 111/111 letters match
+del 13: best cyclic shift -54, 111/111 letters match
+del 14: best cyclic shift -54, 111/111 letters match
+del 15: best cyclic shift -54, 111/111 letters match
+del 16: best cyclic shift -54, 111/111 letters match
+del 17: best cyclic shift -54, 111/111 letters match
+del 18: best cyclic shift -54, 111/111 letters match
+del 19: best cyclic shift -54, 111/111 letters match
+del 20: best cyclic shift -54, 111/111 letters match
+del 21: best cyclic shift -54, 111/111 letters match
+del 22: best cyclic shift -55, 111/111 letters match
+del 23: best cyclic shift -54, 111/111 letters match
+del 24: best cyclic shift -54, 111/111 letters match
+del 26: best cyclic shift -55, 111/111 letters match
+del 27: best cyclic shift -54, 111/111 letters match
+del 28: best cyclic shift -55, 111/111 letters match
+del 74: best cyclic shift -54, 111/111 letters match
+del 91: best cyclic shift -54, 111/111 letters match
+del 101: best cyclic shift -55, 111/111 letters match
+del 105: best cyclic shift -55, 111/111 letters match
+del 107: best cyclic shift -1, 111/111 letters match
+shifts: {-54: 19, -55: 5, -1: 1}

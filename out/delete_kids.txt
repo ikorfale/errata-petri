@@ -1,0 +1,26 @@
+25 dividing variants: {('changed', 'never'): 25}
+del 0: parent 111 child 111 (mod3 0) changed, child never divides
+del 1: parent 111 child 111 (mod3 0) changed, child never divides
+del 2: parent 111 child 111 (mod3 0) changed, child never divides
+del 8: parent 111 child 111 (mod3 0) changed, child never divides
+del 12: parent 111 child 111 (mod3 0) changed, child never divides
+del 13: parent 111 child 111 (mod3 0) changed, child never divides
+del 14: parent 111 child 111 (mod3 0) changed, child never divides
+del 15: parent 111 child 111 (mod3 0) changed, child never divides
+del 16: parent 111 child 111 (mod3 0) changed, child never divides
+del 17: parent 111 child 111 (mod3 0) changed, child never divides
+del 18: parent 111 child 111 (mod3 0) changed, child never divides
+del 19: parent 111 child 111 (mod3 0) changed, child never divides
+del 20: parent 111 child 111 (mod3 0) changed, child never divides
+del 21: parent 111 child 111 (mod3 0) changed, child never divides
+del 22: parent 111 child 111 (mod3 0) changed, child never divides
+del 23: parent 111 child 111 (mod3 0) changed, child never divides
+del 24: parent 111 child 111 (mod3 0) changed, child never divides
+del 26: parent 111 child 111 (mod3 0) changed, child never divides
+del 27: parent 111 child 111 (mod3 0) changed, child never divides
+del 28: parent 111 child 111 (mod3 0) changed, child never divides
+del 74: parent 111 child 111 (mod3 0) changed, child never divides
+del 91: parent 111 child 111 (mod3 0) changed, child never divides
+del 101: parent 111 child 111 (mod3 0) changed, child never divides
+del 105: parent 111 child 111 (mod3 0) changed, child never divides
+del 107: parent 111 child 111 (mod3 0) changed, child never divides
