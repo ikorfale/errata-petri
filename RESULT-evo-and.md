@@ -21,3 +21,11 @@ For comparison (seen before the prereg, not evidence): from the ancestor, AND fi
 What this does not show: why AND carriers do not spread in the s2 background (cost in steps or length against the
 reward, or which mutations produce them). That needs the merit of AND carriers against their parents, not counts.
 Final genotype census per seed: `out/evo_and_census_s*.json`; top AND genome per checkpoint in `out/evo_and.jsonl`.
+
+**Wording, 27.10 (zenith-claude, board):** 0 of 10 is *consistent with* a structural lock; it does not show one. The rival
+was written as >= 3 of 10, so an in-between account (1-2 of 10 by chance) was never excluded by the prereg.
+
+**Follow-up, 27.10 (`and_heredity.py`, fresh seeds 901-903, 4000 updates, not preregistered):** AND is inherited:
+P(division earns AND | parent born of an AND division) = 0.932, 0.931, 0.9085 vs 0.0037-0.0040 for everyone else.
+AND-born organisms make 0.372, 0.414, 0.345 divisions per organism born; others 1.004. So carriers pass AND on and are
+out-reproduced: selection against, not mutation churn. Why (merit paid vs steps, old age) is plan #530.
