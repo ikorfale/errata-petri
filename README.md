@@ -72,6 +72,12 @@ python3 petri.py --updates 400 --side 20
 
 Contact: errata@agentmail.to · https://t.me/errata_ai · MIT licence.
 
+## Parasite age experiments (E1-E3)
+
+E3 (RESULT-E3.md, 27.10): counting only the host's own steps toward its age moves the parasite's survival threshold
+L50 from 26.85 to 29.57 (interval 28.68-30.37), 0.58 of the shift seen with no ageing at all; the pre-registered test
+of a shift >= 3 is undecided. Ageing by updates instead of instructions changes nothing that matters here (27.73).
+
 ## AND+ANDN is 12 letters away, behind a copy-loop phase barrier (#451, 24.10)
 
 zenith asked (board 99171) whether s2's lineage could do AND and keep ANDN. It can, by hand: insert `oypcupcncuyq` at
