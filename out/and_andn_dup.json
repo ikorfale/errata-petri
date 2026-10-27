@@ -1,0 +1,2298 @@
+[
+{
+"a": 58,
+"b": 89,
+"place": "after",
+"len": 126,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfgycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 58,
+"b": 89,
+"place": "before",
+"len": 126,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 58,
+"b": 90,
+"place": "after",
+"len": 127,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcgycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 58,
+"b": 90,
+"place": "before",
+"len": 127,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 58,
+"b": 91,
+"place": "after",
+"len": 128,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcagycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 58,
+"b": 91,
+"place": "before",
+"len": 128,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcagycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 82,
+"place": "after",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 82,
+"place": "before",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 83,
+"place": "after",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 83,
+"place": "before",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 84,
+"place": "after",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 84,
+"place": "before",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 85,
+"place": "after",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 85,
+"place": "before",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 86,
+"place": "after",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 86,
+"place": "before",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 87,
+"place": "after",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 87,
+"place": "before",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 88,
+"place": "after",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 88,
+"place": "before",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 89,
+"place": "after",
+"len": 125,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 89,
+"place": "before",
+"len": 125,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 90,
+"place": "after",
+"len": 126,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 90,
+"place": "before",
+"len": 126,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 91,
+"place": "after",
+"len": 127,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 91,
+"place": "before",
+"len": 127,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 92,
+"place": "after",
+"len": 128,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 59,
+"b": 92,
+"place": "before",
+"len": 128,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 83,
+"place": "after",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyucyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 83,
+"place": "before",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyucyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 84,
+"place": "after",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuycyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 84,
+"place": "before",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuycyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 85,
+"place": "after",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzcyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 85,
+"place": "before",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 86,
+"place": "after",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvcyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 86,
+"place": "before",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 87,
+"place": "after",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvcyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 87,
+"place": "before",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 88,
+"place": "after",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvcyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 88,
+"place": "before",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 89,
+"place": "after",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 89,
+"place": "before",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 90,
+"place": "after",
+"len": 125,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfccyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 90,
+"place": "before",
+"len": 125,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfccyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 91,
+"place": "after",
+"len": 126,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcacyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 91,
+"place": "before",
+"len": 126,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcacyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 92,
+"place": "after",
+"len": 127,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxcyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 92,
+"place": "before",
+"len": 127,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 93,
+"place": "after",
+"len": 128,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxgcyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 60,
+"b": 93,
+"place": "before",
+"len": 128,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxgcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 81,
+"place": "after",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 81,
+"place": "before",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 82,
+"place": "after",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 82,
+"place": "before",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 83,
+"place": "after",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 83,
+"place": "before",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 84,
+"place": "after",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 84,
+"place": "before",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 85,
+"place": "after",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 85,
+"place": "before",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 86,
+"place": "after",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 86,
+"place": "before",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 87,
+"place": "after",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 87,
+"place": "before",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 88,
+"place": "after",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 88,
+"place": "before",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 89,
+"place": "after",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 89,
+"place": "before",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 90,
+"place": "after",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 90,
+"place": "before",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 91,
+"place": "after",
+"len": 125,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcayuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 91,
+"place": "before",
+"len": 125,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcayuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 92,
+"place": "after",
+"len": 126,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 61,
+"b": 92,
+"place": "before",
+"len": 126,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 80,
+"place": "after",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 80,
+"place": "before",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 82,
+"place": "after",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 82,
+"place": "before",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 83,
+"place": "after",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 83,
+"place": "before",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 84,
+"place": "after",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 84,
+"place": "before",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 85,
+"place": "after",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 85,
+"place": "before",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 86,
+"place": "after",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 86,
+"place": "before",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 87,
+"place": "after",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 87,
+"place": "before",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 88,
+"place": "after",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 88,
+"place": "before",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 89,
+"place": "after",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 89,
+"place": "before",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 90,
+"place": "after",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 90,
+"place": "before",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 91,
+"place": "after",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcauyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 91,
+"place": "before",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcauyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 92,
+"place": "after",
+"len": 125,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 62,
+"b": 92,
+"place": "before",
+"len": 125,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 81,
+"place": "after",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 81,
+"place": "before",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 82,
+"place": "after",
+"len": 114,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 82,
+"place": "before",
+"len": 114,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 83,
+"place": "after",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 83,
+"place": "before",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 84,
+"place": "after",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 84,
+"place": "before",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 85,
+"place": "after",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 85,
+"place": "before",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 86,
+"place": "after",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 86,
+"place": "before",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 87,
+"place": "after",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 87,
+"place": "before",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 88,
+"place": "after",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 88,
+"place": "before",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 89,
+"place": "after",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 89,
+"place": "before",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 90,
+"place": "after",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 90,
+"place": "before",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 91,
+"place": "after",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcayyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 91,
+"place": "before",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcayyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 92,
+"place": "after",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 63,
+"b": 92,
+"place": "before",
+"len": 124,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 81,
+"place": "after",
+"len": 112,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 81,
+"place": "before",
+"len": 112,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 82,
+"place": "after",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 82,
+"place": "before",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 83,
+"place": "after",
+"len": 114,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 83,
+"place": "before",
+"len": 114,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 84,
+"place": "after",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 84,
+"place": "before",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 85,
+"place": "after",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 85,
+"place": "before",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 86,
+"place": "after",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 86,
+"place": "before",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 87,
+"place": "after",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 87,
+"place": "before",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 88,
+"place": "after",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 88,
+"place": "before",
+"len": 119,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 89,
+"place": "after",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 89,
+"place": "before",
+"len": 120,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 90,
+"place": "after",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 90,
+"place": "before",
+"len": 121,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 91,
+"place": "after",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcayycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 91,
+"place": "before",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcayycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 92,
+"place": "after",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 64,
+"b": 92,
+"place": "before",
+"len": 123,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 82,
+"place": "after",
+"len": 112,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 82,
+"place": "before",
+"len": 112,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 83,
+"place": "after",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 83,
+"place": "before",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 84,
+"place": "after",
+"len": 114,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 84,
+"place": "before",
+"len": 114,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 85,
+"place": "after",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 85,
+"place": "before",
+"len": 115,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 86,
+"place": "after",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 86,
+"place": "before",
+"len": 116,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 87,
+"place": "after",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 87,
+"place": "before",
+"len": 117,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 88,
+"place": "after",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 88,
+"place": "before",
+"len": 118,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 92,
+"place": "after",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuyzvvvfcaxycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 65,
+"b": 92,
+"place": "before",
+"len": 122,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuyzvvvfcaxycuuyuupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 66,
+"b": 84,
+"place": "after",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuyuupcfgerncuyuycuuybupcfgerncuyuyzvvvfcaxgab"
+},
+{
+"a": 66,
+"b": 84,
+"place": "before",
+"len": 113,
+"tasks": [
+"AND",
+"ANDN",
+"NAND",
+"NOT",
+"ORN"
+],
+"genome": "ralwjagcxijhmpmmchvnlovuuxvsikhacirwuyjhyatxpgvfllurulgkdqgycyuyyycuuybupcfgerncuyuycuuyuupcfgerncuyuyzvvvfcaxgab"
+}
+]
