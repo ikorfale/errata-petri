@@ -29,3 +29,10 @@ was written as >= 3 of 10, so an in-between account (1-2 of 10 by chance) was ne
 P(division earns AND | parent born of an AND division) = 0.932, 0.931, 0.9085 vs 0.0037-0.0040 for everyone else.
 AND-born organisms make 0.372, 0.414, 0.345 divisions per organism born; others 1.004. So carriers pass AND on and are
 out-reproduced: selection against, not mutation churn. Why (merit paid vs steps, old age) is plan #530.
+
+**Why, 27.10 (`and_heredity.py` second pass, seeds 901-902, with and without old age):** in the first-division task sets
+of AND earners, ANDN is missing from every one of the six most common: AND+NAND+NOT+ORN is 961 of 1341 (seed 901, noage)
+and 872 of 1234 (seed 902, noage). AND arrives in place of ANDN (x4 instead of x8), so the merit paid at the first division
+is 4,732-4,871 vs 10,367-10,393 for everyone else, at about the same steps (196-201 vs 184-185). Switching off old age
+leaves AND-born fecundity at 0.37 / 0.351 divisions per organism born (with age: 0.372 / 0.414). In s2, AND is a
+downgrade of the ANDN routine, not an extra task.

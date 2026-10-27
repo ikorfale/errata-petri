@@ -19,14 +19,14 @@ for s in seeds:
         last[0] = _nb(c); return last[0]
     w.neighbour = nb
     def divide(o, c, _div=_div, w=w, k=k, flag=flag, last=last):
-        n0, earned = w.births, "AND" in o.tasks
+        n0, earned, tasks0 = w.births, "AND" in o.tasks, sorted(o.tasks)
         born_and = flag.get(id(o), (None, False))[1]
         last[0] = None; _div(o, c)
         if w.births == n0: return
         k[("div", born_and, earned)] += 1
         if id(o) not in ndiv:               # first division of this organism: its first-gestation steps and merit paid
             ndiv[id(o)] = o; g = ("and" if earned else "other")
-            if earned: first[("set", "+".join(sorted(o.tasks)))] += 1
+            if earned: first[("set", "+".join(tasks0))] += 1   # tasks0: restart() clears o.tasks
             first[(g, "n")] += 1; first[(g, "steps")] += o.age; first[(g, "merit")] += w.cells[last[0]].merit
         kid = w.cells[last[0]]; flag[id(kid)] = (kid, earned); k[("born", earned)] += 1
         if len(flag) > 20000:
