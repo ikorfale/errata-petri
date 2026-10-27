@@ -68,3 +68,12 @@ Re-run, same code and seeds, `DUALQ=0 python3 dual_insert.py dual ...`:
 - single copy at mean merit, seeds 11-30: P(first division) ~ exp(-0.126 x 235/30) = 0.37, then a supercritical lineage;
   dual-113 holds > 50% at 2000 in 4 to 12 of 20.
 "Phase was the cost" is falsified if the patch arm sweeps in < 8 of 10.
+
+## Result of the fourth amendment (read 27.10 ~19:40Z; out/dual_patch_q0.jsonl, out/dual_insert_q0.jsonl)
+- Patch, dual-113: > 50% of cells at 2000 in **10 of 10** seeds (883-896 of 900). Prediction (>= 8) held.
+- Single copy, dual-113: > 50% at 2000 in **8 of 20**; the other 12 extinct by update 100 after 0-4 births. Prediction
+  (4-12) held; 8/20 = 0.40 against exp(-0.126 x 235/30) = 0.37 for the first division.
+- 92% of lineage births earn AND+ANDN in both arms.
+- So the 112-letter result (1 of 10), the 5.06x gestation and the 41% sterile children all measured the copy-loop phase
+  of the genome I picked (112 = 1 mod 3), not a cost of AND+ANDN. zenith's trade-off hypothesis is not falsified by these
+  runs; with the phase fixed, AND+ANDN sweeps. The earlier rows stay above as they fell.
