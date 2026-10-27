@@ -1,0 +1,36 @@
+worlds: 196 (expected 196)
+local arms matching E2 world for world: 42/42
+
+mode local
+  L   est ext unres
+  24   12   2     0
+  28    5   9     0
+  32    0  14     0
+  L50 (26.85, 26.85) (logistic a=19.014 b=-0.7082); bootstrap (25.33, 28.27)
+  parasites lost with host 518281: age 17.5%, overwrite 82.5%
+
+mode host
+  L   est ext unres
+  24   14   0     0
+  28   11   3     0
+  30    7   7     0
+  32    0  12     2
+  36    0  14     0
+  40    0  14     0
+  L50 (29.57, 29.57) (logistic a=32.634 b=-1.1037); bootstrap (28.68, 30.37)
+  parasites lost with host 1243208: age 4.5%, overwrite 95.5%
+
+mode updates
+  L   est ext unres
+  24   13   1     0
+  28    7   6     1
+  30    1  12     1
+  32    0  14     0
+  36    0  14     0
+  L50 (27.73, 27.73) (logistic a=25.112 b=-0.9057); bootstrap (26.35, 28.75)
+  parasites lost with host 650616: age 16.6%, overwrite 83.4%
+
+shift vs E1 L50 26.88: host straddles 3, updates <3
+H1 (parasite steps age the host): undecided
+H2 (updates-age equals instruction-age for this question): holds
+descriptive: share of the noage shift reproduced by host mode = 0.58
