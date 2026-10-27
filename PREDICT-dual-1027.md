@@ -33,3 +33,13 @@ Third arm, written before it is run: patch insertion. Both arms fill a 5x6 block
 c..c+5, r and c from the seed's RNG) after the same 50-update warm-up, each at mean merit; seeds 11-20; 2000 updates.
 Prediction: dual holds > 50% of all cells at 2000 in >= 8 of 10 seeds; control (neutral, 30/900) in <= 1 of 10.
 Trade-off story falsified if dual's patch persists without passing 50% in >= 5 of 10.
+
+## Result of the patch arm (read 27.10 ~18:00Z, out/dual_patch.jsonl)
+- Dual: > 50% of cells at update 2000 in 1 of 10 seeds (seed 11: 884 of 900, 109,028 of 118,475 lineage births
+  AND+ANDN); extinct in the other 9 by update 100-250 after 5-34 births. **Prediction (>= 8 of 10) wrong.**
+- Control: > 50% in 0 of 10 (prediction held); alive at 2000 in 4 of 10 (10-279 cells); the 6 extinct lineages made
+  293-2,354 births first.
+- Falsification clause (dual persists without passing 50% in >= 5 of 10): not met. Dual never persisted below 50%;
+  it either took the world or died within 250 updates. All-or-nothing, as an establishment barrier predicts.
+- Not explained yet: even 30 dual copies made only 5-34 births before dying, against hundreds for the neutral patch.
+  Next: survival of dual-born children vs resident-born in the patch run (do the 41k-merit children divide?).
