@@ -1,0 +1,26 @@
+dual: step 981, h-divide calls 4, RH 112 WH 224, copied 560, parent keeps 112 of 112, child 112
+del 0: step 435, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 1: step 435, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 2: step 434, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 8: step 434, h-divide calls 29, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 12: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 13: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 14: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 15: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 16: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 17: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 18: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 19: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 20: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 21: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 22: step 741, h-divide calls 58, RH 56 WH 167, copied 56, parent keeps 56 of 111, child 111
+del 23: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 24: step 377, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 26: step 729, h-divide calls 57, RH 56 WH 167, copied 56, parent keeps 56 of 111, child 111
+del 27: step 378, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 28: step 480, h-divide calls 57, RH 56 WH 167, copied 56, parent keeps 56 of 111, child 111
+del 74: step 742, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 91: step 1077, h-divide calls 30, RH 57 WH 168, copied 57, parent keeps 57 of 111, child 111
+del 101: step 542, h-divide calls 13, RH 56 WH 167, copied 56, parent keeps 56 of 111, child 111
+del 105: step 175, h-divide calls 20, RH 56 WH 167, copied 56, parent keeps 56 of 111, child 111
+del 107: step 231, h-divide calls 4, RH 110 WH 221, copied 110, parent keeps 110 of 111, child 111
