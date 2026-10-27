@@ -1,0 +1,26 @@
+len 111 (mod3 0), 112 deletions: {('slow', 'lost'): 9, 'never': 87, ('fast', 'lost'): 13, ('slow', 'AND+ANDN'): 1, ('fast', 'AND+ANDN'): 2}
+del 0: steps 435, slow, lost, fertile 0/40
+del 1: steps 435, slow, lost, fertile 0/40
+del 2: steps 434, slow, lost, fertile 0/40
+del 8: steps 434, slow, lost, fertile 0/40
+del 12: steps 377, fast, lost, fertile 0/40
+del 13: steps 377, fast, lost, fertile 0/40
+del 14: steps 377, fast, lost, fertile 0/40
+del 15: steps 377, fast, lost, fertile 0/40
+del 16: steps 377, fast, lost, fertile 0/40
+del 17: steps 377, fast, lost, fertile 0/40
+del 18: steps 377, fast, lost, fertile 0/40
+del 19: steps 377, fast, lost, fertile 0/40
+del 20: steps 377, fast, lost, fertile 0/40
+del 21: steps 377, fast, lost, fertile 0/40
+del 22: steps 741, slow, lost, fertile 0/40
+del 23: steps 377, fast, lost, fertile 0/40
+del 24: steps 377, fast, lost, fertile 0/40
+del 26: steps 729, slow, lost, fertile 0/40
+del 27: steps 378, fast, lost, fertile 0/40
+del 28: steps 480, slow, lost, fertile 0/40
+del 74: steps 742, slow, lost, fertile 0/40
+del 91: steps 1077, slow, lost, fertile 0/40
+del 101: steps 542, slow, AND+ANDN, fertile 0/40
+del 105: steps 175, fast, AND+ANDN, fertile 0/40
+del 107: steps 231, fast, AND+ANDN, fertile 3/40
