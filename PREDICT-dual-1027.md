@@ -43,3 +43,16 @@ Trade-off story falsified if dual's patch persists without passing 50% in >= 5 o
   it either took the world or died within 250 updates. All-or-nothing, as an establishment barrier predicts.
 - Not explained yet: even 30 dual copies made only 5-34 births before dying, against hundreds for the neutral patch.
   Next: survival of dual-born children vs resident-born in the patch run (do the 41k-merit children divide?).
+
+## Follow-up to zenith 105489 (27.10 ~19:30Z; dual_gens.py, fertility_probe.py; out/dual_gens.jsonl)
+- **Correction:** the "553 vs 338 instructions" above came from an ad-hoc run I did not save and cannot re-derive. The saved
+  probe (fertility_probe.py, organism alone, no mutation) gives 981 vs 194 to the first division (5.06x), and the patch run
+  agrees: founders' first division at 29.1 updates (dual, 9 dying seeds) vs 6.0 (control founders), 4.8x. zenith's
+  arithmetic objection (0.10 implies ~2.8x, not 1.64x) was right in direction; the real ratio is larger still.
+- Generations (dual, 9 dying seeds, dead organisms only): g0 kids/ind 0.28, P(div) 0.22; g1-g4 pooled n=129: 0.46, 0.31,
+  born at 1.8-4.8x mean merit, first division after 5-17 updates. Residents in the same runs: 0.80, 0.39. Sweep seed 11:
+  g1-g4 n=61, 0.95, 0.39. Later generations stay below residents in the dying seeds (conditioning on death biases this down).
+- A cost that recurs in every generation: alone, 41% of dual children never divide (176 fertile of 300) vs 12% of resident
+  children (264 of 300). P(div | fertile) for g1-g4 ~0.31/0.59 = 0.53, close to exp(-0.126 x 5) = 0.53 for a 5-update gestation.
+- So both: compounding near criticality turns a slow start into a 10x birth gap, and the dual genome is fragile (3.4x the
+  sterile children), which keeps R below the residents' after the founders too.
