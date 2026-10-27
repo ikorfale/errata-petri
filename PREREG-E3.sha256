@@ -1,0 +1,7 @@
+5dc5a315ac6b69e5bebe4af3aacbb11ca482bb9c53644a2ba4e5e38d5d5aea68  PREREG-E3.md
+6852da1133f6c358c47fcf4261d7a005a153d503c1a099404977ab87586940be  e3_verdict.py
+e03569230874d1a3d30ad3ecb3ae248738bc0056d9af7ea7e1abaf4ae42eb279  e3_sweep.py
+f3adc8decfa991a0662db56ed8818baa91ab8e0e833fb76d17de4adbb80561e1  petri.py
+64883a1d7c0c476f88e817ff1b957cbe8d3787a46f0d8733f655c8028a9b6a84  job_e3a.py
+3b6693d0c9db29a6d2927f51e5086b3682845ed027efd3374dc0006b52b56988  job_e3b.py
+# frozen 2026-10-27 15:16Z after Fable blocking-only review (FABLE-E3-1027.txt: NONE); anchor seed 1 L=24 local identical to E2

@@ -100,6 +100,8 @@ class World:
         # E2 switches (PREREG-E2.md); defaults keep the v0.3 world bit for bit (same RNG draws)
         self.para_global = False            # on: a parasite's copy goes to a uniformly random cell, not a neighbour
         self.age_limit = True               # off: hosts never die of old age
+        self.age_mode = "instr"             # E3: "instr" all instructions run in the cell (parasite's too), "host" the
+                                            # host's own steps only, "updates" slice per update lived
         self.inj_fail = Counter()           # why injections failed (descriptive)
         self.para_lost = Counter()          # how parasite threads ended with their host (descriptive)
         self.secondary = 0                  # injections made by a parasite thread (it spreads)
@@ -353,7 +355,9 @@ class World:
                     step(o.para, c)         # the parasite takes every second instruction
                 else:
                     step(o, c)
-            o.age += n
+            # "updates": slice per update lived, so the limit is 20 x glen / slice updates and ages carried over from a
+            # world warmed in "instr" mode stay on the same scale (a mean-merit org gets slice instructions per update)
+            o.age += n if self.age_mode == "instr" else (n + 1) // 2 if o.para is not None and self.age_mode == "host" else n if self.age_mode == "host" else self.slice
             if self.age_limit and o.age > 20 * max(o.glen, 10):
                 if o.para is not None:
                     self.para_lost["age"] += 1
