@@ -1,0 +1,11 @@
+seed 101: peak 250-window AND share 0.0117; final update 40000; AND births 18737 of 3096959
+seed 102: peak 250-window AND share 0.0111; final update 40000; AND births 18907 of 3122998
+seed 103: peak 250-window AND share 0.0094; final update 40000; AND births 18456 of 3119153
+seed 104: peak 250-window AND share 0.0095; final update 40000; AND births 18511 of 3081231
+seed 105: peak 250-window AND share 0.0089; final update 40000; AND births 18238 of 3115931
+seed 106: peak 250-window AND share 0.0097; final update 40000; AND births 19089 of 3114392
+seed 107: peak 250-window AND share 0.0102; final update 40000; AND births 19545 of 3134245
+seed 108: peak 250-window AND share 0.0109; final update 40000; AND births 19643 of 3119928
+seed 109: peak 250-window AND share 0.0112; final update 40000; AND births 18586 of 3110306
+seed 110: peak 250-window AND share 0.0098; final update 40000; AND births 18880 of 3096561
+max over seeds 0.0117
