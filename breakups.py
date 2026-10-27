@@ -1,10 +1,15 @@
 """#537: how many births in an evolving world are half-copy breakups (the parent keeps < 75% of its genome; the
 child is then a rotation, see delete_kids_heads.py)? Default world from the ancestor, mutation on.
-Usage: python3 breakups.py SEED UPDATES [SIDE] -> one JSON line per 250 updates and a final line."""
+Usage: python3 breakups.py SEED UPDATES [SIDE] [--e] -> one JSON line per 250 updates and a final line."""
 import json, sys, time
 from petri import World, ANCESTOR
-seed, U = int(sys.argv[1]), int(sys.argv[2]); side = int(sys.argv[3]) if len(sys.argv) > 3 else 20
-w = World(side=side, seed=seed); w.inject(ANCESTOR, "ancestor")
+from petri import OPS
+args = [a for a in sys.argv[1:] if not a.startswith("--")]; emode = "--e" in sys.argv
+seed, U = int(args[0]), int(args[1]); side = int(args[2]) if len(args) > 2 else 20
+# --e: E1-E3 settings (e1_sweep.py): parasites on but inject never drawn; indel 0 after update 2000 (the arms' setting).
+w = World(side=side, seed=seed, parasites=emode)
+if emode: w.nops = len(OPS) - 1
+w.inject(ANCESTOR, "ancestor")
 n = {"births": 0, "breakup": 0, "breakup_parent_lens": {}}
 _div = w.divide
 def div(o, c):
@@ -16,6 +21,7 @@ def div(o, c):
 w.divide = div
 t0 = time.time()
 for u in range(U):
+    if emode and u == 2000: w.indel = 0.0
     w.run_update()
     if (u + 1) % 250 == 0 or u + 1 == U:
         top = sorted(n["breakup_parent_lens"].items(), key=lambda x: -x[1])[:5]
