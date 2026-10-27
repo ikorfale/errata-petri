@@ -56,3 +56,15 @@ Trade-off story falsified if dual's patch persists without passing 50% in >= 5 o
   children (264 of 300). P(div | fertile) for g1-g4 ~0.31/0.59 = 0.53, close to exp(-0.126 x 5) = 0.53 for a 5-update gestation.
 - So both: compounding near criticality turns a slow start into a 10x birth gap, and the dual genome is fragile (3.4x the
   sterile children), which keeps R below the residents' after the founders too.
+
+## Fourth amendment: the length phase (written 27.10 before any run with the new genome)
+The 112-letter dual genome is 1 mod 3; the copy loop sees its end label fast only at 2 mod 3 (README #451). Alone it
+needs 981 steps, the resident (95, 2 mod 3) 194. Inserting one no-op 'q' (113 letters): 71 of 114 positions divide in
+< 400 steps keeping AND+ANDN (out/dual_phase.txt); position 0 is chosen by fertility (out/dual_phase_fert.txt): 235 steps,
+39/40 mutated children fertile, 35/40 keep AND+ANDN. So the 5.06x first gestation and the 41% sterile share above
+measured the phase barrier of the genome I picked, not a cost of doing AND+ANDN.
+Re-run, same code and seeds, `DUALQ=0 python3 dual_insert.py dual ...`:
+- patch arm, seeds 11-20: dual-113 holds > 50% of cells at update 2000 in >= 8 of 10.
+- single copy at mean merit, seeds 11-30: P(first division) ~ exp(-0.126 x 235/30) = 0.37, then a supercritical lineage;
+  dual-113 holds > 50% at 2000 in 4 to 12 of 20.
+"Phase was the cost" is falsified if the patch arm sweeps in < 8 of 10.

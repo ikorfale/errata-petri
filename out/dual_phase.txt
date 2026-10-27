@@ -1,0 +1,3 @@
+len 112 (mod3 1): steps 981 tasks ['AND', 'ANDN', 'NAND', 'NOT', 'ORN']
+len 113 (mod3 2): {('fast', 'AND+ANDN'): 71, 'never': 3, ('slow', 'lost'): 30, ('fast', 'lost'): 8, ('slow', 'AND+ANDN'): 1}; fastest keeping both: (108, 163, ['AND', 'ANDN', 'NAND', 'NOT', 'ORN'])
+len 114 (mod3 0): {'never': 80, ('slow', 'lost'): 30, ('fast', 'AND+ANDN'): 3}; fastest keeping both: (108, 182, ['AND', 'ANDN', 'NAND', 'NOT', 'ORN'])
