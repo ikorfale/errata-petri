@@ -4,4 +4,4 @@ set -eu; cd "$(dirname "$0")"; N=${1:-2}; P=$(printf %03d $((N-1))); C=$(printf 
 D=$(python3 -c "import json;print(json.load(open('daily/day-$C.json'))['digest'][:16])")
 U=$(python3 -c "import json;u=json.load(open('daily/day-$C.json'))['updates'];print(u[1]-u[0])")
 A=$(python3 -c "import json;print(json.load(open('daily/day-$C.json'))['updates'][0]+1500)")
-python3 replay_origins.py daily/base/day-$P "$U" --task OR --after "$A" --digest "$D" > daily/replay-day-$C-OR.json
+python3 replay_origins.py daily/base/day-$P "$U" --task OR --after "$A" --digest "$D" --edges 0.1 > daily/replay-day-$C-OR.json

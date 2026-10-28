@@ -20,7 +20,8 @@ import hashlib
 
 ap = argparse.ArgumentParser(); ap.add_argument("base"); ap.add_argument("updates", type=int)
 ap.add_argument("--task", default="OR"); ap.add_argument("--after", type=int, default=41500)
-ap.add_argument("--digest", default=None); ap.add_argument("--max-tests", type=int, default=60000)
+ap.add_argument("--digest", default=None); ap.add_argument("--max-tests", type=int, default=3000000)
+ap.add_argument("--edges", type=float, default=0.0, help="share of mutated births whose edge is tested")
 a = ap.parse_args()
 w = pickle.load(open(os.path.join(a.base, "world.pkl"), "rb")); st = json.load(open(os.path.join(a.base, "state.json")))
 assert hashlib.sha256(canon_s(w).encode()).hexdigest() == st["digest"], "base world does not match its state digest"
@@ -53,6 +54,7 @@ if "lin_prev" in st:
     lin_prev["_gen"] = [(u, {int(c): x for c, x in m.items()}) for u, m in st.get("lin_gen", [])]
     lin_prev["_deepf"] = st.get("lin_deepf", {})
 else: _, lin_prev = daily.lineage_census(w, {})
+live_ids = {}
 perf = {}                                  # census update -> [birth ids of TASK performers]
 u0, t0 = w.update, time.time()
 while w.update - u0 < a.updates:
@@ -61,6 +63,7 @@ while w.update - u0 < a.updates:
         _, lin_prev = daily.lineage_census(w, lin_prev)
         uid = {id(o): uid[id(o)] for o in w.cells if o is not None}   # dead organisms' ids are freed and may be reused
         if w.update > a.after:
+            live_ids[w.update] = [uid[id(o)] for o in w.cells if o is not None]
             perf[w.update] = [uid[id(o)] for o in w.cells if o is not None and (a.task in o.tasks or a.task in getattr(o, "ptasks", ()))]
 petri.Org = _Org
 del w.divide
@@ -69,25 +72,31 @@ if a.digest and not dig.startswith(a.digest):
     sys.exit(f"replay ended on digest {dig[:16]}, expected {a.digest}: not the same day, results discarded")
 sys.stderr.write(f"replayed {w.update - u0} updates, {len(parent)} ids, {time.time() - t0:.0f}s\n")
 
+# The isolation test, fixed before day 2 (zenith 106694): the genome alone in a 5x5 world, no mutation, input seeds
+# 1, 2, 3, at most STEPS instructions to its first division. "Capable" = TASK in the first gestation in at least 1 of
+# the 3 seeds. It is a pure function of the genome bytes, so capability cannot switch on across an exact copy; the
+# gain edges are still checked for a mutation and any without one is reported.
+SEEDS, STEPS = (1, 2, 3), 20000
 def first_div(g, seed):
-    """The genome alone in a 5x5 world without mutation: tasks of its first gestation (as fertility_probe.first_div)."""
+    """Tasks of the first gestation of genome g alone, or None if it does not divide within STEPS."""
     v = World(side=5, seed=seed, copy_mut=0.0, indel=0.0); v.inject(list(g), "t", cell=0); o = v.cells[0]; snap = []
     _d = v.divide
     def d(o2, c): snap.append(set(o2.tasks)); _d(o2, c)
     v.divide = d
-    for _ in range(3000):
+    for _ in range(STEPS):
         b = v.births; v.step(o, 0)
         if v.cells[0] is not o: return None
         if v.births > b: return snap[-1]
     return None
-cap, tests = {}, [0]
-def capable(i):
-    g = genome[i]
+cap, nodiv, tests = {}, set(), [0]
+def capable_g(g):
     if g not in cap:
         if tests[0] >= a.max_tests: raise RuntimeError("test budget spent")
-        tests[0] += 1
-        cap[g] = any(a.task in (first_div(g, s) or ()) for s in (1, 2))
+        tests[0] += 1; r = [first_div(g, s) for s in SEEDS]
+        cap[g] = any(a.task in (x or ()) for x in r)
+        if all(x is None for x in r): nodiv.add(g)
     return cap[g]
+def capable(i): return capable_g(genome[i])
 origin = {}
 def find_origin(i):
     path = []
@@ -100,16 +109,32 @@ def find_origin(i):
     o = origin[i]
     for j in path: origin[j] = o
     return o
-rows, incap = [], 0
+rows, incap, incap_nodiv = [], 0, 0
 for u, ids in sorted(perf.items()):
-    per = Counter()
+    per = Counter(); ps = set(ids)
     for i in ids:
-        if not capable(i): incap += 1; continue    # expressed TASK but its genome alone cannot: input luck, counted apart
+        if not capable(i):                         # expressed TASK in the world, but its genome alone does not
+            incap += 1; incap_nodiv += genome[i] in nodiv; continue
         per[find_origin(i)] += 1
-    rows.append({"update": u, "performers": len(ids), "origins": {str(k): v for k, v in per.items()}})
+    silent = sum(1 for i in live_ids[u] if i not in ps and capable(i))
+    rows.append({"update": u, "performers": len(ids), "capable_not_performing": silent, "origins": {str(k): v for k, v in per.items()}})
 allo = {o for r in rows for o in r["origins"]}
+no_mut_gains = sum(1 for o in allo if not str(o).startswith("start") and parent[int(o)] >= 0 and genome[int(o)] is genome[parent[int(o)]])
+start_cap = sum(1 for i, p in enumerate(parent) if p < 0 and capable(i))
+# gain and loss edges over every mutated birth after --after (zenith 106694 point 3): parent capable -> child not = loss
+gains = losses = sampled = 0
+if a.edges:
+    import random; rs = random.Random(20261029)   # a sample of mutated births: testing all of them takes hours
+    for i, p in enumerate(parent):
+        if p < 0 or birth_u[i] <= a.after or genome[i] is genome[p] or rs.random() >= a.edges: continue
+        sampled += 1
+        cp, ci = capable(p), capable(i); gains += ci and not cp; losses += cp and not ci
 print(json.dumps({"task": a.task, "after": a.after, "updates": [u0, w.update], "digest16": dig[:16], "ids": len(parent),
-                  "genome_tests": tests[0], "performers_not_capable_alone": incap, "origins_total": len(allo),
+                  "test": {"seeds": SEEDS, "steps": STEPS, "capable": "task in first gestation in >= 1 of 3 seeds"},
+                  "start_capable": start_cap, "gain_edges_without_mutation": no_mut_gains,
+                  "edges": {"sample_share": a.edges, "mutated_births_tested": sampled, "gains": gains, "losses": losses} if a.edges else None,
+                  "genome_tests": tests[0], "performers_not_capable_alone": incap,
+                  "of_them_never_divide_alone": incap_nodiv, "origins_total": len(allo),
                   "origins_older_than_day": sum(1 for o in allo if str(o).startswith("start")),
                   "origin_born": {str(o): birth_u[int(o)] for o in allo if not str(o).startswith("start")},
                   "censuses": rows}, indent=1))
