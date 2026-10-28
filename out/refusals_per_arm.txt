@@ -1,0 +1,4 @@
+mode     worlds  births    viable/1k  episodes/1k  lost%   pend%  first-gap clean | refused (median of world medians)
+local       21   1367242      314.9       16.26   35.0    0.4     354 |    411 (n worlds 21)
+host        42   2521718      310.4       17.14   33.6    0.4     357 |    418 (n worlds 42)
+updates     35   1941205      309.7       22.89   31.1    0.3     355 |    415 (n worlds 35)

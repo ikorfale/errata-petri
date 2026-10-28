@@ -1,0 +1,26 @@
+strict-c equals strict-a outside ref: True 98 worlds
+worlds strict 196 default 196
+P4a breakups > 0 under strict: 0 []
+  warm seed  1: h_occupied strict 0.04893 default 0.04892  +0.0%
+  warm seed  2: h_occupied strict 0.04893 default 0.05076  -3.6%
+  warm seed  3: h_occupied strict 0.04936 default 0.04979  -0.9%
+  warm seed  4: h_occupied strict 0.05796 default 0.05330  +8.7%
+  warm seed  5: h_occupied strict 0.05001 default 0.04972  +0.6%
+  warm seed  6: h_occupied strict 0.04751 default 0.05085  -6.6%
+  warm seed  7: h_occupied strict 0.05210 default 0.05088  +2.4%
+  warm seed  8: h_occupied strict 0.04987 default 0.04995  -0.2%
+  warm seed  9: h_occupied strict 0.04991 default 0.05016  -0.5%
+  warm seed 10: h_occupied strict 0.04971 default 0.04901  +1.4%
+  warm seed 11: h_occupied strict 0.04935 default 0.06024  -18.1%
+  warm seed 12: h_occupied strict 0.05834 default 0.05004  +16.6%
+  warm seed 13: h_occupied strict 0.04814 default 0.04861  -1.0%
+  warm seed 14: h_occupied strict 0.04921 default 0.04869  +1.1%
+P4b seeds outside 20%: []
+default  local    L50 (26.846798204280017, 26.846798204280017) (logistic a=19.014 b=-0.7082) boot (25.325159359957482, 28.271712411219333)
+default  host     L50 (29.567432743193592, 29.567432743193592) (logistic a=32.634 b=-1.1037) boot (28.67738188880466, 30.365147929910894)
+default  updates  L50 (27.72643026380598, 27.72643026380598) (logistic a=25.112 b=-0.9057) boot (26.350947842317233, 28.751999290374798)
+default  shift host-local 2.72; host boot lo vs local point+3 = 28.68 vs 29.85, hi 30.37
+strict   local    L50 (27.457347871618055, 27.457347871618055) (logistic a=23.280 b=-0.8479) boot (26.14154853334399, 28.88888888888889)
+strict   host     L50 (29.43606504956182, 29.43606504956182) (logistic a=16.646 b=-0.5655) boot (27.97210936977367, 30.888272433146707)
+strict   updates  L50 (28.13932300161411, 28.13932300161411) (logistic a=31.994 b=-1.1370) boot (26.969547820055507, 29.00076913568485)
+strict   shift host-local 1.98; host boot lo vs local point+3 = 27.97 vs 30.46, hi 30.89
