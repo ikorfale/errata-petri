@@ -29,19 +29,23 @@ def _divide(self, o, c):
             wh = o.heads[WH] or len(o.mem); kid = wh - rh if wh > rh else 0
             if kid >= 10 and rh >= 10 and 0.5 <= kid / rh <= 2 and o.ncopy >= 0.5 * kid:   # carve()'s viability test
                 self.ref[2] += 1            # a refusal of what would have been a birth (a breakup)
-                if o._pend is None: o._pend = o._st; self.ref[1] += 1
+                if o._pend is None: o._pend = o._st; self.ref[1] += 1   # an episode: re-arms after each division (theone 106013)
+                if not o._seen: o._seen = True; self.ref[3] += 1        # distinct host (lifetime flag, never cleared in an arm)
             o.heads[IP] = (o.heads[IP] + 1) % len(o.mem); return
     g0, b = o.glen, self.births; _orig_div(self, o, c)
     if self.births > b:
         self.brk[0] += 1
         if o.glen < 0.75 * g0: self.brk[1] += 1
+        if o._ld is not None: (self.dgap_ref if o._pend is not None else self.dgap_clean).append(o._st - o._ld)   # zenith 106000 comparator
+        else: (self.fgap_ref if o._pend is not None else self.fgap_clean).append(o._st)   # birth to first division
+        o._ld = o._st
         if o._pend is not None: self.ref_gap.append(o._st - o._pend); o._pend = None
 World.divide = _divide
 import petri
 class OrgX(Org):                            # Org has __slots__: the two counters need their own slots
-    __slots__ = ("_pend", "_st")
+    __slots__ = ("_pend", "_st", "_seen", "_ld")
     def __init__(self, *a, **k):
-        super().__init__(*a, **k); self._pend, self._st = None, 0
+        super().__init__(*a, **k); self._pend, self._st, self._seen, self._ld = None, 0, False, None
 petri.Org = Org = OrgX                      # every org born in World (petri.Org) and the seeded parasites
 if STRICT:
     _orig_step = World.step
@@ -53,8 +57,16 @@ def ref_summary(w):
     (counted at the first while not pending), of them divided later, still alive and pending, host-step gap quantiles."""
     g = sorted(w.ref_gap); q = lambda f: g[min(len(g) - 1, int(f * len(g)))] if g else None
     alive = sum(o is not None and o._pend is not None for o in w.cells)
+    Q = lambda g: [g[min(len(g) - 1, int(f * len(g)))] for f in (.1, .5, .9)] if g else None
+    dc, dr = sorted(w.dgap_clean), sorted(w.dgap_ref)
+    fc, fr = sorted(w.fgap_clean), sorted(w.fgap_ref)
+    # "refused_hosts" counts refusal episodes, not hosts (theone 106013); distinct_hosts is the lifetime count.
+    # lost = episodes that neither completed nor are still pending at the end (host died or was overwritten first).
     return {"refusals": w.ref[0], "viable_refusals": w.ref[2], "refused_hosts": w.ref[1], "divided_after": len(g), "alive_pending": alive,
-            "gap_q10_50_90": [q(.1), q(.5), q(.9)], "gap_mean": round(sum(g) / len(g), 1) if g else None}
+            "gap_q10_50_90": [q(.1), q(.5), q(.9)], "gap_mean": round(sum(g) / len(g), 1) if g else None,
+            "episodes": w.ref[1], "distinct_hosts": w.ref[3], "lost": w.ref[1] - len(g) - alive,
+            "divgap_clean_n": len(dc), "divgap_clean_q10_50_90": Q(dc), "divgap_ref_n": len(dr), "divgap_ref_q10_50_90": Q(dr),
+            "firstgap_clean_n": len(fc), "firstgap_clean_q10_50_90": Q(fc), "firstgap_ref_n": len(fr), "firstgap_ref_q10_50_90": Q(fr)}
 
 def make_parasite(L):
     pad = L - 16
@@ -66,7 +78,7 @@ KEY = bytes([COMP[CODE["nop-B"]]])
 upd = int(sys.argv[1]); seeds = [int(x) for x in sys.argv[2].split(",")]; arms = [(m, int(L)) for part in sys.argv[3].split(";") for m, ls in [part.split(":")] for L in ls.split(",")]
 assert all(m in ("local", "global", "noage", "host", "updates") for m, _ in arms), arms
 for seed in seeds:
-    w = World(seed=seed, parasites=True); w.nops = len(OPS) - 1; w.brk = [0, 0]; w.ref, w.ref_gap = [0, 0, 0], []
+    w = World(seed=seed, parasites=True); w.nops = len(OPS) - 1; w.brk = [0, 0]; w.ref, w.ref_gap, w.dgap_clean, w.dgap_ref, w.fgap_clean, w.fgap_ref = [0, 0, 0, 0], [], [], [], [], []
     w.inject(ANCESTOR, "ancestor")
     for _ in range(1500): w.run_update()
     b0 = w.births; occ = 0
@@ -79,9 +91,9 @@ for seed in seeds:
     print(json.dumps({"warm": warm}), flush=True)
     hosts = [c for c, o in enumerate(w.cells) if o is not None and o.para is None]; w.rng.shuffle(hosts)
     for mode, L in arms:
-        v = copy.deepcopy(w); v.indel = 0.0; v.para_global = mode == "global"; v.age_limit = mode != "noage"; v.age_mode = {"host": "host", "updates": "updates"}.get(mode, "instr"); v.brk = [0, 0]; v.ref, v.ref_gap = [0, 0, 0], []
+        v = copy.deepcopy(w); v.indel = 0.0; v.para_global = mode == "global"; v.age_limit = mode != "noage"; v.age_mode = {"host": "host", "updates": "updates"}.get(mode, "instr"); v.brk = [0, 0]; v.ref, v.ref_gap, v.dgap_clean, v.dgap_ref, v.fgap_clean, v.fgap_ref = [0, 0, 0, 0], [], [], [], [], []
         for o in v.cells:
-            if o is not None: o._pend = None
+            if o is not None: o._pend, o._seen = None, False
         from collections import Counter as _C; v.inj_fail, v.para_lost = _C(), _C(); b0, occ = v.births, 0
         t = time.process_time(); par = make_parasite(L)
         assert len(par) == L, (L, len(par))
