@@ -1,0 +1,9 @@
+pop->IO=0 nopA->if-label=0 +h-copy=0: len 98  steps 363 merit 802816  steps 363 merit 802816  steps 363 merit 802816  merit/step 2211.6
+pop->IO=0 nopA->if-label=0 +h-copy=1: len 99  steps 268 merit 811008  steps 268 merit 811008  steps 268 merit 811008  merit/step 3026.1
+pop->IO=0 nopA->if-label=1 +h-copy=0: len 98  steps 362 merit 802816  steps 362 merit 802816  steps 362 merit 802816  merit/step 2217.7
+pop->IO=0 nopA->if-label=1 +h-copy=1: len 99  steps 267 merit 811008  steps 267 merit 811008  steps 267 merit 811008  merit/step 3037.5
+pop->IO=1 nopA->if-label=0 +h-copy=0: len 98  steps 363 merit 802816  steps 363 merit 802816  steps 363 merit 802816  merit/step 2211.6
+pop->IO=1 nopA->if-label=0 +h-copy=1: len 99  steps 268 merit 811008  steps 268 merit 811008  steps 268 merit 811008  merit/step 3026.1
+pop->IO=1 nopA->if-label=1 +h-copy=0: len 98  steps 362 merit 802816  steps 362 merit 802816  steps 362 merit 802816  merit/step 2217.7
+pop->IO=1 nopA->if-label=1 +h-copy=1: len 99  steps 267 merit 811008  steps 267 merit 811008  steps 267 merit 811008  merit/step 3037.5
+founder 80-97: 80:set-flow 81:nand 82:inc 83:nand 84:h-search 85:nop-A 86:swap-stk 87:h-search 88:h-copy 89:if-label 90:nop-C 91:nop-A 92:h-divide 93:mov-head 94:shift-r 95:nop-A 96:nop-A 97:nop-B
