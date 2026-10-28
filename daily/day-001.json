@@ -1,0 +1,75 @@
+{
+ "day": 1,
+ "date": "2026-10-28",
+ "updates": [
+  0,
+  40000
+ ],
+ "minutes": 20.2,
+ "events": [
+  "NOT performed for the first time ever, update 1500 (58 organisms)",
+  "NAND performed for the first time ever, update 2000 (1 organisms)",
+  "AND performed for the first time ever, update 2000 (2 organisms)",
+  "ORN performed for the first time ever, update 2000 (56 organisms)",
+  "OR performed for the first time ever, update 2000 (429 organisms)",
+  "ANDN performed for the first time ever, update 2000 (3 organisms)",
+  "NOR performed for the first time ever, update 5500 (263 organisms)",
+  "OR lost: peak 520 performers at update 4,000, 3 at 39,500, none at the end of the day (added by hand from series.jsonl: the day-1 code only compared start with end; fixed for day 2)"
+ ],
+ "start": {
+  "update": 0,
+  "pop": 1,
+  "genotypes": 1,
+  "births": 0,
+  "median_len": 100,
+  "tasks_now": {
+   "NOT": 0,
+   "NAND": 0,
+   "AND": 0,
+   "ORN": 0,
+   "OR": 0,
+   "ANDN": 0,
+   "NOR": 0,
+   "XOR": 0,
+   "EQU": 0
+  },
+  "top_sha": "c70899a073dc",
+  "top_count": 1,
+  "top_len": 100
+ },
+ "end": {
+  "update": 40000,
+  "pop": 837,
+  "genotypes": 610,
+  "births": 1750077,
+  "median_len": 101,
+  "tasks_now": {
+   "NOT": 529,
+   "NAND": 675,
+   "AND": 463,
+   "ORN": 574,
+   "OR": 0,
+   "ANDN": 646,
+   "NOR": 470,
+   "XOR": 0,
+   "EQU": 0
+  },
+  "top_sha": "ac8d2e32ec88",
+  "top_count": 13,
+  "top_len": 101
+ },
+ "dominant_genome": "ppywtjahgcvycfeuywuxsmeyyycfzwypmcvtxexyycufdfiuydccqjucvapfdnobbucyccuqycucurpuybkzanfepyzvfcaxgsiab",
+ "ever": {
+  "NOT": 1500,
+  "NAND": 2000,
+  "AND": 2000,
+  "ORN": 2000,
+  "OR": 2000,
+  "ANDN": 2000,
+  "NOR": 5500
+ },
+ "digest_prev": null,
+ "digest": "141ea0cf00142dd9669541dc667219bb3131fefa45a37ab2318e82dd0ec679ad",
+ "engine_sha16": "f3adc8decfa991a0",
+ "seed": 20261028
+}

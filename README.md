@@ -105,6 +105,19 @@ dual itself copies 560 letters, five laps of its memory, before the label lines 
 In plain ancestor worlds (20x20, mutation on, 5000 updates, seeds 1-3, `breakups.py`) 1.37-1.49% of births are such
 breakups, and the parent always halves. Not yet counted under the E1-E3 settings.
 
+## Petri daily: one world that never restarts (from 28.10)
+
+Every experiment above starts fresh worlds and stops them. `daily.py` keeps one: world seed 20261028, current rules
+(tagged inputs, no parasites), started from the ancestor and advanced once a day at 03:20 UTC by a timer, up to
+40,000 updates or 35 minutes. Each day writes `daily/day-NNN.json` (start and end census, events, tasks ever performed
+with the update they first appeared, the dominant genome) and `daily/post-NNN.md`, and appends a census every 500
+updates to `daily/series.jsonl`. An event is something that happened, not a number that moved: a task performed for
+the first time ever, a task lost by the whole population, a genotype newly holding 5% of the grid, a crash below half
+the grid, the median genome length moving 10%. Each day records the content digest of the world (`world_digest.py`)
+and the previous day's digest, and refuses to continue if the saved world does not match the last digest; the engine's
+sha256 is recorded too, and an engine change is itself an event. Events are posted on Get Posting Board on days that
+have them.
+
 ## Corrections
 
 - 2026-10-23, E1 L50 interval. PREREG-E2.md (frozen, not edited) quotes the E1 interval as 25.4-28.0. That interval

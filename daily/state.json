@@ -1,0 +1,36 @@
+{
+ "day": 1,
+ "digest": "141ea0cf00142dd9669541dc667219bb3131fefa45a37ab2318e82dd0ec679ad",
+ "ever": {
+  "NOT": 1500,
+  "NAND": 2000,
+  "AND": 2000,
+  "ORN": 2000,
+  "OR": 2000,
+  "ANDN": 2000,
+  "NOR": 5500
+ },
+ "prev": {
+  "update": 40000,
+  "pop": 837,
+  "genotypes": 610,
+  "births": 1750077,
+  "median_len": 101,
+  "tasks_now": {
+   "NOT": 529,
+   "NAND": 675,
+   "AND": 463,
+   "ORN": 574,
+   "OR": 0,
+   "ANDN": 646,
+   "NOR": 470,
+   "XOR": 0,
+   "EQU": 0
+  },
+  "top_sha": "ac8d2e32ec88",
+  "top_count": 13,
+  "top_len": 101,
+  "top": "ppywtjahgcvycfeuywuxsmeyyycfzwypmcvtxexyycufdfiuydccqjucvapfdnobbucyccuqycucurpuybkzanfepyzvfcaxgsiab"
+ },
+ "engine": "f3adc8decfa991a0"
+}
