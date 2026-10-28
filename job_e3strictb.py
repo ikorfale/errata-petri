@@ -1,0 +1,6 @@
+"""Lab job #541: e3_brk.py strict seeds 8,9,10,11,12,13,14. Output in out/e3strict_b.jsonl."""
+import os, subprocess, sys
+here = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(here, "out", "e3strict_b.jsonl"), "w") as f:
+    sys.exit(subprocess.call([sys.executable, os.path.join(here, "e3_brk.py"), "3000", "8,9,10,11,12,13,14",
+                              "local:24,28,32;host:24,28,30,32,36,40;updates:24,28,30,32,36", "--strict"], cwd=here, stdout=f))
