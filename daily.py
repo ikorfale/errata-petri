@@ -31,7 +31,16 @@ def census(w):
             "median_len": lens[len(lens) // 2] if lens else 0, "tasks_now": {k: t.get(k, 0) for k in TASK_NAMES},
             "top_sha": sha(top)[:12] if top else "", "top_count": topn, "top_len": len(top), "top": top}
 
-MODES = {"": (1, False), "_c1m": (1, True), "_infm": (None, True)}   # stats/state suffix: (carry censuses, merge)
+MODES = {"": (1, False), "_c1m": (1, True), "_infm": (None, True), "_deep": (None, True)}   # suffix: (carry censuses, merge)
+DEEP_W = 4   # "_deep": how many censuses back (2,000 updates) two openers' ancestries are compared
+
+def chain(a, gen):
+    """Ancestry of a cell a at the previous census, as (census update, cell) points going back up to DEEP_W censuses.
+    gen: [(update, {cell: anc cell at the census before})], oldest first, the previous census last."""
+    pts, i = [], len(gen) - 1
+    while a is not None and i >= 0 and len(pts) < DEEP_W:
+        pts.append((gen[i][0], a)); a = gen[i][1].get(a); i -= 1
+    return pts
 
 def lineage_census(w, prevs):
     """Who descends from whom between two censuses (glitchfox 106597, zenith 106600: a zero census cannot tell a task that
@@ -46,16 +55,31 @@ def lineage_census(w, prevs):
       are one clade (one origin that reached several performers before it was first seen).
     - "_infm": unlimited carry, merged: every descendant of a clade member stays in the clade for good, performing or
       not. A real re-invention inside an old clade's descendants is then read as continuation, so this undercounts.
-    prevs: {mode: {task: {cell: [clade, is_performer]}}}. Returns ({mode: stats per task with performers}, new prevs)."""
+    - "_deep" (glitchfox 106647, from day 2): as "_infm", but an organism that would open a clade first compares its
+      ancestry over the last DEEP_W censuses with the ancestries of the clades opened in that window; if they share
+      an ancestor at some census it joins that clade. This catches one origin silenced through a census that then
+      reaches performers from several organisms of the previous census. It also merges real re-inventions whose
+      carriers just happen to be related, so each census logs a baseline: the share of random pairs of live
+      organisms whose ancestries meet within DEEP_W censuses ("coal").
+    prevs: {mode: {task: {cell: [clade, is_performer]}}, "_gen": genealogy, "_deepf": {task: {clade: [opened, points]}}}.
+    Returns ({mode: stats per task with performers}, new prevs)."""
     allstats, nxts = {}, {}
+    gen = prevs.get("_gen", []); deepf = {k: {cl: [v[0], {tuple(p) for p in v[1]}] for cl, v in f.items()}
+                                           for k, f in prevs.get("_deepf", {}).items()}
     for m, (carry, merge) in MODES.items():
         prev = prevs.get(m, {}); stats, nxt = {}, {}
         for k in TASK_NAMES:
             old, cur = prev.get(k, {}), {}
+            fk = deepf.setdefault(k, {}) if m == "_deep" else None
             for c, o in enumerate(w.cells):
                 if o is None: continue
                 a = getattr(o, "anc", None); inh = old.get(a)
                 if k in o.tasks or k in getattr(o, "ptasks", ()):
+                    if not inh and fk is not None:
+                        pts = set(chain(a, gen)); hit = next((cl for cl, v in fk.items() if v[1] & pts), None)
+                        cl = hit or ("%d:a%d" % (w.update, a) if a is not None else "%d:%d" % (w.update, c))
+                        fk.setdefault(cl, [w.update, set()])[1].update(pts)
+                        cur[c] = [cl, True]; continue
                     cur[c] = [inh[0] if inh else ("%d:a%d" % (w.update, a) if merge and a is not None else "%d:%d" % (w.update, c)), True]
                 elif inh and (inh[1] or carry is None):
                     cur[c] = [inh[0], False]
@@ -69,6 +93,21 @@ def lineage_census(w, prevs):
                             "top_clade": sizes.most_common(1)[0][1], "top_clade_id": sizes.most_common(1)[0][0]}
                 if len(sizes) <= 30: stats[k]["sizes"] = dict(sizes)
         allstats[m], nxts[m] = stats, nxt
+    # baseline for "_deep": random pairs of live organisms, drawn with an RNG of their own (the world's RNG is not touched)
+    live = [c for c, o in enumerate(w.cells) if o is not None]
+    r = __import__("random").Random(w.update); ch = {}
+    def cs(c):
+        if c not in ch: ch[c] = chain(getattr(w.cells[c], "anc", None), gen)
+        return ch[c]
+    pairs = [r.sample(live, 2) for _ in range(300)] if len(live) > 1 and gen else []
+    # share of pairs whose ancestries meet within d censuses, d = 1 .. len(gen); the last one is the "_deep" window
+    allstats["coal"] = [round(sum(1 for x, y in pairs if set(cs(x)[:d]) & set(cs(y)[:d])) / len(pairs), 3)
+                        for d in range(1, len(gen) + 1)] if pairs else None
+    gen = (gen + [(w.update, {c: getattr(o, "anc", None) for c, o in enumerate(w.cells) if o is not None})])[-DEEP_W:]
+    lo = gen[0][0]
+    nxts["_gen"] = gen
+    nxts["_deepf"] = {k: {cl: [v[0], [p for p in v[1] if p[0] >= lo]] for cl, v in f.items() if any(p[0] >= lo for p in v[1])}
+                      for k, f in deepf.items()}
     for c, o in enumerate(w.cells):
         if o is not None: o.anc = c
     return allstats, nxts
@@ -90,7 +129,9 @@ def main():
     # lineage from day 2 (28.10; day 1 ran without it). Clades carry over days in state.json; on the first day with
     # lineage every performer at the start census opens its own clade
     if "lin_prev" in st:
-        lin_prev = {md: {k: {int(c): v for c, v in m.items()} for k, m in st["lin_prev" + md].items()} for md in MODES}; warm = 0
+        lin_prev = {md: {k: {int(c): v for c, v in m.items()} for k, m in st.get("lin_prev" + md, {}).items()} for md in MODES}; warm = 0
+        lin_prev["_gen"] = [(u, {int(c): a for c, a in m.items()}) for u, m in st.get("lin_gen", [])]
+        lin_prev["_deepf"] = st.get("lin_deepf", {})
     else: _, lin_prev = lineage_census(w, {}); warm = 2
     # warm-up: organisms from a world saved before lineage have no ptasks, so the first two censuses open spurious clades
     # (test 28.10: AND 152 then 76 new clades, then 0); they are logged with "warmup" and left out of the day's summary
@@ -99,7 +140,7 @@ def main():
         w.run_update()
         if w.update % SAMPLE == 0:
             c = census(w); samples.append({k: v for k, v in c.items() if k != "top"})
-            ls, lin_prev = lineage_census(w, lin_prev); lin_series.append({"update": w.update, **{"lin" + md: ls[md] for md in MODES}, **({"warmup": True} if len(lin_series) < warm else {})})
+            ls, lin_prev = lineage_census(w, lin_prev); lin_series.append({"update": w.update, **{"lin" + md: ls[md] for md in MODES}, "coal": ls["coal"], **({"warmup": True} if len(lin_series) < warm else {})})
             for k, n in c["tasks_now"].items():
                 if n and k not in ever:
                     ever[k] = w.update; events.append(f"{k} performed for the first time ever, update {w.update} ({n} organisms)")
@@ -140,6 +181,8 @@ def main():
                                         "new_clades": sum(x["new_clades"] for x in rows), "max_clade": max(x["top_clade"] for x in rows)}
         rec["lineage" + md] = lin_sums[md]
     lin_sum = lin_sums[""]
+    cv = sorted(r["coal"][-1] for r in lin_series if r.get("coal") and len(r["coal"]) == DEEP_W and not r.get("warmup"))
+    coal_med = cv[len(cv) // 2] if cv else "n/a"; rec["coal_median"] = coal_med
     if st.get("engine") and st["engine"] != engine:
         rec["events"].insert(0, f"engine changed since the last day ({st['engine']} -> {engine})")
     json.dump(rec, open(os.path.join(D, "day-%03d.json" % day), "w"), indent=1)
@@ -158,14 +201,19 @@ def main():
         post += ["Lineage (a performer descends from a performer at the previous census, or opens a new clade): " + "; ".join(
             f"{k} {v['new_clades']} new clades, largest {v['max_clade']}, {v['reorigins']} of {v['censuses']} censuses with no "
             "continuing performer" for k, v in lin_sum.items()) + ".",
-            "New clades by counting rule (carry 1 / carry 1 merged / unlimited carry merged): " + "; ".join(
+            "New clades by counting rule (carry 1 / carry 1 merged / unlimited carry merged / plus shared ancestor within "
+            f"{DEEP_W} censuses): " + "; ".join(
             f"{k} {lin_sums[''][k]['new_clades']} / {lin_sums['_c1m'].get(k, {}).get('new_clades', 0)} / "
-            f"{lin_sums['_infm'].get(k, {}).get('new_clades', 0)}" for k in lin_sum) + ".", ""]
+            f"{lin_sums['_infm'].get(k, {}).get('new_clades', 0)} / {lin_sums['_deep'].get(k, {}).get('new_clades', 0)}"
+            for k in lin_sum) + ".",
+            "Baseline for the last rule: share of random pairs of live organisms whose ancestries meet within "
+            f"{DEEP_W} censuses, median over the day: {coal_med} (per census and per depth in lineage.jsonl).", ""]
     post += [
              f"Continuity: state digest {digest[:16]} (previous {(st['digest'] or 'fresh world')[:16]}), engine {engine}. "
              "Rules: tagged inputs, no parasites. Code: https://github.com/ikorfale/errata-petri (daily.py)"]
     open(os.path.join(D, "post-%03d.md" % day), "w").write("\n".join(post) + "\n")
-    st.update(day=day, digest=digest, ever=ever, prev=after, engine=engine, **{"lin_prev" + md: lin_prev[md] for md in MODES})
+    st.update(day=day, digest=digest, ever=ever, prev=after, engine=engine, **{"lin_prev" + md: lin_prev[md] for md in MODES},
+              lin_gen=lin_prev["_gen"], lin_deepf=lin_prev["_deepf"])
     json.dump(st, open(sp, "w"), indent=1)
     print("\n".join(post))
 
