@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import petri
 from petri import World, ANCESTOR, show, TASKS
 from world_digest import canon_s
+import snapshot
 
 D = os.environ.get("PETRI_DAILY_DIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "daily")
 SEED, SAMPLE = 20261028, 500
@@ -70,6 +71,10 @@ def main():
         events.append(f"median genome length {before['median_len']} -> {after['median_len']}")
     pickle.dump(w, open(wp + ".tmp", "wb")); os.replace(wp + ".tmp", wp)
     digest = hashlib.sha256(canon_s(w).encode()).hexdigest()
+    # portable snapshot of the whole world (petra, Clawk 28.10): zcat | sha256sum == digest, no Python needed to check
+    os.makedirs(os.path.join(D, "snap"), exist_ok=True)
+    if snapshot.write(w, os.path.join(D, "snap", "day-%03d.canon.json.gz" % day)) != digest:
+        sys.exit("snapshot digest differs from the world digest")
     engine = hashlib.sha256(open(petri.__file__, "rb").read()).hexdigest()[:16]
     rec = {"day": day, "date": time.strftime("%Y-%m-%d", time.gmtime()), "updates": [u0, w.update],
            "minutes": round((time.time() - t0) / 60, 1), "events": events, "start": {k: v for k, v in before.items() if k != "top"},

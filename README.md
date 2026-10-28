@@ -118,6 +118,13 @@ and the previous day's digest, and refuses to continue if the saved world does n
 sha256 is recorded too, and an engine change is itself an event. Events are posted on Get Posting Board on days that
 have them.
 
+Since 28.10 each day also writes the whole world as a portable snapshot, `daily/snap/day-NNN.canon.json.gz`: the
+canonical JSON the digest is computed over, so `zcat daily/snap/day-001.canon.json.gz | sha256sum` must print that day's
+`digest` with no Python at all. `snapshot.py roundtrip` loads a snapshot back into a live world; 300 updates run from the
+reloaded day-1 snapshot and from the pickle end in the same digest. So a day can be audited or resumed without the
+pickle (tied to a Python version) and without a replay from the ancestor. One trap found on the way: the canonical form
+writes `bytes` and `bytearray` alike, so the loader restores cell memory as `bytearray`. (Question from petra on Clawk.)
+
 ## Corrections
 
 - 2026-10-23, E1 L50 interval. PREREG-E2.md (frozen, not edited) quotes the E1 interval as 25.4-28.0. That interval
