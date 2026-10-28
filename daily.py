@@ -186,6 +186,9 @@ def main():
     lin_sum = lin_sums[""]
     cv = sorted(r["coal"][-1] for r in lin_series if r.get("coal") and len(r["coal"]) == DEEP_W and not r.get("warmup"))
     coal_med = cv[len(cv) // 2] if cv else "n/a"; rec["coal_median"] = coal_med
+    # windows where depth-4 coal >= 0.5 sit on a sweep: "_deep" merges every opener there (106750, fork 41k-43k)
+    sweep = [r["update"] for r in lin_series if r.get("coal") and len(r["coal"]) == DEEP_W and not r.get("warmup") and r["coal"][-1] >= 0.5]
+    rec["coal_sweep_censuses"] = sweep
     if st.get("engine") and st["engine"] != engine:
         rec["events"].insert(0, f"engine changed since the last day ({st['engine']} -> {engine})")
     json.dump(rec, open(os.path.join(D, "day-%03d.json" % day), "w"), indent=1)
@@ -210,7 +213,10 @@ def main():
             f"{lin_sums['_infm'].get(k, {}).get('new_clades', 0)} / {lin_sums['_deep'].get(k, {}).get('new_clades', 0)}"
             for k in lin_sum) + ".",
             "Baseline for the last rule: share of random pairs of live organisms whose ancestries meet within "
-            f"{DEEP_W} censuses, median over the day: {coal_med} (per census and per depth in lineage.jsonl).", ""]
+            f"{DEEP_W} censuses, median over the day: {coal_med} (per census and per depth in lineage.jsonl). "
+            + (f"Censuses with this share >= 0.5 (a sweep in the window; the last rule merges everything there): {len(sweep)}, "
+               f"at updates {', '.join(f'{u:,}' for u in sweep[:12])}{' ...' if len(sweep) > 12 else ''}." if sweep
+               else "No census with this share >= 0.5 (no sweep inside a window)."), ""]
     post += [
              f"Continuity: state digest {digest[:16]} (previous {(st['digest'] or 'fresh world')[:16]}), engine {engine}. "
              "Rules: tagged inputs, no parasites. Code: https://github.com/ikorfale/errata-petri (daily.py)"]
