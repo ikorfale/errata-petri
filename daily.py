@@ -31,6 +31,37 @@ def census(w):
             "median_len": lens[len(lens) // 2] if lens else 0, "tasks_now": {k: t.get(k, 0) for k in TASK_NAMES},
             "top_sha": sha(top)[:12] if top else "", "top_count": topn, "top_len": len(top), "top": top}
 
+def lineage_census(w, prev):
+    """Who descends from whom between two censuses (glitchfox 106597, zenith 106600: a zero census cannot tell a task that
+    persisted from one that died and was re-invented). At each census every live organism gets anc = its cell index;
+    children inherit anc (petri.py divide). A performer of k is an organism that did k in its current gestation or in
+    the one it last finished (ptasks), since tasks reset at every division. At the next census a performer whose anc was
+    in a clade of k continues that clade; any other performer opens a new clade (a re-origin since the last census).
+    Non-performers whose anc performed k carry its clade for one census (a child that has not yet done k is still of
+    that clade); a carrier's own descendants do not inherit it. Clades are lower bounds on origins.
+    prev: {task: {cell: [clade, is_performer]}}. Returns (stats per task with performers, the new prev)."""
+    stats, nxt = {}, {}
+    for k in TASK_NAMES:
+        old, cur = prev.get(k, {}), {}
+        for c, o in enumerate(w.cells):
+            if o is None: continue
+            a = getattr(o, "anc", None); inh = old.get(a)
+            if k in o.tasks or k in getattr(o, "ptasks", ()):
+                cur[c] = [inh[0] if inh else "%d:%d" % (w.update, c), True]
+            elif inh and inh[1]:
+                cur[c] = [inh[0], False]
+        nxt[k] = cur
+        perf = [v[0] for v in cur.values() if v[1]]
+        if perf:
+            olds = {v[0] for v in old.values()}
+            sizes = Counter(perf)
+            stats[k] = {"n": len(perf), "cont": sum(1 for v in perf if v in olds),
+                        "new_clades": sum(1 for v in sizes if v not in olds), "clades": len(sizes),
+                        "top_clade": sizes.most_common(1)[0][1], "top_clade_id": sizes.most_common(1)[0][0]}
+    for c, o in enumerate(w.cells):
+        if o is not None: o.anc = c
+    return stats, nxt
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--updates", type=int, default=40000)
     ap.add_argument("--max-min", type=float, default=35); a = ap.parse_args()
@@ -45,10 +76,18 @@ def main():
         st = {"day": 0, "digest": None, "ever": {}, "prev": census(w), "engine": None}
     day = st["day"] + 1; before = st["prev"]; ever = st["ever"]
     t0 = time.time(); u0 = w.update; samples = []; events = []
+    # lineage from day 2 (28.10; day 1 ran without it). Clades carry over days in state.json; on the first day with
+    # lineage every performer at the start census opens its own clade
+    if "lin_prev" in st: lin_prev = {k: {int(c): v for c, v in m.items()} for k, m in st["lin_prev"].items()}; warm = 0
+    else: _, lin_prev = lineage_census(w, {}); warm = 2
+    # warm-up: organisms from a world saved before lineage have no ptasks, so the first two censuses open spurious clades
+    # (test 28.10: AND 152 then 76 new clades, then 0); they are logged with "warmup" and left out of the day's summary
+    lin_series = []
     while w.update - u0 < a.updates and time.time() - t0 < a.max_min * 60:
         w.run_update()
         if w.update % SAMPLE == 0:
             c = census(w); samples.append({k: v for k, v in c.items() if k != "top"})
+            ls, lin_prev = lineage_census(w, lin_prev); lin_series.append({"update": w.update, "lin": ls, **({"warmup": True} if len(lin_series) < warm else {})})
             for k, n in c["tasks_now"].items():
                 if n and k not in ever:
                     ever[k] = w.update; events.append(f"{k} performed for the first time ever, update {w.update} ({n} organisms)")
@@ -80,9 +119,17 @@ def main():
            "minutes": round((time.time() - t0) / 60, 1), "events": events, "start": {k: v for k, v in before.items() if k != "top"},
            "end": {k: v for k, v in after.items() if k != "top"}, "dominant_genome": after["top"], "ever": ever,
            "digest_prev": st["digest"], "digest": digest, "engine_sha16": engine, "seed": SEED}
+    lin_sum = {}
+    for k in TASK_NAMES:
+        rows = [r["lin"][k] for r in lin_series if k in r["lin"] and not r.get("warmup")]
+        if rows: lin_sum[k] = {"censuses": len(rows), "reorigins": sum(1 for x in rows if x["cont"] == 0),
+                               "new_clades": sum(x["new_clades"] for x in rows), "max_clade": max(x["top_clade"] for x in rows)}
+    rec["lineage"] = lin_sum
     if st.get("engine") and st["engine"] != engine:
         rec["events"].insert(0, f"engine changed since the last day ({st['engine']} -> {engine})")
     json.dump(rec, open(os.path.join(D, "day-%03d.json" % day), "w"), indent=1)
+    with open(os.path.join(D, "lineage.jsonl"), "a") as f:
+        for r in lin_series: f.write(json.dumps(r) + "\n")
     with open(os.path.join(D, "series.jsonl"), "a") as f:
         for s in samples: f.write(json.dumps(s) + "\n")
     tn = lambda c: ", ".join(f"{k} {n}" for k, n in c["tasks_now"].items() if n) or "none"
@@ -91,11 +138,16 @@ def main():
     post += ["", f"End of day: {after['pop']} organisms, {after['genotypes']} genotypes, median genome {after['median_len']} "
              f"instructions. Tasks performed now (organisms): {tn(after)}.",
              f"Tasks ever performed, with first update: {', '.join(f'{k} {u:,}' for k, u in ever.items()) or 'none yet'}.",
-             f"Dominant genome ({after['top_len']}): {after['top']}", "",
+             f"Dominant genome ({after['top_len']}): {after['top']}", ""]
+    if lin_sum:
+        post += ["Lineage (a performer descends from a performer at the previous census, or opens a new clade): " + "; ".join(
+            f"{k} {v['new_clades']} new clades, largest {v['max_clade']}, {v['reorigins']} of {v['censuses']} censuses with no "
+            "continuing performer" for k, v in lin_sum.items()) + ".", ""]
+    post += [
              f"Continuity: state digest {digest[:16]} (previous {(st['digest'] or 'fresh world')[:16]}), engine {engine}. "
              "Rules: tagged inputs, no parasites. Code: https://github.com/ikorfale/errata-petri (daily.py)"]
     open(os.path.join(D, "post-%03d.md" % day), "w").write("\n".join(post) + "\n")
-    st.update(day=day, digest=digest, ever=ever, prev=after, engine=engine)
+    st.update(day=day, digest=digest, ever=ever, prev=after, engine=engine, lin_prev=lin_prev)
     json.dump(st, open(sp, "w"), indent=1)
     print("\n".join(post))
 

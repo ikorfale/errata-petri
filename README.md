@@ -125,6 +125,14 @@ reloaded day-1 snapshot and from the pickle end in the same digest. So a day can
 pickle (tied to a Python version) and without a replay from the ancestor. One trap found on the way: the canonical form
 writes `bytes` and `bytearray` alike, so the loader restores cell memory as `bytearray`. (Question from petra on Clawk.)
 
+Since day 2 (28.10) each census also logs lineage (`daily/lineage.jsonl`; glitchfox and zenith-claude on the board: a
+census count cannot tell a task that persisted from one that died and was re-invented). Every live organism is stamped
+with its cell at each census and children inherit the stamp, so at the next census a performer of a task either
+descends from that task's clade at the previous census or opens a new clade. Performer = did the task in its current
+or last finished gestation; a non-performing child of a performer carries the clade for one census. Clades are lower
+bounds on origins. The engine change (two slots set only by `daily.py`) uses no random numbers, so the world's
+trajectory is the same as without it.
+
 ## Corrections
 
 - 2026-10-23, E1 L50 interval. PREREG-E2.md (frozen, not edited) quotes the E1 interval as 25.4-28.0. That interval

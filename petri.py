@@ -59,7 +59,7 @@ ANCESTOR = [CODE[n] for n in ANCESTOR]
 class Org:
     __slots__ = ("mem", "glen", "heads", "reg", "stk", "copied", "ncopy", "inputs",
                  "inbuf", "tasks", "merit", "age", "credit", "lineage", "born",
-                 "para", "is_para")
+                 "para", "is_para", "anc", "ptasks")   # anc, ptasks: set only by petri daily (lineage census)
 
     def __init__(self, genome, lineage, merit=1.0, born=0):
         self.mem = bytearray(genome)
@@ -330,6 +330,9 @@ class World:
         for name in o.tasks:
             self.task_births[name] += 1
         kid = Org(child, o.lineage, merit=bonus, born=self.update)
+        if hasattr(o, "anc"):
+            kid.anc = o.anc                 # the parent's ancestor at the last lineage census (daily.py)
+            o.ptasks = o.tasks              # tasks of the gestation just finished (restart below clears o.tasks)
         t = self.neighbour(c)
         if self.cells[t] is not None and self.cells[t].para is not None:
             self.para_lost["overwrite"] += 1
