@@ -125,6 +125,9 @@ def main():
         w = World(seed=SEED); w.inject(ANCESTOR, "ancestor")
         st = {"day": 0, "digest": None, "ever": {}, "prev": census(w), "engine": None}
     day = st["day"] + 1; before = st["prev"]; ever = st["ever"]
+    if os.path.exists(wp):   # keep the world each day starts from, so the day can be replayed exactly (replay_origins.py)
+        import shutil; bd = os.path.join(D, "base", "day-%03d" % st["day"]); os.makedirs(bd, exist_ok=True)
+        shutil.copy2(wp, bd); shutil.copy2(sp, bd)
     t0 = time.time(); u0 = w.update; samples = []; events = []
     # lineage from day 2 (28.10; day 1 ran without it). Clades carry over days in state.json; on the first day with
     # lineage every performer at the start census opens its own clade
