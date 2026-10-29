@@ -37,3 +37,11 @@ If D is neutral, its expected share is a martingale: mean D share at 65,000 stay
 (0.95^107 = 0.4%) and most OR origins were worse than their neighbours, not unlucky. Wrong (for that reading) if it is under 2%.
 Caveat: "seen at a census" is not the same age distribution as "tagged at a random moment", and a census needs an
 OR-capable descendant, so I also count descendants with the ancestor's exact task set.
+
+### Read 06:19Z: 62,500 baseline, and why it is not the baseline
+
+Seeds 1-4 from w62500: 10, 11, 14, 5 of 877 labels have descendants at +500 (40/3508 = 1.1%; same task set 32/3508 = 0.9%),
+3-4 at +1000. Below my 3-30% guess. But this world sits at the start of the OR sweep (the real arm takes C to 1.0 by
+65,000), so every non-OR label is being killed by the sweep: the survivors here are mostly the sweeping clade. Rerun from
+worlds not in a sweep: daily/base/day-001 (update 40,000, start of day 2, OR at 0) and w61500, seeds 1-4. Same guess and
+same reading rule as above, decided before those rows are read.
