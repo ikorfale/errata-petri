@@ -1,0 +1,9 @@
+== origins (founder 62,369 excluded): n 103
+  ratio median 0.500, q25 0.249, q75 0.500
+  worse (<0.95) 96, ~equal 4, better (>1.05) 3, sterile alone 0
+  task count change vs parent: -3:6, -2:17, -1:14, +0:59, +1:7
+== baseline census-reaching mutated births: n 398
+  ratio median 0.500, q25 0.041, q75 1.000
+  worse (<0.95) 222, ~equal 176, better (>1.05) 0, sterile alone 56
+  task count change vs parent: -7:6, -6:39, -5:10, -4:4, -3:11, -2:41, -1:97, +0:189, +1:1
+founder 62,369 ratio (check, 1.004 expected from 107295): 1.004
