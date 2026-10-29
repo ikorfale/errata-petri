@@ -1,4 +1,4 @@
-# Guess before the merit-vs-survival split (29.10 ~10:20 UTC, written before out/origin_genomes_day2_r2.json exists)
+# Guess before the merit-vs-survival split (29.10 10:00 UTC; first draft said "~10:20", a felt time, corrected before the run finished, written before out/origin_genomes_day2_r2.json exists)
 
 Context: out/origin_merit_day2.txt (b861b5c). Origins and census-reaching mutated births both have median merit ratio 0.50;
 origins are almost never neutral (7/103 equal-or-better vs 176/398). Question: does merit alone predict whether a
