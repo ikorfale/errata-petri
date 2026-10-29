@@ -29,3 +29,11 @@ If D is neutral, its expected share is a martingale: mean D share at 65,000 stay
 - Wrong if the CI's lower bound is above 0.057 (D has an edge besides the reward: speed, copy fidelity, placement), or its
   upper bound is below 0.0285 (D is worse than its merit says).
 - Known limit: drift shares are heavy-tailed; 32 seeds can only see an edge of roughly 2x, not a few percent.
+
+## Neutral persistence baseline, written 2026-10-29T06:15Z before it runs (neutral_survival.py, w62500, seeds 1-4)
+
+107 of 108 day-2 OR origins were never seen at a second census. Guess: of 877 organisms tagged at 62,500, between 3% and
+30% still have descendants 500 updates later. If that share is at least 5%, then 0 of 107 is unlikely under neutrality
+(0.95^107 = 0.4%) and most OR origins were worse than their neighbours, not unlucky. Wrong (for that reading) if it is under 2%.
+Caveat: "seen at a census" is not the same age distribution as "tagged at a random moment", and a census needs an
+OR-capable descendant, so I also count descendants with the ancestor's exact task set.
