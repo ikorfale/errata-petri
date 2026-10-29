@@ -22,6 +22,7 @@ ap = argparse.ArgumentParser(); ap.add_argument("base"); ap.add_argument("update
 ap.add_argument("--task", default="OR"); ap.add_argument("--after", type=int, default=41500)
 ap.add_argument("--digest", default=None); ap.add_argument("--max-tests", type=int, default=3000000)
 ap.add_argument("--edges", type=float, default=0.0, help="share of mutated births whose edge is tested")
+ap.add_argument("--survival", default=None, help="write lineage lifetimes of origins and a matched baseline of mutated births here (JSON)")
 ap.add_argument("--founders", default=None, help="write genome bytes of the origins at the last census and of their parents here (JSON)")
 a = ap.parse_args()
 w = pickle.load(open(os.path.join(a.base, "world.pkl"), "rb")); st = json.load(open(os.path.join(a.base, "state.json")))
@@ -58,8 +59,12 @@ else: _, lin_prev = daily.lineage_census(w, {})
 live_ids = {}
 perf = {}                                  # census update -> [birth ids of TASK performers]
 u0, t0 = w.update, time.time()
+last = {}                                  # birth id -> last update seen alive (added 29.10 for --survival)
 while w.update - u0 < a.updates:
     w.run_update()
+    if a.survival:
+        for o in w.cells:
+            if o is not None: last[uid[id(o)]] = w.update
     if w.update % daily.SAMPLE == 0:
         _, lin_prev = daily.lineage_census(w, lin_prev)
         uid = {id(o): uid[id(o)] for o in w.cells if o is not None}   # dead organisms' ids are freed and may be reused
@@ -154,3 +159,27 @@ if a.founders:                             # added 29.10 (board 107280): the fou
                    "parent": parent[int(o)], "parent_genome": list(genome[parent[int(o)]]) if parent[int(o)] >= 0 else None,
                    "parent_capable": capable(parent[int(o)]) if parent[int(o)] >= 0 else None}
                for o, n in last.items() if not str(o).startswith("start")}, open(a.founders, "w"), indent=1)
+
+if a.survival:                             # added 29.10 (zenith 107333/107347): how long did each origin's line last?
+    import numpy as np, random
+    par = np.array(parent); order = np.argsort(par, kind="stable"); ps = par[order]
+    def kids(i):
+        lo, hi = np.searchsorted(ps, i), np.searchsorted(ps, i, side="right"); return order[lo:hi].tolist()
+    def lifetime(i, only_capable=False):   # last update any descendant (incl. i) was alive, minus birth of i
+        best, stack = last.get(i, birth_u[i]), [i]
+        while stack:
+            j = stack.pop(); best = max(best, last.get(j, birth_u[j]))
+            if best >= E: break                # alive at the end of the day: no need to walk the rest
+            stack.extend(k for k in kids(j) if not only_capable or capable(k))
+        return best - birth_u[i]
+    S = a.after; E = w.update
+    def nextc(b): return (b // daily.SAMPLE + 1) * daily.SAMPLE
+    org = {}
+    for o in allo:
+        if str(o).startswith("start"): continue
+        o = int(o); org[o] = {"born": birth_u[o], "next_census": nextc(birth_u[o]), "life_any": lifetime(o), "life_capable_run": lifetime(o, True)}
+    rs = random.Random(1029); base = []
+    cand = [i for i in range(len(parent)) if parent[i] >= 0 and S < birth_u[i] <= E - 1000 and genome[i] is not genome[parent[i]]]
+    for i in rs.sample(cand, min(20000, len(cand))):
+        base.append((birth_u[i], lifetime(i)))
+    json.dump({"origins": org, "baseline_mutated_births": base, "n_mutated_births_after": len(cand)}, open(a.survival, "w"))
