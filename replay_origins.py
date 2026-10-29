@@ -25,6 +25,8 @@ ap.add_argument("--edges", type=float, default=0.0, help="share of mutated birth
 ap.add_argument("--survival", default=None, help="write lineage lifetimes of origins and a matched baseline of mutated births here (JSON)")
 ap.add_argument("--origin-genomes", default=None, help="write genome bytes of every origin and its parent, plus 400 census-reaching mutated births and parents (JSON)")
 ap.add_argument("--baseline-n", type=int, default=400, help="census-reaching mutated births kept for --origin-genomes (same random order, so the first 400 are the old sample)")
+ap.add_argument("--no-lineage", action="store_true", help="skip lineage censuses (day 1 ran without them; they set anc/ptasks, which the digest hashes)")
+ap.add_argument("--save-world", default=None, help="write per-field digests of the end world here (JSON, world_digest.parts), before the digest check")
 ap.add_argument("--founders", default=None, help="write genome bytes of the origins at the last census and of their parents here (JSON)")
 a = ap.parse_args()
 w = pickle.load(open(os.path.join(a.base, "world.pkl"), "rb")); st = json.load(open(os.path.join(a.base, "state.json")))
@@ -57,7 +59,7 @@ if "lin_prev" in st:
     lin_prev = {md: {k: {int(c): v for c, v in m.items()} for k, m in st.get("lin_prev" + md, {}).items()} for md in daily.MODES}
     lin_prev["_gen"] = [(u, {int(c): x for c, x in m.items()}) for u, m in st.get("lin_gen", [])]
     lin_prev["_deepf"] = st.get("lin_deepf", {})
-else: _, lin_prev = daily.lineage_census(w, {})
+elif not a.no_lineage: _, lin_prev = daily.lineage_census(w, {})
 live_ids = {}
 perf = {}                                  # census update -> [birth ids of TASK performers]
 u0, t0 = w.update, time.time()
@@ -68,13 +70,15 @@ while w.update - u0 < a.updates:
         for o in w.cells:
             if o is not None: last[uid[id(o)]] = w.update
     if w.update % daily.SAMPLE == 0:
-        _, lin_prev = daily.lineage_census(w, lin_prev)
+        if not a.no_lineage: _, lin_prev = daily.lineage_census(w, lin_prev)
         uid = {id(o): uid[id(o)] for o in w.cells if o is not None}   # dead organisms' ids are freed and may be reused
         if w.update > a.after:
             live_ids[w.update] = [uid[id(o)] for o in w.cells if o is not None]
             perf[w.update] = [uid[id(o)] for o in w.cells if o is not None and (a.task in o.tasks or a.task in getattr(o, "ptasks", ()))]
 petri.Org = _Org
 del w.divide
+if a.save_world:
+    from world_digest import parts; json.dump(parts(w), open(a.save_world, "w"))
 dig = hashlib.sha256(canon_s(w).encode()).hexdigest()
 if a.digest and not dig.startswith(a.digest):
     sys.exit(f"replay ended on digest {dig[:16]}, expected {a.digest}: not the same day, results discarded")

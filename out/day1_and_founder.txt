@@ -1,0 +1,9 @@
+len 99 99 diffs [(51, 'nop-C', 'nand'), (84, 'if-n-equ', 'h-alloc')]
+parent 1 (354, 202752.0, ('ANDN', 'NAND', 'NOR', 'NOT', 'ORN'))
+parent 2 (354, 202752.0, ('ANDN', 'NAND', 'NOR', 'NOT', 'ORN'))
+parent 3 (354, 202752.0, ('ANDN', 'NAND', 'NOR', 'NOT', 'ORN'))
+founder 1 (354, 405504.0, ('AND', 'ANDN', 'NAND', 'NOR', 'ORN'))
+founder 2 (354, 405504.0, ('AND', 'ANDN', 'NAND', 'NOR', 'ORN'))
+founder 3 (354, 405504.0, ('AND', 'ANDN', 'NAND', 'NOR', 'ORN'))
+parent+only 51 [(354, 405504.0, ('AND', 'ANDN', 'NAND', 'NOR', 'ORN')), (354, 405504.0, ('AND', 'ANDN', 'NAND', 'NOR', 'ORN')), (354, 405504.0, ('AND', 'ANDN', 'NAND', 'NOR', 'ORN'))]
+parent+only 84 [(354, 202752.0, ('ANDN', 'NAND', 'NOR', 'NOT', 'ORN')), (354, 202752.0, ('ANDN', 'NAND', 'NOR', 'NOT', 'ORN')), (354, 202752.0, ('ANDN', 'NAND', 'NOR', 'NOT', 'ORN'))]

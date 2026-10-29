@@ -1,0 +1,193 @@
+{
+ "task": "AND",
+ "origins_an_earliest_ancestor_rule_would_fold": 8,
+ "after": 31000,
+ "updates": [
+  0,
+  40000
+ ],
+ "digest16": "141ea0cf00142dd9",
+ "ids": 1750078,
+ "test": {
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "steps": 20000,
+  "capable": "task in first gestation in >= 1 of 3 seeds"
+ },
+ "start_capable": 0,
+ "gain_edges_without_mutation": 0,
+ "edges": null,
+ "genome_tests": 15957,
+ "performers_not_capable_alone": 623,
+ "of_them_never_divide_alone": 604,
+ "origins_total": 9,
+ "origins_older_than_day": 0,
+ "origin_born": {
+  "1612200": 36985,
+  "1683362": 38451,
+  "1618610": 37100,
+  "1639638": 37495,
+  "1463015": 33920,
+  "1611869": 36979,
+  "1683663": 38458,
+  "1328814": 30783,
+  "1725113": 39421
+ },
+ "censuses": [
+  {
+   "update": 31500,
+   "performers": 423,
+   "capable_not_performing": 177,
+   "origins": {
+    "1328814": 389
+   }
+  },
+  {
+   "update": 32000,
+   "performers": 459,
+   "capable_not_performing": 157,
+   "origins": {
+    "1328814": 425
+   }
+  },
+  {
+   "update": 32500,
+   "performers": 469,
+   "capable_not_performing": 175,
+   "origins": {
+    "1328814": 433
+   }
+  },
+  {
+   "update": 33000,
+   "performers": 433,
+   "capable_not_performing": 188,
+   "origins": {
+    "1328814": 413
+   }
+  },
+  {
+   "update": 33500,
+   "performers": 467,
+   "capable_not_performing": 172,
+   "origins": {
+    "1328814": 431
+   }
+  },
+  {
+   "update": 34000,
+   "performers": 475,
+   "capable_not_performing": 148,
+   "origins": {
+    "1328814": 440,
+    "1463015": 1
+   }
+  },
+  {
+   "update": 34500,
+   "performers": 436,
+   "capable_not_performing": 188,
+   "origins": {
+    "1328814": 401
+   }
+  },
+  {
+   "update": 35000,
+   "performers": 471,
+   "capable_not_performing": 161,
+   "origins": {
+    "1328814": 439
+   }
+  },
+  {
+   "update": 35500,
+   "performers": 452,
+   "capable_not_performing": 191,
+   "origins": {
+    "1328814": 425
+   }
+  },
+  {
+   "update": 36000,
+   "performers": 440,
+   "capable_not_performing": 238,
+   "origins": {
+    "1328814": 406
+   }
+  },
+  {
+   "update": 36500,
+   "performers": 447,
+   "capable_not_performing": 207,
+   "origins": {
+    "1328814": 400
+   }
+  },
+  {
+   "update": 37000,
+   "performers": 456,
+   "capable_not_performing": 195,
+   "origins": {
+    "1328814": 403,
+    "1612200": 1,
+    "1611869": 1
+   }
+  },
+  {
+   "update": 37500,
+   "performers": 481,
+   "capable_not_performing": 188,
+   "origins": {
+    "1328814": 438,
+    "1639638": 1,
+    "1618610": 4
+   }
+  },
+  {
+   "update": 38000,
+   "performers": 459,
+   "capable_not_performing": 171,
+   "origins": {
+    "1328814": 426
+   }
+  },
+  {
+   "update": 38500,
+   "performers": 467,
+   "capable_not_performing": 175,
+   "origins": {
+    "1328814": 443,
+    "1683663": 1,
+    "1683362": 1
+   }
+  },
+  {
+   "update": 39000,
+   "performers": 451,
+   "capable_not_performing": 181,
+   "origins": {
+    "1328814": 417
+   }
+  },
+  {
+   "update": 39500,
+   "performers": 460,
+   "capable_not_performing": 164,
+   "origins": {
+    "1328814": 417,
+    "1725113": 1
+   }
+  },
+  {
+   "update": 40000,
+   "performers": 463,
+   "capable_not_performing": 179,
+   "origins": {
+    "1328814": 429
+   }
+  }
+ ]
+}
