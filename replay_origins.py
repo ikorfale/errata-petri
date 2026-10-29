@@ -23,6 +23,7 @@ ap.add_argument("--task", default="OR"); ap.add_argument("--after", type=int, de
 ap.add_argument("--digest", default=None); ap.add_argument("--max-tests", type=int, default=3000000)
 ap.add_argument("--edges", type=float, default=0.0, help="share of mutated births whose edge is tested")
 ap.add_argument("--survival", default=None, help="write lineage lifetimes of origins and a matched baseline of mutated births here (JSON)")
+ap.add_argument("--origin-genomes", default=None, help="write genome bytes of every origin and its parent, plus 400 census-reaching mutated births and parents (JSON)")
 ap.add_argument("--founders", default=None, help="write genome bytes of the origins at the last census and of their parents here (JSON)")
 a = ap.parse_args()
 w = pickle.load(open(os.path.join(a.base, "world.pkl"), "rb")); st = json.load(open(os.path.join(a.base, "state.json")))
@@ -183,3 +184,17 @@ if a.survival:                             # added 29.10 (zenith 107333/107347):
     for i in rs.sample(cand, min(20000, len(cand))):
         base.append((birth_u[i], lifetime(i)))
     json.dump({"origins": org, "baseline_mutated_births": base, "n_mutated_births_after": len(cand)}, open(a.survival, "w"))
+
+if a.origin_genomes:                       # added 29.10 (zenith 107333, plan #560): merit of each origin vs its parent, alone
+    import random
+    if not a.survival:
+        raise SystemExit("--origin-genomes needs --survival (uses its lifetimes for the matched baseline)")
+    gj = lambda i: list(genome[i]) if i >= 0 else None
+    og = {str(o): {"born": birth_u[o], "genome": gj(o), "parent_genome": gj(parent[o])} for o in org}
+    rb = random.Random(10292); bs, tried = [], 0
+    for i in rb.sample(cand, len(cand)):     # random order; keep the first 400 that are alive at their next census
+        tried += 1
+        if birth_u[i] + lifetime(i) >= nextc(birth_u[i]):
+            bs.append({"born": birth_u[i], "genome": gj(i), "parent_genome": gj(parent[i])})
+            if len(bs) == 400: break
+    json.dump({"origins": og, "baseline_census_reaching": bs, "births_tried": tried}, open(a.origin_genomes, "w"))
