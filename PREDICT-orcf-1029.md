@@ -45,3 +45,11 @@ Seeds 1-4 from w62500: 10, 11, 14, 5 of 877 labels have descendants at +500 (40/
 65,000), so every non-OR label is being killed by the sweep: the survivors here are mostly the sweeping clade. Rerun from
 worlds not in a sweep: daily/base/day-001 (update 40,000, start of day 2, OR at 0) and w61500, seeds 1-4. Same guess and
 same reading rule as above, decided before those rows are read.
+
+### Read 06:25Z: clean baselines
+
+Worlds not in a sweep, seeds 1-4 each, share of labels with a descendant of the ancestor's exact task set at +500:
+40,000: 76/3348 = 2.27% (any descendant 2.81%); 61,500: 80/3464 = 2.31% (2.71%). **My guess was wrong**: below 3%, and
+below the 5% line I set for "most OR origins were worse than neighbours". At 2.3%, 107 origins would leave about 2.4 lines
+past a second census by luck alone; 0 has probability 0.08. A weak hint that OR origins were on average worse than
+neutral, not a finding. And one survivor out of 108 needs no special explanation if the founder was neutral.
