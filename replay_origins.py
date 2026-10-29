@@ -129,7 +129,16 @@ if a.edges:
         if p < 0 or birth_u[i] <= a.after or genome[i] is genome[p] or rs.random() >= a.edges: continue
         sampled += 1
         cp, ci = capable(p), capable(i); gains += ci and not cp; losses += cp and not ci
-print(json.dumps({"task": a.task, "after": a.after, "updates": [u0, w.update], "digest16": dig[:16], "ids": len(parent),
+# Added 29.10 after the freeze, reporting only (glitchfox 107031): how many of the run-origins an "earliest ancestor
+# whose genome computes TASK" rule would have folded into an older line, i.e. some ancestor above the gap is capable.
+def folded(o):
+    p = parent[int(o)]
+    while p >= 0:
+        if capable(p): return True
+        p = parent[p]
+    return False
+n_folded = sum(1 for o in allo if not str(o).startswith("start") and folded(o))
+print(json.dumps({"task": a.task, "origins_an_earliest_ancestor_rule_would_fold": n_folded, "after": a.after, "updates": [u0, w.update], "digest16": dig[:16], "ids": len(parent),
                   "test": {"seeds": SEEDS, "steps": STEPS, "capable": "task in first gestation in >= 1 of 3 seeds"},
                   "start_capable": start_cap, "gain_edges_without_mutation": no_mut_gains,
                   "edges": {"sample_share": a.edges, "mutated_births_tested": sampled, "gains": gains, "losses": losses} if a.edges else None,
