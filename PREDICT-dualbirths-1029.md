@@ -21,3 +21,17 @@ Guesses (I can lose them):
   parents are ~60% of births and AND parents ~0.6%. If the ANDN route gives zero, gaining AND from the s2 background
   is the harder step.
 Only seed 101; one seed cannot reject the mutation spectrum (glitchfox: 10 seeds of zero would be p~4e-5).
+
+## Result so far (29.10 ~14:05 UTC; out/dual_births_s101.log, out/dual_births_trace_and.json, out/dual_seeds_s101.txt, out/dual_births2_s101.json)
+
+Replay exact: 3,096,959 births and 18,737 AND births at update 40,000, as the original row.
+- D1 (0-3 duals from AND parents): **held, at 0.** 9,917 distinct mutated children of AND parents (9,918 births), none
+  computes AND+ANDN traced. Expected ~1.0, so P(0) ~0.36: no conflict with the 2e-5 rate, no support either.
+- D2 (0 or 1 dividing duals, none dividing twice): **first half wrong, second held.** The world logged 11 divisions by
+  organisms that computed AND and ANDN in that gestation, 11 different genomes, each dividing once. But none of them is
+  a dual genotype: their genomes at division compute AND+ANDN in 0 of 1,100 traced gestations (100 input seeds each),
+  and the first two were born as different genomes (8 and 2 changed blocks between birth and division), whose birth
+  genomes compute AND+ANDN in 0/100 and 1/100 input seeds. So in-world duals here are organisms rewriting themselves
+  during a gestation, not a heritable dual.
+- D3 (more duals by the ANDN route): trace of 1,610,525 distinct mutated children of non-AND parents still running;
+  10 dual genotypes in the first 250,000.
