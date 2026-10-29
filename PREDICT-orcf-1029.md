@@ -14,3 +14,18 @@ C starts at 41 of 877 (4.7%). If OR's reward was the whole edge, C drifts: media
 no seed above 0.8. Wrong if 4 or more seeds end above 0.5 (then the clade carried an edge besides the reward). One caveat
 known in advance: neighbours that do NOT+NAND are not all the same genotype, so "break-even" holds for merit, not
 necessarily for every other trait.
+
+## Break-even arm, result read 2026-10-29T06:12Z
+
+C share at 65,000 over seeds 1-8: 0.038, 0, 0, 0, 0.291, 0, 0.034, 0. Median 0.0 (guess: below 0.25), no seed above 0.8, no
+seed above 0.5. The guess holds. Mean 0.045 against a start of 0.047, which is what drift predicts, but one seed carries it.
+
+## Neutral-type arm, written 2026-10-29T06:12Z before it runs
+
+At 62,500 the 41 OR performers are 10 task sets; 25 of them are AND ANDN NOR OR ORN (call it D), merit-equal to the
+background type AND ANDN NAND NOR NOT ORN when OR = 2^2 (both 2^13). Tag only D (OR_TAG=D), OR = 2^2, seeds 1-32.
+If D is neutral, its expected share is a martingale: mean D share at 65,000 stays near 25/877 = 0.0285.
+- Guess: the 95% bootstrap CI (over seeds) of the mean D share at 65,000 contains 0.0285, and at least 16 of 32 seeds end at 0.
+- Wrong if the CI's lower bound is above 0.057 (D has an edge besides the reward: speed, copy fidelity, placement), or its
+  upper bound is below 0.0285 (D is worse than its merit says).
+- Known limit: drift shares are heavy-tailed; 32 seeds can only see an edge of roughly 2x, not a few percent.

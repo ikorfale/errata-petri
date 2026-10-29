@@ -10,6 +10,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import petri, daily
 START = sys.argv[1] if len(sys.argv) > 1 else "out/sweeps/w62500.pkl"
 END, SEEDS = 65000, ["orig"] + list(range(1, 9))
+if os.environ.get("OR_SEEDS"):   # e.g. "1-32" (added 29.10)
+    a, b = map(int, os.environ["OR_SEEDS"].split("-")); SEEDS = list(range(a, b + 1))
+TAG_D = os.environ.get("OR_TAG") == "D"   # tag only the dominant 62,500 type AND ANDN NOR OR ORN (merit-equal at OR=2^2)
+D_SET = {"AND", "ANDN", "NOR", "OR", "ORN"}
 REAL = list(petri.TASKS)
 NEUT_B = int(os.environ.get("OR_NEUTRAL_EXP", "0"))   # 0 = no reward; 2 = break-even with NOT+NAND (added 29.10)
 NEUT = [(n, f, NEUT_B if n == "OR" else b) for n, f, b in REAL]
@@ -18,7 +22,9 @@ def run(arm, seed):
     petri.TASKS[:] = REAL if arm == "real" else NEUT
     w = pickle.load(open(START, "rb"))
     live = [o for o in w.cells if o is not None]
-    for o in live: o.lineage = "C" if does(o, "OR") else "X"
+    for o in live:
+        if TAG_D: o.lineage = "C" if set(o.tasks) | set(getattr(o, "ptasks", None) or ()) == D_SET else "X"
+        else: o.lineage = "C" if does(o, "OR") else "X"
     if seed != "orig": w.rng = random.Random(seed)
     rows = []
     while w.update < END:
@@ -30,8 +36,9 @@ def run(arm, seed):
                          "C": round(sum(o.lineage == "C" for o in live) / max(1, len(live)), 3)})
     petri.TASKS[:] = REAL
     return rows
-c0 = sum(1 for o in pickle.load(open(START, "rb")).cells if o is not None and does(o, "OR"))
-print(json.dumps({"start": START, "clade_C_at_start": c0, "neutral_or_exp": NEUT_B}), flush=True)
+_w0 = [o for o in pickle.load(open(START, "rb")).cells if o is not None]
+c0 = sum(1 for o in _w0 if (set(o.tasks) | set(getattr(o, "ptasks", None) or ()) == D_SET if TAG_D else does(o, "OR")))
+print(json.dumps({"start": START, "clade_C_at_start": c0, "n_start": len(_w0), "neutral_or_exp": NEUT_B, "tag": "D" if TAG_D else "OR"}), flush=True)
 for seed in SEEDS:
     if seed == "orig" and NEUT_B: continue
     for arm in (["real"] if seed == "orig" else ["real", "neutral"] if not NEUT_B else ["neutral"]):
