@@ -33,5 +33,12 @@ Replay exact: 3,096,959 births and 18,737 AND births at update 40,000, as the or
   and the first two were born as different genomes (8 and 2 changed blocks between birth and division), whose birth
   genomes compute AND+ANDN in 0/100 and 1/100 input seeds. So in-world duals here are organisms rewriting themselves
   during a gestation, not a heritable dual.
-- D3 (more duals by the ANDN route): trace of 1,610,525 distinct mutated children of non-AND parents still running;
-  10 dual genotypes in the first 250,000.
+- D3 (more duals by the ANDN route): **held on count, not on rate.** 1,610,525 distinct mutated children of non-AND
+  parents (1,613,441 births), traced (seed 7, cap 2000): 58 compute AND+ANDN, each born once (3.6e-5 per child;
+  zenith's band 48-80 in 107759, posted before the count ended, holds). Per child this does not differ from the AND
+  route: 9,917 x 3.6e-5 = 0.36 expected there, 0 seen. The ANDN background gives more duals because it has ~160x
+  more children. Over 100 input seeds each (dual_seeds_other.py, cap 20000): all 58 compute AND+ANDN in at least one
+  seed, 13 in 50 or more; 33 compute both and divide in the same gestation in at least one seed, two of them in
+  100/100 (steps to divide 766 and 1125). None of the 58 is among the 11 in-world dual dividers, so none of them
+  divided as a dual in the world. Heritable dual genotypes do arise by this route; in this seed none left a lineage.
+  Why they died is not in this log.
