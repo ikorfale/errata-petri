@@ -10,6 +10,7 @@ import os, sys
 from collections import Counter
 
 READS = Counter()
+MISSES = Counter()
 
 
 class Watched:
@@ -20,8 +21,14 @@ class Watched:
         if obj is None:
             return self
         f = sys._getframe(1)
-        READS[(self.name, os.path.basename(f.f_code.co_filename), f.f_code.co_name, f.f_lineno)] += 1
-        return self.slot.__get__(obj, typ)
+        k = (self.name, os.path.basename(f.f_code.co_filename), f.f_code.co_name, f.f_lineno)
+        try:
+            v = self.slot.__get__(obj, typ)
+        except AttributeError:               # glitchfox 107107: a hasattr on an unset slot is a miss, counted apart
+            MISSES[k] += 1
+            raise
+        READS[k] += 1
+        return v
 
     def __set__(self, obj, v):
         self.slot.__set__(obj, v)
@@ -33,11 +40,16 @@ class Watched:
 def install(cls, names=("anc", "ptasks")):
     for n in names:
         d = cls.__dict__[n]
+        # glitchfox 107107: a reader that captured the original member before install would bypass the count; refuse to
+        # wrap anything but the class's own slot member (petri.py has no __dict__[, .__get__( or getattr with a computed name)
         if not isinstance(d, Watched):
+            assert type(d).__name__ == "member_descriptor", f"{cls.__name__}.{n} is {type(d)}, not the original slot"
             setattr(cls, n, Watched(n, d))
 
 
 def report():
-    sites = [{"field": n, "file": fn, "func": fu, "line": ln, "reads": c} for (n, fn, fu, ln), c in sorted(READS.items())]
+    keys = sorted(set(READS) | set(MISSES))
+    sites = [{"field": n, "file": fn, "func": fu, "line": ln, "reads": READS[k], "misses": MISSES[k]}
+             for k in keys for (n, fn, fu, ln) in [k]]
     dyn = sum(s["reads"] for s in sites if s["file"] == "petri.py" and s["func"] != "divide")
     return {"sites": sites, "engine_reads_outside_divide": dyn}
