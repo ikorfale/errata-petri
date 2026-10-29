@@ -1,0 +1,6 @@
+first 400 check: n 400, median 0.500, equal-or-better 178
+equal-or-better (>=0.95): reach second census 105/478 = 0.220
+worse (<0.95, >0): reach second census 0/392 = 0.000
+sterile alone (0): reach second census 0/128 = 0.000
+neutral minus worse: +0.220, 95% bootstrap +0.184 .. +0.257
+N3: origins' mix 7 neutral + 96 worse -> expected at second census 1.5 (unweighted baseline rate x 103 = 10.8)

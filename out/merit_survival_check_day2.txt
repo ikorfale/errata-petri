@@ -1,0 +1,7 @@
+ratio [0.00,0.00): n 128, margin past next census median 9.0, max 74, >= 500: 0
+ratio [0.00,0.50): n 335, margin past next census median 17, max 181, >= 500: 0
+ratio [0.50,0.51): n 39, margin past next census median 27, max 195, >= 500: 0
+ratio [0.51,0.80): n 16, margin past next census median 14.0, max 63, >= 500: 0
+ratio [0.80,0.95): n 2, margin past next census median 43.5, max 73, >= 500: 0
+ratio [0.95,1.05): n 476, margin past next census median 117.0, max 37000, >= 500: 105
+ratio [1.05,99.00): n 2, margin past next census median 42.5, max 46, >= 500: 0

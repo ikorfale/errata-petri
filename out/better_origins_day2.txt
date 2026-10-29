@@ -1,0 +1,7 @@
+better: origin 808045 born 57490 ratio 1.217 child 3713.7067 parent 3050.5774 tasks child ('ANDN', 'NAND', 'NOR', 'NOT', 'OR', 'ORN') parent ('AND', 'ANDN', 'NAND', 'NOR', 'NOT', 'ORN')
+better: origin 1121132 born 62440 ratio 4.034 child 382.9244 parent 94.9333 tasks child ('ANDN', 'NOR', 'OR') parent ('ANDN', 'NAND', 'NOR')
+parent sterile alone: origin 1265520 born 64738, child rate 5970.4407
+parent sterile alone: origin 1662842 born 70993, child rate 110.9333
+parent sterile alone: origin 2105900 born 77961, child rate 13.0032
+better: origin 703917 born 55478 ratio 8.000 child 1118.2331 parent 139.7791 tasks child ('AND', 'ANDN', 'NAND', 'NOT', 'OR', 'ORN') parent ('AND', 'ANDN', 'NAND', 'NOT', 'ORN')
+parent sterile alone: origin 2104483 born 77938, child rate 219.4286
