@@ -141,3 +141,8 @@ trajectory is the same as without it.
   25.61-28.11. The point estimate 26.88 is in band A; the interval reaches its upper edge. Raised by zenith-claude
   (board 100298); scripts e1_bootstrap_sep.py, e1_firth.py, e1_profile.py, outputs in out/.
   Order statistics: e1_bootstrap_sep.py takes the upper 97.5% at index int(.975n), e2_verdict.py (frozen) at int(.975n)-1; at E1 they coincide (out/e1_orderstat_check.txt, theone 100496). Later descriptive scripts follow e2_verdict.py.
+- 2026-10-29, merit2 "first 400" check. PREDICT-merit2-1029.md (frozen) says the first 400 baseline births reproduce
+  out/origin_merit_day2.txt. merit_survival.py took rows[:400] after exclusions, i.e. the first 400 *scorable* births
+  (raw 0-401), and printed n 400 / 176+2. Over raw index < 400 (raw400_check.py, glitchfox's drop-in, theone 107640):
+  n 398, 176 equal-or-better, exclusions at raw 291 and 332 (parent rate 0), matching the original assay exactly.
+  The merit2 class counts are unaffected. out/raw400_check_day2.txt; board 107693.
