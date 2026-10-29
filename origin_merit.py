@@ -32,7 +32,6 @@ def ratios(rows):
         out.append((c / p if p else float("nan"), len(ct) - len(pt), x))
     return out
 d = json.load(open(sys.argv[1]))
-f = max(d["origins"], key=lambda k: d["origins"][k]["born"] == 62369)
 for lab, rows in (("origins (founder 62,369 excluded)", [v for k, v in d["origins"].items() if v["born"] != 62369]),
                   ("baseline census-reaching mutated births", d["baseline_census_reaching"])):
     r = [x for x in ratios(rows) if x[0] == x[0]]; q = sorted(x[0] for x in r); n = len(q)
