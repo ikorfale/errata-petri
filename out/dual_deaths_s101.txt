@@ -1,0 +1,24 @@
+dual-genotype organisms born in world (seed 101, 40000 updates): 58; dead 58, alive at end 0
+genotypes seen: 58 of 58
+causes: Counter({'overwritten': 57, 'age': 1})
+divided in world: 2
+organisms of genotypes that divide in isolation: 16
+  iso_step  787  age at death   104  glen  94  ratio 0.13  overwritten  lived 7 updates
+  iso_step  529  age at death   555  glen  20  ratio 1.05  age  lived 17 updates
+  iso_step 1125  age at death   909  glen  94  ratio 0.81  overwritten  lived 28 updates
+  iso_step 1156  age at death   339  glen  94  ratio 0.29  overwritten  lived 11 updates
+  iso_step  870  age at death   119  glen  94  ratio 0.14  overwritten  lived 8 updates
+  iso_step  487  age at death   629  glen  96  ratio 1.29  overwritten  lived 20 updates
+  iso_step  507  age at death   175  glen  96  ratio 0.35  overwritten  lived 7 updates
+  iso_step  591  age at death   550  glen  95  ratio 0.93  overwritten  lived 18 updates
+  iso_step  898  age at death    51  glen  96  ratio 0.06  overwritten  lived 8 updates
+  iso_step  766  age at death   241  glen  94  ratio 0.31  overwritten  lived 9 updates
+  iso_step  757  age at death   384  glen  95  ratio 0.51  overwritten  lived 12 updates
+  iso_step  548  age at death     0  glen  94  ratio 0.00  overwritten  lived 2 updates
+  iso_step  630  age at death   169  glen  95  ratio 0.27  overwritten  lived 7 updates
+  iso_step 1338  age at death   270  glen  95  ratio 0.20  overwritten  lived 10 updates
+  iso_step  754  age at death    51  glen  95  ratio 0.07  overwritten  lived 8 updates
+  iso_step 1288  age at death   235  glen  95  ratio 0.18  overwritten  lived 9 updates
+  died before reaching own isolation division step: 14 of 16
+non-dividing-in-isolation genotypes: 42 organisms, ages median 279.5
+age limit 20 x glen: e.g. [400, 1880, 1900, 1920]
