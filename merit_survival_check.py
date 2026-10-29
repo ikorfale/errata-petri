@@ -1,4 +1,4 @@
-"""Check on merit_survival.py (0/520 worse lines at second census looked too clean, 29.10 11:50): ratio histogram of the
+"""Check on merit_survival.py (0/520 worse lines at second census looked too clean, 29.10 ~11:15 UTC by date -u): ratio histogram of the
 worse class, and how far past their next census each class's lineage lived (born + life - next_census)."""
 import json, sys
 src = open('merit_survival.py').read().split('d = json.load(open(sys.argv[1]))')[0]; exec(src)
