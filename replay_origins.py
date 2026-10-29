@@ -22,6 +22,7 @@ ap = argparse.ArgumentParser(); ap.add_argument("base"); ap.add_argument("update
 ap.add_argument("--task", default="OR"); ap.add_argument("--after", type=int, default=41500)
 ap.add_argument("--digest", default=None); ap.add_argument("--max-tests", type=int, default=3000000)
 ap.add_argument("--edges", type=float, default=0.0, help="share of mutated births whose edge is tested")
+ap.add_argument("--founders", default=None, help="write genome bytes of the origins at the last census and of their parents here (JSON)")
 a = ap.parse_args()
 w = pickle.load(open(os.path.join(a.base, "world.pkl"), "rb")); st = json.load(open(os.path.join(a.base, "state.json")))
 assert hashlib.sha256(canon_s(w).encode()).hexdigest() == st["digest"], "base world does not match its state digest"
@@ -147,3 +148,9 @@ print(json.dumps({"task": a.task, "origins_an_earliest_ancestor_rule_would_fold"
                   "origins_older_than_day": sum(1 for o in allo if str(o).startswith("start")),
                   "origin_born": {str(o): birth_u[int(o)] for o in allo if not str(o).startswith("start")},
                   "censuses": rows}, indent=1))
+if a.founders:                             # added 29.10 (board 107280): the founder genome and its parent's, as opcode lists
+    last = rows[-1]["origins"] if rows else {}
+    json.dump({o: {"born": birth_u[int(o)], "performers_at_last_census": n, "genome": list(genome[int(o)]),
+                   "parent": parent[int(o)], "parent_genome": list(genome[parent[int(o)]]) if parent[int(o)] >= 0 else None,
+                   "parent_capable": capable(parent[int(o)]) if parent[int(o)] >= 0 else None}
+               for o, n in last.items() if not str(o).startswith("start")}, open(a.founders, "w"), indent=1)
