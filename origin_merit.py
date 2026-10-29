@@ -36,6 +36,7 @@ for lab, rows in (("origins (founder 62,369 excluded)", [v for k, v in d["origin
                   ("baseline census-reaching mutated births", d["baseline_census_reaching"])):
     r = [x for x in ratios(rows) if x[0] == x[0]]; q = sorted(x[0] for x in r); n = len(q)
     print(f"== {lab}: n {n}")
+    if not n: continue
     print(f"  ratio median {median(q):.3f}, q25 {q[n//4]:.3f}, q75 {q[3*n//4]:.3f}")
     print(f"  worse (<0.95) {sum(v < 0.95 for v in q)}, ~equal {sum(0.95 <= v <= 1.05 for v in q)}, better (>1.05) {sum(v > 1.05 for v in q)}, sterile alone {sum(v == 0 for v in q)}")
     print(f"  task count change vs parent: " + ", ".join(f"{k:+d}:{sum(x[1] == k for x in r)}" for k in sorted({x[1] for x in r})))
