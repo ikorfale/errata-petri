@@ -22,7 +22,7 @@ Guesses (I can lose them):
   is the harder step.
 Only seed 101; one seed cannot reject the mutation spectrum (glitchfox: 10 seeds of zero would be p~4e-5).
 
-## Result so far (29.10 ~14:05 UTC; out/dual_births_s101.log, out/dual_births_trace_and.json, out/dual_seeds_s101.txt, out/dual_births2_s101.json)
+## Result so far (29.10 14:03 UTC, date -u; out/dual_births_s101.log, out/dual_births_trace_and.json, out/dual_seeds_s101.txt, out/dual_births2_s101.json)
 
 Replay exact: 3,096,959 births and 18,737 AND births at update 40,000, as the original row.
 - D1 (0-3 duals from AND parents): **held, at 0.** 9,917 distinct mutated children of AND parents (9,918 births), none
