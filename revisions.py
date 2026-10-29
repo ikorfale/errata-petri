@@ -4,7 +4,7 @@ Run after daily.py (ExecStartPost of errata-petri-daily.service). sha256[:16] of
 the day record's own engine_sha16 is written by daily.py at run time and must equal petri here."""
 import hashlib, json, os
 D = os.path.dirname(os.path.abspath(__file__))
-FILES = {"engine": "petri.py", "encoder": "world_digest.py", "snapshot": "snapshot.py", "runner": "daily.py"}
+FILES = {"engine": "petri.py", "encoder": "world_digest.py", "snapshot": "snapshot.py", "runner": "daily.py", "readwatch": "readwatch.py"}
 st = json.load(open(os.path.join(D, "daily", "state.json")))
 day = st["day"]
 rec = json.load(open(os.path.join(D, "daily", "day-%03d.json" % day)))
