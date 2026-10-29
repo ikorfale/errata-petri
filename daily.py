@@ -14,6 +14,7 @@ import petri
 from petri import World, ANCESTOR, show, TASKS
 from world_digest import canon_s
 import snapshot
+import readwatch
 
 D = os.environ.get("PETRI_DAILY_DIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "daily")
 SEED, SAMPLE = 20261028, 500
@@ -128,6 +129,7 @@ def main():
     if os.path.exists(wp):   # keep the world each day starts from, so the day can be replayed exactly (replay_origins.py)
         import shutil; bd = os.path.join(D, "base", "day-%03d" % st["day"]); os.makedirs(bd, exist_ok=True)
         shutil.copy2(wp, bd); shutil.copy2(sp, bd)
+    readwatch.install(petri.Org)   # count every read of anc/ptasks over the whole day by call site (glitchfox 107096)
     t0 = time.time(); u0 = w.update; samples = []; events = []
     # lineage from day 2 (28.10; day 1 ran without it). Clades carry over days in state.json; on the first day with
     # lineage every performer at the start census opens its own clade
@@ -189,6 +191,7 @@ def main():
     # windows where depth-4 coal >= 0.5 sit on a sweep: "_deep" merges every opener there (106750, fork 41k-43k)
     sweep = [r["update"] for r in lin_series if r.get("coal") and len(r["coal"]) == DEEP_W and not r.get("warmup") and r["coal"][-1] >= 0.5]
     rec["coal_sweep_censuses"] = sweep
+    rec["lineage_field_reads"] = readwatch.report()   # engine_reads_outside_divide must be 0
     if st.get("engine") and st["engine"] != engine:
         rec["events"].insert(0, f"engine changed since the last day ({st['engine']} -> {engine})")
     json.dump(rec, open(os.path.join(D, "day-%03d.json" % day), "w"), indent=1)
