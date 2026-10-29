@@ -1,0 +1,10 @@
+55500 match series {'NOT': 554, 'NAND': 619, 'AND': 434, 'ORN': 571, 'OR': 3, 'ANDN': 632, 'NOR': 447, 'XOR': 0, 'EQU': 0}
+56500 match series {'NOT': 607, 'NAND': 687, 'AND': 532, 'ORN': 601, 'OR': 5, 'ANDN': 671, 'NOR': 516, 'XOR': 0, 'EQU': 0}
+57500 match series {'NOT': 576, 'NAND': 666, 'AND': 451, 'ORN': 581, 'OR': 2, 'ANDN': 644, 'NOR': 415, 'XOR': 0, 'EQU': 0}
+61500 match series {'NOT': 571, 'NAND': 682, 'AND': 473, 'ORN': 556, 'OR': 0, 'ANDN': 644, 'NOR': 457, 'XOR': 0, 'EQU': 0}
+62500 match series {'NOT': 608, 'NAND': 658, 'AND': 531, 'ORN': 647, 'OR': 41, 'ANDN': 692, 'NOR': 534, 'XOR': 0, 'EQU': 0}
+63000 match series {'NOT': 50, 'NAND': 37, 'AND': 447, 'ORN': 666, 'OR': 472, 'ANDN': 634, 'NOR': 443, 'XOR': 0, 'EQU': 0}
+65500 match series {'NOT': 47, 'NAND': 36, 'AND': 478, 'ORN': 676, 'OR': 538, 'ANDN': 643, 'NOR': 459, 'XOR': 0, 'EQU': 0}
+66500 match series {'NOT': 640, 'NAND': 21, 'AND': 512, 'ORN': 716, 'OR': 597, 'ANDN': 687, 'NOR': 515, 'XOR': 0, 'EQU': 0}
+74500 match series {'NOT': 552, 'NAND': 25, 'AND': 460, 'ORN': 664, 'OR': 533, 'ANDN': 632, 'NOR': 453, 'XOR': 0, 'EQU': 0}
+75500 match series {'NOT': 608, 'NAND': 655, 'AND': 490, 'ORN': 727, 'OR': 550, 'ANDN': 695, 'NOR': 483, 'XOR': 0, 'EQU': 0}

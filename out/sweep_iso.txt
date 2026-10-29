@@ -1,0 +1,84 @@
+== sweep flagged at 57,500 (before: 56,500)
+  56,500: pop 847; top 8 genotypes (copies, len, steps, merit, merit/step, tasks):
+     11 len  90 steps 328 merit 737280 m/s 2248 AND+ANDN+NAND+NOR+NOT+ORN
+     10 len  92 steps 339 merit 753664 m/s 2223 AND+ANDN+NAND+NOR+NOT+ORN
+      7 len  92 steps 334 merit 753664 m/s 2256 AND+ANDN+NAND+NOR+NOT+ORN
+      7 len  90 steps 323 merit 737280 m/s 2283 AND+ANDN+NAND+NOR+NOT+ORN
+      6 len  89 steps 327 merit 729088 m/s 2230 AND+ANDN+NAND+NOR+NOT+ORN
+      6 len  91 steps 336 merit 745472 m/s 2219 AND+ANDN+NAND+NOR+NOT+ORN
+      5 len  87 steps 321 merit 712704 m/s 2220 AND+ANDN+NAND+NOR+NOT+ORN
+      5 len  92 steps 333 merit 753664 m/s 2263 AND+ANDN+NAND+NOR+NOT+ORN
+  median of top 8: steps 330, merit/step 2239, OR in first gestation 0/8
+  57,500: pop 879; top 8 genotypes (copies, len, steps, merit, merit/step, tasks):
+     10 len  90 steps 241 merit 737280 m/s 3059 AND+ANDN+NAND+NOR+NOT+ORN
+      9 len  89 steps 241 merit 729088 m/s 3025 AND+ANDN+NAND+NOR+NOT+ORN
+      9 len  89 steps 241 merit 729088 m/s 3025 AND+ANDN+NAND+NOR+NOT+ORN
+      9 len  89 steps 239 merit 729088 m/s 3051 AND+ANDN+NAND+NOR+NOT+ORN
+      8 len  89 steps 242 merit 729088 m/s 3013 AND+ANDN+NAND+NOR+NOT+ORN
+      7 len  89 steps 239 merit 729088 m/s 3051 AND+ANDN+NAND+NOR+NOT+ORN
+      7 len  89 steps 240 merit 729088 m/s 3038 AND+ANDN+NAND+NOR+NOT+ORN
+      7 len  89 steps 239 merit 729088 m/s 3051 AND+ANDN+NAND+NOR+NOT+ORN
+  median of top 8: steps 240, merit/step 3044, OR in first gestation 0/8
+== sweep flagged at 63,000 (before: 61,500)
+  61,500: pop 866; top 8 genotypes (copies, len, steps, merit, merit/step, tasks):
+     17 len  88 steps 237 merit 720896 m/s 3042 AND+ANDN+NAND+NOR+NOT+ORN
+     16 len  89 steps 242 merit 729088 m/s 3013 AND+ANDN+NAND+NOR+NOT+ORN
+      9 len  89 steps 239 merit 729088 m/s 3051 AND+ANDN+NAND+NOR+NOT+ORN
+      9 len  89 steps 241 merit 729088 m/s 3025 AND+ANDN+NAND+NOR+NOT+ORN
+      8 len  89 steps 239 merit 729088 m/s 3051 AND+ANDN+NAND+NOR+NOT+ORN
+      7 len  90 steps 240 merit 737280 m/s 3072 AND+ANDN+NAND+NOR+NOT+ORN
+      6 len  90 steps 241 merit 737280 m/s 3059 AND+ANDN+NAND+NOR+NOT+ORN
+      6 len  89 steps 241 merit 729088 m/s 3025 AND+ANDN+NAND+NOR+NOT+ORN
+  median of top 8: steps 240, merit/step 3046, OR in first gestation 0/8
+  63,000: pop 868; top 8 genotypes (copies, len, steps, merit, merit/step, tasks):
+     14 len  89 steps 239 merit 1458176 m/s 6101 AND+ANDN+NOR+OR+ORN
+     13 len  89 steps 240 merit 1458176 m/s 6076 AND+ANDN+NOR+OR+ORN
+      9 len  89 steps 240 merit 1458176 m/s 6076 AND+ANDN+NOR+OR+ORN
+      8 len  89 steps 240 merit 1458176 m/s 6076 AND+ANDN+NOR+OR+ORN
+      8 len  89 steps 239 merit 1458176 m/s 6101 AND+ANDN+NOR+OR+ORN
+      7 len  89 steps 240 merit 1458176 m/s 6076 AND+ANDN+NOR+OR+ORN
+      7 len  89 steps 240 merit 1458176 m/s 6076 AND+ANDN+NOR+OR+ORN
+      7 len  89 steps 241 merit 1458176 m/s 6051 AND+ANDN+NOR+OR+ORN
+  median of top 8: steps 240, merit/step 6076, OR in first gestation 8/8
+== sweep flagged at 66,500 (before: 65,500)
+  65,500: pop 868; top 8 genotypes (copies, len, steps, merit, merit/step, tasks):
+     11 len  89 steps 239 merit 1458176 m/s 6101 AND+ANDN+NOR+OR+ORN
+     11 len  90 steps 239 merit 1474560 m/s 6170 AND+ANDN+NOR+OR+ORN
+      9 len  89 steps 240 merit 1458176 m/s 6076 AND+ANDN+NOR+OR+ORN
+      9 len  90 steps 239 merit 1474560 m/s 6170 AND+ANDN+NOR+OR+ORN
+      9 len  90 steps 239 merit 1474560 m/s 6170 AND+ANDN+NOR+OR+ORN
+      7 len  90 steps 238 merit 1474560 m/s 6196 AND+ANDN+NOR+OR+ORN
+      7 len  89 steps 242 merit 1458176 m/s 6026 AND+ANDN+NOR+OR+ORN
+      7 len  89 steps 240 merit 1458176 m/s 6076 AND+ANDN+NOR+OR+ORN
+  median of top 8: steps 239, merit/step 6135, OR in first gestation 8/8
+  66,500: pop 876; top 8 genotypes (copies, len, steps, merit, merit/step, tasks):
+     15 len  89 steps 239 merit 2916352 m/s 12202 AND+ANDN+NOR+NOT+OR+ORN
+     12 len  89 steps 240 merit 2916352 m/s 12151 AND+ANDN+NOR+NOT+OR+ORN
+     11 len  89 steps 240 merit 2916352 m/s 12151 AND+ANDN+NOR+NOT+OR+ORN
+     11 len  89 steps 240 merit 2916352 m/s 12151 AND+ANDN+NOR+NOT+OR+ORN
+      9 len  89 steps 240 merit 2916352 m/s 12151 AND+ANDN+NOR+NOT+OR+ORN
+      8 len  89 steps 240 merit 2916352 m/s 12151 AND+ANDN+NOR+NOT+OR+ORN
+      8 len  89 steps 242 merit 2916352 m/s 12051 AND+ANDN+NOR+NOT+OR+ORN
+      7 len  89 steps 240 merit 2916352 m/s 12151 AND+ANDN+NOR+NOT+OR+ORN
+  median of top 8: steps 240, merit/step 12151, OR in first gestation 8/8
+== sweep flagged at 75,500 (before: 74,500)
+  74,500: pop 858; top 8 genotypes (copies, len, steps, merit, merit/step, tasks):
+     19 len  90 steps 237 merit 2949120 m/s 12444 AND+ANDN+NOR+NOT+OR+ORN
+     16 len  90 steps 234 merit 2949120 m/s 12603 AND+ANDN+NOR+NOT+OR+ORN
+     11 len  90 steps 240 merit 2949120 m/s 12288 AND+ANDN+NOR+NOT+OR+ORN
+     10 len  90 steps 234 merit 2949120 m/s 12603 AND+ANDN+NOR+NOT+OR+ORN
+      7 len  89 steps 231 merit 2916352 m/s 12625 AND+ANDN+NOR+NOT+OR+ORN
+      7 len  90 steps 238 merit 2949120 m/s 12391 AND+ANDN+NOR+NOT+OR+ORN
+      7 len  90 steps 238 merit 2949120 m/s 12391 AND+ANDN+NOR+NOT+OR+ORN
+      6 len  90 steps 234 merit 2949120 m/s 12603 AND+ANDN+NOR+NOT+OR+ORN
+  median of top 8: steps 236, merit/step 12523, OR in first gestation 8/8
+  75,500: pop 879; top 8 genotypes (copies, len, steps, merit, merit/step, tasks):
+     15 len  89 steps 237 merit 5832704 m/s 24611 AND+ANDN+NAND+NOR+NOT+OR+ORN
+      9 len  89 steps 236 merit 5832704 m/s 24715 AND+ANDN+NAND+NOR+NOT+OR+ORN
+      9 len  89 steps 236 merit 5832704 m/s 24715 AND+ANDN+NAND+NOR+NOT+OR+ORN
+      9 len  89 steps 237 merit 5832704 m/s 24611 AND+ANDN+NAND+NOR+NOT+OR+ORN
+      8 len  89 steps 237 merit 5832704 m/s 24611 AND+ANDN+NAND+NOR+NOT+OR+ORN
+      8 len  89 steps 237 merit 5832704 m/s 24611 AND+ANDN+NAND+NOR+NOT+OR+ORN
+      7 len  89 steps 237 merit 5832704 m/s 24611 AND+ANDN+NAND+NOR+NOT+OR+ORN
+      7 len  89 steps 239 merit 5832704 m/s 24405 AND+ANDN+NAND+NOR+NOT+OR+ORN
+  median of top 8: steps 237, merit/step 24611, OR in first gestation 8/8

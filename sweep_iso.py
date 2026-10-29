@@ -3,7 +3,7 @@ For each sweep, the 8 most common genotypes just before it and at its first flag
 (no mutation, seeds 1-3, same settings as the daily world): steps to first division, the child's merit, tasks done in
 that first gestation, merit per step (CPU share ~ merit, so replication rate ~ merit / gestation).
 Speed sweep: the sweep's genotypes divide in fewer steps. Task sweep: same steps, higher merit from a new task.
-Usage: python3 sweep_iso.py > out/sweep_iso.txt (needs out/sweeps/w*.pkl from sweep_snaps.py)"""
+Usage: python3 sweep_iso.py [PRE:AT ...] > out/sweep_iso.txt (needs out/sweeps/w*.pkl from sweep_snaps.py)"""
 import os, pickle, sys
 from collections import Counter
 from statistics import median
@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from petri import OPS, World
 SWEEPS = [(56500, 57500), (61500, 63000), (65500, 66500), (74500, 75500)]   # (before, first flagged census)
 K = 8
+if len(sys.argv) > 1: SWEEPS = [tuple(map(int, a.split(':'))) for a in sys.argv[1:]]   # e.g. 61500:63000
 
 def run(g, seed, steps=20000):
     v = World(side=5, seed=seed, copy_mut=0.0, indel=0.0); v.inject(list(g), "t", cell=0); o = v.cells[0]
