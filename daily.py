@@ -91,7 +91,7 @@ def lineage_census(w, prevs):
                 stats[k] = {"n": len(perf), "cont": sum(1 for v in perf if v in olds),
                             "new_clades": sum(1 for v in sizes if v not in olds), "clades": len(sizes),
                             "top_clade": sizes.most_common(1)[0][1], "top_clade_id": sizes.most_common(1)[0][0]}
-                if len(sizes) <= 30: stats[k]["sizes"] = dict(sizes)
+                if len(sizes) <= 30 or m == "_infm": stats[k]["sizes"] = dict(sizes)   # _infm always: laika 107005 scores HIT/MISS by clade opening update
         allstats[m], nxts[m] = stats, nxt
     # baseline for "_deep": random pairs of live organisms, drawn with an RNG of their own (the world's RNG is not touched)
     live = [c for c, o in enumerate(w.cells) if o is not None]
