@@ -1,0 +1,11 @@
+update 5116 len 94 world tasks AND,ANDN,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 71/100, tasks ever AND,NAND,NOT,ORN
+update 5980 len 95 world tasks AND,ANDN,NAND,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 100/100, tasks ever NAND
+update 7916 len 96 world tasks AND,ANDN,NAND,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 10/100, tasks ever ANDN,NAND,NOT
+update 10587 len 95 world tasks AND,ANDN,NAND,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 0/100, tasks ever 
+update 11064 len 96 world tasks AND,ANDN,NAND,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 0/100, tasks ever AND,NAND,NOT,ORN
+update 11198 len 96 world tasks AND,ANDN,NAND,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 0/100, tasks ever AND,NAND,NOT,ORN
+update 11704 len 96 world tasks AND,ANDN,NAND,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 62/100, tasks ever NAND,NOT,ORN
+update 12549 len 94 world tasks AND,ANDN,NAND,ORN: AND+ANDN in 0/100 seeds, divided in 100/100, tasks ever NAND,ORN
+update 13155 len 95 world tasks AND,ANDN,ORN: AND+ANDN in 0/100 seeds, divided in 48/100, tasks ever NAND,NOT,ORN
+update 14700 len 96 world tasks AND,ANDN,NAND,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 100/100, tasks ever AND,NAND,NOT,ORN
+update 24436 len 95 world tasks AND,ANDN,NAND,NOT,ORN: AND+ANDN in 0/100 seeds, divided in 78/100, tasks ever AND,NAND,NOT,ORN
