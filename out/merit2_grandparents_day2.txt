@@ -1,0 +1,6 @@
+neutral: births 478, reach 2nd census 105; distinct parents 478, grandparent individuals 478 (largest [1, 1, 1]), genotypes 468 (largest [2, 2, 2])
+worse: births 392, reach 2nd census 0; distinct parents 392, grandparent individuals 390 (largest [2, 2, 1]), genotypes 383 (largest [2, 2, 2])
+sterile: births 128, reach 2nd census 0; distinct parents 128, grandparent individuals 128 (largest [1, 1, 1]), genotypes 126 (largest [2, 2, 1])
+all classes: 998 births, 990 grandparent individuals; shared across classes: 6
+one birth per grandparent (863 groups), draw 1: neutral 104/473, worse 0/390
+Fisher p over 50 draws: median 3.4e-30, max 7.9e-30

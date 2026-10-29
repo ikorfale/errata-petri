@@ -1,0 +1,5 @@
+== out/origin_genomes_day2_r2.json sha256 6a5540e2150f78cc0672bc0d4ff3fee0b1e1f95074a06f7f5b640408b9b8d13a
+== out/origin_genomes_day2_gp.json sha256 3831ae7b866360391305da0d6f42ba181025484982357ddc3c18c1c4f3f4a13e
+raw baseline births: 1000 | exclusions (raw index, reason): [(291, 'parent rate 0'), (332, 'parent rate 0')]
+raw-index<400 check: n 398, median 0.500, equal-or-better 176, sterile 56
+r2 vs gp baseline: 1000 vs 1000 births, identical (born, genome, parent genome, life) at same index: 1000
