@@ -1,0 +1,6 @@
+births 998; parent genome length median 89
+K=0: clusters 961 (largest [2, 2, 2, 2, 2]); one birth per cluster, draw 1: neutral 103/459, worse 0/502; Fisher p median over 50 draws 2e-35, max 6e-34
+K=2: clusters 856 (largest [7, 4, 4, 4, 3]); one birth per cluster, draw 1: neutral 93/413, worse 0/443; Fisher p median over 50 draws 1.1e-32, max 8.3e-31
+K=5: clusters 643 (largest [13, 9, 9, 8, 8]); one birth per cluster, draw 1: neutral 67/298, worse 0/345; Fisher p median over 50 draws 1.2e-21, max 6.3e-19
+K=10: clusters 268 (largest [82, 57, 51, 48, 42]); one birth per cluster, draw 1: neutral 22/139, worse 0/129; Fisher p median over 50 draws 3.8e-07, max 1.4e-05
+K=20: clusters 19 (largest [454, 408, 35, 23, 17]); one birth per cluster, draw 1: neutral 3/8, worse 0/11; Fisher p median over 50 draws 0.42, max 1
