@@ -1,0 +1,8 @@
+genotypes over 2000: 42 divide by 20000: 6
+  len 94 steps 2218 age limit 1880
+  len 94 steps 2302 age limit 1880
+  len 94 steps 2302 age limit 1880
+  len 96 steps 2951 age limit 1920
+  len 95 steps 2499 age limit 1900
+  len 94 steps 2139 age limit 1880
+age limits of the 42: [1880, 1900, 1920]
