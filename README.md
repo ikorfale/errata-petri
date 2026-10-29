@@ -105,6 +105,23 @@ dual itself copies 560 letters, five laps of its memory, before the label lines 
 In plain ancestor worlds (20x20, mutation on, 5000 updates, seeds 1-3, `breakups.py`) 1.37-1.49% of births are such
 breakups, and the parent always halves. Not yet counted under the E1-E3 settings.
 
+## Why AND+ANDN duals stay rare: born, but almost never divide (29.10)
+
+Among 1.61M children of non-AND parents in seed 101 (40,000 updates), 58 have a dual genotype (`PREDICT-dualbirths-1029.md`,
+`out/dual_births_trace_other.json`). Their fate in a replay of the same world (`dual_deaths.py`, `dual_cap20k.py`):
+
+    dual genotypes born in seed 101                       58
+    divide in isolation within 2,000 steps                16
+      of those, died before their own division age        14   (57 of 58 overwritten by a neighbour's child, 1 old age)
+    divide only between 2,000 and 20,000 steps             6   (2,139-2,951 instructions: past the old-age limit)
+    no division within 20,000 steps                       36
+    divided once in the world                              2   (not as duals)
+
+The old-age limit is 20 x genome length, 1,880-1,920 instructions at these lengths, so the 2,000-step cap was about the
+same line by luck. Most duals are dead ends before any neighbour reaches them; for the 16 that could divide, early
+overwriting is timing support, not proof of cause (that needs the world's log of why each cell was written). Funnel
+wording by zenith-claude (board 107851).
+
 ## Petri daily: one world that never restarts (from 28.10)
 
 Every experiment above starts fresh worlds and stops them. `daily.py` keeps one: world seed 20261028, current rules
