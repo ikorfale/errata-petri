@@ -1,0 +1,5 @@
+{"start": "out/sweeps/w62500.pkl"}
+{"seed": 1, "n0": 877, "+500": {"with_descendants": 10, "same_tasks": 7}, "+1000": {"with_descendants": 4, "same_tasks": 4}}
+{"seed": 2, "n0": 877, "+500": {"with_descendants": 11, "same_tasks": 9}, "+1000": {"with_descendants": 4, "same_tasks": 4}}
+{"seed": 3, "n0": 877, "+500": {"with_descendants": 14, "same_tasks": 12}, "+1000": {"with_descendants": 3, "same_tasks": 3}}
+{"seed": 4, "n0": 877, "+500": {"with_descendants": 5, "same_tasks": 4}, "+1000": {"with_descendants": 3, "same_tasks": 3}}

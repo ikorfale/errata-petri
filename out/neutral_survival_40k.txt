@@ -1,0 +1,5 @@
+{"start": "daily/base/day-001/world.pkl"}
+{"seed": 1, "n0": 837, "+500": {"with_descendants": 25, "same_tasks": 22}, "+1000": {"with_descendants": 15, "same_tasks": 12}}
+{"seed": 2, "n0": 837, "+500": {"with_descendants": 22, "same_tasks": 16}, "+1000": {"with_descendants": 12, "same_tasks": 12}}
+{"seed": 3, "n0": 837, "+500": {"with_descendants": 24, "same_tasks": 20}, "+1000": {"with_descendants": 15, "same_tasks": 14}}
+{"seed": 4, "n0": 837, "+500": {"with_descendants": 23, "same_tasks": 18}, "+1000": {"with_descendants": 14, "same_tasks": 12}}

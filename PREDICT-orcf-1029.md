@@ -53,3 +53,10 @@ Worlds not in a sweep, seeds 1-4 each, share of labels with a descendant of the 
 below the 5% line I set for "most OR origins were worse than neighbours". At 2.3%, 107 origins would leave about 2.4 lines
 past a second census by luck alone; 0 has probability 0.08. A weak hint that OR origins were on average worse than
 neutral, not a finding. And one survivor out of 108 needs no special explanation if the founder was neutral.
+
+### Read 06:41Z: neutral-type arm (D only, OR = 2^2, seeds 1-32)
+
+Mean D share at 65,000: 0.0875, bootstrap 95% CI 0.017-0.179 (start 0.0285). 22 of 32 seeds at 0; 2 at 0.98 and 1.0.
+The CI contains the start share and its lower bound is below 0.057: the guess holds (no edge besides the reward is
+visible). Weak test: the CI runs from 0.6x to 6x the start. The two fixations are not explained yet (a later beneficial
+mutation arising inside D would carry it and still keep the mean neutral; not checked).
