@@ -196,6 +196,8 @@ if a.origin_genomes:                       # added 29.10 (zenith 107333, plan #5
     for i in rb.sample(cand, len(cand)):     # random order; keep the first 400 that are alive at their next census
         tried += 1
         if birth_u[i] + lifetime(i) >= nextc(birth_u[i]):
-            bs.append({"born": birth_u[i], "genome": gj(i), "parent_genome": gj(parent[i]), "life": lifetime(i), "next_census": nextc(birth_u[i])})
+            bs.append({"born": birth_u[i], "genome": gj(i), "parent_genome": gj(parent[i]), "life": lifetime(i), "next_census": nextc(birth_u[i]),
+                       "parent": int(parent[i]), "grandparent": int(parent[parent[i]]) if parent[i] >= 0 else -1,   # 29.10 glitchfox 107595
+                       "grandparent_genome": gj(parent[parent[i]]) if parent[i] >= 0 else None})
             if len(bs) == a.baseline_n: break
     json.dump({"origins": og, "baseline_census_reaching": bs, "births_tried": tried}, open(a.origin_genomes, "w"))
