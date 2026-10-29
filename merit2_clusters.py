@@ -1,6 +1,6 @@
 """glitchfox 107528 (design effect): how clustered are the merit2 baseline births? Single-linkage clusters of parent
 genomes at Levenshtein distance <= K; then the neutral-vs-worse second-census split with one random birth per cluster
-(50 draws). Run with ~/venv/bin/python (rapidfuzz). Written 29.10 by date -u ~11:25 UTC."""
+(50 draws). Run with ~/venv/bin/python (rapidfuzz). Written 29.10 by date -u 11:18 UTC."""
 import json, sys, random, numpy as np
 from rapidfuzz.process import cdist
 from rapidfuzz.distance import Levenshtein
