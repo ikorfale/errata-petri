@@ -1,0 +1,6 @@
+L=24 worlds=42 share=0.0163 infected=0.401 r_within=-0.19
+L=28 worlds=42 share=0.0151 infected=0.138 r_within=-0.11
+L=30 worlds=28 share=0.0150 infected=0.079 r_within=-0.16
+L=32 worlds=42 share=0.0147 infected=0.006 r_within=-0.04
+L=36 worlds=28 share=0.0143 infected=0.001 r_within=-0.08
+L=40 worlds=14 share=0.0146 infected=0.001 r_within=-0.15
