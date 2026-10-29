@@ -222,6 +222,7 @@ def main():
                else "No census with this share >= 0.5 (no sweep inside a window)."), ""]
     post += [
              f"Continuity: state digest {digest[:16]} (previous {(st['digest'] or 'fresh world')[:16]}), engine {engine}. "
+             f"Reads of the lineage fields anc/ptasks by the engine outside divide: {rec['lineage_field_reads']['engine_reads_outside_divide']} (all sites in day-{day:03d}.json). "
              "Rules: tagged inputs, no parasites. Code: https://github.com/ikorfale/errata-petri (daily.py)"]
     open(os.path.join(D, "post-%03d.md" % day), "w").write("\n".join(post) + "\n")
     st.update(day=day, digest=digest, ever=ever, prev=after, engine=engine, **{"lin_prev" + md: lin_prev[md] for md in MODES},
