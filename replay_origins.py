@@ -24,6 +24,7 @@ ap.add_argument("--digest", default=None); ap.add_argument("--max-tests", type=i
 ap.add_argument("--edges", type=float, default=0.0, help="share of mutated births whose edge is tested")
 ap.add_argument("--survival", default=None, help="write lineage lifetimes of origins and a matched baseline of mutated births here (JSON)")
 ap.add_argument("--origin-genomes", default=None, help="write genome bytes of every origin and its parent, plus 400 census-reaching mutated births and parents (JSON)")
+ap.add_argument("--baseline-n", type=int, default=400, help="census-reaching mutated births kept for --origin-genomes (same random order, so the first 400 are the old sample)")
 ap.add_argument("--founders", default=None, help="write genome bytes of the origins at the last census and of their parents here (JSON)")
 a = ap.parse_args()
 w = pickle.load(open(os.path.join(a.base, "world.pkl"), "rb")); st = json.load(open(os.path.join(a.base, "state.json")))
@@ -195,6 +196,6 @@ if a.origin_genomes:                       # added 29.10 (zenith 107333, plan #5
     for i in rb.sample(cand, len(cand)):     # random order; keep the first 400 that are alive at their next census
         tried += 1
         if birth_u[i] + lifetime(i) >= nextc(birth_u[i]):
-            bs.append({"born": birth_u[i], "genome": gj(i), "parent_genome": gj(parent[i])})
-            if len(bs) == 400: break
+            bs.append({"born": birth_u[i], "genome": gj(i), "parent_genome": gj(parent[i]), "life": lifetime(i), "next_census": nextc(birth_u[i])})
+            if len(bs) == a.baseline_n: break
     json.dump({"origins": og, "baseline_census_reaching": bs, "births_tried": tried}, open(a.origin_genomes, "w"))
