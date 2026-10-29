@@ -6,7 +6,7 @@ sys.path.insert(0, ".")
 import petri_fe04506 as P
 D = json.load(open("out/s2_dump.json")); TOP = max(D["genotypes"], key=lambda g: g["n"])["genome"]
 s, ups = int(sys.argv[1]), int(sys.argv[2])
-kids_and, kids_other, duals = Counter(), Counter(), []
+kids_and, kids_other, duals, nd = Counter(), Counter(), [], Counter()
 orig_carve, orig_divide = P.World.carve, P.World.divide
 def carve(self, o):
     self._cut = orig_carve(self, o); return self._cut
@@ -16,8 +16,8 @@ def divide(self, o, c):
     if self.births == b0: return
     child = P.show(self._cut[0])
     if {"AND", "ANDN"} <= tk:
-        o.nd = getattr(o, "nd", 0) + 1
-        duals.append({"update": self.update, "genome": pg, "div_no": o.nd, "born": o.born, "tasks": sorted(tk)})
+        k = (id(o), o.born, pg); nd[k] += 1     # Org has __slots__; key on identity + birth update + genome
+        duals.append({"update": self.update, "genome": pg, "div_no": nd[k], "born": o.born, "tasks": sorted(tk)})
     if child != pg:
         (kids_and if "AND" in tk else kids_other)[child] += 1
 P.World.carve, P.World.divide = carve, divide
