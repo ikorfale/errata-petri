@@ -15,3 +15,14 @@ Guesses (no test, a guess I can lose):
   rule says for the s2 copy loop.
 - If G1 holds, the next step is selection, not reachability: head to head of the fastest hit vs its parent (h2h as
   out/h2h_hand.py). Not run in this pass.
+
+## Result (29.10 13:04 UTC, date -u; out/swapback.txt, 295 s)
+
+62 parents, every one-step mutant traced. AND+ANDN mutants: 8 in total, from 5 parents; 3 divide in <2000 steps, all at
+0 mod 3 (325, 514, 545 steps against parents at 186 and 545), none fast.
+- G1 (a fast one-step AND+ANDN mutant exists): **wrong.** 0 fast.
+- G2 (2 mod 3 hits faster): **not testable.** The only 2 mod 3 hit never divides.
+So from what s2 worlds actually hold, the dual is at least two steps away from every swapped carrier, and the one-step
+forms that do divide are slower than their parents. With AND births at ~0.6% and AND lines short-lived, this fits the
+dual never appearing. Limits: parents are the final-census snapshot (94 AND organisms, 62 genotypes), not the ~19,000 AND
+births per seed; two-step paths not searched; trace seed 7 only.
