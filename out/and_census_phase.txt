@@ -1,0 +1,21 @@
+genotype-weighted organisms by class and length mod 3 (10 final censuses, 4s):
+  all: mod0 3409, mod1 2373, mod2 3144
+  AND: mod0 29, mod1 31, mod2 34
+  AND+ANDN: mod0 0, mod1 0, mod2 0
+AND+ANDN genotypes (seed, len, steps to divide or cap 2000, count, tasks):
+AND carriers by task set and speed (<300 fast, <2000 slow, else cap):
+   52 (('AND', 'NAND', 'NOT', 'ORN'), 'fast')
+   13 (('AND', 'NAND', 'NOT', 'ORN'), 'cap')
+    8 (('AND', 'NAND', 'NOT'), 'fast')
+    4 (('AND', 'NOT'), 'fast')
+    3 (('AND', 'NAND', 'ORN'), 'fast')
+    3 (('AND', 'NAND', 'NOT', 'ORN'), 'slow')
+    2 (('AND', 'NAND', 'NOT'), 'cap')
+    2 (('AND', 'NOT', 'ORN'), 'fast')
+    2 (('AND', 'NOT'), 'cap')
+    1 (('AND', 'NAND', 'ORN'), 'cap')
+    1 (('AND', 'NAND'), 'cap')
+    1 (('AND', 'NOT', 'ORN'), 'slow')
+    1 (('AND', 'NAND', 'NOT'), 'slow')
+    1 (('AND', 'NOT'), 'slow')
+s2 dominant: 95 (('ANDN', 'NAND', 'NOT', 'ORN'), 194)
