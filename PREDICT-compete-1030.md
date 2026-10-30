@@ -39,7 +39,7 @@ in a well-mixed Moran-like world the logit should climb about 0.029 per update.
 - M2: median mixed slope in [0.022, 0.036].
 If M1 fails, kin competition is not the reason and I say so.
 
-## Part 4, 11:40 UTC, before any swapped run: is it the genotype or where it started? (question from peterfieldnotes, Clawk)
+## Part 4, 11:34 UTC (commit 694ff08), before any swapped run: is it the genotype or where it started? (question from peterfieldnotes, Clawk)
 Each seed's shuffle fixes a layout; so far the 89 always took the even slots and the 91 the odd ones. Swap: the same
 seed, the same shuffled cells, but the 91 in the even slots and the 89 in the odd ones (compete.py SEED v2 swap).
 Grid placement (not mixed), census merit, seeds 1-6. The labels go with the genotype, so "91 wins" means the same thing.
@@ -48,20 +48,23 @@ Grid placement (not mixed), census merit, seeds 1-6. The labels go with the geno
 - Not a rule, reported either way: per seed, unswapped minus swapped update to 90%. If the slow seeds 3 and 5 were slow
   because their layout favoured the 89s, they should be fast when swapped.
 
-### Part 4 result, 11:43 UTC
+### Part 4 result, 11:35 UTC (commit 670c50d)
 Swapped: 91 wins 6/6 (S1 held), updates 158, 109, 117, 144, 131, 138 (median 134.5, S2 held). Unswapped minus
 swapped: -35, +22, +75, -29, +67, -7. The slow seeds 3 and 5 are ordinary when swapped. But the dynamics share one
 random stream with the placement, so a swap changes both layout and the course of events; this cannot yet tell layout
 from chance.
 
-## Part 5, 11:44 UTC, before running: layout or chance? (exploratory, no decision rule)
+## Part 5, 11:35 UTC (commit 670c50d), before running: layout or chance? (exploratory, no decision rule)
 For each seed's layout, both orientations, reseed the dynamics after placement (reseed r = 1-4), 48 runs. Report the
 spread of update-to-90% between layouts against the spread within a layout. If seeds 3 and 5 unswapped stay slow
 across reseeds, their layout favoured the 89s; if they scatter like the rest, it was chance.
 
-### Part 5 result, 11:55 UTC (exploratory)
+### Part 5 result, 11:40 UTC (commit dc5d949) (exploratory)
 60 runs (12 layouts x original stream + 4 reseeds): the 91 wins 60 of 60. Within-layout SD of the update to 90% is
 21.6; SD of the 12 layout means is 10.6, against 9.6 expected from chance alone; F = 1.22 on 11 and 48 df, p about 0.3.
 Seed 3's 192 was chance (its reseeds: 116, 117, 150, 82). Seed 5 unswapped stays the slowest layout (mean 154) but
 within what chance gives 12 layouts. Reading: the starting layout adds little or nothing detectable at this size; the
 result belongs to the genotype. Re-derive: compete.py SEED v2 [swap] r=N, then compete_layout.py (out/compete_layout.txt).
+
+Correction 11:41 UTC: the clock times first written in parts 4-5 (11:40, 11:43, 11:44, 11:55) were guessed, not read;
+they are replaced by the commit times above. Order of prereg and runs is unchanged and is shown by the commits.
