@@ -1,0 +1,46 @@
+== 56500: f89 = 0.36
+   len 89   6 copies  steps   327  merit    729088  m/s    2230  AND+ANDN+NAND+NOR+NOT+ORN
+   len 89   5 copies  steps   331  merit    729088  m/s    2203  AND+ANDN+NAND+NOR+NOT+ORN
+   len 89   5 copies  steps   240  merit    729088  m/s    3038  AND+ANDN+NAND+NOR+NOT+ORN
+   len 90  11 copies  steps   328  merit    737280  m/s    2248  AND+ANDN+NAND+NOR+NOT+ORN
+   len 90   7 copies  steps   323  merit    737280  m/s    2283  AND+ANDN+NAND+NOR+NOT+ORN
+   len 90   5 copies  steps   333  merit    368640  m/s    1107  AND+ANDN+NAND+NOR+ORN
+== 57500: f89 = 0.92
+   len 89   9 copies  steps   241  merit    729088  m/s    3025  AND+ANDN+NAND+NOR+NOT+ORN
+   len 89   9 copies  steps   241  merit    729088  m/s    3025  AND+ANDN+NAND+NOR+NOT+ORN
+   len 89   9 copies  steps   239  merit    729088  m/s    3051  AND+ANDN+NAND+NOR+NOT+ORN
+   len 90  10 copies  steps   241  merit    737280  m/s    3059  AND+ANDN+NAND+NOR+NOT+ORN
+   len 90   4 copies  steps   239  merit    737280  m/s    3085  AND+ANDN+NAND+NOR+NOT+ORN
+   len 90   3 copies  steps   239  merit    737280  m/s    3085  AND+ANDN+NAND+NOR+NOT+ORN
+== 68000: f89 = 0.79
+   len 89  13 copies  steps   241  merit   2916352  m/s   12101  AND+ANDN+NOR+NOT+OR+ORN
+   len 89  12 copies  steps   240  merit   2916352  m/s   12151  AND+ANDN+NOR+NOT+OR+ORN
+   len 89  11 copies  steps   241  merit   2916352  m/s   12101  AND+ANDN+NOR+NOT+OR+ORN
+   len 90  11 copies  steps   239  merit   2949120  m/s   12339  AND+ANDN+NOR+NOT+OR+ORN
+   len 90   6 copies  steps   240  merit   2949120  m/s   12288  AND+ANDN+NOR+NOT+OR+ORN
+   len 90   6 copies  steps   243  merit   2949120  m/s   12136  AND+ANDN+NOR+NOT+OR+ORN
+== 70000: f89 = 0.43
+   len 89  11 copies  steps   242  merit   2916352  m/s   12051  AND+ANDN+NOR+NOT+OR+ORN
+   len 89   9 copies  steps   239  merit   2916352  m/s   12202  AND+ANDN+NOR+NOT+OR+ORN
+   len 89   8 copies  steps   240  merit   2916352  m/s   12151  AND+ANDN+NOR+NOT+OR+ORN
+   len 90  11 copies  steps   239  merit   2949120  m/s   12339  AND+ANDN+NOR+NOT+OR+ORN
+   len 90   9 copies  steps   237  merit   2949120  m/s   12444  AND+ANDN+NOR+NOT+OR+ORN
+   len 90   8 copies  steps   238  merit   2949120  m/s   12391  AND+ANDN+NOR+NOT+OR+ORN
+== 72000: f89 = 0.09
+   len 89  11 copies  steps   241  merit   2916352  m/s   12101  AND+ANDN+NOR+NOT+OR+ORN
+   len 89   4 copies  steps   236  merit   2916352  m/s   12357  AND+ANDN+NOR+NOT+OR+ORN
+   len 89   2 copies  steps   239  merit   2916352  m/s   12202  AND+ANDN+NOR+NOT+OR+ORN
+   len 90  10 copies  steps   236  merit   2949120  m/s   12496  AND+ANDN+NOR+NOT+OR+ORN
+   len 90   9 copies  steps   238  merit   2949120  m/s   12391  AND+ANDN+NOR+NOT+OR+ORN
+   len 90   9 copies  steps   235  merit   2949120  m/s   12549  AND+ANDN+NOR+NOT+OR+ORN
+== 74500: f89 = 0.10
+   len 89   7 copies  steps   231  merit   2916352  m/s   12625  AND+ANDN+NOR+NOT+OR+ORN
+   len 89   4 copies  steps   235  merit   2916352  m/s   12410  AND+ANDN+NOR+NOT+OR+ORN
+   len 89   3 copies  steps   237  merit   2916352  m/s   12305  AND+ANDN+NOR+NOT+OR+ORN
+   len 90  19 copies  steps   237  merit   2949120  m/s   12444  AND+ANDN+NOR+NOT+OR+ORN
+   len 90  16 copies  steps   234  merit   2949120  m/s   12603  AND+ANDN+NOR+NOT+OR+ORN
+   len 90  11 copies  steps   240  merit   2949120  m/s   12288  AND+ANDN+NOR+NOT+OR+ORN
+== 75500: f89 = 0.96
+   len 89  15 copies  steps   237  merit   5832704  m/s   24611  AND+ANDN+NAND+NOR+NOT+OR+ORN
+   len 89   9 copies  steps   236  merit   5832704  m/s   24715  AND+ANDN+NAND+NOR+NOT+OR+ORN
+   len 89   9 copies  steps   236  merit   5832704  m/s   24715  AND+ANDN+NAND+NOR+NOT+OR+ORN

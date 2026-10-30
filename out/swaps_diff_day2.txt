@@ -1,0 +1,9 @@
+swap  50000-> 50500: 90->89  dominant 90: 7 copies (323, 737280.0, 'AND+ANDN+NAND+NOR+NOT+ORN') | dominant 89: 15 copies (327, 729088.0, 'AND+ANDN+NAND+NOR+NOT+ORN') | lev 35
+swap  50500-> 51000: 89->90  dominant 89: 15 copies (327, 729088.0, 'AND+ANDN+NAND+NOR+NOT+ORN') | dominant 90: 7 copies (330, 737280.0, 'AND+ANDN+NAND+NOR+NOT+ORN') | lev 41
+swap  52000-> 52500: 90->89  dominant 90: 8 copies (334, 737280.0, 'AND+ANDN+NAND+NOR+NOT+ORN') | dominant 89: 8 copies (322, 729088.0, 'AND+ANDN+NAND+NOR+NOT+ORN') | lev 41
+swap  55500-> 56000: 89->90  dominant 89: 7 copies (321, 364544.0, 'AND+ANDN+NOR+NOT+ORN') | dominant 90: 12 copies (324, 737280.0, 'AND+ANDN+NAND+NOR+NOT+ORN') | lev 30
+swap  69500-> 70000: 89->90  dominant 89: 10 copies (241, 2916352.0, 'AND+ANDN+NOR+NOT+OR+ORN') | dominant 90: 11 copies (239, 2949120.0, 'AND+ANDN+NOR+NOT+OR+ORN') | lev 31
+swap  70000-> 70500: 90->89  dominant 90: 11 copies (239, 2949120.0, 'AND+ANDN+NOR+NOT+OR+ORN') | dominant 89: 16 copies (241, 2916352.0, 'AND+ANDN+NOR+NOT+OR+ORN') | lev 31
+swap  70500-> 71000: 89->90  dominant 89: 16 copies (241, 2916352.0, 'AND+ANDN+NOR+NOT+OR+ORN') | dominant 90: 9 copies (243, 2949120.0, 'AND+ANDN+NOR+NOT+OR+ORN') | lev 33
+swap  75000-> 75500: 90->89  dominant 90: 26 copies (233, 2949120.0, 'AND+ANDN+NOR+NOT+OR+ORN') | dominant 89: 15 copies (237, 5832704.0, 'AND+ANDN+NAND+NOR+NOT+OR+ORN') | lev 17
+S3: swaps with lev >= 2: 8 of 8
