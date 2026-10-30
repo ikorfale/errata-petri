@@ -16,3 +16,15 @@ Predictions:
 - C3 (control, not a rule): no side reaches 90% in most control seeds by 1,500 updates (neutral drift is slow at N=900).
 A miss on C1 means the isolated speed gain does not carry into competition (for example slower in a crowded grid,
 or births landing on own kin); I will say so and not call the 82k sweep adaptive.
+
+## Amendment 10:43 UTC, after v1 seeds 1-6 were seen (not blind)
+v1 result: B won 6 of 6, at updates 18-23. Too fast to be the +23% merit per step (50% to 90% at that edge needs
+roughly ten generations, ~70 updates). Cause found in the design, not the world: inject() sets merit = genome length
+(89, 91), and the first division sets task merit (~5.9 million). CPU share is merit / mean, so whoever divides first
+takes the CPU and the undivided rest nearly freeze. The 91 divides first (198 vs ~238 steps), so v1 measured a
+start-up race that amplifies the speed edge many times. **C1 is reported as passed but void as a test of fitness.**
+v2 (compete.py ... v2): every organism starts at its genotype's census merit (89: 5,832,704; 91: 5,963,776), so no
+start-up race. Same seeds 1-6 and control 1-3. Written knowing that B wins v1; v2's outcome is not fixed by that.
+- C1': B wins in 6 of 6 v2 seeds.
+- C2': median v2 update to 90% between 40 and 400 (an edge near +23% per generation, ~7 updates per generation).
+- C3': control v2 mostly "none" by 1,500.
