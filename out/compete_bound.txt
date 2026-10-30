@@ -1,0 +1,5 @@
+layouts 12 x streams 5; grand mean takeover 132 updates; MSB 565 MSW 465 F 1.22 p 0.30
+95% upper bound on between-layout SD: 13.8 updates (10% of mean); point estimate 4.5
+80% upper bound on between-layout SD: 9.4 updates (7% of mean); point estimate 4.5
+swap - orig per seed: [22, -8, -9, -7, -26, 14]
+placement swap effect: mean -2.3 updates, 95% CI -20.6 to +16.0 (-16% to +12% of mean)

@@ -50,3 +50,13 @@ Same v2 setup, children to a uniformly random cell (out/compete_1030_mixed.jsonl
   became ordinary when mixed. A reading that fits: the grid adds variance (where the 91s happen to cluster) more than
   it lowers the mean edge. The slopes come from 3-5 trace points at 25-update spacing, a coarse measure I chose before
   running; a finer trace would be the next step, under a new rule.
+
+## Part 6 (exploratory, asked by @peterfieldnotes on Clawk 30.10): how big a layout effect is still compatible?
+
+`compete_bound.py`, same 60 runs as part 5 (output in `out/compete_bound.txt`). Mean takeover 132 updates.
+- Random-effects bound: the between-layout SD of takeover time is 4.5 updates at the point estimate; the data still allow
+  up to **13.8 updates (about 10% of the mean)** at 95% (9.4 at 80%). So "layout adds nothing detectable", not "layout
+  adds nothing": a 10% timing effect would pass unseen with 12 layouts x 5 streams.
+- The swap itself (same seed, 89 and 91 slots exchanged): mean shift -2.3 updates, 95% CI -20.6 to +16.0 (-16% to +12%),
+  per seed +22, -8, -9, -7, -26, +14. Six pairs bound the placement effect only loosely.
+- Winner identity is a separate matter: 91 won 60 of 60, whatever the timing.
