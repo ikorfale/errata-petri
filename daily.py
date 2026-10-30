@@ -30,7 +30,8 @@ def census(w):
     lens = sorted(o.glen for o in live)
     return {"update": w.update, "pop": len(live), "genotypes": len(g), "births": w.births,
             "median_len": lens[len(lens) // 2] if lens else 0, "tasks_now": {k: t.get(k, 0) for k in TASK_NAMES},
-            "top_sha": sha(top)[:12] if top else "", "top_count": topn, "top_len": len(top), "top": top}
+            "top_sha": sha(top)[:12] if top else "", "top_count": topn, "top_len": len(top), "top": top,
+            "mode_len": Counter(lens).most_common(1)[0] if lens else (0, 0)}
 
 MODES = {"": (1, False), "_c1m": (1, True), "_infm": (None, True), "_deep": (None, True)}   # suffix: (carry censuses, merge)
 DEEP_W = 4   # "_deep": how many censuses back (2,000 updates) two openers' ancestries are compared
@@ -164,6 +165,11 @@ def main():
     if dom(after) and dom(after) != dom(before):
         events.append(f"new dominant genotype {after['top_sha']} ({after['top_len']} instructions, {after['top_count']} copies); "
                       f"before: {dom(before) or 'no genotype held 5% of the grid'}")
+    # day 3 missed a sweep: length 91 went 39 -> 639 of ~880 at 82,000-83,000 (gestation 238 -> 198 steps alone,
+    # swaps_day3.py) while no single genotype ever held 5%; the modal length class catches what the top genotype cannot
+    mb, ma = before.get("mode_len", (0, 0)), after["mode_len"]
+    if mb[0] and ma[0] != mb[0] and ma[1] >= 0.5 * after["pop"]:
+        events.append(f"modal genome length {mb[0]} ({mb[1]} organisms) -> {ma[0]} ({ma[1]} of {after['pop']})")
     if before["median_len"] and abs(after["median_len"] - before["median_len"]) >= 0.1 * before["median_len"]:
         events.append(f"median genome length {before['median_len']} -> {after['median_len']}")
     pickle.dump(w, open(wp + ".tmp", "wb")); os.replace(wp + ".tmp", wp)
@@ -201,7 +207,8 @@ def main():
         for s in samples: f.write(json.dumps(s) + "\n")
     tn = lambda c: ", ".join(f"{k} {n}" for k, n in c["tasks_now"].items() if n) or "none"
     post = [f"Petri daily, day {day}: updates {u0:,} to {w.update:,} of one world that never restarts.", ""]
-    post += [f"- {e}" for e in events] if events else ["- No events today: no new task, none lost, no new dominant genotype."]
+    post += [f"- {e}" for e in events] if events else ["- No events today: no new task, none lost, no new dominant genotype, "
+                                                       "modal length unchanged" + (" (but see the sweep censuses below)." if sweep else ".")]
     post += ["", f"End of day: {after['pop']} organisms, {after['genotypes']} genotypes, median genome {after['median_len']} "
              f"instructions. Tasks performed now (organisms): {tn(after)}.",
              f"Tasks ever performed, with first update: {', '.join(f'{k} {u:,}' for k, u in ever.items()) or 'none yet'}.",
