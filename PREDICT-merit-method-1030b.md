@@ -10,3 +10,13 @@ Decision rule (glitchfox, board 108301): over all 6 pairs,
 - D2: report the mean paired dU with a t interval (5 df) and the same for dG; no claim from dG unless its interval
   excludes 0.
 - On seeds 14-16 alone: I expect dU > 0 in at least 2 of 3 and dG of either sign (P3 failed once already).
+
+## Amendment, 30.10 08:45 UTC (glitchfox, board 108355, posted 05:29 UTC, one minute after the arms started)
+
+Written after all six arms had finished and their output files existed on disk, but before I opened any of them.
+That is the only blindness claimed: nobody looked, the files were there.
+- D3: one-sided paired t test on dU (H1: mean dU > 0), alpha 0.05, 5 df, over all 6 pairs. Reported next to D1;
+  both verdicts are given, neither overrides the other. Power at the seeds-11-13 spread (glitchfox's simulation):
+  the sign rule finds a true dU of 0.033 about 43% of the time, the t rule about 75%.
+- dG: no claim expected. At the seeds-11-13 spread the 6-pair interval is about 5-6 genome units wide; a null there is
+  not news and will not be reported as "method does not change genome length".
