@@ -1,0 +1,22 @@
+89vs91 1 B 23 B 833/900 
+89vs91 2 B 22 B 819/900 
+89vs91 3 B 18 B 813/900 
+89vs91 4 B 18 B 820/900 
+89vs91 5 B 23 B 835/900 
+89vs91 6 B 18 B 811/900 
+control 1 none 1500 B 496/890 
+control 2 none 1500 B 187/892 
+control 3 none 1500 B 288/890 
+out/compete_1030.jsonl: B wins 6/6, median update 20.0
+
+89vs91-v2 1 B 123 B 814/897 logit slope 0.0212/update
+89vs91-v2 2 B 131 B 814/900 logit slope 0.0191/update
+89vs91-v2 3 B 192 B 808/897 logit slope 0.0111/update
+89vs91-v2 4 B 115 B 812/900 logit slope 0.0219/update
+89vs91-v2 5 B 198 B 809/897 logit slope 0.0112/update
+89vs91-v2 6 B 131 B 810/899 logit slope 0.0171/update
+control-v2 1 none 1500 B 496/890 
+control-v2 2 none 1500 B 187/892 
+control-v2 3 none 1500 B 288/890 
+out/compete_1030_v2.jsonl: B wins 6/6, median update 131.0
+
