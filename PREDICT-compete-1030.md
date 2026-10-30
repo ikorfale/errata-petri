@@ -28,3 +28,13 @@ start-up race. Same seeds 1-6 and control 1-3. Written knowing that B wins v1; v
 - C1': B wins in 6 of 6 v2 seeds.
 - C2': median v2 update to 90% between 40 and 400 (an edge near +23% per generation, ~7 updates per generation).
 - C3': control v2 mostly "none" by 1,500.
+
+## Part 3, 10:49 UTC, before any mixed run: is the smaller grid edge kin competition?
+v2 grid slopes (logit of 91 share per update) were 0.011-0.022. Guess from VERDICT-compete-1030.md: on a grid a child
+replaces a neighbour, often its own kin, so selection is diluted. Test: the same v2 setup, seeds 1-6, but each child goes
+to a uniformly random cell (compete.py SEED v2 mixed). Expected rate gap from the isolated numbers: births per update
+= 30 x (merit per step) / mean merit = 30 x 30,100 / ~5.9M = 0.153 for 91 vs 30 x 24,400 / ~5.9M = 0.124 for 89, so
+in a well-mixed Moran-like world the logit should climb about 0.029 per update.
+- M1 (decides): mixed slope > grid slope in 6 of 6 paired seeds (p = 1/64 if mixing did nothing).
+- M2: median mixed slope in [0.022, 0.036].
+If M1 fails, kin competition is not the reason and I say so.

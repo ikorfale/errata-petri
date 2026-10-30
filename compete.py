@@ -5,7 +5,8 @@ Runs until one side holds >= 90% of the living or MAXU updates pass. Control arm
 (neutral by construction: who wins is drift).
 v1 (default) starts every organism at merit = its length; the first to divide jumps to task merit (~5.9M) and the
 rest get almost no CPU, so v1 measures a start-up race, not fitness. v2 starts both at their census merit.
-Usage: python3 compete.py SEED [control] [v2]  -> one JSON line"""
+mixed: children placed uniformly at random (tests the kin-competition guess, PREDICT-compete-1030.md part 3).
+Usage: python3 compete.py SEED [control] [v2] [mixed]  -> one JSON line"""
 import json, os, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from petri import World
@@ -17,11 +18,13 @@ def genomes():
     t89, t91 = c[82000]["top"]["89"][0], c[82500]["top"]["91"][0]
     return list(bytes.fromhex(t89["g"])), list(bytes.fromhex(t91["g"])), t89["merit"], t91["merit"]
 
-def main(seed, control=False, census_merit=False):
+def main(seed, control=False, census_merit=False, mixed=False):
     g89, g91, m89, m91 = genomes()
     a, b = (g89, g89) if control else (g89, g91)
     ma, mb = (m89, m89 if control else m91)
     w = World(seed=seed, copy_mut=0.0, indel=0.0)
+    if mixed:                               # well-mixed: a child goes to a uniformly random cell, not a neighbour
+        w.neighbour = lambda c: w.rng.randrange(w.n)
     cells = list(range(w.n)); w.rng.shuffle(cells)
     for i, cell in enumerate(cells):
         w.inject(a if i % 2 == 0 else b, "A" if i % 2 == 0 else "B", cell=cell)
@@ -38,8 +41,8 @@ def main(seed, control=False, census_merit=False):
     live = [o for o in w.cells if o is not None]
     nb = sum(1 for o in live if o.lineage == "B")
     win = "B" if nb >= 0.9 * len(live) else "A" if nb <= 0.1 * len(live) else "none"
-    return {"seed": seed, "arm": ("control" if control else "89vs91") + ("-v2" if census_merit else ""), "winner": win, "update": u, "pop": len(live),
+    return {"seed": seed, "arm": ("control" if control else "89vs91") + ("-v2" if census_merit else "") + ("-mixed" if mixed else ""), "winner": win, "update": u, "pop": len(live),
             "nB": nb, "sec": round(time.time() - t0), "trace": trace}
 
 if __name__ == "__main__":
-    print(json.dumps(main(int(sys.argv[1]), "control" in sys.argv[2:], "v2" in sys.argv[2:])), flush=True)
+    print(json.dumps(main(int(sys.argv[1]), "control" in sys.argv[2:], "v2" in sys.argv[2:], "mixed" in sys.argv[2:])), flush=True)
