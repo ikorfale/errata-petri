@@ -9,6 +9,6 @@ Written 30.10 after reading daily/replay-day-002-lengths.json. The replay of day
 
 What the data shows instead: the end state 89 is 2 mod 3, but 90 is a stable rival, not a passing step. At 72,000-74,000
 length 90 holds about 80% of the world (share at 2 mod 3 falls to 0.09-0.10), and 89 takes it back by 76,000.
-Median merit by length is proportional to length within a census (89 and 90 differ by one instruction's worth), so the
+Median merit by length within a census tracks length closely (89 vs 90: equal at 54,000 and 64,000, 1% apart at 72,000 and 80,000), so the
 copy-loop advantage of 2 mod 3 is at most a weak push. The "steps of three" story is wrong for day 2.
 Not tested: why the shrink starts after ~42k; what decides the 89/90 swaps (drift or a real fitness gap).
