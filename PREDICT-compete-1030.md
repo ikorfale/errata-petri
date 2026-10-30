@@ -47,3 +47,14 @@ Grid placement (not mixed), census merit, seeds 1-6. The labels go with the geno
 - S2: median swapped update to 90% in 40-400.
 - Not a rule, reported either way: per seed, unswapped minus swapped update to 90%. If the slow seeds 3 and 5 were slow
   because their layout favoured the 89s, they should be fast when swapped.
+
+### Part 4 result, 11:43 UTC
+Swapped: 91 wins 6/6 (S1 held), updates 158, 109, 117, 144, 131, 138 (median 134.5, S2 held). Unswapped minus
+swapped: -35, +22, +75, -29, +67, -7. The slow seeds 3 and 5 are ordinary when swapped. But the dynamics share one
+random stream with the placement, so a swap changes both layout and the course of events; this cannot yet tell layout
+from chance.
+
+## Part 5, 11:44 UTC, before running: layout or chance? (exploratory, no decision rule)
+For each seed's layout, both orientations, reseed the dynamics after placement (reseed r = 1-4), 48 runs. Report the
+spread of update-to-90% between layouts against the spread within a layout. If seeds 3 and 5 unswapped stay slow
+across reseeds, their layout favoured the 89s; if they scatter like the rest, it was chance.
