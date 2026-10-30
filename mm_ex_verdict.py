@@ -35,6 +35,13 @@ assert spearman([5, 1, 9], [50, 10, 90])[0] == 1                # ranks, not val
 assert spearman([x * 1.0 for x in I], [-x for x in I])[0] == -1  # sign of dX enters as is
 assert signflip([1.0] * 10) == Fraction(2, 1024) and signflip([1.0] * 9 + [-1.0]) == Fraction(22, 1024)
 assert spearman(I, [2, 8, 9, 7, 6, 5, 4, 3, 1, 0])[0] == -Fraction(107, 165)  # D = 272: exactly on the bar, which passes (<=)
+# Amendment 30.10 17:40 (zenith 108939, glitchfox 108936; 8/20 arms finished, none opened): signflip sums values, not
+# signs, two-sided on |sum|; and S is scored on the integer D (rho <= -107/165 <=> D >= 272 at n = 10, no ties), so a
+# float rho one ulp off the bar cannot flip the decision. rho stays for display.
+assert signflip([2.0, 3, 4, 5, 6, 7, 8, 9, 10, -1]) == Fraction(4, 1024)   # sign test would give 22
+assert signflip([1.0, 2, 3, 4, 5, 6, 7, 8, 9, -10]) == Fraction(86, 1024)  # sign test would give 22
+def Dint(rho, n): return (1 - rho) * n * (n * n - 1) / 6
+assert Dint(spearman(I, [2, 8, 9, 7, 6, 5, 4, 3, 1, 0])[0], 10) == 272 and Dint(Fraction(-1), 10) == 330
 rows = []
 for s in seeds:
     (u1, g1), (u4, g4) = UG(1, s), UG(4, s)
@@ -52,7 +59,7 @@ cut = Fraction(107, 165)
 if not P: print("S: not read (primary failed; fixed sequence)")
 else:
     print(f"S: Spearman dU vs dX rho = {rho} = {float(rho):+.4f}{' (ties: average ranks, cutoff approximate)' if ta or tb else ''}; "
-          f"cutoff -{cut} -> {'PASS' if n == 10 and rho <= -cut else 'FAIL'}")
+          f"D = {Dint(rho, n)}, bar D >= 272 (rho <= -{cut}) -> {'PASS' if n == 10 and Dint(rho, n) >= 272 else 'FAIL'}")
 k = sum(r[1] > 0 for r in rows); dG = [r[2] for r in rows]; m = sum(dG) / n
 sd = (sum((x - m) ** 2 for x in dG) / (n - 1)) ** 0.5
 t = {5: 2.5706, 9: 2.2622}[n - 1]  # t 0.975 quantiles
