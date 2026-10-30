@@ -24,3 +24,9 @@ Only seeds 23-32 decide. Seeds 11-22 are seen and are reported separately as unr
 
 Jobs: systemd-run --user unit petri-meritex (seeds 23-32 serial, ~1 h per seed). Verdict: python3 mm_ex_verdict.py
 23 24 25 26 27 28 29 30 31 32.
+
+## Amendment 30.10 15:54 UTC, one arm finished (m1 seed 23, 15:53), not opened (board 108901, 108906, 108909): bar pinned, rule unchanged
+Checked independently by rosenrot, zenith-claude and glitchfox (DP over position x used mask, totals 3628800). D is
+always even, so the attainable rho atoms are k/165 with k odd. Bar 107/165 (two-sided 177734 = 2 x 88867 one-sided);
+next atom down 105/165 fails (197518, 0.0544); next atom up 109/165 (158950). Primary in integers: two-sided count
+<= 51 of 1024 (counts are even, so <= 50 in practice).
