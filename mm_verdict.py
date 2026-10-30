@@ -27,5 +27,7 @@ print(f"D3 one-sided paired t on dU: t = {r.statistic:.3f}, df {n-1}, p = {r.pva
 for name, d, want in (("E1 executed units m4-m1", dE, 1), ("E2 unexecuted units m4-m1", dX, -1)):
     k = sum(x * want > 0 for x in d)
     print(f"{name}: {' '.join(f'{x:+.1f}' for x in d)}; in predicted direction {k}/{n}, one-sided p = {sum(math.comb(n, j) for j in range(k, n + 1)) / 2 ** n:.4f}")
+k = sum(d < 0 for d in dG)
+print(f"G1 sign: dG<0 in {k}/{n}, one-sided p = {sum(math.comb(n, j) for j in range(k, n + 1)) / 2 ** n:.4f} (rule: {n}/{n})")
 r = stats.ttest_1samp(dG, 0, alternative="less")
 print(f"G2 one-sided paired t on dG (H1 mean < 0): t = {r.statistic:.3f}, df {n-1}, p = {r.pvalue:.4f}")

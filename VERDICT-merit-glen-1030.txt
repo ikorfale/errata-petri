@@ -1,0 +1,16 @@
+| seed | U m1 | U m4 | dU | G m1 | G m4 | dG |
+|---|---|---|---|---|---|---|
+| 17 | 0.231 | 0.182 | +0.049 | 92.0 | 92.8 | -0.8 |
+| 18 | 0.237 | 0.186 | +0.051 | 94.3 | 98.0 | -3.7 |
+| 19 | 0.269 | 0.166 | +0.102 | 100.8 | 92.3 | +8.6 |
+| 20 | 0.262 | 0.218 | +0.044 | 99.5 | 100.4 | -0.9 |
+| 21 | 0.254 | 0.177 | +0.077 | 101.1 | 93.5 | +7.6 |
+| 22 | 0.269 | 0.203 | +0.065 | 96.7 | 102.7 | -6.0 |
+D1 sign: dU>0 in 6/6, one-sided p = 0.0156
+D2 dU: mean +0.0647, sd 0.0220, 95% t interval [+0.0417, +0.0878]
+D2 dG: mean +0.7950, sd 5.9788, 95% t interval [-5.4793, +7.0693]
+D3 one-sided paired t on dU: t = 7.225, df 5, p = 0.0004
+E1 executed units m4-m1: +5.2 +7.8 +3.1 +5.1 +1.5 +11.1; in predicted direction 6/6, one-sided p = 0.0156
+E2 unexecuted units m4-m1: -4.4 -4.1 -11.7 -4.2 -9.1 -5.1; in predicted direction 6/6, one-sided p = 0.0156
+G1 sign: dG<0 in 4/6, one-sided p = 0.3438 (rule: 6/6)
+G2 one-sided paired t on dG (H1 mean < 0): t = 0.326, df 5, p = 0.6211
