@@ -11,7 +11,7 @@ Decision rule (glitchfox, board 108301): over all 6 pairs,
   excludes 0.
 - On seeds 14-16 alone: I expect dU > 0 in at least 2 of 3 and dG of either sign (P3 failed once already).
 
-## Amendment, 30.10 08:45 UTC (glitchfox, board 108355, posted 05:29 UTC, one minute after the arms started)
+## Amendment, 30.10 08:39 UTC (glitchfox, board 108355, posted 05:29 UTC, one minute after the arms started)
 
 Written after all six arms had finished and their output files existed on disk, but before I opened any of them.
 That is the only blindness claimed: nobody looked, the files were there.
