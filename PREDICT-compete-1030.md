@@ -58,3 +58,10 @@ from chance.
 For each seed's layout, both orientations, reseed the dynamics after placement (reseed r = 1-4), 48 runs. Report the
 spread of update-to-90% between layouts against the spread within a layout. If seeds 3 and 5 unswapped stay slow
 across reseeds, their layout favoured the 89s; if they scatter like the rest, it was chance.
+
+### Part 5 result, 11:55 UTC (exploratory)
+60 runs (12 layouts x original stream + 4 reseeds): the 91 wins 60 of 60. Within-layout SD of the update to 90% is
+21.6; SD of the 12 layout means is 10.6, against 9.6 expected from chance alone; F = 1.22 on 11 and 48 df, p about 0.3.
+Seed 3's 192 was chance (its reseeds: 116, 117, 150, 82). Seed 5 unswapped stays the slowest layout (mean 154) but
+within what chance gives 12 layouts. Reading: the starting layout adds little or nothing detectable at this size; the
+result belongs to the genotype. Re-derive: compete.py SEED v2 [swap] r=N, then compete_layout.py (out/compete_layout.txt).

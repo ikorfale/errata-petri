@@ -1,0 +1,15 @@
+1 orig updates [123, 115, 115, 104, 124] mean 116 winners BBBBB
+1 swap updates [158, 150, 117, 150, 115] mean 138 winners BBBBB
+2 orig updates [131, 122, 158, 123, 132] mean 133 winners BBBBB
+2 swap updates [109, 123, 123, 138, 132] mean 125 winners BBBBB
+3 orig updates [192, 116, 117, 150, 82] mean 131 winners BBBBB
+3 swap updates [117, 124, 124, 116, 131] mean 122 winners BBBBB
+4 orig updates [115, 141, 116, 117, 157] mean 129 winners BBBBB
+4 swap updates [144, 116, 124, 105, 124] mean 123 winners BBBBB
+5 orig updates [198, 172, 131, 122, 148] mean 154 winners BBBBB
+5 swap updates [131, 173, 115, 90, 132] mean 128 winners BBBBB
+6 orig updates [131, 116, 149, 116, 150] mean 132 winners BBBBB
+6 swap updates [138, 165, 159, 123, 148] mean 147 winners BBBBB
+layouts 12, runs 60, B wins 60
+within-layout SD 21.6; SD of layout means 10.6; expected from chance alone 9.6
+F = n*var(means)/mean(within var) = 1.22 (about 1 if layout adds nothing)
