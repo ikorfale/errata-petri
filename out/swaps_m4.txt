@@ -1,0 +1,21 @@
+== 68000: f89 = 0.79
+   len 89  13 copies  steps   241  executed  69  m1/s   12101  m4/s    9382
+   len 89  12 copies  steps   240  executed  68  m1/s   12151  m4/s    9284
+   len 89  11 copies  steps   241  executed  69  m1/s   12101  m4/s    9382
+   len 90  11 copies  steps   239  executed  68  m1/s   12339  m4/s    9323
+   len 90   6 copies  steps   240  executed  67  m1/s   12288  m4/s    9148
+   len 90   6 copies  steps   243  executed  71  m1/s   12136  m4/s    9574
+== 70000: f89 = 0.43
+   len 89  11 copies  steps   242  executed  70  m1/s   12051  m4/s    9478
+   len 89   9 copies  steps   239  executed  67  m1/s   12202  m4/s    9186
+   len 89   8 copies  steps   240  executed  68  m1/s   12151  m4/s    9284
+   len 90  11 copies  steps   239  executed  67  m1/s   12339  m4/s    9186
+   len 90   9 copies  steps   237  executed  66  m1/s   12444  m4/s    9125
+   len 90   8 copies  steps   238  executed  67  m1/s   12391  m4/s    9225
+== 72000: f89 = 0.09
+   len 89  11 copies  steps   241  executed  69  m1/s   12101  m4/s    9382
+   len 89   4 copies  steps   236  executed  64  m1/s   12357  m4/s    8886
+   len 89   2 copies  steps   239  executed  67  m1/s   12202  m4/s    9186
+   len 90  10 copies  steps   236  executed  65  m1/s   12496  m4/s    9025
+   len 90   9 copies  steps   238  executed  67  m1/s   12391  m4/s    9225
+   len 90   9 copies  steps   235  executed  64  m1/s   12549  m4/s    8924
