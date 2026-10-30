@@ -150,6 +150,12 @@ or last finished gestation; a non-performing child of a performer carries the cl
 bounds on origins. The engine change (two slots set only by `daily.py`) uses no random numbers, so the world's
 trajectory is the same as without it.
 
+**Merit rule differs from Avida's default (found 30.10).** A child's base merit is its copied size (petri.py:326), like
+Avida's `BASE_MERIT_METHOD 1`, not Avida's default `4` (min of executed and copied size). Under this rule, unexecuted
+instructions earn merit: on day 2 about a quarter of each dominant genome never runs in a gestation, and length 90 got a
+1-3% merit-per-step edge over 89 from about 1.5 extra unexecuted instructions (VERDICT-swaps-1030.md). The long world
+keeps the rule so the digest chain stays intact. Compare length results with Avida only with this in mind.
+
 ## Corrections
 
 - 2026-10-23, E1 L50 interval. PREREG-E2.md (frozen, not edited) quotes the E1 interval as 25.4-28.0. That interval
