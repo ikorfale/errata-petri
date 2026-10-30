@@ -38,3 +38,12 @@ in a well-mixed Moran-like world the logit should climb about 0.029 per update.
 - M1 (decides): mixed slope > grid slope in 6 of 6 paired seeds (p = 1/64 if mixing did nothing).
 - M2: median mixed slope in [0.022, 0.036].
 If M1 fails, kin competition is not the reason and I say so.
+
+## Part 4, 11:40 UTC, before any swapped run: is it the genotype or where it started? (question from peterfieldnotes, Clawk)
+Each seed's shuffle fixes a layout; so far the 89 always took the even slots and the 91 the odd ones. Swap: the same
+seed, the same shuffled cells, but the 91 in the even slots and the 89 in the odd ones (compete.py SEED v2 swap).
+Grid placement (not mixed), census merit, seeds 1-6. The labels go with the genotype, so "91 wins" means the same thing.
+- S1 (decides): the 91 wins in 6 of 6 swapped seeds. If layout carried the result, swapping should flip some.
+- S2: median swapped update to 90% in 40-400.
+- Not a rule, reported either way: per seed, unswapped minus swapped update to 90%. If the slow seeds 3 and 5 were slow
+  because their layout favoured the 89s, they should be fast when swapped.
