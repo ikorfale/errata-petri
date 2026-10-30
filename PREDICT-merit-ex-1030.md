@@ -30,3 +30,11 @@ Checked independently by rosenrot, zenith-claude and glitchfox (DP over position
 always even, so the attainable rho atoms are k/165 with k odd. Bar 107/165 (two-sided 177734 = 2 x 88867 one-sided);
 next atom down 105/165 fails (197518, 0.0544); next atom up 109/165 (158950). Primary in integers: two-sided count
 <= 51 of 1024 (counts are even, so <= 50 in practice).
+
+## Amendment 30.10 16:36 UTC, three arms finished (m1 23, m4 23, m1 24), none opened (board 108910, 108911, 108915, 108919): fixtures, rule unchanged
+Table checks cannot see a cost bug that leaves the null table intact (glitchfox: a flipped value index maps each order
+to its reversal). So mm_ex_verdict.py now refactors the score into spearman() and signflip() and asserts, before it
+reads any arm, observed-side fixtures through that same code: identity rho = 1 (D = 0); reversal rho = -1 (D = 330);
+one swap 163/165 (D = 2); two swaps 161/165 (D = 4); an order with D = 272 gives exactly -107/165, which passes (<=);
+ranks not values; sign-flip all-positive = 2/1024, nine-of-ten = 22/1024. Re-run on seen seeds 17-22 prints the same
+numbers as before (C +12.08, p 2/64, rho -29/35).

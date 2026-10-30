@@ -10,6 +10,31 @@ def UG(m, s):
     last = [x for x in r if 76000 <= x["update"] <= 80000]
     assert len(last) == 5 and last[-1]["update"] == 80000, (m, s, [x["update"] for x in last])
     return sum(x["unexec_mean"] for x in last) / 5, last[-1]["glen_mean"]
+def ranks(v):
+    o = sorted(range(len(v)), key=lambda i: v[i]); r = [0] * len(v); i = 0
+    while i < len(v):
+        j = i
+        while j + 1 < len(v) and v[o[j + 1]] == v[o[i]]: j += 1
+        for k in range(i, j + 1): r[o[k]] = Fraction(i + j + 2, 2)
+        i = j + 1
+    return r, len(set(v)) < len(v)
+def spearman(x, y):
+    (ra, ta), (rb, tb) = ranks(x), ranks(y); n = len(x)
+    return 1 - Fraction(6) * sum((a - b) ** 2 for a, b in zip(ra, rb)) / (n * (n * n - 1)), (ta, tb)
+def signflip(C):
+    obs = abs(sum(C))
+    return Fraction(sum(abs(sum(c * f for c, f in zip(C, fl))) >= obs - 1e-12 for fl in product((1, -1), repeat=len(C))), 2 ** len(C))
+# Observed-side fixtures through the same code that scores the data (glitchfox 108919, zenith 108915; amendment 30.10 16:36):
+# table checks cannot see an orientation or shift bug in the cost, these can.
+I = list(range(10))
+assert spearman(I, I)[0] == 1                                   # identity: D = 0
+assert spearman(I, I[::-1])[0] == -1                            # reversal: D = n(n^2-1)/3 = 330
+assert spearman(I, [1, 0, 2, 3, 4, 5, 6, 7, 9, 8])[0] == Fraction(161, 165)   # two adjacent swaps: D = 4
+assert spearman(I, [0, 1, 2, 3, 4, 5, 6, 7, 9, 8])[0] == Fraction(163, 165)   # one swap: D = 2
+assert spearman([5, 1, 9], [50, 10, 90])[0] == 1                # ranks, not values; order-preserving map
+assert spearman([x * 1.0 for x in I], [-x for x in I])[0] == -1  # sign of dX enters as is
+assert signflip([1.0] * 10) == Fraction(2, 1024) and signflip([1.0] * 9 + [-1.0]) == Fraction(22, 1024)
+assert spearman(I, [2, 8, 9, 7, 6, 5, 4, 3, 1, 0])[0] == -Fraction(107, 165)  # D = 272: exactly on the bar, which passes (<=)
 rows = []
 for s in seeds:
     (u1, g1), (u4, g4) = UG(1, s), UG(4, s)
@@ -19,20 +44,10 @@ for s in seeds:
     rows.append((s, dU, dG, dE, dX, dE - dX))
 print("| seed | dU | dG | dE | dX | C = dE-dX |\n|---|---|---|---|---|---|")
 for s, dU, dG, dE, dX, C in rows: print(f"| {s} | {dU:+.3f} | {dG:+.1f} | {dE:+.1f} | {dX:+.1f} | {C:+.1f} |")
-n = len(rows); C = [r[5] for r in rows]; obs = abs(sum(C))
-ext = sum(abs(sum(c * f for c, f in zip(C, fl))) >= obs - 1e-12 for fl in product((1, -1), repeat=n))
-p = Fraction(ext, 2 ** n); P = p <= Fraction(1, 20) and sum(C) > 0
+n = len(rows); C = [r[5] for r in rows]
+p = signflip(C); ext = p.numerator * (2 ** n // p.denominator); P = p <= Fraction(1, 20) and sum(C) > 0
 print(f"P: mean C {sum(C)/n:+.2f}, positive in {sum(c > 0 for c in C)}/{n}, exact two-sided sign-flip p = {ext}/{2**n} = {float(p):.4f} -> {'PASS' if P else 'FAIL'}")
-def ranks(v):
-    o = sorted(range(len(v)), key=lambda i: v[i]); r = [0] * len(v); i = 0
-    while i < len(v):
-        j = i
-        while j + 1 < len(v) and v[o[j + 1]] == v[o[i]]: j += 1
-        for k in range(i, j + 1): r[o[k]] = Fraction(i + j + 2, 2)
-        i = j + 1
-    return r, len(set(v)) < len(v)
-ra, ta = ranks([r[1] for r in rows]); rb, tb = ranks([r[4] for r in rows])
-d2 = sum((a - b) ** 2 for a, b in zip(ra, rb)); rho = 1 - Fraction(6) * d2 / (n * (n * n - 1))
+rho, (ta, tb) = spearman([r[1] for r in rows], [r[4] for r in rows])
 cut = Fraction(107, 165)
 if not P: print("S: not read (primary failed; fixed sequence)")
 else:
