@@ -1,0 +1,12 @@
+70000 len 89  11 copies: executed 70 of 89, never executed 19
+70000 len 89   9 copies: executed 67 of 89, never executed 22
+70000 len 89   8 copies: executed 68 of 89, never executed 21
+70000 len 90  11 copies: executed 67 of 90, never executed 23
+70000 len 90   9 copies: executed 66 of 90, never executed 24
+70000 len 90   8 copies: executed 67 of 90, never executed 23
+72000 len 89  11 copies: executed 69 of 89, never executed 20
+72000 len 89   4 copies: executed 64 of 89, never executed 25
+72000 len 89   2 copies: executed 67 of 89, never executed 22
+72000 len 90  10 copies: executed 65 of 90, never executed 25
+72000 len 90   9 copies: executed 67 of 90, never executed 23
+72000 len 90   9 copies: executed 64 of 90, never executed 26

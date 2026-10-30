@@ -25,3 +25,11 @@ Reading: the length gap favours 90 by about 1-3%, and it moved the world one way
 (copy speed, then NAND). That fits glitchfox's hitchhiking hypothesis and not drift.
 Limits: merit per step alone in a 5x5 world, top 3 genotypes per class, seeds 1-3. Realised fitness on the grid (age
 limit, neighbours, CPU credit) is not measured. The world has about 860 organisms on 900 cells, not 3,600.
+
+Follow-up, same pass (swaps_exec.py, out/swaps_exec_day2.txt): where 90's edge comes from. Petri pays merit = copied size
+(petri.py:326), like Avida's BASE_MERIT_METHOD 1; Avida's default is 4, min(executed, copied). Top 3 genotypes per class
+at 70k and 72k, alone, seed 1, first gestation: 89s never execute 19-25 of 89 instructions, 90s 23-26 of 90. So about a
+quarter of each genome is never run, and the 90s carry about 1.5 more such instructions on average. Under min(executed,
+copied) the 90s' merit would be 64-67 against 64-70 for the 89s: the gap would vanish or reverse. The 1-3% length edge is an
+artefact of the merit rule, paid for an unexecuted instruction. The engine stays as it is for the long world (changing it
+would break the daily digest chain), but this belongs in the README's list of differences from Avida.
