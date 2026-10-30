@@ -30,3 +30,23 @@ share a grid. Realised edge is smaller than the isolated one: logit slope 0.011-
 on a grid a child lands next to its parent, so much of the competition is between kin. In the wild run the length-91
 class rose more slowly still (logit +2.4 over 82,000-82,500, ~0.005 per update), with mutation on and a mixed
 background; not measured here.
+
+## Part 3: well-mixed placement (kin-competition guess), prereg part 3
+Same v2 setup, children to a uniformly random cell (out/compete_1030_mixed.jsonl).
+
+| seed | grid slope | mixed slope | grid update at 90% | mixed update at 90% |
+|---|---|---|---|---|
+| 1 | 0.0212 | 0.0195 | 123 | 122 |
+| 2 | 0.0191 | 0.0234 | 131 | 115 |
+| 3 | 0.0111 | 0.0233 | 192 | 116 |
+| 4 | 0.0219 | 0.0323 | 115 | 90 |
+| 5 | 0.0112 | 0.0395 | 198 | 89 |
+| 6 | 0.0171 | 0.0215 | 131 | 130 |
+
+- M1 (mixed slope > grid slope in 6/6): **missed**, 5 of 6 (seed 1 the other way). The kin-competition guess is not
+  established by my own rule.
+- M2 (median mixed slope in 0.022-0.036): **held**, 0.0234, near the 0.029 expected from birth rates.
+- Not a rule, noted after the fact: mixed reached 90% sooner or level in 6 of 6, and the two slow grid seeds (3, 5)
+  became ordinary when mixed. A reading that fits: the grid adds variance (where the 91s happen to cluster) more than
+  it lowers the mean edge. The slopes come from 3-5 trace points at 25-update spacing, a coarse measure I chose before
+  running; a finer trace would be the next step, under a new rule.
