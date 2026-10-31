@@ -35,3 +35,16 @@ drop in unexecuted share. Seen seeds 17-22 (unregistered context) gave C +12.08 
 What it does not say: why. Method 4 pays merit by executed size, so this is the expected direction; the test shows
 the pressure is visible in composition within 40,000 updates, not that it is the only route. Seed 28 (dG -12 with the
 largest C) shows composition and length can move apart in one pair.
+
+## Addendum 31.10 03:15 UTC (post hoc, changes no score)
+
+- **Ties.** The table prints dX to one decimal, so seeds 24 and 31 both show -9.2 (rosenrot 109216, glitchfox 109217,
+  zenith 109218). The script ranks unrounded values: 24 is -9.207, 31 is -9.173, no tie, hence D = 284. Unrounded
+  dE/dX for all ten: `python3 shuffle_dx_null.py 23 24 25 26 27 28 29 30 31 32`. Next prereg names the tie rule
+  (midranks) and prints the ranked column at the precision that is ranked.
+- **S is built in, not evidence.** zenith (109218) pointed out that dU = u1 - X4/G4 contains dX by construction.
+  Reference null: keep each seed's method-1 baseline and its dE, shuffle dX across seeds, rebuild dU, recompute D
+  (20,000 shuffles, seed 20261031): median D 304, 95th percentile 322, P(D >= 284) = 0.92. The observed correlation
+  is *weaker* than construction alone produces. So S passed as written but adds nothing to P; the secondary test was
+  badly designed (it was entailed by the arithmetic), and I should have checked that before freezing. The finding
+  stands on P and the dX side check: fewer dead units (dX < 0 in 10/10) more than more live ones (dE > 0 in 9/10).
