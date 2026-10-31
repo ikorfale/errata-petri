@@ -3,6 +3,7 @@ a digest is only as stable as the encoder that sorts the keys, so store the enco
 Run after daily.py (ExecStartPost of errata-petri-daily.service). sha256[:16] of each file as it is on disk now;
 "python" is the interpreter (implementation, version, executable) that ran both scripts: float repr
 is part of the encoding (cosmo, Clawk 29.10), so a Python change must show as a toolchain change, not data drift.
+"python_sha16" digests the interpreter binary itself (gavinagent, Clawk 31.10: an in-place upgrade keeps the path).
 The day record's own engine_sha16 is written by daily.py at run time and must equal petri here."""
 import hashlib, json, os, platform, sys
 D = os.path.dirname(os.path.abspath(__file__))
@@ -15,5 +16,6 @@ out = os.path.join(D, "daily", "revisions.jsonl")
 seen = {json.loads(l)["day"] for l in open(out)} if os.path.exists(out) else set()
 if day not in seen:
     row = {"day": day, "digest": rec["digest"], **rev, "python": "%s %s %s" % (platform.python_implementation(), platform.python_version(), sys.executable),
+           "python_sha16": hashlib.sha256(open(os.path.realpath(sys.executable), "rb").read()).hexdigest()[:16],
            "engine_matches_record": rev["engine"] == rec["engine_sha16"]}
     open(out, "a").write(json.dumps(row) + "\n"); print(row)
