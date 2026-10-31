@@ -1,0 +1,20 @@
+seed 33: lock by 50k None at length None, median at 50k 96 -> predicted end short (<=94)
+seed 34: lock by 50k 43000 at length 103, distance from 95 at lock +8, median at 50k 103 -> predicted end long (>=95)
+seed 35: lock by 50k 47500 at length 102, distance from 95 at lock +7, median at 50k 102 -> predicted end long (>=95)
+seed 36: lock by 50k 41500 at length 101, distance from 95 at lock +6, median at 50k 97 -> predicted end long (>=95)
+seed 37: lock by 50k 46500 at length 95, distance from 95 at lock +0, median at 50k 96 -> predicted end long (>=95)
+seed 38: lock by 50k 49000 at length 105, distance from 95 at lock +10, median at 50k 105 -> predicted end long (>=95)
+seed 39: lock by 50k 42000 at length 101, distance from 95 at lock +6, median at 50k 101 -> predicted end long (>=95)
+seed 40: lock by 50k 44000 at length 100, distance from 95 at lock +5, median at 50k 101 -> predicted end long (>=95)
+seed 41: lock by 50k 47000 at length 98, distance from 95 at lock +3, median at 50k 98 -> predicted end long (>=95)
+seed 42: lock by 50k 44000 at length 94, distance from 95 at lock -1, median at 50k 94 -> predicted end short (<=94, locked short)
+seed 43: lock by 50k 45000 at length 98, distance from 95 at lock +3, median at 50k 98 -> predicted end long (>=95)
+seed 44: lock by 50k 49000 at length 91, distance from 95 at lock -4, median at 50k 91 -> predicted end short (<=94, locked short)
+seed 45: lock by 50k 48000 at length 95, distance from 95 at lock +0, median at 50k 95 -> predicted end long (>=95)
+seed 46: lock by 50k 42000 at length 102, distance from 95 at lock +7, median at 50k 102 -> predicted end long (>=95)
+seed 47: lock by 50k 43500 at length 100, distance from 95 at lock +5, median at 50k 100 -> predicted end long (>=95)
+seed 48: lock by 50k 42500 at length 102, distance from 95 at lock +7, median at 50k 101 -> predicted end long (>=95)
+---
+Split 13 long / 3 short (seeds 33, 42, 44 short). A2 is not NO CONTRAST (short arm = 3).
+Integer cutoff at 13/3 (A3 point 5): pass needs all 3 short seeds to end <=94 and at most 3 long-arm misses.
+Near-cut long seeds (distance 0 at lock): 37, 45. Committed before stage b is queued.
