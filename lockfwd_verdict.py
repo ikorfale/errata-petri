@@ -13,7 +13,8 @@ for s in SEEDS:
     a = json.load(open(f"out/lockfwd_{s}_a.json"))["rows"]
     u, L = lock(a)
     pred = "long (>=95)" if (u is not None and L >= 95) else "short (<=94)" if u is None else "short (<=94, locked short)"
-    line = f"seed {s}: lock by 50k {u} at length {L}, median at 50k {a[-1]['glen_med']} -> predicted end {pred}"
+    dist = f", distance from 95 at lock {L - 95:+d}" if u is not None else ""   # A3, report-only
+    line = f"seed {s}: lock by 50k {u} at length {L}{dist}, median at 50k {a[-1]['glen_med']} -> predicted end {pred}"
     if sys.argv[1] == "b":
         end = json.load(open(f"out/lockfwd_{s}_b.json"))["rows"][-1]["glen_med"]
         ok = (end >= 95) == pred.startswith("long"); hits += ok; misses += not ok
@@ -25,4 +26,7 @@ if sys.argv[1] == "b":
     n, r1, k = a + b + c + d, a + b, a + c
     p = sum(comb(k, x) * comb(n - k, r1 - x) for x in range(a, min(k, r1) + 1)) / comb(n, r1)   # Fisher, one-sided
     print(f"hits {hits} of {n}; short arm {a}/{r1} end short, long arm {d}/{c + d} end long; always-long baseline {b + d} of {n}")
-    print(f"Fisher one-sided p = {p:.4f} ->", "NO CONTRAST (short arm < 3)" if r1 < 3 else "PASS" if p < 0.05 else "FAIL")
+    h = lambda x: comb(k, x) * comb(n - k, r1 - x) / comb(n, r1)
+    midp = p - 0.5 * h(a)   # A3: Lancaster mid-p, report-only, does not decide the verdict
+    print(f"Lancaster mid-p (report-only) = {midp:.4f}")
+    print(f"Fisher one-sided p = {p:.4f} ->", "NO CONTRAST (short arm < 3)" if r1 < 3 else "PASS" if p < 0.05 else "FAIL (not detected at this n)")
