@@ -9,7 +9,7 @@ All 8 seeds valid (each reproduces its method-1 run, 0 mismatches).
 
 ## What the miss shows (exploratory, lockin_explore.py, out/lockin_explore.txt)
 A1 said L1 was "mostly circular" if a lock is absorbing. **It isn't.** Once a population has locked, one length
-keeps >= 50% of cells in 46-94% of the later snapshots, and **the modal length keeps moving while it's held**:
+keeps >= 50% of cells in 46-96% of the later snapshots, and **the modal length keeps moving while it's held**:
 - seed 17 went 95 -> 93 and seed 18 went 99 -> 95;
 - seed 12 went 98 -> 92 (its lock at exactly 50,000 counts as >= 50k);
 - seed 20 went 105 -> 101.
