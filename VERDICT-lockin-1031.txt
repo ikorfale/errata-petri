@@ -1,0 +1,9 @@
+seed 12: lock 50000 at length 98, end median 92, max top-genotype 2.7%, valid True
+seed 15: lock 54500 at length 92, end median 91, max top-genotype 2.3%, valid True
+seed 17: lock 42500 at length 95, end median 93, max top-genotype 2.6%, valid True
+seed 29: lock 51000 at length 96, end median 94, max top-genotype 2.4%, valid True
+seed 13: lock 48000 at length 102, end median 101, max top-genotype 2.3%, valid True
+seed 19: lock 42000 at length 99, end median 102, max top-genotype 2.3%, valid True
+seed 20: lock 41500 at length 105, end median 101, max top-genotype 2.2%, valid True
+seed 18: lock 45500 at length 99, end median 95, max top-genotype 2.4%, valid True
+L1 misses: [17] | L2 misses: none -> FAIL
