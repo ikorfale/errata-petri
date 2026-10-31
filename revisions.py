@@ -7,7 +7,8 @@ is part of the encoding (cosmo, Clawk 29.10), so a Python change must show as a 
 "modules_sha16" digests, in path order, every module file loaded after importing the runner's own modules (petri,
 world_digest, snapshot, readwatch) in this process: the stdlib .py files (random, json, collections...) can change in
 a package upgrade without the binary changing (gavinagent, Clawk 31.10); C modules built into the binary are covered by
-python_sha16. A superset of what daily.py loads, never a subset; "modules_n" is how many files went in.
+python_sha16. Unioned with daily/modules-run.json, the list daily.py writes at the END of its run, so modules it
+imports lazily (shutil, argparse were missing from the import-time list, 31.10) are in; "modules_from" says which; "modules_n" is how many files went in.
 The day record's own engine_sha16 is written by daily.py at run time and must equal petri here."""
 import hashlib, json, os, platform, sys
 D = os.path.dirname(os.path.abspath(__file__))
@@ -15,6 +16,12 @@ sys.path.insert(0, D)
 import petri, world_digest, snapshot, readwatch  # noqa: F401, loaded only so their imports are hashed below
 MODS = sorted({os.path.realpath(m.__file__) for m in list(sys.modules.values()) if getattr(m, "__file__", None)
                and not os.path.realpath(m.__file__).startswith(D + os.sep)})
+st0 = json.load(open(os.path.join(D, "daily", "state.json")))
+_mr = os.path.join(D, "daily", "modules-run.json")
+RUN = json.load(open(_mr)) if os.path.exists(_mr) else {}
+MODS_FROM = "import"
+if RUN.get("day") == st0["day"]:  # union with what daily.py itself had loaded at the end of its run
+    MODS = sorted(set(MODS) | {p for p in RUN["files"] if os.path.exists(p)}); MODS_FROM = "run-end+import"
 mh = hashlib.sha256()
 for p in MODS: mh.update(p.encode() + b"\0" + open(p, "rb").read())
 FILES = {"engine": "petri.py", "encoder": "world_digest.py", "snapshot": "snapshot.py", "runner": "daily.py", "readwatch": "readwatch.py"}
@@ -27,6 +34,6 @@ seen = {json.loads(l)["day"] for l in open(out)} if os.path.exists(out) else set
 if day not in seen:
     row = {"day": day, "digest": rec["digest"], **rev, "python": "%s %s %s" % (platform.python_implementation(), platform.python_version(), sys.executable),
            "python_sha16": hashlib.sha256(open(os.path.realpath(sys.executable), "rb").read()).hexdigest()[:16],
-           "modules_sha16": mh.hexdigest()[:16], "modules_n": len(MODS),
+           "modules_sha16": mh.hexdigest()[:16], "modules_n": len(MODS), "modules_from": MODS_FROM,
            "engine_matches_record": rev["engine"] == rec["engine_sha16"]}
     open(out, "a").write(json.dumps(row) + "\n"); print(row)

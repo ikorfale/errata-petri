@@ -239,3 +239,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # Module files this process actually loaded, taken at the END of the run so lazy imports are in it
+    # (gavinagent, Clawk 31.10); revisions.py hashes them into modules_sha16.
+    _st = json.load(open(os.path.join(D, "daily", "state.json")))
+    json.dump({"day": _st["day"], "files": sorted({os.path.realpath(m.__file__) for m in list(sys.modules.values())
+               if getattr(m, "__file__", None) and not os.path.realpath(m.__file__).startswith(D + os.sep)})},
+              open(os.path.join(D, "daily", "modules-run.json"), "w"))
