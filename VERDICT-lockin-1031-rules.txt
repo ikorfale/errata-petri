@@ -1,0 +1,19 @@
+seed | lock at 50k | med 50k | end 80k | net | lock rule | length rule | outcome | where they differ
+33 | none | 96 | 89 | -7 | S | L | S | lock wins
+34 | 103 | 103 | 104 | +1 | L | L | L | 
+35 | 102 | 102 | 101 | -1 | L | L | L | 
+36 | 101 | 97 | 97 | +0 | L | L | L | 
+37 | 95 | 96 | 93 | -3 | L | L | S | 
+38 | 105 | 105 | 102 | -3 | L | L | L | 
+39 | 101 | 101 | 99 | -2 | L | L | L | 
+40 | 100 | 101 | 100 | -1 | L | L | L | 
+41 | 98 | 98 | 101 | +3 | L | L | L | 
+42 | 94 | 94 | 94 | +0 | S | S | S | 
+43 | 98 | 98 | 96 | -2 | L | L | L | 
+44 | 91 | 91 | 91 | +0 | S | S | S | 
+45 | 95 | 95 | 98 | +3 | L | L | L | 
+46 | 102 | 102 | 100 | -2 | L | L | L | 
+47 | 100 | 100 | 100 | +0 | L | L | L | 
+48 | 102 | 101 | 102 | +1 | L | L | L | 
+seeds where the rules differ: 1; lock wins 1, length wins 0
+net change 50k->80k: down 8, zero 4, up 4 of 16
