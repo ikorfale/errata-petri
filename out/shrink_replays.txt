@@ -1,0 +1,24 @@
+wild median length at 44k/48k/60k/80k: [99, 92, 89, 89]
+seed 11: median at 80k 90, first <= 94 at 54000
+seed 12: median at 80k 92, first <= 94 at 67000
+seed 13: median at 80k 101, first <= 94 at None
+seed 14: median at 80k 85, first <= 94 at 45000
+seed 15: median at 80k 91, first <= 94 at 51000
+seed 16: median at 80k 98, first <= 94 at None
+seed 17: median at 80k 93, first <= 94 at 48000
+seed 18: median at 80k 95, first <= 94 at None
+seed 19: median at 80k 102, first <= 94 at None
+seed 20: median at 80k 101, first <= 94 at None
+seed 21: median at 80k 102, first <= 94 at None
+seed 22: median at 80k 98, first <= 94 at None
+seed 23: median at 80k 103, first <= 94 at None
+seed 24: median at 80k 102, first <= 94 at None
+seed 25: median at 80k 101, first <= 94 at None
+seed 26: median at 80k 104, first <= 94 at None
+seed 27: median at 80k 102, first <= 94 at None
+seed 28: median at 80k 89, first <= 94 at 51000
+seed 29: median at 80k 94, first <= 94 at 71000
+seed 30: median at 80k 100, first <= 94 at None
+seed 31: median at 80k 102, first <= 94 at None
+seed 32: median at 80k 101, first <= 94 at None
+replays: 22; median at 80k <= 90: 3; <= 94: 7; >= 99: 12
