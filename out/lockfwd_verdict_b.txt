@@ -1,0 +1,20 @@
+seed 33: lock by 50k None at length None, median at 50k 96 -> predicted end short (<=94) | end median 89 HIT
+seed 34: lock by 50k 43000 at length 103, distance from 95 at lock +8, median at 50k 103 -> predicted end long (>=95) | end median 104 HIT
+seed 35: lock by 50k 47500 at length 102, distance from 95 at lock +7, median at 50k 102 -> predicted end long (>=95) | end median 101 HIT
+seed 36: lock by 50k 41500 at length 101, distance from 95 at lock +6, median at 50k 97 -> predicted end long (>=95) | end median 97 HIT
+seed 37: lock by 50k 46500 at length 95, distance from 95 at lock +0, median at 50k 96 -> predicted end long (>=95) | end median 93 MISS
+seed 38: lock by 50k 49000 at length 105, distance from 95 at lock +10, median at 50k 105 -> predicted end long (>=95) | end median 102 HIT
+seed 39: lock by 50k 42000 at length 101, distance from 95 at lock +6, median at 50k 101 -> predicted end long (>=95) | end median 99 HIT
+seed 40: lock by 50k 44000 at length 100, distance from 95 at lock +5, median at 50k 101 -> predicted end long (>=95) | end median 100 HIT
+seed 41: lock by 50k 47000 at length 98, distance from 95 at lock +3, median at 50k 98 -> predicted end long (>=95) | end median 101 HIT
+seed 42: lock by 50k 44000 at length 94, distance from 95 at lock -1, median at 50k 94 -> predicted end short (<=94, locked short) | end median 94 HIT
+seed 43: lock by 50k 45000 at length 98, distance from 95 at lock +3, median at 50k 98 -> predicted end long (>=95) | end median 96 HIT
+seed 44: lock by 50k 49000 at length 91, distance from 95 at lock -4, median at 50k 91 -> predicted end short (<=94, locked short) | end median 91 HIT
+seed 45: lock by 50k 48000 at length 95, distance from 95 at lock +0, median at 50k 95 -> predicted end long (>=95) | end median 98 HIT
+seed 46: lock by 50k 42000 at length 102, distance from 95 at lock +7, median at 50k 102 -> predicted end long (>=95) | end median 100 HIT
+seed 47: lock by 50k 43500 at length 100, distance from 95 at lock +5, median at 50k 100 -> predicted end long (>=95) | end median 100 HIT
+seed 48: lock by 50k 42500 at length 102, distance from 95 at lock +7, median at 50k 101 -> predicted end long (>=95) | end median 102 HIT
+hits 15 of 16; short arm 3/3 end short, long arm 12/13 end long; always-long baseline 12 of 16
+Lancaster mid-p (report-only) = 0.0036
+Fisher one-sided p = 0.0071 -> PASS
+A4 report-only, excluding seeds [37, 41, 43, 45]: n 12; short arm 3/3 end short, long arm 9/9 end long; Fisher one-sided p = 0.0045 -> PASS
