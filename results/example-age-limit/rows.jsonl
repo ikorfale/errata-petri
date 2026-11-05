@@ -1,0 +1,8 @@
+{"seed": 20261100, "control": 99.4, "control_sec": 10.0, "treatment": 99.0, "treatment_sec": 10.1, "holds": false}
+{"seed": 20261101, "control": 100.4, "control_sec": 10.2, "treatment": 99.9, "treatment_sec": 10.4, "holds": false}
+{"seed": 20261102, "control": 98.8, "control_sec": 9.9, "treatment": 99.9, "treatment_sec": 10.3, "holds": true}
+{"seed": 20261103, "control": 98.0, "control_sec": 10.5, "treatment": 100.8, "treatment_sec": 10.9, "holds": true}
+{"seed": 20261104, "control": 99.2, "control_sec": 10.0, "treatment": 99.2, "treatment_sec": 10.6, "holds": false}
+{"seed": 20261105, "control": 99.8, "control_sec": 10.2, "treatment": 98.6, "treatment_sec": 10.4, "holds": false}
+{"seed": 20261106, "control": 98.4, "control_sec": 10.4, "treatment": 99.7, "treatment_sec": 10.8, "holds": true}
+{"seed": 20261107, "control": 100.7, "control_sec": 10.2, "treatment": 99.0, "treatment_sec": 10.5, "holds": false}

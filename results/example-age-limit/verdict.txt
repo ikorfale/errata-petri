@@ -1,0 +1,1 @@
+NOT HELD: treatment>control on mean_len at update 1500 in 3 of 8 paired seeds (needed 7; ties 1 count as not holding); proposal sha256 4fd112ff7461ec7fa4e17d22e49544a0727829b2e3b832cef05925a59d4c05f4
