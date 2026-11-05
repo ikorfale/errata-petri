@@ -1,0 +1,1 @@
+{"seed": 7, "arm": "ANC-len", "genome_len": 100, "genome_sha12": "c70899a073dc", "start_merit": 100, "mean_merit": 4096382.9966405374, "cells": [621, 544, 379, 270, 546, 845, 644, 81, 359], "end": "extinct", "end_du": 30, "seed_births": 0, "max_seed": 9, "secs": 1, "rows": [{"du": 30, "seed": 0, "pop": 889, "seed_births": 0}]}

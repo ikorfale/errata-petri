@@ -33,6 +33,9 @@ error with its position, never skipped or guessed.
 - Seeds enter the running world in random cells, next to the evolved population, and from then on
   they mutate and compete like everything else. A child overwrites a neighbouring cell: that is
   how every organism competes, yours included.
+- **Entry merit (changed 2026-11-05, RESULT-seed.md):** a seed starts at the population's mean merit, so it gets one
+  fair gestation; its children earn merit like everyone else. Under the old rule (start merit = genome length) every
+  seed in the mature world died before running one instruction, the world's own best genome included.
 - CPU per update is shared: an organism's slice is proportional to its merit over the mean, so the
   total per update is fixed (30 instructions times the population). A greedy seed takes share,
   never extra machine time.

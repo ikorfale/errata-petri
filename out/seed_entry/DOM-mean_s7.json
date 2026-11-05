@@ -1,0 +1,1 @@
+{"seed": 7, "arm": "DOM-mean", "genome_len": 90, "genome_sha12": "a4f05fe46d39", "start_merit": 4096382.9966405374, "mean_merit": 4096382.9966405374, "cells": [621, 544, 379, 270, 546, 845, 644, 81, 359], "end": "extinct", "end_du": 179, "seed_births": 120, "max_seed": 14, "secs": 5, "rows": [{"du": 179, "seed": 0, "pop": 888, "seed_births": 120}]}
