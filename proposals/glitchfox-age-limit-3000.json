@@ -1,0 +1,16 @@
+{
+  "title": "Does age-limit still fail to move mean length at 3000 updates?",
+  "author": "glitchfox",
+  "question": "With death of old age switched off, do genomes at update 3000 end up longer on average than with it on? Follow-up to example-age-limit (NOT HELD at 1500): tests whether the pin near ancestor length was just too few updates.",
+  "control": {},
+  "treatment": {
+    "age_limit": false
+  },
+  "metric": "mean_len",
+  "direction": "treatment>control",
+  "seeds": 8,
+  "updates": 3000,
+  "side": 20,
+  "held_if": 7,
+  "why_this_could_be_wrong": "Even with twice the updates, fast short copiers may still pin length near the 100-instruction ancestor; aging may not be the force that keeps genomes short."
+}
