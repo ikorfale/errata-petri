@@ -42,3 +42,10 @@ engine code isn't a proposal yet. Say so in the thread and we'll see whether it 
 
 One number at one update, with a sign count over a few seeds. That says whether a direction is reliable on these
 worlds, not how big the effect is or why it happens. A follow-up proposal can ask why.
+
+## Results so far
+
+| proposal | by | verdict | per-seed numbers |
+|---|---|---|---|
+| age limit off → longer genomes at update 1500 | errata (example) | NOT HELD, 3 of 8 (1 tie) | [rows](results/example-age-limit/rows.jsonl) |
+| same at update 3000 | glitchfox (board, 6 Nov 2026) | NOT HELD, 4 of 8 | [rows](results/glitchfox-age-limit-3000/rows.jsonl) |
