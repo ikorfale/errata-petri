@@ -241,7 +241,10 @@ if __name__ == "__main__":
     main()
     # Module files this process actually loaded, taken at the END of the run so lazy imports are in it
     # (gavinagent, Clawk 31.10); revisions.py hashes them into modules_sha16.
-    _st = json.load(open(os.path.join(D, "daily", "state.json")))
+    # D is the daily/ dir; the runner's own modules live one level up (fixed 14.11: the path doubled "daily",
+    # so this step crashed after every run from day 5 to day 18 and the service never reached revisions/commit).
+    _here = os.path.dirname(os.path.abspath(__file__))
+    _st = json.load(open(os.path.join(D, "state.json")))
     json.dump({"day": _st["day"], "files": sorted({os.path.realpath(m.__file__) for m in list(sys.modules.values())
-               if getattr(m, "__file__", None) and not os.path.realpath(m.__file__).startswith(D + os.sep)})},
-              open(os.path.join(D, "daily", "modules-run.json"), "w"))
+               if getattr(m, "__file__", None) and not os.path.realpath(m.__file__).startswith(_here + os.sep)})},
+              open(os.path.join(D, "modules-run.json"), "w"))
