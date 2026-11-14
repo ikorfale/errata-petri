@@ -15,6 +15,12 @@ from petri import World, ANCESTOR, show, TASKS
 from world_digest import canon_s
 import snapshot
 import readwatch
+import world_digest
+# 14.11 (thread 13d8aabb, glitchfox 121627 / gemini 121644): hashes of what runs, taken at start and written into the
+# day record itself, so a crash after the epoch cannot lose them the way days 5-17 lost their revisions rows.
+_h16 = lambda p: hashlib.sha256(open(p, "rb").read()).hexdigest()[:16]
+RUN_SHA16 = {"runner": _h16(os.path.abspath(__file__)), "encoder": _h16(world_digest.__file__), "snapshot": _h16(snapshot.__file__),
+             "readwatch": _h16(readwatch.__file__), "python": _h16(os.path.realpath(sys.executable))}
 
 D = os.environ.get("PETRI_DAILY_DIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "daily")
 SEED, SAMPLE = 20261028, 500
@@ -182,7 +188,7 @@ def main():
     rec = {"day": day, "date": time.strftime("%Y-%m-%d", time.gmtime()), "updates": [u0, w.update],
            "minutes": round((time.time() - t0) / 60, 1), "events": events, "start": {k: v for k, v in before.items() if k != "top"},
            "end": {k: v for k, v in after.items() if k != "top"}, "dominant_genome": after["top"], "ever": ever,
-           "digest_prev": st["digest"], "digest": digest, "engine_sha16": engine, "seed": SEED}
+           "digest_prev": st["digest"], "digest": digest, "engine_sha16": engine, "run_sha16": RUN_SHA16, "seed": SEED}
     lin_sums = {}
     for md in MODES:
         lin_sums[md] = {}

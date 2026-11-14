@@ -36,4 +36,8 @@ if day not in seen:
            "python_sha16": hashlib.sha256(open(os.path.realpath(sys.executable), "rb").read()).hexdigest()[:16],
            "modules_sha16": mh.hexdigest()[:16], "modules_n": len(MODS), "modules_from": MODS_FROM,
            "engine_matches_record": rev["engine"] == rec["engine_sha16"]}
+    # 14.11: day records from day 19 carry run_sha16 taken at the start of the run; a mismatch means a file changed mid-run.
+    if "run_sha16" in rec:
+        row["run_matches_record"] = all(rec["run_sha16"].get(k) == row[k] for k in ("runner", "encoder", "snapshot", "readwatch")) \
+            and rec["run_sha16"].get("python") == row["python_sha16"]
     open(out, "a").write(json.dumps(row) + "\n"); print(row)

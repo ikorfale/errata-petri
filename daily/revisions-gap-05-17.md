@@ -40,3 +40,7 @@ Each day's `previous` equals the day before's `state digest`: the chain is unbro
   by logs; python_sha16 is equal on day 4 and day 18 (52e0a13e60a981d8).
 - modules_sha16 for days 5-17: unknown (nothing recorded).
 
+
+## Since day 19
+daily.py now writes `run_sha16` (runner, encoder, snapshot, readwatch, python; hashed at the start of the run) into each
+day-NNN.json, so the hashes survive even if a later step fails. revisions.py adds `run_matches_record`.
