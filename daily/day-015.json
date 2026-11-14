@@ -1,0 +1,343 @@
+{
+ "day": 15,
+ "date": "2026-11-11",
+ "updates": [
+  560000,
+  600000
+ ],
+ "minutes": 27.7,
+ "events": [
+  "modal genome length 88 (774 organisms) -> 82 (595 of 881)"
+ ],
+ "start": {
+  "update": 560000,
+  "pop": 882,
+  "genotypes": 569,
+  "births": 42876455,
+  "median_len": 88,
+  "tasks_now": {
+   "NOT": 552,
+   "NAND": 641,
+   "AND": 447,
+   "ORN": 700,
+   "OR": 531,
+   "ANDN": 665,
+   "NOR": 436,
+   "XOR": 0,
+   "EQU": 0
+  },
+  "top_sha": "303181f7b74d",
+  "top_count": 12,
+  "top_len": 88,
+  "mode_len": [
+   88,
+   774
+  ]
+ },
+ "end": {
+  "update": 600000,
+  "pop": 881,
+  "genotypes": 534,
+  "births": 46198097,
+  "median_len": 82,
+  "tasks_now": {
+   "NOT": 610,
+   "NAND": 654,
+   "AND": 459,
+   "ORN": 705,
+   "OR": 584,
+   "ANDN": 677,
+   "NOR": 439,
+   "XOR": 0,
+   "EQU": 0
+  },
+  "top_sha": "43e295fdfb09",
+  "top_count": 21,
+  "top_len": 82,
+  "mode_len": [
+   82,
+   595
+  ]
+ },
+ "dominant_genome": "yycuuyucsmwdcyrqjayuqyrpntrupwbsyuuyrnqygcucppuoebbjtcycuycucucpuydbsqzvvvvfcxvvga",
+ "ever": {
+  "NOT": 1500,
+  "NAND": 2000,
+  "AND": 2000,
+  "ORN": 2000,
+  "OR": 2000,
+  "ANDN": 2000,
+  "NOR": 5500
+ },
+ "digest_prev": "502653baaaabcd213636903d1cdf0fc69a01ced12749ca2942edafd50ffa44a5",
+ "digest": "224c339a42a8cf5f1edc759d0feab46f567d0c550f3d7587576c77473cb12511",
+ "engine_sha16": "4b1613c9cc004946",
+ "seed": 20261028,
+ "lineage": {
+  "NOT": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 334,
+   "max_clade": 684
+  },
+  "NAND": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 334,
+   "max_clade": 688
+  },
+  "AND": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 1340,
+   "max_clade": 584
+  },
+  "ORN": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 370,
+   "max_clade": 735
+  },
+  "OR": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 334,
+   "max_clade": 674
+  },
+  "ANDN": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 357,
+   "max_clade": 702
+  },
+  "NOR": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 1342,
+   "max_clade": 573
+  }
+ },
+ "lineage_c1m": {
+  "NOT": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 9,
+   "max_clade": 684
+  },
+  "NAND": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 9,
+   "max_clade": 688
+  },
+  "AND": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 34,
+   "max_clade": 584
+  },
+  "ORN": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 9,
+   "max_clade": 735
+  },
+  "OR": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 9,
+   "max_clade": 674
+  },
+  "ANDN": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 9,
+   "max_clade": 702
+  },
+  "NOR": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 34,
+   "max_clade": 573
+  }
+ },
+ "lineage_infm": {
+  "NOT": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 684
+  },
+  "NAND": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 703
+  },
+  "AND": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 586
+  },
+  "ORN": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 748
+  },
+  "OR": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 674
+  },
+  "ANDN": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 710
+  },
+  "NOR": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 583
+  }
+ },
+ "lineage_deep": {
+  "NOT": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 684
+  },
+  "NAND": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 703
+  },
+  "AND": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 586
+  },
+  "ORN": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 748
+  },
+  "OR": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 674
+  },
+  "ANDN": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 710
+  },
+  "NOR": {
+   "censuses": 80,
+   "reorigins": 0,
+   "new_clades": 0,
+   "max_clade": 583
+  }
+ },
+ "coal_median": 0.253,
+ "coal_sweep_censuses": [
+  575500,
+  584000,
+  587500
+ ],
+ "lineage_field_reads": {
+  "sites": [
+   {
+    "field": "anc",
+    "file": "daily.py",
+    "func": "cs",
+    "line": 102,
+    "reads": 34903,
+    "misses": 0
+   },
+   {
+    "field": "anc",
+    "file": "daily.py",
+    "func": "lineage_census",
+    "line": 78,
+    "reads": 2551032,
+    "misses": 0
+   },
+   {
+    "field": "anc",
+    "file": "daily.py",
+    "func": "lineage_census",
+    "line": 108,
+    "reads": 70862,
+    "misses": 0
+   },
+   {
+    "field": "anc",
+    "file": "daily.py",
+    "func": "main",
+    "line": 175,
+    "reads": 881,
+    "misses": 0
+   },
+   {
+    "field": "anc",
+    "file": "petri.py",
+    "func": "divide",
+    "line": 333,
+    "reads": 3321642,
+    "misses": 0
+   },
+   {
+    "field": "anc",
+    "file": "petri.py",
+    "func": "divide",
+    "line": 334,
+    "reads": 3321642,
+    "misses": 0
+   },
+   {
+    "field": "anc",
+    "file": "world_digest.py",
+    "func": "canon",
+    "line": 21,
+    "reads": 3524,
+    "misses": 0
+   },
+   {
+    "field": "ptasks",
+    "file": "daily.py",
+    "func": "lineage_census",
+    "line": 79,
+    "reads": 495240,
+    "misses": 822652
+   },
+   {
+    "field": "ptasks",
+    "file": "daily.py",
+    "func": "main",
+    "line": 175,
+    "reads": 374,
+    "misses": 507
+   },
+   {
+    "field": "ptasks",
+    "file": "world_digest.py",
+    "func": "canon",
+    "line": 21,
+    "reads": 1496,
+    "misses": 1014
+   }
+  ],
+  "engine_reads_outside_divide": 0
+ }
+}
